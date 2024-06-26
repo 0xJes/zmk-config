@@ -14,10 +14,10 @@
             bindings = <
                 &kp Q      &kp N3     &kp N4      &kp N5          &kp T        
 				&kp A      &kp W      &kp E       &kp R           &kp G
-                &kp S      &kp D      &kp F       &kp V           &kp B  
+                &kp S      &kp D      &kp F       &kp C           &kp V  
 				&kp U      &kp N8     &kp N9      &kp N0          &kp LEFT_BRACKET
                 &kp J      &kp I      &kp O       &kp P           &kp SINGLE_QUOTE
-				&kp K      &kp L      &kp SEMI    &kp M           &kp COMMA
+				&kp K      &kp L      &kp SEMI    &kp COMMA       &kp M
             >;
         };
     };
