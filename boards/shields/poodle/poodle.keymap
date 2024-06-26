@@ -12,10 +12,12 @@
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-                &kp 1      &kp 2      &kp 3       &kp R           &kp T        &kp H            &kp U          &kp I       &kp O      &kp P
-                &kp A      &kp S      &kp D       &kp F           &kp G        &kp N            &kp J          &kp K       &kp L      &kp QUOT
-                           &kp X      &kp C       &kp V                                         &kp M          &kp COMMA  &kp DOT
-                                                  &lt NAV_L TAB  &kp RET       &lt NUM_L SPACE  &lt SYM_L BKSP
+                &kp Q      &kp N3     &kp N4      &kp N5          &kp T        
+				&kp A      &kp W      &kp E       &kp R           &kp G
+                &kp S      &kp D      &kp F       &kp V           &kp B  
+				&kp U      &kp N8     &kp N9      &kp N0          &kp LEFT_BRACKET
+                &kp J      &kp I      &kp O       &kp P           &kp SINGLE_QUOTE
+				&kp K      &kp L      &kp SEMI    &lt M           &lt COMMA
             >;
         };
     };
