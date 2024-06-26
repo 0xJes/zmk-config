@@ -4,6 +4,6 @@
 if SHIELD_POODLE
 
 config ZMK_KEYBOARD_NAME
-    default "Poodle"
+    default "poodle"
 
 endif
