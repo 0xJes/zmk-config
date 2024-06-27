@@ -8,18 +8,44 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <16 17>;
+        };
+
+        bsp {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <17 18>;
+        };
+
+        ret {
+            bindings = <&kp RET>;
+            key-positions = <12 11>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
-        default_layer {
+
+        Base {
             bindings = <
-                &kp Q      &kp N3     &kp N4      &kp N5          &kp T        
-				&kp A      &kp W      &kp E       &kp R           &kp G
-                &kp S      &kp D      &kp F       &kp C           &kp V  
-				&kp U      &kp N8     &kp N9      &kp N0          &kp LEFT_BRACKET
-                &kp J      &kp I      &kp O       &kp P           &kp SINGLE_QUOTE
-				&kp K      &kp L      &kp SEMI    &kp COMMA       &kp M
+&kp C  &kp B           &kp H        &kp G      &kp K    &kp DOT    &kp COMMA  &kp FSLH     &kp J       &kp M
+&kp P  &mt LEFT_ALT S  &mt LCTRL N  &kp T      &kp V    &kp MINUS  &kp A      &mt RCTRL E  &mt LALT I  &kp M
+       &kp F           &kp L        &kp D                          &kp U      &kp O        &kp Y
+                                    &sk LSHFT  &kp R    &kp SPACE  &sk RSHFT
+            >;
+        };
+
+        layer_1 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans                    &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans
             >;
         };
     };
 };
-
