@@ -30,21 +30,21 @@
     keymap {
         compatible = "zmk,keymap";
 
-        Base {
+        base {
             bindings = <
-&kp C  &kp B           &kp H        &kp G      &kp K    &kp DOT    &kp COMMA  &kp FSLH     &kp J       &kp M
-&kp P  &mt LEFT_ALT S  &mt LCTRL N  &kp T      &kp V    &kp MINUS  &kp A      &mt RCTRL E  &mt LALT I  &kp M
-       &kp F           &kp L        &kp D                          &kp U      &kp O        &kp Y
-                                    &sk LSHFT  &kp R    &kp SPACE  &sk RSHFT
+&kp C  &kp B           &kp H        &kp G      &kp K    &kp DOT          &kp COMMA  &kp FSLH     &kp J       &kp M
+&kp P  &mt LEFT_ALT S  &mt LCTRL N  &lt 1 T    &kp V    &kp MINUS        &kp A      &mt RCTRL E  &mt LALT I  &kp W
+       &kp F           &kp L        &kp D                                &kp U      &kp O        &kp Y
+                                    &sk LSHFT  &kp R    &mt RMETA SPACE  &sk RSHFT
             >;
         };
 
-        layer_1 {
+        nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans                    &trans  &trans  &trans
-                        &trans  &trans    &trans  &trans
+&trans  &trans        &trans     &trans          &trans    &trans  &trans     &trans          &trans        &kp RIGHT
+&trans  &kp LEFT_ALT  &kp LCTRL  &trans          &trans    &trans  &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp END
+        &trans        &trans     &trans                            &kp HOME   &kp PAGE_DOWN   &kp PG_UP
+                                 &kp LEFT_SHIFT  &trans    &trans  &kp RSHFT
             >;
         };
     };
