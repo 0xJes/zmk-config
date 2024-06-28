@@ -14,17 +14,17 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <16 17>;
+            key-positions = <13 14>;
         };
 
         bsp {
             bindings = <&kp BACKSPACE>;
-            key-positions = <17 18>;
+            key-positions = <14 15>;
         };
 
         ret {
             bindings = <&kp RET>;
-            key-positions = <12 11>;
+            key-positions = <8 9>;
         };
 
         esc {
@@ -34,22 +34,22 @@
 
         del {
             bindings = <&kp DELETE>;
-            key-positions = <18 9>;
+            key-positions = <8 10>;
         };
 
         plus {
             bindings = <&kp KP_PLUS>;
-            key-positions = <15 5>;
+            key-positions = <12 22>;
         };
 
         grv {
             bindings = <&kp GRAVE>;
-            key-positions = <14 4>;
+            key-positions = <11 21>;
         };
 
         tilde {
             bindings = <&kp TILDE>;
-            key-positions = <6 7>;
+            key-positions = <4 5>;
         };
     };
 
@@ -61,7 +61,7 @@
           &kp B           &kp H        &kp G                                      &kp COMMA  &kp FSLH     &kp J      
 &kp C      &mt LEFT_ALT S  &mt LCTRL N  &lt 1 T    &kp K            &kp DOT        &lt 2 A    &mt RCTRL E  &mt LALT I   &kp M
 &kp P      &kp F           &kp L        &kp D      &kp V              &kp MINUS    &kp U      &kp O        &kp Y &kp W
-                                    &sk LSHFT  &mt RA(APOS) R   &mt RMETA SPACE  &sk RSHFT
+                                    &sk LSHFT  &kp R   &mt RMETA SPACE  &sk RSHFT
             >;
         };
 
