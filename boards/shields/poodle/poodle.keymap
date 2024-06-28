@@ -6,6 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 / {
     combos {
@@ -75,10 +76,19 @@
 
         num {
             bindings = <
-&kp KP_NUMBER_3  &trans           &trans           &trans           &trans             &trans           &trans     &trans      &trans     &trans
-&kp KP_NUMBER_7  &kp KP_N2        &kp KP_NUMBER_1  &kp KP_NUMBER_0  &trans             &trans           &trans     &kp PERIOD  &kp COMMA  &trans
-                 &kp KP_NUMBER_6  &kp KP_NUMBER_5  &kp KP_NUMBER_4                                      &trans     &trans      &trans
+&kp KP_NUMBER_3  &none            &none            &none            &none              &none            &none      &trans      &none      &none
+&kp KP_NUMBER_7  &kp KP_N2        &kp KP_NUMBER_1  &kp KP_NUMBER_0  &none              &none            &none      &kp PERIOD  &kp COMMA  &none
+                 &kp KP_NUMBER_6  &kp KP_NUMBER_5  &kp KP_NUMBER_4                                      &none      &none       &none
                                                    &kp MINUS        &kp KP_NUMBER_8    &kp KP_NUMBER_9  &kp SPACE
+            >;
+        };
+
+        mouse {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans  &mkp MB5
+        &trans  &trans  &trans                      &mkp MB4  &trans  &trans
+                        &trans  &trans    &mkp MB1  &mkp MB2
             >;
         };
     };
