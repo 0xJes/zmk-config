@@ -61,7 +61,7 @@
           &kp B           &kp H        &kp G                                      &kp COMMA  &kp FSLH     &kp J      
 &kp C      &mt LEFT_ALT S  &mt LCTRL N  &lt 1 T    &kp K            &kp DOT        &lt 2 A    &mt RCTRL E  &mt LALT I   &kp M
 &kp P      &kp F           &kp L        &kp D      &kp V              &kp MINUS    &kp U      &kp O        &kp Y &kp W
-                                    &sk LSHFT  &mt R RA(APOS)    &mt RMETA SPACE  &sk RSHFT
+                                    &sk LSHFT  &mt RA(APOS) R   &mt RMETA SPACE  &sk RSHFT
             >;
         };
 
