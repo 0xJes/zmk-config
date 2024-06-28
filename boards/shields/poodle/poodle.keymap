@@ -58,7 +58,7 @@
 
         base {
             bindings = <
-            &kp B       &kp H       &kp G                               &kp COMMA   &kp FSLH    &kp J      
+            &kp B       &kp H       &kp G                               &kp COMMA   &kp FSLH    &kp J
 &kp C       &mt LALT S  &mt LCTRL N &lt 1 T     &kp K       &kp DOT     &lt 2 A     &mt RCTRL E &mt LALT I  &kp M
 &kp P       &kp F       &kp L       &kp D       &kp V       &kp MINUS   &kp U       &kp O       &kp Y       &kp W
                                     &sk LSHFT   &kp R       &mt RWIN SPACE &sk RSHFT
@@ -66,16 +66,16 @@
         };
         nav {
             bindings = <
-            &none       &none       &none                                      &kp LC(C)  &kp LC(V)       &kp LC(X)     
-&none       &kp LALT    &kp LCTRL   &none       &none       &kp LC(KP_PLUS)  &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT
-&none       &none       &none       &none       &trans      &kp LC(KP_SUBTRACT)                           &kp HOME   &kp PAGE_DOWN   &kp PG_UP &kp END
-                                &kp LEFT_SHIFT  &none       &kp LC(Z)            &kp LC(Y)
+            &none       &none       &none                                        &kp LC(C)  &kp LC(V)       &kp LC(X)
+&none       &kp LALT    &kp LCTRL   &none       &none       &kp LC(KP_PLUS)      &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT
+&none       &none       &none       &none       &none       &kp MINUS            &kp HOME   &kp PAGE_DOWN   &kp PG_UP &kp END
+                                    &kp LSHFT   &none       &kp LC(Z)            &kp LC(Y)
             >;
         };
 
         num {
             bindings = <
-                  &none            &none            &none                   &none              &none            &none      
+                  &none            &none            &none                   &none              &none            &none
 &kp KP_NUMBER_3   &kp KP_N2        &kp KP_NUMBER_1  &kp KP_NUMBER_0  &none              &none            &none      &kp PERIOD  &kp COMMA  &none
 &kp KP_NUMBER_7   &kp KP_NUMBER_6  &kp KP_NUMBER_5  &kp KP_NUMBER_4   &none      &none       &none &none       &none &none
                                                    &kp MINUS        &kp KP_NUMBER_8    &kp KP_NUMBER_9  &kp SPACE
@@ -84,7 +84,7 @@
 
         mouse {
             bindings = <
-  &trans  &trans  &trans  &trans    &trans    &trans  
+  &trans  &trans  &trans  &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans  &mkp MB5
 &trans        &trans  &trans  &trans   &trans       &trans            &mkp MB4  &trans  &trans &mkp MB5
                         &trans  &trans    &mkp MB1  &mkp MB2
