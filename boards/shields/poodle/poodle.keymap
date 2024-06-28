@@ -17,6 +17,15 @@
 
 / {
     behaviors {
+		 sksft: sticky_shift {
+			compatible = "zmk,behavior-sticky-key";
+        	#binding-cells = <1>;
+       		bindings = <&kp LSHFT>;
+    		release-after-ms = <2500>;
+    		quick-release;
+    		ignore-modifiers;
+		};
+
         parent_pair: parent_pair {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -291,7 +300,7 @@
 		&kp B		&kp H		&kp G								&kp COMMA	&kp FSLH	&kp J
 &kp C	&mt LALT S	&mt LCTRL N	&lt 1 T		&kp K	&tperiod		&lt 2 A		&mt RCTRL E	&mt LALT I	&kp M
 &kp P	&kp F		&kp L		&kp D		&kp V	&kp MINUS		&kp U		&kp O		&kp Y		&kp W
-								&sk LSHFT	&mt RA(APOS) R	&mt RWIN SPACE	&sk RSHFT
+								&sksft	&mt RA(APOS) R	&mt RWIN SPACE	&sksft
 			>;
 		};
 		nav {
