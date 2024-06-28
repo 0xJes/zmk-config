@@ -9,8 +9,9 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #define VERT_TIMEOUT 150
-#define HORZ_TIMEOUT 150
-
+#define HORZ_TIMEOUT 100
+#define DEFAULT_IDLE 100
+#define VERT_IDLE 0
 
 / {
 	combos {
@@ -98,20 +99,34 @@
 		};
 		combo_equal {
 			bindings = <&kp EQUAL>;
-			key-positions = <11 21>;
-			require-prior-idle-ms = <50>;
+			key-positions = <1 2>;
+			require-prior-idle-ms = <DEFAULT_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
-
+		combo_tilde {
+			bindings = <&kp TILDE>;
+			key-positions = <3 4>;
+			require-prior-idle-ms = <DEFAULT_IDLE>;
+			timeout-ms = <HORZ_TIMEOUT>;
+		};
+		combo_caret {
+			bindings = <&kp CARET>;
+			key-positions = <4 5>;
+			require-prior-idle-ms = <DEFAULT_IDLE>;
+			timeout-ms = <HORZ_TIMEOUT>;
+		};
+		combo_percent {
+			bindings = <&kp PERCENT>;
+			key-positions = <0 1>;
+			require-prior-idle-ms = <DEFAULT_IDLE>;
+			timeout-ms = <HORZ_TIMEOUT>;
+		};
 		grv {
 			bindings = <&kp GRAVE>;
 			key-positions = <10 20>;
 		};
 
-		tilde {
-			bindings = <&kp TILDE>;
-			key-positions = <3 4>;
-		};
+
 	};
 
 	keymap {
