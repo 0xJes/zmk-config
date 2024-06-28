@@ -14,42 +14,42 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <13 14>;
+            key-positions = <12 13>;
         };
 
         bsp {
             bindings = <&kp BACKSPACE>;
-            key-positions = <14 15>;
+            key-positions = <13 14>;
         };
 
         ret {
             bindings = <&kp RET>;
-            key-positions = <8 9>;
+            key-positions = <7 8>;
         };
 
         esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <11 13>;
+            key-positions = <10 12>;
         };
 
         del {
             bindings = <&kp DELETE>;
-            key-positions = <8 10>;
+            key-positions = <7 9>;
         };
 
         plus {
             bindings = <&kp KP_PLUS>;
-            key-positions = <12 22>;
+            key-positions = <11 21>;
         };
 
         grv {
             bindings = <&kp GRAVE>;
-            key-positions = <11 21>;
+            key-positions = <10 20>;
         };
 
         tilde {
             bindings = <&kp TILDE>;
-            key-positions = <4 5>;
+            key-positions = <3 4>;
         };
     };
 
