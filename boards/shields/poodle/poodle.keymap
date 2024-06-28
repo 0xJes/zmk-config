@@ -43,7 +43,7 @@
 			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_enie {
-			bindings = <&kp RA(n)>;
+			bindings = <&kp RA(N)>;
 			key-positions = <17 19>;
 			require-prior-idle-ms = <50>;
 			timeout-ms = <200>;
