@@ -8,12 +8,13 @@
 #include <dt-bindings/zmk/keys.h>
 
 #define VERT_TIMEOUT 120
-#define HORZ_TIMEOUT 90
-#define DIAG_TIMEOUT 140
+#define HORZ_TIMEOUT 80
+#define DIAG_TIMEOUT 150
 #define HOME_TIMEOUT 50
+
 #define VERT_IDLE 0
 #define ALPHA_IDLE 0
-#define DEFAULT_IDLE 100
+#define DEF_IDLE 100
 
 / {
     behaviors {
@@ -81,6 +82,7 @@
     };
 	combos {
 		compatible = "zmk,combos";
+// ALPHA COMBOS
 		combo_gu {
 			bindings = <&kp G &kp RA(U)>;
 			key-positions = <12 13>;
@@ -111,185 +113,190 @@
 			require-prior-idle-ms = <ALPHA_IDLE>;
 			timeout-ms = <HORZ_TIMEOUT>;
 		};
+
+// HORIZONTAL COMBOS ON HOME ROW
 		combo_bsp {
 			bindings = <&kp BACKSPACE>;
 			key-positions = <13 14>;
-			require-prior-idle-ms = <50>;
+			require-prior-idle-ms = <HOME_IDLE>;
 			timeout-ms = <150>;
 		};
 		combo_del {
 			bindings = <&kp DELETE>;
 			key-positions = <14 15>;
-			require-prior-idle-ms = <50>;
+			require-prior-idle-ms = <HOME_IDLE>;
 			timeout-ms = <120>;
 		};
 		combo_ret {
 			bindings = <&kp RET>;
 			key-positions = <7 8>;
-			require-prior-idle-ms = <50>;
-			timeout-ms = <HOME_TIMEOUT>;
+			require-prior-idle-ms = <HOME_IDLE>;
+			timeout-ms = <100>;
 		};
 		combo_esc {
 			bindings = <&kp ESCAPE>;
 			key-positions = <7 8>;
-			require-prior-idle-ms = <50>;
-			timeout-ms = <HOME_TIMEOUT>;
+			require-prior-idle-ms = <HOME_IDLE>;
+			timeout-ms = <50>;
+		};
+		combo_underscore {
+			bindings = <&kp UNDER>;
+			key-positions = <12 14>;
+			require-prior-idle-ms = <HOME_IDLE>;
+			timeout-ms = <100>;
 		};
 		combo_tab {
 			bindings = <&kp TAB>;
 			key-positions = <12 13>;
-			require-prior-idle-ms = <100>;
-			timeout-ms = <HOME_TIMEOUT>;
+			require-prior-idle-ms = <HOME_IDLE>;
+			timeout-ms = <60>;
 		};
+// HORIZONTAL COMBOS
 		combo_caps_word {
 			bindings = <&caps_word>;
 			key-positions = <26 27>;
 			require-prior-idle-ms = <100>;
 			timeout-ms = <150>;
 		};
-		combo_at {
-			bindings = <&kp AT>;
-			key-positions = <13 23>;
-			require-prior-idle-ms = <DEFAULT_IDLE>;
-			timeout-ms = <VERT_TIMEOUT>;
-		};
-		combo_currency {
-			bindings = <&currency_pair>;
-			key-positions = <14 24>;
-			require-prior-idle-ms = <DEFAULT_IDLE>;
-			timeout-ms = <VERT_TIMEOUT>;
-		};
-		combo_plus {
-			bindings = <&kp PLUS>;
-			key-positions = <11 21>;
-			require-prior-idle-ms = <DEFAULT_IDLE>;
-			timeout-ms = <VERT_TIMEOUT>;
-		};
 		combo_equal {
 			bindings = <&kp EQUAL>;
 			key-positions = <1 2>;
-			require-prior-idle-ms = <DEFAULT_IDLE>;
-			timeout-ms = <VERT_TIMEOUT>;
+			require-prior-idle-ms = <DEF_IDLE>;
+			timeout-ms = <HORZ_TIMEOUT>;
 		};
 		combo_tilde {
 			bindings = <&kp TILDE>;
 			key-positions = <3 4>;
-			require-prior-idle-ms = <DEFAULT_IDLE>;
+			require-prior-idle-ms = <DEF_IDLE>;
 			timeout-ms = <HORZ_TIMEOUT>;
 		};
 		combo_caret {
 			bindings = <&kp CARET>;
 			key-positions = <4 5>;
-			require-prior-idle-ms = <DEFAULT_IDLE>;
+			require-prior-idle-ms = <DEF_IDLE>;
 			timeout-ms = <HORZ_TIMEOUT>;
 		};
 		combo_percent {
 			bindings = <&kp PERCENT>;
 			key-positions = <0 1>;
-			require-prior-idle-ms = <DEFAULT_IDLE>;
+			require-prior-idle-ms = <DEF_IDLE>;
 			timeout-ms = <HORZ_TIMEOUT>;
 		};
-		combo_quote {
-			bindings = <&kp SQT>;
-			key-positions = <2 8>;
-			require-prior-idle-ms = <DEFAULT_IDLE>;
-			timeout-ms = <DIAG_TIMEOUT>;
+// VERTICAL COMBOS
+		combo_at {
+			bindings = <&kp AT>;
+			key-positions = <13 23>;
+			require-prior-idle-ms = <DEF_IDLE>;
+			timeout-ms = <VERT_TIMEOUT>;
 		};
-		combo_dbquote {
-			bindings = <&kp DQT>;
-			key-positions = <3 13>;
-			require-prior-idle-ms = <DEFAULT_IDLE>;
-			timeout-ms = <DIAG_TIMEOUT>;
+		combo_currency {
+			bindings = <&currency_pair>;
+			key-positions = <14 24>;
+			require-prior-idle-ms = <DEF_IDLE>;
+			timeout-ms = <VERT_TIMEOUT>;
+		};
+		combo_plus {
+			bindings = <&kp PLUS>;
+			key-positions = <11 21>;
+			require-prior-idle-ms = <VERT_IDLE>;
+			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_grv {
 			bindings = <&kp GRAVE>;
 			key-positions = <10 20>;
-			require-prior-idle-ms = <DEFAULT_IDLE>;
+			require-prior-idle-ms = <VERT_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_and {
 			bindings = <&kp AMPERSAND>;
 			key-positions = <5 14>;
-			require-prior-idle-ms = <DEFAULT_IDLE>;
+			require-prior-idle-ms = <VERT_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_or {
 			bindings = <&kp PIPE>;
 			key-positions = <0 7>;
-			require-prior-idle-ms = <DEFAULT_IDLE>;
+			require-prior-idle-ms = <VERT_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_hash {
 			bindings = <&kp HASH>;
 			key-positions = <12 22>;
-			require-prior-idle-ms = <DEFAULT_IDLE>;
+			require-prior-idle-ms = <VERT_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
-		};
-		combo_underscore {
-			bindings = <&kp UNDER>;
-			key-positions = <12 14>;
-			require-prior-idle-ms = <DEFAULT_IDLE>;
-			timeout-ms = <HOME_TIMEOUT>;
 		};
 		combo_asterisk {
 			bindings = <&kp STAR>;
 			key-positions = <4 13>;
-			require-prior-idle-ms = <DEFAULT_IDLE>;
+			require-prior-idle-ms = <VERT_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_bslash {
 			bindings = <&kp BSLH>;
 			key-positions = <1 8>;
-			require-prior-idle-ms = <DEFAULT_IDLE>;
+			require-prior-idle-ms = <VERT_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
-		};
-		combo_parentesis {
-			bindings = <&parent_pair>;
-			key-positions = <12 23>;
-			require-prior-idle-ms = <DEFAULT_IDLE>;
-			timeout-ms = <DIAG_TIMEOUT>;
-		};
-		combo_braces {
-			bindings = <&brace_pair>;
-			key-positions = <9 18>;
-			require-prior-idle-ms = <DEFAULT_IDLE>;
-			timeout-ms = <DIAG_TIMEOUT>;
-		};
-		combo_brackets {
-			bindings = <&bracket_pair>;
-			key-positions = <7 18>;
-			require-prior-idle-ms = <DEFAULT_IDLE>;
-			timeout-ms = <DIAG_TIMEOUT>;
-		};
-		combo_angles {
-			bindings = <&angle_pair>;
-			key-positions = <8 17>;
-			require-prior-idle-ms = <DEFAULT_IDLE>;
-			timeout-ms = <DIAG_TIMEOUT>;
 		};
 		combo_semi {
 			bindings = <&kp SEMI>;
 			key-positions = <2 9>;
-			require-prior-idle-ms = <DEFAULT_IDLE>;
+			require-prior-idle-ms = <VERT_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_colon {
 			bindings = <&kp COLON>;
 			key-positions = <3 12>;
-			require-prior-idle-ms = <DEFAULT_IDLE>;
+			require-prior-idle-ms = <VERT_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
+		};
+// DIAGONAL COMBOS
+		combo_quote {
+			bindings = <&kp SQT>;
+			key-positions = <2 8>;
+			require-prior-idle-ms = <DEF_IDLE>;
+			timeout-ms = <DIAG_TIMEOUT>;
+		};
+		combo_dbquote {
+			bindings = <&kp DQT>;
+			key-positions = <3 13>;
+			require-prior-idle-ms = <DEF_IDLE>;
+			timeout-ms = <DIAG_TIMEOUT>;
+		};
+		combo_parentesis {
+			bindings = <&parent_pair>;
+			key-positions = <12 23>;
+			require-prior-idle-ms = <DEF_IDLE>;
+			timeout-ms = <DIAG_TIMEOUT>;
+		};
+		combo_braces {
+			bindings = <&brace_pair>;
+			key-positions = <9 18>;
+			require-prior-idle-ms = <DEF_IDLE>;
+			timeout-ms = <DIAG_TIMEOUT>;
+		};
+		combo_brackets {
+			bindings = <&bracket_pair>;
+			key-positions = <7 18>;
+			require-prior-idle-ms = <DEF_IDLE>;
+			timeout-ms = <DIAG_TIMEOUT>;
+		};
+		combo_angles {
+			bindings = <&angle_pair>;
+			key-positions = <8 17>;
+			require-prior-idle-ms = <DEF_IDLE>;
+			timeout-ms = <DIAG_TIMEOUT>;
 		};
 		combo_excl {
 			bindings = <&exclamation_pair>;
 			key-positions = <5 13>;
-			require-prior-idle-ms = <DEFAULT_IDLE>;
-			timeout-ms = <VERT_TIMEOUT>;
+			require-prior-idle-ms = <DEF_IDLE>;
+			timeout-ms = <DIAG_TIMEOUT>;
 		};
 		combo_quest {
 			bindings = <&question_pair>;
 			key-positions = <0 8>;
-			require-prior-idle-ms = <DEFAULT_IDLE>;
-			timeout-ms = <VERT_TIMEOUT>;
+			require-prior-idle-ms = <DEF_IDLE>;
+			timeout-ms = <DIAG_TIMEOUT>;
 		};
 	};
 
