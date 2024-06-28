@@ -139,8 +139,6 @@
 			bindings = <&kp GRAVE>;
 			key-positions = <10 20>;
 		};
-
-
 	};
 
 	keymap {
@@ -173,7 +171,7 @@
 		mouse {
 			bindings = <
 		&none	&none	&none						&none		&none	&none
-&none	&none	&none	&none	&none	&none		&none		&none	&none	&mkp MB5
+&none	&none	&none	&none	&none	&none		&none		&none	&none	&none
 &none	&none	&none	&none	&none	&none		&mkp MB4	&none	&none	&mkp MB5
 						&none	&none	&mkp MB1	&mkp MB2
 			>;
