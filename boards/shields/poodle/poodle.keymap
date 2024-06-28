@@ -8,10 +8,12 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
 
-#define VERT_TIMEOUT 150
-#define HORZ_TIMEOUT 100
-#define DEFAULT_IDLE 100
+#define VERT_TIMEOUT 120
+#define HORZ_TIMEOUT 90
+#define DIAG_TIMEOUT 140
 #define VERT_IDLE 0
+#define ALPHA_IDLE 0
+#define DEFAULT_IDLE 100
 
 / {
 	combos {
@@ -34,20 +36,20 @@
 		combo_z {
 			bindings = <&kp Z>;
 			key-positions = <7 17>;
-			require-prior-idle-ms = <0>;
+			require-prior-idle-ms = <ALPHA_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_x {
 			bindings = <&kp X>;
 			key-positions = <9 19>;
-			require-prior-idle-ms = <0>;
+			require-prior-idle-ms = <ALPHA_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_enie {
 			bindings = <&kp RA(N)>;
 			key-positions = <17 19>;
-			require-prior-idle-ms = <50>;
-			timeout-ms = <200>;
+			require-prior-idle-ms = <ALPHA_IDLE>;
+			timeout-ms = <HORZ_TIMEOUT>;
 		};
 		combo_bsp {
 			bindings = <&kp BACKSPACE>;
@@ -120,6 +122,18 @@
 			key-positions = <0 1>;
 			require-prior-idle-ms = <DEFAULT_IDLE>;
 			timeout-ms = <HORZ_TIMEOUT>;
+		};
+		combo_quote {
+			bindings = <&kp SQT>;
+			key-positions = <2 8>;
+			require-prior-idle-ms = <DEFAULT_IDLE>;
+			timeout-ms = <DIAG_TIMEOUT>;
+		};
+		combo_dbquote {
+			bindings = <&kp DQT>;
+			key-positions = <3 13>;
+			require-prior-idle-ms = <DEFAULT_IDLE>;
+			timeout-ms = <DIAG_TIMEOUT>;
 		};
 		grv {
 			bindings = <&kp GRAVE>;
