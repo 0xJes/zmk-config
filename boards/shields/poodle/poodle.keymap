@@ -25,6 +25,31 @@
             bindings = <&kp RET>;
             key-positions = <12 11>;
         };
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <11 13>;
+        };
+
+        del {
+            bindings = <&kp DELETE>;
+            key-positions = <18 9>;
+        };
+
+        plus {
+            bindings = <&kp KP_PLUS>;
+            key-positions = <15 5>;
+        };
+
+        grv {
+            bindings = <&kp GRAVE>;
+            key-positions = <14 4>;
+        };
+
+        tilde {
+            bindings = <&kp TILDE>;
+            key-positions = <6 7>;
+        };
     };
 
     keymap {
@@ -32,19 +57,28 @@
 
         base {
             bindings = <
-&kp C  &kp B           &kp H        &kp G      &kp K    &kp DOT          &kp COMMA  &kp FSLH     &kp J       &kp M
-&kp P  &mt LEFT_ALT S  &mt LCTRL N  &lt 1 T    &kp V    &kp MINUS        &kp A      &mt RCTRL E  &mt LALT I  &kp W
-       &kp F           &kp L        &kp D                                &kp U      &kp O        &kp Y
-                                    &sk LSHFT  &kp R    &mt RMETA SPACE  &sk RSHFT
+&kp C  &kp B           &kp H        &kp G      &kp K             &kp DOT          &kp COMMA  &kp FSLH     &kp J       &kp M
+&kp P  &mt LEFT_ALT S  &mt LCTRL N  &lt 1 T    &kp V             &kp MINUS        &lt 2 A    &mt RCTRL E  &mt LALT I  &kp W
+       &kp F           &kp L        &kp D                                         &kp U      &kp O        &kp Y
+                                    &sk LSHFT  &mt R RA(APOS)    &mt RMETA SPACE  &sk RSHFT
             >;
         };
 
         nav {
             bindings = <
-&trans  &trans        &trans     &trans          &trans    &trans  &trans     &trans          &trans        &kp RIGHT
-&trans  &kp LEFT_ALT  &kp LCTRL  &trans          &trans    &trans  &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp END
-        &trans        &trans     &trans                            &kp HOME   &kp PAGE_DOWN   &kp PG_UP
-                                 &kp LEFT_SHIFT  &trans    &trans  &kp RSHFT
+&none  &none         &none      &none           &trans    &kp LC(KP_PLUS)      &kp LC(C)  &kp LC(V)       &kp LC(X)     &kp RIGHT
+&none  &kp LEFT_ALT  &kp LCTRL  &none           &none     &kp LC(KP_SUBTRACT)  &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp END
+       &none         &none      &none                                          &kp HOME   &kp PAGE_DOWN   &kp PG_UP
+                                &kp LEFT_SHIFT  &none     &kp LC(Z)            &kp LC(Y)
+            >;
+        };
+
+        num {
+            bindings = <
+&kp KP_NUMBER_3  &trans           &trans           &trans           &trans             &trans           &trans     &trans      &trans     &trans
+&kp KP_NUMBER_7  &kp KP_N2        &kp KP_NUMBER_1  &kp KP_NUMBER_0  &trans             &trans           &trans     &kp PERIOD  &kp COMMA  &trans
+                 &kp KP_NUMBER_6  &kp KP_NUMBER_5  &kp KP_NUMBER_4                                      &trans     &trans      &trans
+                                                   &kp MINUS        &kp KP_NUMBER_8    &kp KP_NUMBER_9  &kp SPACE
             >;
         };
     };
