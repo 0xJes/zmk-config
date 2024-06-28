@@ -58,7 +58,14 @@
 		currency_pair: currency_pair {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp DOLLAR>, <&kp RA(N1=5)>;
+            bindings = <&kp DOLLAR>, <&kp RA(N5)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+		tperiod: tperiod {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp PERIOD>, <&kp PERIOD &kp PERIOD &kp PERIOD>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -279,11 +286,10 @@
 
 	keymap {
 		compatible = "zmk,keymap";
-
 		base {
 			bindings = <
 		&kp B		&kp H		&kp G								&kp COMMA	&kp FSLH	&kp J
-&kp C	&mt LALT S	&mt LCTRL N	&lt 1 T		&kp K	&kp DOT			&lt 2 A		&mt RCTRL E	&mt LALT I	&kp M
+&kp C	&mt LALT S	&mt LCTRL N	&lt 1 T		&kp K	&tperiod		&lt 2 A		&mt RCTRL E	&mt LALT I	&kp M
 &kp P	&kp F		&kp L		&kp D		&kp V	&kp MINUS		&kp U		&kp O		&kp Y		&kp W
 								&sk LSHFT	&mt RA(APOS) R	&mt RWIN SPACE	&sk RSHFT
 			>;
@@ -298,10 +304,10 @@
 		};
 		num {
 			bindings = <
-		&none	&none	&none						&none	&none		&none
-&kp N3	&kp N2	&kp N1	&kp N0		&none	&none	&none	&kp PERIOD	&kp COMMA	&none
-&kp N7	&kp N6	&kp N5	&kp N4		&none	&none	&none	&none		&none		&none
-						&kp MINUS	&kp N8	&kp N9	&kp SPACE
+		&kp FSLH	&kp STAR	&kp PLUS					&none	&none		&none
+&kp N3	&kp N2		&kp N1		&kp N0		&none	&none	&none	&kp PERIOD	&kp COMMA	&none
+&kp N7	&kp N6		&kp N5		&kp N4		&none	&none	&none	&none		&none		&none
+								&kp MINUS	&kp N8	&kp N9	&kp SPACE
 			>;
 		};
 	};
