@@ -23,6 +23,45 @@
             bindings = <&kp LPAR>, <&kp RPAR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        brace_pair: brace_pair {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LBRC>, <&kp RBRC>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        bracket_pair: bracket_pair {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT>, <&kp RBKT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        angle_pair: angle_pair {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LT>, <&kp GT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+
+		question_pair: question_pair {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp QUESTION>, <&kp RA(FSLH)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+		exclamation_pair: exclamation_pair {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp EXCLAMATION>, <&kp RA(N1)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+		currency_pair: currency_pair {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOLLAR>, <&kp RA(N1=5)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
     };
 	combos {
 		compatible = "zmk,combos";
@@ -95,6 +134,12 @@
 		combo_at {
 			bindings = <&kp AT>;
 			key-positions = <13 23>;
+			require-prior-idle-ms = <DEFAULT_IDLE>;
+			timeout-ms = <VERT_TIMEOUT>;
+		};
+		combo_currency {
+			bindings = <&currency_pair>;
+			key-positions = <14 24>;
 			require-prior-idle-ms = <DEFAULT_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
@@ -183,25 +228,25 @@
 			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_parentesis {
-			bindings = <&kp LPAR>;
+			bindings = <&parent_pair>;
 			key-positions = <12 23>;
 			require-prior-idle-ms = <DEFAULT_IDLE>;
 			timeout-ms = <DIAG_TIMEOUT>;
 		};
 		combo_braces {
-			bindings = <&kp LBRC>;
+			bindings = <&brace_pair>;
 			key-positions = <9 18>;
 			require-prior-idle-ms = <DEFAULT_IDLE>;
 			timeout-ms = <DIAG_TIMEOUT>;
 		};
 		combo_brackets {
-			bindings = <&kp LBKT>;
+			bindings = <&bracket_pair>;
 			key-positions = <7 18>;
 			require-prior-idle-ms = <DEFAULT_IDLE>;
 			timeout-ms = <DIAG_TIMEOUT>;
 		};
 		combo_angles {
-			bindings = <&kp LT>;
+			bindings = <&angle_pair>;
 			key-positions = <8 17>;
 			require-prior-idle-ms = <DEFAULT_IDLE>;
 			timeout-ms = <DIAG_TIMEOUT>;
@@ -219,13 +264,13 @@
 			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_excl {
-			bindings = <&kp EXCLAMATION>;
+			bindings = <&exclamation_pair>;
 			key-positions = <5 13>;
 			require-prior-idle-ms = <DEFAULT_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_quest {
-			bindings = <&kp QUESTION>;
+			bindings = <&question_pair>;
 			key-positions = <0 8>;
 			require-prior-idle-ms = <DEFAULT_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
