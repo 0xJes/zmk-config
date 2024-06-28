@@ -8,7 +8,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
 
-#define VERTICAL_TIMEOUT 150
+#define VERT_TIMEOUT 150
+#define HORZ_TIMEOUT 150
+
 
 / {
 	combos {
@@ -32,13 +34,13 @@
 			bindings = <&kp Z>;
 			key-positions = <7 17>;
 			require-prior-idle-ms = <0>;
-			timeout-ms = <200>;
+			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_x {
 			bindings = <&kp X>;
 			key-positions = <9 19>;
 			require-prior-idle-ms = <0>;
-			timeout-ms = <200>;
+			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_enie {
 			bindings = <&kp RA(n)>;
@@ -86,14 +88,19 @@
 			bindings = <&kp AT>;
 			key-positions = <13 23>;
 			require-prior-idle-ms = <50>;
-			timeout-ms = <VERTICAL_TIMEOUT>;
+			timeout-ms = <VERT_TIMEOUT>;
 		};
-
-
-
-		plus {
-			bindings = <&kp KP_PLUS>;
+		combo_plus {
+			bindings = <&kp PLUS>;
 			key-positions = <11 21>;
+			require-prior-idle-ms = <50>;
+			timeout-ms = <VERT_TIMEOUT>;
+		};
+		combo_equal {
+			bindings = <&kp EQUAL>;
+			key-positions = <11 21>;
+			require-prior-idle-ms = <50>;
+			timeout-ms = <VERT_TIMEOUT>;
 		};
 
 		grv {
