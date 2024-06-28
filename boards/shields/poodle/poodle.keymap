@@ -6,7 +6,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 
 #define VERT_TIMEOUT 120
 #define HORZ_TIMEOUT 90
@@ -149,7 +148,7 @@
 		&kp B		&kp H		&kp G								&kp COMMA	&kp FSLH	&kp J
 &kp C	&mt LALT S	&mt LCTRL N	&lt 1 T		&kp K	&kp DOT			&lt 2 A		&mt RCTRL E	&mt LALT I	&kp M
 &kp P	&kp F		&kp L		&kp D		&kp V	&kp MINUS		&kp U		&kp O		&kp Y		&kp W
-								&sk LSHFT	&kp R	&mt RWIN SPACE	&sk RSHFT
+								&sk LSHFT	&mt RA(APOS) R	&mt RWIN SPACE	&sk RSHFT
 			>;
 		};
 		nav {
@@ -166,14 +165,6 @@
 &kp N3	&kp N2	&kp N1	&kp N0		&none	&none	&none	&kp PERIOD	&kp COMMA	&none
 &kp N7	&kp N6	&kp N5	&kp N4		&none	&none	&none	&none		&none		&none
 						&kp MINUS	&kp N8	&kp N9	&kp SPACE
-			>;
-		};
-		mouse {
-			bindings = <
-		&none	&none	&none						&none		&none	&none
-&none	&none	&none	&none	&none	&none		&none		&none	&none	&none
-&none	&none	&none	&none	&none	&none		&mkp MB4	&none	&none	&mkp MB5
-						&none	&none	&mkp MB1	&mkp MB2
 			>;
 		};
 	};
