@@ -16,7 +16,7 @@
 #define HORZ_IDLE 200
 #define ALPHA_IDLE 0
 #define DEF_IDLE 100
-#define HOME_IDLE 50
+#define HOME_IDLE 75
 
 / {
     behaviors {
