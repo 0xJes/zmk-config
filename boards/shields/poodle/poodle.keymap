@@ -39,6 +39,11 @@
             #binding-cells = <0>;
             bindings = <&kp G &kp RA(U)>;
         };
+		macro_triple_period: macro_triple_period {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PERIOD &kp PERIOD &KP PERIOD>;
+        };
     };
 
 
@@ -60,7 +65,7 @@
 			quick-release;
 			ignore-modifiers;
 		};
-        qu_q: qu_q {
+        holdtap_qu: holdtap_qu {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&macro_qu>, <&kp>;
@@ -119,7 +124,7 @@
 		tperiod: tperiod {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings = <&kp PERIOD>, <&kp PERIOD &kp PERIOD &kp PERIOD>;
+			bindings = <&kp PERIOD>, <&macro_triple_period>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 	};
@@ -137,7 +142,7 @@
 			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_qu {
-			bindings = <&qu_q Q Q> ;
+			bindings = <&holdtap_qu Q Q> ;
 			key-positions = <8 18>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
