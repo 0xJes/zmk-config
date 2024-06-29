@@ -123,7 +123,7 @@
 			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_qu {
-			bindings = <&qu q>;
+			bindings = <&qu Q>;
 			key-positions = <8 18>;
 			require-prior-idle-ms = <ALPHA_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
