@@ -29,7 +29,19 @@
             #binding-cells = <0>;
             bindings = <&kp A &kp U>;
         };
+		macro_gu: macro_gu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp U>;
+        };
+		macro_gu_diar: macro_gu_diar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp RA(U)>;
+        };
     };
+
+
 	behaviors {
 		hm: home_row_mod {
 			compatible = "zmk,behavior-hold-tap";
@@ -52,6 +64,12 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&macro_qu>, <&kp>;
+            tapping-term-ms = <200>;
+        };
+		holdtap_gu: holdtap_gu {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&macro_gu>, <&macro_gu_diar>;
             tapping-term-ms = <200>;
         };
 
@@ -123,16 +141,15 @@
 			key-positions = <8 18>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
+		combo_gu {
+			bindings = <&holdtap_gu G G>;
+			key-positions = <2 9>;
+			timeout-ms = <VERT_TIMEOUT>;
+		};
 		combo_au {
 			bindings = <&macro_au>;
 			key-positions = <12 22>;
 			timeout-ms = <VERT_TIMEOUT>;
-		};
-		combo_gu {
-			bindings = <&kp G &kp RA(U)>;
-			key-positions = <0 2>;
-			require-prior-idle-ms = <ALPHA_IDLE>;
-			timeout-ms = <HORZ_TIMEOUT>;
 		};
 		combo_enie {
 			bindings = <&kp RA(N)>;
@@ -222,11 +239,6 @@
 			timeout-ms = <HORZ_TIMEOUT>;
 		};
 // VERTICAL COMBOS
-		combo_at {
-			bindings = <&kp AT>;
-			key-positions = <13 23>;
-			timeout-ms = <VERT_TIMEOUT>;
-		};
 		combo_currency {
 			bindings = <&currency_pair>;
 			key-positions = <14 24>;
