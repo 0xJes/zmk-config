@@ -143,7 +143,7 @@
 		};
 		combo_esc {
 			bindings = <&kp ESCAPE>;
-			key-positions = <7 8>;
+			key-positions = <7 9>;
 			require-prior-idle-ms = <HOME_IDLE>;
 			timeout-ms = <50>;
 		};
