@@ -8,11 +8,12 @@
 #include <dt-bindings/zmk/keys.h>
 
 #define VERT_TIMEOUT 120
-#define HORZ_TIMEOUT 80
+#define HORZ_TIMEOUT 70
 #define DIAG_TIMEOUT 150
 #define HOME_TIMEOUT 50
 
 #define VERT_IDLE 0
+#define HORZ_IDLE 200
 #define ALPHA_IDLE 0
 #define DEF_IDLE 100
 
@@ -113,6 +114,12 @@
 			require-prior-idle-ms = <ALPHA_IDLE>;
 			timeout-ms = <HORZ_TIMEOUT>;
 		};
+		combo_au {
+			bindings = <&kp A &kp U>;
+			key-positions = <12 22>;
+			require-prior-idle-ms = <ALPHA_IDLE>;
+			timeout-ms = <HORZ_TIMEOUT>;
+		};
 
 // HORIZONTAL COMBOS ON HOME ROW
 		combo_bsp {
@@ -152,6 +159,12 @@
 			timeout-ms = <60>;
 		};
 // HORIZONTAL COMBOS
+		combo_hash {
+			bindings = <&kp HASH>;
+			key-positions = <18 19>;
+			require-prior-idle-ms = <HORZ_IDLE>;
+			timeout-ms = <HORZ_TIMEOUT>;
+		};
 		combo_caps_word {
 			bindings = <&caps_word>;
 			key-positions = <26 27>;
@@ -219,12 +232,7 @@
 			require-prior-idle-ms = <VERT_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
-		combo_hash {
-			bindings = <&kp HASH>;
-			key-positions = <12 22>;
-			require-prior-idle-ms = <VERT_IDLE>;
-			timeout-ms = <VERT_TIMEOUT>;
-		};
+
 		combo_asterisk {
 			bindings = <&kp STAR>;
 			key-positions = <4 13>;
