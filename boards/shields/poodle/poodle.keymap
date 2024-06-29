@@ -61,7 +61,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             flavor = "tap-preferred";
-            bindings = <&kp Q>, <&macro_q>;
+            bindings = <&kp Q &macro_q>;
         };
 // PAIRED SYMBOLS
 		parent_pair: parent_pair {
