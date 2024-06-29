@@ -52,7 +52,7 @@
 		macro_mouse_layer_hack: macro_mouse_layer_hack {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
-			bindings = <&kp D &lt 3 D>;
+			bindings = <&kp D &mo 3>;
 		};
 	};
 
