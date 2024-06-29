@@ -42,7 +42,7 @@
 		macro_triple_period: macro_triple_period {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp PERIOD &kp PERIOD &KP PERIOD>;
+            bindings = <&kp PERIOD &kp PERIOD &kp PERIOD>;
         };
     };
 
