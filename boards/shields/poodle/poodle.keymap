@@ -337,5 +337,13 @@
 								&kp MINUS	&kp N8	&kp N9	&kp SPACE
 			>;
 		};
+		mouse {
+			bindings = <
+		&none	&none	&none					&none	&none	&none
+&none	&none	&none	&none	&none	&none	&none	&none	&none	&none
+&none	&none	&none	&none	&none	&none	&none	&none	&none	&none
+						&none	&none	&none	&none
+			>;
+		};
 	};
 };
