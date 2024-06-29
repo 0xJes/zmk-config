@@ -320,7 +320,7 @@
 		&kp B		&kp H		&kp G						&kp COMMA	&kp FSLH	&kp J
 &kp C	&hm LALT S	&hm LCTRL N	&lt 1 T	&kp K	&tperiod	&lt 2 A		&hm RCTRL E	&hm LALT I	&kp M
 &kp P	&kp F		&kp L		&kp D	&kp V	&kp MINUS	&kp U		&kp O		&kp Y		&kp W
-								&ss LSHFT	&lt RA(APOS) R	&lt RWIN SPACE	&ss RSHFT
+								&ss LSHFT	&lt RA(APOS) R	&mt RWIN SPACE	&ss RSHFT
 			>;
 		};
 		nav {
