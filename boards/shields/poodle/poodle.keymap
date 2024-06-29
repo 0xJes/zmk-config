@@ -6,9 +6,9 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-#define VERT_TIMEOUT 120
-#define HORZ_TIMEOUT 70
-#define DIAG_TIMEOUT 150
+#define VERT_TIMEOUT 100
+#define HORZ_TIMEOUT 60
+#define DIAG_TIMEOUT 120
 #define HOME_TIMEOUT 50
 
 #define VERT_IDLE 0
@@ -299,13 +299,13 @@
 			require-prior-idle-ms = <DEF_IDLE>;
 			timeout-ms = <DIAG_TIMEOUT>;
 		};
-		combo_excl {
+		combo_exclamation {
 			bindings = <&exclamation_pair>;
 			key-positions = <5 13>;
 			require-prior-idle-ms = <DEF_IDLE>;
 			timeout-ms = <DIAG_TIMEOUT>;
 		};
-		combo_quest {
+		combo_question {
 			bindings = <&question_pair>;
 			key-positions = <0 8>;
 			require-prior-idle-ms = <DEF_IDLE>;
