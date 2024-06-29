@@ -23,6 +23,11 @@
             #binding-cells = <0>;
             bindings = <&kp Q &kp U>;
         };
+		macro_au: macro_au {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp U>;
+        };
     };
 	behaviors {
 		hm: home_row_mod {
@@ -102,11 +107,6 @@
 	combos {
 		compatible = "zmk,combos";
 // ALPHA COMBOS
-		combo_qu {
-			bindings = <&qu_q Q Q> ;
-			key-positions = <8 18>;
-			timeout-ms = <VERT_TIMEOUT>;
-		};
 		combo_z {
 			bindings = <&kp Z>;
 			key-positions = <7 17>;
@@ -117,8 +117,13 @@
 			key-positions = <9 19>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
+		combo_qu {
+			bindings = <&qu_q Q Q> ;
+			key-positions = <8 18>;
+			timeout-ms = <VERT_TIMEOUT>;
+		};
 		combo_au {
-			bindings = <&kp A &kp U>;
+			bindings = <&macro_au>;
 			key-positions = <12 22>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
