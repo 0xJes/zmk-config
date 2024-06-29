@@ -28,14 +28,6 @@
 			quick-tap-ms = <200>;
 			bindings = <&kp>, <&kp>;
 		};
-		tl: temp_layer {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <2>;
-			flavor = "tap-preferred";
-			tapping-term-ms = <200>;
-			quick-tap-ms = <200>;
-			bindings = <&kp>, <&kp>;
-		};
 		ss: sticky_shift {
 			compatible = "zmk,behavior-sticky-key";
 			#binding-cells = <1>;
@@ -326,9 +318,9 @@
 		base {
 			bindings = <
 		&kp B		&kp H		&kp G						&kp COMMA	&kp FSLH	&kp J
-&kp C	&hm LALT S	&hm LCTRL N	&tl 1 T	&kp K	&tperiod	&tl 2 A		&hm RCTRL E	&hm LALT I	&kp M
+&kp C	&hm LALT S	&hm LCTRL N	&lt 1 T	&kp K	&tperiod	&lt 2 A		&hm RCTRL E	&hm LALT I	&kp M
 &kp P	&kp F		&kp L		&kp D	&kp V	&kp MINUS	&kp U		&kp O		&kp Y		&kp W
-								&ss LSHFT	&tl RA(APOS) R	&tl RWIN SPACE	&ss RSHFT
+								&ss LSHFT	&lt RA(APOS) R	&lt RWIN SPACE	&ss RSHFT
 			>;
 		};
 		nav {
