@@ -3,7 +3,6 @@
  *
  * SPDX-License-Identifier: MIT
  */
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
@@ -19,78 +18,81 @@
 #define HOME_IDLE 75
 
 / {
-    behaviors {
-        hm: home_row_mod {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <250>;
-            quick-tap-ms = <200>;
-            bindings = <&kp>, <&kp>;
-        };
-
-    
-		sksft: sticky_shift {
-			compatible = "zmk,behavior-sticky-key";
-        	#binding-cells = <1>;
-       		bindings = <&kp>;
-    		release-after-ms = <2500>;
-    		quick-release;
-    		ignore-modifiers;
+	behaviors {
+		hm: home_row_mod {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "tap-preferred";
+			tapping-term-ms = <250>;
+			quick-tap-ms = <200>;
+			bindings = <&kp>, <&kp>;
 		};
-        parent_pair: parent_pair {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LPAR>, <&kp RPAR>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        brace_pair: brace_pair {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LBRC>, <&kp RBRC>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        bracket_pair: bracket_pair {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LBKT>, <&kp RBKT>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        angle_pair: angle_pair {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LT>, <&kp GT>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-
+		tl: temp_layer {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "tap-preferred";
+			tapping-term-ms = <200>;
+			quick-tap-ms = <200>;
+			bindings = <&kp>, <&kp>;
+		};
+		ss: sticky_shift {
+			compatible = "zmk,behavior-sticky-key";
+			#binding-cells = <1>;
+	   		bindings = <&kp>;
+			release-after-ms = <2500>;
+			quick-release;
+			ignore-modifiers;
+		};
+// PAIRED SYMBOLS
+		parent_pair: parent_pair {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp LPAR>, <&kp RPAR>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
+		brace_pair: brace_pair {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp LBRC>, <&kp RBRC>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
+		bracket_pair: bracket_pair {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp LBKT>, <&kp RBKT>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
+		angle_pair: angle_pair {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp LT>, <&kp GT>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
 		question_pair: question_pair {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp QUESTION>, <&kp RA(FSLH)>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp QUESTION>, <&kp RA(FSLH)>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
 		exclamation_pair: exclamation_pair {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp EXCLAMATION>, <&kp RA(N1)>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp EXCLAMATION>, <&kp RA(N1)>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
 		currency_pair: currency_pair {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DOLLAR>, <&kp RA(N5)>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp DOLLAR>, <&kp RA(N5)>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
 		tperiod: tperiod {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp PERIOD>, <&kp PERIOD &kp PERIOD &kp PERIOD>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-    };
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp PERIOD>, <&kp PERIOD &kp PERIOD &kp PERIOD>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
+	};
 	combos {
 		compatible = "zmk,combos";
 // ALPHA COMBOS
@@ -148,7 +150,7 @@
 			bindings = <&kp RET>;
 			key-positions = <7 8>;
 			require-prior-idle-ms = <HOME_IDLE>;
-			timeout-ms = <100>;
+			timeout-ms = <70>;
 		};
 		combo_esc {
 			bindings = <&kp ESCAPE>;
@@ -322,10 +324,10 @@
 		compatible = "zmk,keymap";
 		base {
 			bindings = <
-		&kp B		&kp H		&kp G								&kp COMMA	&kp FSLH	&kp J
-&kp C	&hm LALT S	&hm LCTRL N	&lt 1 T		&kp K	&tperiod		&lt 2 A		&hm RCTRL E	&hm LALT I	&kp M
-&kp P	&kp F		&kp L		&kp D		&kp V	&kp MINUS		&kp U		&kp O		&kp Y		&kp W
-								&sksft LSHIFT	&mt RA(APOS) R	&mt RWIN SPACE	&sksft RSHIFT
+		&kp B		&kp H		&kp G						&kp COMMA	&kp FSLH	&kp J
+&kp C	&hm LALT S	&hm LCTRL N	&tl 1 T	&kp K	&tperiod	&tl 2 A		&hm RCTRL E	&hm LALT I	&kp M
+&kp P	&kp F		&kp L		&kp D	&kp V	&kp MINUS	&kp U		&kp O		&kp Y		&kp W
+								&ss LSHFT	&tl RA(APOS) R	&tl RWIN SPACE	&ss RSHFT
 			>;
 		};
 		nav {
