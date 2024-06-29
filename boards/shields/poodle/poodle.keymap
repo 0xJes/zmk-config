@@ -188,25 +188,31 @@
 		};
 
 // HORIZONTAL COMBOS ON HOME ROW
-		combo_bsp {
+		combo_bootloader {
+			bindings = <&bootloader>;
+			key-positions = <1 2 3 4>;
+			require-prior-idle-ms = <HOME_IDLE>;
+			timeout-ms = <100>;
+		};
+		combo_backspace {
 			bindings = <&kp BACKSPACE>;
 			key-positions = <13 14>;
 			require-prior-idle-ms = <HOME_IDLE>;
 			timeout-ms = <150>;
 		};
-		combo_del {
+		combo_delete {
 			bindings = <&kp DELETE>;
 			key-positions = <14 15>;
 			require-prior-idle-ms = <HOME_IDLE>;
 			timeout-ms = <120>;
 		};
-		combo_ret {
+		combo_return {
 			bindings = <&kp RET>;
 			key-positions = <7 8>;
 			require-prior-idle-ms = <HOME_IDLE>;
 			timeout-ms = <70>;
 		};
-		combo_esc {
+		combo_escape {
 			bindings = <&kp ESCAPE>;
 			key-positions = <7 9>;
 			require-prior-idle-ms = <HOME_IDLE>;
@@ -237,7 +243,7 @@
 			require-prior-idle-ms = <HORZ_IDLE>;
 			timeout-ms = <HORZ_TIMEOUT>;
 		};
-		combo_semi {
+		combo_semicolon {
 			bindings = <&kp SEMI>;
 			key-positions = <18 19>;
 			require-prior-idle-ms = <HORZ_IDLE>;
