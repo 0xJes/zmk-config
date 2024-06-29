@@ -20,10 +20,10 @@
 
 / {
     behaviors {
-		 sksft: sticky_shift {
+		sksft: sticky_shift {
 			compatible = "zmk,behavior-sticky-key";
         	#binding-cells = <1>;
-       		bindings = <&kp LSHFT>;
+       		bindings = <&kp LSHIFT>;
     		release-after-ms = <2500>;
     		quick-release;
     		ignore-modifiers;
