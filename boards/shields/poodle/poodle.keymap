@@ -392,12 +392,15 @@
 					&kp MINUS	&kp N8						&kp N9	&kp SPACE
 			>;
 		};
-		mouse { // Mouse movements implemented in Kanata
+		mouse {
+// Mouse movements handled by Kanata on OS side
+// entering this layer holds D for layer-while-held in Kanata
+// kps here are mapped for missing zmk mouse functionality
 			bindings = <
-		&none		&none		&none							&none		&none	&none
-&none	&none		&none		&none	&none		&none		&none		&none	&none	&none
-&none	&kp LALT	&kp LCTRL	&none	&none		&none		&mkp MB4	&none	&none	&mkp MB5
-					&none		&mkp RCLK						&mkp LCLK	&mkp MCLK
+		&none		&none		&none					&none		&kp DOWM	&kp UP
+&none	&none		&none		&none	&none	&none	&kp A		&kp E		&kp I	&kp M
+&none	&kp LALT	&kp LCTRL	&none	&none	&none	&mkp MB4	&kp O		&kp Y	&mkp MB5
+					&none		&mkp RCLK				&mkp LCLK	&mkp MCLK
 			>;
 		};
 	};
