@@ -192,7 +192,7 @@
 			bindings = <&bootloader>;
 			key-positions = <1 2 3 4>;
 			require-prior-idle-ms = <HOME_IDLE>;
-			timeout-ms = <100>;
+			timeout-ms = <70>;
 		};
 		combo_backspace {
 			bindings = <&kp BACKSPACE>;
@@ -392,10 +392,10 @@
 		};
 		num {
 			bindings = <
-		&kp FSLH	&kp STAR	&kp PLUS					&none	&none		&none
-&kp N3	&kp N2		&kp N1		&kp N0		&none	&none	&none	&kp PERIOD	&kp COMMA	&none
-&kp N7	&kp N6		&kp N5		&kp N4		&none	&none	&none	&none		&none		&none
-					&kp MINUS	&kp N8						&kp N9	&kp SPACE
+		&kp FSLH	&kp STAR	&kp PLUS					&none		&none		&none
+&kp N4	&kp N3		&kp N2		&kp N1		&none	&none	&none		&kp PERIOD	&kp COMMA	&kp MINUS
+&kp N8	&kp N7		&kp N6		&kp N5		&none	&none	&none		&none		&none		&none
+					&kp N9  	&kp N0						&kp SPACE	&none
 			>;
 		};
 		mouse {
