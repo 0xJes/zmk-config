@@ -17,6 +17,13 @@
 #define HOME_IDLE 75
 
 / {
+    macros {
+        macro_qu: macro_qu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Q &kp U>;
+        };
+    };
 	behaviors {
 		hm: home_row_mod {
 			compatible = "zmk,behavior-hold-tap";
@@ -35,6 +42,13 @@
 			quick-release;
 			ignore-modifiers;
 		};
+        qu_q: qu_q {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&macro_qu>, <&kp>;
+            tapping-term-ms = <200>;
+        };
+
 // PAIRED SYMBOLS
 		parent_pair: parent_pair {
 			compatible = "zmk,behavior-mod-morph";
@@ -89,7 +103,7 @@
 		compatible = "zmk,combos";
 // ALPHA COMBOS
 		combo_qu {
-			bindings = <&kp Q>,<&kp U> ;
+			bindings = <&qu_q Q Q> ;
 			key-positions = <8 18>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
