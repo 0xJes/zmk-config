@@ -6,12 +6,11 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-#define VERT_TIMEOUT 100
+#define VERT_TIMEOUT 80
 #define HORZ_TIMEOUT 60
 #define DIAG_TIMEOUT 120
 #define HOME_TIMEOUT 50
 
-#define VERT_IDLE 0
 #define HORZ_IDLE 200
 #define ALPHA_IDLE 0
 #define DEF_IDLE 100
@@ -89,39 +88,35 @@
 	combos {
 		compatible = "zmk,combos";
 // ALPHA COMBOS
-		combo_gu {
-			bindings = <&kp G &kp RA(U)>;
-			key-positions = <0 2>;
-			require-prior-idle-ms = <ALPHA_IDLE>;
-			timeout-ms = <VERT_TIMEOUT>;
-		};
 		combo_qu {
 			bindings = <&kp Q>,<&kp U> ;
 			key-positions = <8 18>;
-			require-prior-idle-ms = <ALPHA_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_z {
 			bindings = <&kp Z>;
 			key-positions = <7 17>;
-			require-prior-idle-ms = <ALPHA_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_x {
 			bindings = <&kp X>;
 			key-positions = <9 19>;
-			require-prior-idle-ms = <ALPHA_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
-		};
-		combo_enie {
-			bindings = <&kp RA(N)>;
-			key-positions = <17 19>;
-			require-prior-idle-ms = <ALPHA_IDLE>;
-			timeout-ms = <HORZ_TIMEOUT>;
 		};
 		combo_au {
 			bindings = <&kp A &kp U>;
 			key-positions = <12 22>;
+			timeout-ms = <VERT_TIMEOUT>;
+		};
+		combo_gu {
+			bindings = <&kp G &kp RA(U)>;
+			key-positions = <0 2>;
+			require-prior-idle-ms = <ALPHA_IDLE>;
+			timeout-ms = <HORZ_TIMEOUT>;
+		};
+		combo_enie {
+			bindings = <&kp RA(N)>;
+			key-positions = <17 19>;
 			require-prior-idle-ms = <ALPHA_IDLE>;
 			timeout-ms = <HORZ_TIMEOUT>;
 		};
@@ -204,62 +199,51 @@
 		combo_at {
 			bindings = <&kp AT>;
 			key-positions = <13 23>;
-			require-prior-idle-ms = <DEF_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_currency {
 			bindings = <&currency_pair>;
 			key-positions = <14 24>;
-			require-prior-idle-ms = <DEF_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_plus {
 			bindings = <&kp PLUS>;
 			key-positions = <11 21>;
-			require-prior-idle-ms = <VERT_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_grv {
 			bindings = <&kp GRAVE>;
 			key-positions = <10 20>;
-			require-prior-idle-ms = <VERT_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_and {
 			bindings = <&kp AMPERSAND>;
 			key-positions = <5 14>;
-			require-prior-idle-ms = <VERT_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_or {
 			bindings = <&kp PIPE>;
 			key-positions = <0 7>;
-			require-prior-idle-ms = <VERT_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
-
 		combo_asterisk {
 			bindings = <&kp STAR>;
 			key-positions = <4 13>;
-			require-prior-idle-ms = <VERT_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_bslash {
 			bindings = <&kp BSLH>;
 			key-positions = <1 8>;
-			require-prior-idle-ms = <VERT_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_semi {
 			bindings = <&kp SEMI>;
 			key-positions = <2 9>;
-			require-prior-idle-ms = <VERT_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_colon {
 			bindings = <&kp COLON>;
 			key-positions = <3 12>;
-			require-prior-idle-ms = <VERT_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
 // DIAGONAL COMBOS
