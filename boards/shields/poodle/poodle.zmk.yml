@@ -2,7 +2,7 @@ file_format: "1"
 id: poodle
 name: Poodle
 type: shield
-url: https://github.com/
+url: https://github.com/0xJes/keyboards
 requires: [nice_nano_v2]
 features:
   - keys
