@@ -324,7 +324,7 @@
 		&kp B		&kp H		&kp G						&kp COMMA	&kp FSLH	&kp J
 &kp C	&hm LALT S	&hm LCTRL N	&lt 1 T	&kp K	&tperiod	&lt 2 A		&hm RCTRL E	&hm LALT I	&kp M
 &kp P	&kp F		&kp L		&kp D	&kp V	&kp MINUS	&kp U		&kp O		&kp Y		&kp W
-								&ss LSHFT	&lt RA(APOS) R	&mt RWIN SPACE	&ss RSHFT
+					&ss LSHFT	&lt RA(APOS) R				&mt RWIN SPACE	&ss RSHFT
 			>;
 		};
 		nav {
@@ -332,7 +332,7 @@
 		&none		&none		&none								&kp LC(C)	&kp LC(V)	&kp LC(X)
 &none	&kp LALT	&kp LCTRL	&none		&none	&kp LC(PLUS)	&kp LEFT	&kp DOWN	&kp UP		&kp RIGHT
 &none	&none		&none		&none		&none	&kp LC(MINUS)	&kp HOME	&kp PG_DN	&kp PG_UP	&kp END
-								&kp LSHFT	&none	&kp LC(Z)		&kp LC(Y)
+					&kp LSHFT	&none								&kp LC(Z)	&kp LC(Y)
 			>;
 		};
 		num {
@@ -340,15 +340,15 @@
 		&kp FSLH	&kp STAR	&kp PLUS					&none	&none		&none
 &kp N3	&kp N2		&kp N1		&kp N0		&none	&none	&none	&kp PERIOD	&kp COMMA	&none
 &kp N7	&kp N6		&kp N5		&kp N4		&none	&none	&none	&none		&none		&none
-								&kp MINUS	&kp N8	&kp N9	&kp SPACE
+					&kp MINUS	&kp N8						&kp N9	&kp SPACE
 			>;
 		};
-		mouse {
+		mouse { // Mouse movements implemented in Kanata
 			bindings = <
-		&none	&none	&none					&none	&none	&none
-&none	&none	&none	&none	&none	&none	&none	&none	&none	&none
-&none	&none	&none	&none	&none	&none	&none	&none	&none	&none
-						&none	&none	&none	&none
+		&none		&none		&none							&none		&none	&none
+&none	&none		&none		&none	&none		&none		&none		&none	&none	&none
+&none	&kp LALT	&kp LCTRL	&none	&none		&none		&mkp MB4	&none	&none	&mkp MB5
+					&none		&mkp RCLK						&mkp LCLK	&mkp MCLK
 			>;
 		};
 	};
