@@ -18,6 +18,19 @@
 #define HOME_IDLE 75
 
 / {
+// MACROS
+    macros {
+        macro_q: macro_q {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp Q>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp U>
+                ;
+        };
+    };
 	behaviors {
 		hm: home_row_mod {
 			compatible = "zmk,behavior-hold-tap";
@@ -43,6 +56,13 @@
 			quick-release;
 			ignore-modifiers;
 		};
+		qu: qu
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&macro_q>;
+        };
 // PAIRED SYMBOLS
 		parent_pair: parent_pair {
 			compatible = "zmk,behavior-mod-morph";
@@ -103,7 +123,7 @@
 			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_qu {
-			bindings = <&kp Q &kp U>;
+			bindings = <&qu q>;
 			key-positions = <8 18>;
 			require-prior-idle-ms = <ALPHA_IDLE>;
 			timeout-ms = <VERT_TIMEOUT>;
