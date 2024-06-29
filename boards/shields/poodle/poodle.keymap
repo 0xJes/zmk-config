@@ -185,6 +185,12 @@
 			require-prior-idle-ms = <HORZ_IDLE>;
 			timeout-ms = <HORZ_TIMEOUT>;
 		};
+		combo_at {
+			bindings = <&kp AT>;
+			key-positions = <23 23>;
+			require-prior-idle-ms = <HORZ_IDLE>;
+			timeout-ms = <HORZ_TIMEOUT>;
+		};
 		combo_caps_word {
 			bindings = <&caps_word>;
 			key-positions = <26 27>;
