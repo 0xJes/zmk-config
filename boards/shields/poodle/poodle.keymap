@@ -18,33 +18,43 @@
 #define HOME_IDLE 75
 
 / {
-    macros {
-        macro_qu: macro_qu {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp Q &kp U>;
-        };
+	macros {
+		macro_qu: macro_qu {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp Q &kp U>;
+		};
 		macro_au: macro_au {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp A &kp U>;
-        };
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp A &kp U>;
+		};
+		macro_ua: macro_ua {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp U &kp A>;
+		};
 		macro_gu: macro_gu {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp G &kp U>;
-        };
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp G &kp U>;
+		};
 		macro_gu_diar: macro_gu_diar {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp G &kp RA(U)>;
-        };
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp G &kp RA(U)>;
+		};
 		macro_triple_period: macro_triple_period {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp PERIOD &kp PERIOD &kp PERIOD>;
-        };
-    };
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp PERIOD &kp PERIOD &kp PERIOD>;
+		};
+		macro_triple_period: macro_triple_period {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp PERIOD &kp PERIOD &kp PERIOD>;
+		};
+	};
 
 
 	behaviors {
@@ -60,23 +70,23 @@
 		ss: sticky_shift {
 			compatible = "zmk,behavior-sticky-key";
 			#binding-cells = <1>;
-	   		bindings = <&kp>;
+			bindings = <&kp>;
 			release-after-ms = <2500>;
 			quick-release;
 			ignore-modifiers;
 		};
-        holdtap_qu: holdtap_qu {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            bindings = <&macro_qu>, <&kp>;
-            tapping-term-ms = <200>;
-        };
+		holdtap_qu: holdtap_qu {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			bindings = <&macro_qu>, <&kp>;
+			tapping-term-ms = <200>;
+		};
 		holdtap_gu: holdtap_gu {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            bindings = <&macro_gu>, <&macro_gu_diar>;
-            tapping-term-ms = <200>;
-        };
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			bindings = <&macro_gu>, <&macro_gu_diar>;
+			tapping-term-ms = <200>;
+		};
 
 // PAIRED SYMBOLS
 		parent_pair: parent_pair {
@@ -154,6 +164,11 @@
 		combo_au {
 			bindings = <&macro_au>;
 			key-positions = <12 22>;
+			timeout-ms = <VERT_TIMEOUT>;
+		};
+		combo_ua {
+			bindings = <&macro_ua>;
+			key-positions = <3 12>;
 			timeout-ms = <VERT_TIMEOUT>;
 		};
 		combo_enie {
