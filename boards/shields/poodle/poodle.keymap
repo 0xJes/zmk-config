@@ -5,6 +5,7 @@
  */
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 #define VERT_TIMEOUT 80
 #define HORZ_TIMEOUT 60
