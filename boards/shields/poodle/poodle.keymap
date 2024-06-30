@@ -1,7 +1,7 @@
-#include "zmk-helpers/helper.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
+#include "zmk-helpers/helper.h"
 
 #define TO_V 100
 #define TO_H 60
@@ -36,15 +36,6 @@
 				, <&macro_release &mo MACRO_PLACEHOLDER>
 				;
 		};
-
-		ZMK_MACRO(macro_qu, bindings = <&kp Q &kp U>;)
-		ZMK_MACRO(macro_au, bindings = <&kp A &kp U>;)
-		ZMK_MACRO(macro_ua, bindings = <&kp U &kp A>;)
-		ZMK_MACRO(macro_gu, bindings = <&kp G &kp U>;)
-		ZMK_MACRO(macro_gu_diaresis, bindings = <&kp G &kp RA(U)>;)
-		ZMK_MACRO(macro_triple_period, bindings = <&kp PERIOD &kp PERIOD &kp PERIOD>;)
-		ZMK_MACRO(macro_path_here, bindings = <&kp PERIOD &kp FSLH &kp STAR>;)
-		ZMK_MACRO(macro_excl_quest, bindings = <&kp EXCLAMATION &kp QUESTION>;)
 	};
 
 	behaviors {
@@ -155,34 +146,14 @@
 	};
 };
 
-ZMK_LAYER(base,
-		&kp B		&kp H			&kp G							&comma		&slash			&kp J
-&kp C	&lhm LALT S	&lhm LCTRL N	&lt 1 T		&kp K	&tperiod	&lt 2 A		&rhm RCTRL E	&rhm LALT I	&kp M
-&kp P	&kp F		&kp L			&lm 3 D		&kp V	&kp MINUS	&kp U		&kp O			&kp Y		&kp W
-					&ss LSHFT		&lt RA(APOS) R					&mt RWIN SPACE	&ss RSHFT
-)
-
-ZMK_LAYER(navigation,
-			&none		&none		&none								&kp LC(C)	&kp LC(V)	&kp LC(X)
-&kp LALT	&kp LCTRL	&kp LSHFT	&none		&none	&kp LC(PLUS)	&kp LEFT	&kp DOWN	&kp UP		&kp RIGHT
-&none		&none		&none		&none		&none	&kp LC(MINUS)	&kp HOME	&kp PG_DN	&kp PG_UP	&kp END
-						&kp LC(Z)	&kp LC(Y)					 		&kp SPACE	&kp RSHFT
-)
-
-ZMK_LAYER(numbers,
-		&kp FSLH	&kp STAR	&kp PLUS					&none		&none		&none
-&kp N4	&kp N3		&kp N2		&kp N1		&none	&none	&none		&kp PERIOD	&kp COMMA	&kp MINUS
-&kp N8	&kp N7		&kp N6		&kp N5		&none	&none	&none		&none		&none		&none
-					&kp N9  	&kp N0						&kp SPACE	&none
-)
-
-ZMK_LAYER(mouse,
-		&none		&none		&none					&none		&kp DOWN	&kp UP
-&none	&none		&none		&none	&none	&none	&kp A		&kp E		&kp I	&kp M
-&none	&kp LALT	&kp LCTRL	&none	&none	&none	&mkp MB4	&kp O		&kp Y	&mkp MB5
-					&none		&mkp RCLK				&mkp LCLK	&mkp MCLK
-)
-
+ZMK_MACRO(macro_qu, bindings = <&kp Q &kp U>;)
+ZMK_MACRO(macro_au, bindings = <&kp A &kp U>;)
+ZMK_MACRO(macro_ua, bindings = <&kp U &kp A>;)
+ZMK_MACRO(macro_gu, bindings = <&kp G &kp U>;)
+ZMK_MACRO(macro_gu_diaresis, bindings = <&kp G &kp RA(U)>;)
+ZMK_MACRO(macro_triple_period, bindings = <&kp PERIOD &kp PERIOD &kp PERIOD>;)
+ZMK_MACRO(macro_path_here, bindings = <&kp PERIOD &kp FSLH &kp STAR>;)
+ZMK_MACRO(macro_excl_quest, bindings = <&kp EXCLAMATION &kp QUESTION>;)
 
 /*		0	1	2		 		3	4	5
 	6	7	8	9	10		11	12	13	14	15
@@ -198,7 +169,6 @@ ZMK_COMBO(qu,           &kp Q,	8 18,	LAYERS, TO_V)
 ZMK_COMBO(au,       &macro_au, 12 22,	LAYERS,	TO_V)
 ZMK_COMBO(ua,       &macro_ua,  3 12,	LAYERS,	TO_V)
 // ZMK_COMBO(enie,     &kp RA(N), 7 19>,	COMBO_LAYERS,   HORZ_TIMEOUT, 50)
-
 // Vertical combos
 ZMK_COMBO(plus,      &kp PLUS, 11 21, LAYERS, TO_V)
 ZMK_COMBO(grave,    &kp GRAVE, 10 20, LAYERS, TO_V)
@@ -230,7 +200,35 @@ ZMK_COMBO(quote,      &kp SQT,   2 8, LAYERS, TO_D, DEF_IDLE)
 ZMK_COMBO(dquote,     &kp DQT,  3 13, LAYERS, TO_D, DEF_IDLE)
 ZMK_COMBO(parent, &parentesis, 12 23, LAYERS, TO_D, DEF_IDLE)
 ZMK_COMBO(braces,     &braces,  9 18, LAYERS, TO_D, DEF_IDLE)
-ZMK_COMBO(brackets, &brackets, 14 23, LAYERS, TO_D, DEF_IDLE)
+ZMK_COMBO(brackets, &brackets, 1$4 23, LAYERS, TO_D, DEF_IDLE)
 ZMK_COMBO(angles,     &angles,  7 18, LAYERS, TO_D, DEF_IDLE)
 ZMK_COMBO(excl,         &excl,  5 13, LAYERS, TO_D, DEF_IDLE)
 ZMK_COMBO(quest,       &quest,  0  8, LAYERS, TO_D, DEF_IDLE)
+
+ZMK_LAYER(base,
+		&kp B		&kp H			&kp G							&comma		&slash			&kp J
+&kp C	&lhm LALT S	&lhm LCTRL N	&lt 1 T		&kp K	&tperiod	&lt 2 A		&rhm RCTRL E	&rhm LALT I	&kp M
+&kp P	&kp F		&kp L			&lm 3 D		&kp V	&kp MINUS	&kp U		&kp O			&kp Y		&kp W
+					&ss LSHFT		&lt RA(APOS) R					&mt RWIN SPACE	&ss RSHFT
+)
+
+ZMK_LAYER(navigation,
+			&none		&none		&none								&kp LC(C)	&kp LC(V)	&kp LC(X)
+&kp LALT	&kp LCTRL	&kp LSHFT	&none		&none	&kp LC(PLUS)	&kp LEFT	&kp DOWN	&kp UP		&kp RIGHT
+&none		&none		&none		&none		&none	&kp LC(MINUS)	&kp HOME	&kp PG_DN	&kp PG_UP	&kp END
+						&kp LC(Z)	&kp LC(Y)					 		&kp SPACE	&kp RSHFT
+)
+
+ZMK_LAYER(numbers,
+		&kp FSLH	&kp STAR	&kp PLUS					&none		&none		&none
+&kp N4	&kp N3		&kp N2		&kp N1		&none	&none	&none		&kp PERIOD	&kp COMMA	&kp MINUS
+&kp N8	&kp N7		&kp N6		&kp N5		&none	&none	&none		&none		&none		&none
+					&kp N9  	&kp N0						&kp SPACE	&none
+)
+
+ZMK_LAYER(mouse,
+		&none		&none		&none					&none		&kp DOWN	&kp UP
+&none	&none		&none		&none	&none	&none	&kp A		&kp E		&kp I	&kp M
+&none	&kp LALT	&kp LCTRL	&none	&none	&none	&mkp MB4	&kp O		&kp Y	&mkp MB5
+					&none		&mkp RCLK				&mkp LCLK	&mkp MCLK
+)
