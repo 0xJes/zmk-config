@@ -93,33 +93,15 @@
 			bindings = <&kp QUESTION>, <&kp RA(FSLH)>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
-		excl: exclamation_pair {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp EXCLAMATION>, <&kp RA(N1)>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
-		currency: currency_pair {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp DOLLAR>, <&kp RA(N5)>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
-		tperiod: tperiod {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp PERIOD>, <&macro_triple_period>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
-		slash: slash {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp FSLH>, <&macro_path_here>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
 	};
 };
-ZMK_MOD_MORPH(comma, bindings = <&kp COMMA>, <&macro_excl_quest>; mods = <(MOD_LSFT|MOD_RSFT)>;)
+
+ZMK_MOD_MORPH(comma,    bindings = <&kp COMMA>,  <&macro_excl_quest>;    mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(slash,    bindings = <&kp FSLH>,   <&macro_path_here>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(tperiod,  bindings = <&kp PERIOD>, <&macro_triple_period>; mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(currency, bindings = <&kp DOLLAR>, <&kp RA(N5)>;           mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(excl,     bindings = <&kp EXCLAMATION>, <&kp RA(N1)>; mods = <(MOD_LSFT|MOD_RSFT)>;)
+
 
 ZMK_MACRO(macro_qu, bindings = <&kp Q &kp U>;)
 ZMK_MACRO(macro_au, bindings = <&kp A &kp U>;)
@@ -129,7 +111,6 @@ ZMK_MACRO(macro_gu_diaresis, bindings = <&kp G &kp RA(U)>;)
 ZMK_MACRO(macro_triple_period, bindings = <&kp PERIOD &kp PERIOD &kp PERIOD>;)
 ZMK_MACRO(macro_path_here, bindings = <&kp PERIOD &kp FSLH &kp STAR>;)
 ZMK_MACRO(macro_excl_quest, bindings = <&kp EXCLAMATION &kp QUESTION>;)
-
 ZMK_MACRO_TWO_PARAM(lm,
 	wait-ms = <0>;
 	tap-ms = <0>;
@@ -204,7 +185,7 @@ ZMK_LAYER(base,
 )
 
 ZMK_LAYER(navigation,
-			&none		&none		&none								&kp LC(C)	&kp LC(V)	&kp LC(X)
+			&none		&none		&none								&kp LC(V)	&kp LC(C)	&kp LC(X)
 &kp LALT	&kp LCTRL	&kp LSHFT	&none		&none	&kp LC(PLUS)	&kp LEFT	&kp DOWN	&kp UP		&kp RIGHT
 &none		&none		&none		&none		&none	&kp LC(MINUS)	&kp HOME	&kp PG_DN	&kp PG_UP	&kp END
 						&kp LC(Z)	&kp LC(Y)					 		&kp SPACE	&kp RSHFT
