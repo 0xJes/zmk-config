@@ -12,8 +12,7 @@
 #define ALPHA_IDLE 0
 #define DEF_IDLE 100
 #define HOME_IDLE 75
-#define COMBO_LAYERS 0 1 2 3
-
+#define COMBO_LAYERS 0 1 2
 
 / {
 	macros {
@@ -43,7 +42,6 @@
 		ZMK_MACRO(macro_triple_period, bindings = <&kp PERIOD &kp PERIOD &kp PERIOD>;)
 		ZMK_MACRO(macro_path_here, bindings = <&kp PERIOD &kp FSLH &kp STAR>;)
 		ZMK_MACRO(macro_excl_quest, bindings = <&kp EXCLAMATION &kp QUESTION>;)
-		ZMK_MACRO(macro_mouse_layer_hack, bindings = <&kp D &mo 3>;)
 	};
 
 	behaviors {
@@ -68,15 +66,6 @@
 			hold-trigger-key-positions = <0 1 2 6 7 8 9 10 16 17 18 19 20 26 27>;
 			hold-trigger-on-release;
 			bindings = <&kp>, <&kp>;
-		};
-		mse_l: mouse_layer_hack {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <2>;
-			flavor = "hold-preferred";
-			require-prior-idle-ms = <100>;
-			tapping-term-ms = <250>;
-			quick-tap-ms = <200>;
-			bindings = <&kp>, <&macro_mouse_layer_hack>;
 		};
 		ss: sticky_shift {
 			compatible = "zmk,behavior-sticky-key";
@@ -243,7 +232,6 @@ ZMK_COMBO(z,            &kp Z,	7 17,	COMBO_LAYERS,	VERT_TIMEOUT)
 ZMK_COMBO(x,            &kp X,	9 19,	COMBO_LAYERS,	VERT_TIMEOUT)
 // ZMK_COMBO(qu,   &holdtap_qu Q,	8 18,	COMBO_LAYERS,   VERT_TIMEOUT)
 ZMK_COMBO(qu,           &kp Q,	8 18,	COMBO_LAYERS,   VERT_TIMEOUT)
-
 // ZMK_COMBO(gu, &holdtap_gu G G,   2 9,	COMBO_LAYERS,	VERT_TIMEOUT)
 ZMK_COMBO(au,       &macro_au, 12 22,	COMBO_LAYERS,	VERT_TIMEOUT)
 ZMK_COMBO(ua,       &macro_ua,  3 12,	COMBO_LAYERS,	VERT_TIMEOUT)
