@@ -30,10 +30,10 @@
 		)
 		ZMK_MACRO(macro_gu,
 			bindings = <&kp G &kp U>;
-		};
+		)
 		ZMK_MACRO(macro_gu_diaresis,
 			bindings = <&kp G &kp RA(U)>;
-		};
+		)
 		ZMK_MACRO(macro_triple_period,
 			bindings = <&kp PERIOD &kp PERIOD &kp PERIOD>;
 		)
@@ -43,7 +43,7 @@
 		ZMK_MACRO(macro_excl_quest,
 			bindings = <&kp EXCLAMATION &kp QUESTION>;
 		)
-		ZMK_MACRO(macro_mouse_layer_hack ,
+		ZMK_MACRO(macro_mouse_layer_hack,
 			bindings = <&kp D &mo 3>;
 		)
 	};
@@ -57,6 +57,7 @@
 			tapping-term-ms = <250>;
 			quick-tap-ms = <200>;
 			hold-trigger-key-positions = <3 4 5 11 12 13 14 15 21 22 23 24 25 28 29>;
+			hold-trigger-on-release;
 			bindings = <&kp>, <&kp>;
 		};
 		rhm: right_home_row_mod {
@@ -67,6 +68,7 @@
 			tapping-term-ms = <250>;
 			quick-tap-ms = <200>;
 			hold-trigger-key-positions = <0 1 2 6 7 8 9 10 16 17 18 19 20 26 27>;
+			hold-trigger-on-release;
 			bindings = <&kp>, <&kp>;
 		};
 		mse_l: mouse_layer_hack {
