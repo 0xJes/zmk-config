@@ -57,7 +57,7 @@
 		macro_excl_quest: macro_excl_quest {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
-			bindings = <&kp EXCLAMATION &kp QUESTION &kp>;
+			bindings = <&kp EXCLAMATION &kp QUESTION>;
 		};
 		macro_mouse_layer_hack: macro_mouse_layer_hack {
 			compatible = "zmk,behavior-macro";
