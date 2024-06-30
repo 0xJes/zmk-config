@@ -13,6 +13,10 @@
 #define HOME_IDLE 75
 #define LAYERS 0 1 2
 
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>;
+};
+
 / {
 	macros {
 		lm: lm {
