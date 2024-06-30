@@ -20,8 +20,9 @@ ZMK_COMBO(z,            &kp Z,	7 17,	COMBO_LAYERS,	VERT_TIMEOUT)
 ZMK_COMBO(x,            &kp X,	9 19,	COMBO_LAYERS,	VERT_TIMEOUT)
 ZMK_COMBO(qu, &holdtap_qu Q Q,	8 18,	COMBO_LAYERS,   VERT_TIMEOUT)
 ZMK_COMBO(gu, &holdtap_gu G G,   2 9,	COMBO_LAYERS,	VERT_TIMEOUT)
-ZMK_COMBO(au,      &macro_au , 12 22,	COMBO_LAYERS,	VERT_TIMEOUT)
-
+ZMK_COMBO(au,       &macro_au, 12 22,	COMBO_LAYERS,	VERT_TIMEOUT)
+ZMK_COMBO(ua,       &macro_ua,  3 12,	COMBO_LAYERS,	VERT_TIMEOUT)
+ZMK_COMBO(enie,     &kp RA(N), 7 19>,	COMBO_LAYERS,   HORZ_TIMEOUT, 50)
 
 / {
 	macros {
@@ -173,17 +174,6 @@ ZMK_COMBO(au,      &macro_au , 12 22,	COMBO_LAYERS,	VERT_TIMEOUT)
 	combos {
 		compatible = "zmk,combos";
 // ALPHA COMBOS
-		combo_ua {
-			bindings = <&macro_ua>;
-			key-positions = <3 12>;
-			timeout-ms = <VERT_TIMEOUT>;
-		};
-		combo_enie {
-			bindings = <&kp RA(N)>;
-			key-positions = <17 19>;
-			require-prior-idle-ms = <ALPHA_IDLE>;
-			timeout-ms = <HORZ_TIMEOUT>;
-		};
 
 // HORIZONTAL COMBOS ON HOME ROW
 		combo_bootloader {
