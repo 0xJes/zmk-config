@@ -14,6 +14,8 @@
 #define HOME_IDLE 75
 #define COMBO_LAYERS 0 1 2 3
 
+ZMK_COMBO(z,	&kp Z,	7 17,	COMBO_LAYERS,	VERT_TIMEOUT)
+
 / {
 	macros {
 		ZMK_MACRO(macro_qu,
@@ -160,7 +162,7 @@
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 	};
-	ZMK_COMBO(z,	&kp Z,	7 17,	COMBO_LAYERS,	VERT_TIMEOUT)
+
 	combos {
 		compatible = "zmk,combos";
 //             name  bindings   keys          layers         timeout
