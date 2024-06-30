@@ -49,6 +49,16 @@
 			#binding-cells = <0>;
 			bindings = <&kp PERIOD &kp PERIOD &kp PERIOD>;
 		};
+		macro_path_here: macro_path_here {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp PERIOD &kp FSLH &kp STAR>;
+		};
+		macro_excl_quest: macro_excl_quest {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp EXCLAMATION &kp QUESTION &kp>;
+		};
 		macro_mouse_layer_hack: macro_mouse_layer_hack {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
@@ -144,6 +154,18 @@
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			bindings = <&kp PERIOD>, <&macro_triple_period>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
+		slash: slash {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp FSLH>, <&macro_path_here>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
+		comma: comma {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&kp COMMA>, <&macro_excl_quest>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 	};
@@ -376,7 +398,7 @@
 		compatible = "zmk,keymap";
 		base {
 			bindings = <
-		&kp B		&kp H		&kp G							&kp COMMA	&kp FSLH	&kp J
+		&kp B		&kp H		&kp G							&comma	&slash		&kp J
 &kp C	&hm LALT S	&hm LCTRL N	&lt 1 T		&kp K	&tperiod	&lt 2 A		&hm RCTRL E	&hm LALT I	&kp M
 &kp P	&kp F		&kp L		&mse_l D D	&kp V	&kp MINUS	&kp U		&kp O		&kp Y		&kp W
 					&ss LSHFT	&lt RA(APOS) R				&mt RWIN SPACE	&ss RSHFT
