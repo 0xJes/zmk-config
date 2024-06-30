@@ -22,48 +22,31 @@
 		ZMK_MACRO(macro_qu,
 			bindings = <&kp Q &kp U>;
 		)
-		macro_au: macro_au {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
+		ZMK_MACRO(macro_au,
 			bindings = <&kp A &kp U>;
-		};
-		macro_ua: macro_ua {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
+		)
+		ZMK_MACRO(macro_ua,
 			bindings = <&kp U &kp A>;
-		};
-		macro_gu: macro_gu {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
+		)
+		ZMK_MACRO(macro_gu,
 			bindings = <&kp G &kp U>;
 		};
-		macro_gu_diar: macro_gu_diar {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
+		ZMK_MACRO(macro_gu_diaresis,
 			bindings = <&kp G &kp RA(U)>;
 		};
-		macro_triple_period: macro_triple_period {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
+		ZMK_MACRO(macro_triple_period,
 			bindings = <&kp PERIOD &kp PERIOD &kp PERIOD>;
-		};
-		macro_path_here: macro_path_here {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
+		)
+		ZMK_MACRO(macro_path_here,
 			bindings = <&kp PERIOD &kp FSLH &kp STAR>;
-		};
-		macro_excl_quest: macro_excl_quest {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
+		)
+		ZMK_MACRO(macro_excl_quest,
 			bindings = <&kp EXCLAMATION &kp QUESTION>;
-		};
-		macro_mouse_layer_hack: macro_mouse_layer_hack {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
+		)
+		ZMK_MACRO(macro_mouse_layer_hack ,
 			bindings = <&kp D &mo 3>;
-		};
+		)
 	};
-
 
 	behaviors {
 		hm: home_row_mod {
@@ -101,11 +84,11 @@
 		holdtap_gu: holdtap_gu {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
-			bindings = <&macro_gu>, <&macro_gu_diar>;
+			bindings = <&macro_gu>, <&macro_gu_diaresis>;
 			tapping-term-ms = <200>;
 		};
 
-// PAIRED SYMBOLS
+// PAIRED SYMBOLS AND MACROS WITH SHIFTS
 		parent_pair: parent_pair {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
