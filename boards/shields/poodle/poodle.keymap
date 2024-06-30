@@ -195,7 +195,7 @@
 ZMK_LAYER(base,
 		&kp B		&kp H			&kp G							&comma		&slash			&kp J
 &kp C	&lhm LALT S	&lhm LCTRL N	&lt 1 T		&kp K	&tperiod	&lt 2 A		&rhm RCTRL E	&rhm LALT I	&kp M
-&kp P	&kp F		&kp L			&lt D 3		&kp V	&kp MINUS	&kp U		&kp O			&kp Y		&kp W
+&kp P	&kp F		&kp L			&lt 3 D		&kp V	&kp MINUS	&kp U		&kp O			&kp Y		&kp W
 					&ss LSHFT		&lt RA(APOS) R					&mt RWIN SPACE	&ss RSHFT
 )
 
