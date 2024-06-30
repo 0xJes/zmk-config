@@ -17,33 +17,15 @@
 
 / {
 	macros {
-		ZMK_MACRO(macro_qu,
-			bindings = <&kp Q &kp U>;
-		)
-		ZMK_MACRO(macro_au,
-			bindings = <&kp A &kp U>;
-		)
-		ZMK_MACRO(macro_ua,
-			bindings = <&kp U &kp A>;
-		)
-		ZMK_MACRO(macro_gu,
-			bindings = <&kp G &kp U>;
-		)
-		ZMK_MACRO(macro_gu_diaresis,
-			bindings = <&kp G &kp RA(U)>;
-		)
-		ZMK_MACRO(macro_triple_period,
-			bindings = <&kp PERIOD &kp PERIOD &kp PERIOD>;
-		)
-		ZMK_MACRO(macro_path_here,
-			bindings = <&kp PERIOD &kp FSLH &kp STAR>;
-		)
-		ZMK_MACRO(macro_excl_quest,
-			bindings = <&kp EXCLAMATION &kp QUESTION>;
-		)
-		ZMK_MACRO(macro_mouse_layer_hack,
-			bindings = <&kp D &mo 3>;
-		)
+		ZMK_MACRO(macro_qu, bindings = <&kp Q &kp U>;)
+		ZMK_MACRO(macro_au, bindings = <&kp A &kp U>;)
+		ZMK_MACRO(macro_ua, bindings = <&kp U &kp A>;)
+		ZMK_MACRO(macro_gu, bindings = <&kp G &kp U>;)
+		ZMK_MACRO(macro_gu_diaresis, bindings = <&kp G &kp RA(U)>;)
+		ZMK_MACRO(macro_triple_period, bindings = <&kp PERIOD &kp PERIOD &kp PERIOD>;)
+		ZMK_MACRO(macro_path_here, bindings = <&kp PERIOD &kp FSLH &kp STAR>;)
+		ZMK_MACRO(macro_excl_quest, bindings = <&kp EXCLAMATION &kp QUESTION>;)
+		ZMK_MACRO(macro_mouse_layer_hack, bindings = <&kp D &mo 3>;)
 	};
 
 	behaviors {
@@ -72,7 +54,7 @@
 		mse_l: mouse_layer_hack {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
-			flavor = "balanced";
+			flavor = "hold-preferred";
 			require-prior-idle-ms = <100>;
 			tapping-term-ms = <250>;
 			quick-tap-ms = <200>;
@@ -234,7 +216,7 @@ ZMK_LAYER(numbers,
 ZMK_LAYER(mouse,
 		&none		&none		&none					&none		&kp DOWN	&kp UP
 &none	&none		&none		&none	&none	&none	&kp A		&kp E		&kp I	&kp M
-&none	&kp LALT	&kp LCTRL	&none	&none	&none	&mkp MB4	&kp O		&kp Y	&mkp MB5
+&none	&kp LALT	&kp LCTRL	&kp D	&none	&none	&mkp MB4	&kp O		&kp Y	&mkp MB5
 					&none		&mkp RCLK				&mkp LCLK	&mkp MCLK
 )
 
