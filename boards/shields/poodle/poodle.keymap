@@ -350,35 +350,28 @@
 			timeout-ms = <DIAG_TIMEOUT>;
 		};
 	};
+};
 
-	keymap {
-		compatible = "zmk,keymap";
-		base {
-			bindings = <
+ZMK_LAYER(base,
 		&kp B		&kp H			&kp G							&comma		&slash			&kp J
 &kp C	&lhm LALT S	&lhm LCTRL N	&lt 1 T		&kp K	&tperiod	&lt 2 A		&rhm RCTRL E	&rhm LALT I	&kp M
 &kp P	&kp F		&kp L			&mse_l D D	&kp V	&kp MINUS	&kp U		&kp O			&kp Y		&kp W
 					&ss LSHFT		&lt RA(APOS) R					&mt RWIN SPACE	&ss RSHFT
-			>;
-		};
-		nav {
-			bindings = <
+)
+
+ZMK_LAYER(navigation,
 		&none		&none		&none								&kp LC(C)	&kp LC(V)	&kp LC(X)
 &none	&kp LALT	&kp LCTRL	&none		&none	&kp LC(PLUS)	&kp LEFT	&kp DOWN	&kp UP		&kp RIGHT
 &none	&none		&none		&none		&none	&kp LC(MINUS)	&kp HOME	&kp PG_DN	&kp PG_UP	&kp END
 					&kp LSHFT	&none								&kp LC(Z)	&kp LC(Y)
-			>;
-		};
-		num {
-			bindings = <
+)
+
+ZMK_LAYER(numbers,
 		&kp FSLH	&kp STAR	&kp PLUS					&none		&none		&none
 &kp N4	&kp N3		&kp N2		&kp N1		&none	&none	&none		&kp PERIOD	&kp COMMA	&kp MINUS
 &kp N8	&kp N7		&kp N6		&kp N5		&none	&none	&none		&none		&none		&none
 					&kp N9  	&kp N0						&kp SPACE	&none
-			>;
-		};
-	};
-};
+)
 
 ZMK_LAYER(mouse,
 		&none		&none		&none					&none		&kp DOWN	&kp UP
