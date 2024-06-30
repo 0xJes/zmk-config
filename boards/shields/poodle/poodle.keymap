@@ -19,11 +19,9 @@
 
 / {
 	macros {
-		macro_qu: macro_qu {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
+		ZMK_MACRO(macro_qu,
 			bindings = <&kp Q &kp U>;
-		};
+		)
 		macro_au: macro_au {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
