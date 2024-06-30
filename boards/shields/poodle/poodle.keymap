@@ -3,16 +3,16 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
 
-#define VERT_TIMEOUT 80
-#define HORZ_TIMEOUT 60
-#define DIAG_TIMEOUT 120
-#define HOME_TIMEOUT 50
+#define V_TOUT 80
+#define H_TOUT 60
+#define D_TOUT 120
+#define HOME_TOUT 50
 
 #define HORZ_IDLE 200
 #define ALPHA_IDLE 0
 #define DEF_IDLE 100
 #define HOME_IDLE 75
-#define COMBO_LAYERS 0 1 2
+#define LAYERS 0 1 2
 
 / {
 	macros {
@@ -89,43 +89,43 @@
 		};
 
 // PAIRED SYMBOLS AND MACROS WITH SHIFTS
-		parent_pair: parent_pair {
+		parentesis: parent_pair {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			bindings = <&kp LPAR>, <&kp RPAR>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
-		brace_pair: brace_pair {
+		braces: brace_pair {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			bindings = <&kp LBRC>, <&kp RBRC>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
-		bracket_pair: bracket_pair {
+		brackets: bracket_pair {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			bindings = <&kp LBKT>, <&kp RBKT>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
-		angle_pair: angle_pair {
+		angles: angle_pair {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			bindings = <&kp LT>, <&kp GT>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
-		question_pair: question_pair {
+		quest: question_pair {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			bindings = <&kp QUESTION>, <&kp RA(FSLH)>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
-		exclamation_pair: exclamation_pair {
+		excl: exclamation_pair {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			bindings = <&kp EXCLAMATION>, <&kp RA(N1)>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
-		dolar_euro: currency_pair {
+		currency: currency_pair {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
 			bindings = <&kp DOLLAR>, <&kp RA(N5)>;
@@ -238,31 +238,31 @@ ZMK_COMBO(ua,       &macro_ua,  3 12,	COMBO_LAYERS,	VERT_TIMEOUT)
 // ZMK_COMBO(enie,     &kp RA(N), 7 19>,	COMBO_LAYERS,   HORZ_TIMEOUT, 50)
 
 // Vertical combos
-ZMK_COMBO(plus,          &kp PLUS, 11 21, COMBO_LAYERS, VERT_TIMEOUT)
-ZMK_COMBO(grave,        &kp GRAVE, 10 20, COMBO_LAYERS, VERT_TIMEOUT)
-ZMK_COMBO(ampersand,     &kp AMPS,  5 14, COMBO_LAYERS, VERT_TIMEOUT)
-ZMK_COMBO(pipe,          &kp PIPE,  0  7, COMBO_LAYERS, VERT_TIMEOUT)
-ZMK_COMBO(star,          &kp STAR,  4 13, COMBO_LAYERS, VERT_TIMEOUT)
-ZMK_COMBO(backslash,     &kp BSLH,  1  8, COMBO_LAYERS, VERT_TIMEOUT)
-ZMK_COMBO(currency,   &dolar_euro, 14 24, COMBO_LAYERS, VERT_TIMEOUT)
+ZMK_COMBO(plus,      &kp PLUS, 11 21, LAYERS, V_TOUT)
+ZMK_COMBO(grave,    &kp GRAVE, 10 20, LAYERS, V_TOUT)
+ZMK_COMBO(and,       &kp AMPS,  5 14, LAYERS, V_TOUT)
+ZMK_COMBO(or,        &kp PIPE,  0  7, LAYERS, V_TOUT)
+ZMK_COMBO(asterisk,  &kp STAR,  4 13, LAYERS, V_TOUT)
+ZMK_COMBO(backslash, &kp BSLH,  1  8, LAYERS, V_TOUT)
+ZMK_COMBO(currency, &currency, 14 24, LAYERS, V_TOUT)
 
 // Horizontal combos
-ZMK_COMBO(hash,      &kp HASH, 17 18, COMBO_LAYERS, HORZ_TIMEOUT, HORZ_IDLE)
-ZMK_COMBO(at,          &kp AT, 23 24, COMBO_LAYERS, HORZ_TIMEOUT, HORZ_IDLE)
-ZMK_COMBO(semicolon, &kp SEMI, 18 19, COMBO_LAYERS, HORZ_TIMEOUT, HORZ_IDLE)
-ZMK_COMBO(colon,    &kp COLON, 22 23, COMBO_LAYERS, HORZ_TIMEOUT, HORZ_IDLE)
-ZMK_COMBO(cps_wrd, &caps_word, 26 27, COMBO_LAYERS,          150,       100)
-ZMK_COMBO(equal,    &kp EQUAL,   1 2, COMBO_LAYERS, HORZ_TIMEOUT,  DEF_IDLE)
-ZMK_COMBO(tilde,    &kp TILDE,   3 4, COMBO_LAYERS, HORZ_TIMEOUT,  DEF_IDLE)
-ZMK_COMBO(caret,    &kp CARET,   4 5, COMBO_LAYERS, HORZ_TIMEOUT,  DEF_IDLE)
-ZMK_COMBO(prcnt,  &kp PERCENT,   0 1, COMBO_LAYERS, HORZ_TIMEOUT,  DEF_IDLE)
+ZMK_COMBO(hash,      &kp HASH, 17 18, LAYERS, H_TOUT, HORZ_IDLE)
+ZMK_COMBO(at,          &kp AT, 23 24, LAYERS, H_TOUT, HORZ_IDLE)
+ZMK_COMBO(semicolon, &kp SEMI, 18 19, LAYERS, H_TOUT, HORZ_IDLE)
+ZMK_COMBO(colon,    &kp COLON, 22 23, LAYERS, H_TOUT, HORZ_IDLE)
+ZMK_COMBO(cps_wrd, &caps_word, 26 27, LAYERS,    150,       100)
+ZMK_COMBO(equal,    &kp EQUAL,   1 2, LAYERS, H_TOUT,  DEF_IDLE)
+ZMK_COMBO(tilde,    &kp TILDE,   3 4, LAYERS, H_TOUT,  DEF_IDLE)
+ZMK_COMBO(caret,    &kp CARET,   4 5, LAYERS, H_TOUT,  DEF_IDLE)
+ZMK_COMBO(prcnt,  &kp PERCENT,   0 1, LAYERS, H_TOUT,  DEF_IDLE)
 
 // Diagonal combos
-ZMK_COMBO(quote,          &kp SQT,   2 8, COMBO_LAYERS, DIAG_TIMEOUT, DEF_IDLE)
-ZMK_COMBO(double_quote,   &kp DQT,  3 13, COMBO_LAYERS, DIAG_TIMEOUT, DEF_IDLE)
-ZMK_COMBO(parent,    &parent_pair, 12 23, COMBO_LAYERS, DIAG_TIMEOUT, DEF_IDLE)
-ZMK_COMBO(braces,     &brace_pair,  9 18, COMBO_LAYERS, DIAG_TIMEOUT, DEF_IDLE)
-ZMK_COMBO(brackets, &bracket_pair, 14 23, COMBO_LAYERS, DIAG_TIMEOUT, DEF_IDLE)
-ZMK_COMBO(angles,     &angle_pair,  7 18, COMBO_LAYERS, DIAG_TIMEOUT, DEF_IDLE)
-ZMK_COMBO(excl, &exclamation_pair,  5 13, COMBO_LAYERS, DIAG_TIMEOUT, DEF_IDLE)
-ZMK_COMBO(quest,   &question_pair,  0  8, COMBO_LAYERS, DIAG_TIMEOUT, DEF_IDLE)
+ZMK_COMBO(quote,      &kp SQT,   2 8, LAYERS, D_TOUT, DEF_IDLE)
+ZMK_COMBO(dquote,     &kp DQT,  3 13, LAYERS, D_TOUT, DEF_IDLE)
+ZMK_COMBO(parent, &parentesis, 12 23, LAYERS, D_TOUT, DEF_IDLE)
+ZMK_COMBO(braces,     &braces,  9 18, LAYERS, D_TOUT, DEF_IDLE)
+ZMK_COMBO(brackets, &brackets, 14 23, LAYERS, D_TOUT, DEF_IDLE)
+ZMK_COMBO(angles,     &angles,  7 18, LAYERS, D_TOUT, DEF_IDLE)
+ZMK_COMBO(excl,         &excl,  5 13, LAYERS, D_TOUT, DEF_IDLE)
+ZMK_COMBO(quest,       &quest,  0  8, LAYERS, D_TOUT, DEF_IDLE)
