@@ -49,13 +49,24 @@
 	};
 
 	behaviors {
-		hm: home_row_mod {
+		lhm: left_home_row_mod {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
 			flavor = "balanced";
 			require-prior-idle-ms = <100>;
 			tapping-term-ms = <250>;
 			quick-tap-ms = <200>;
+			hold-trigger-key-positions = <3 4 5 11 12 13 14 15 21 22 23 24 25 28 29>;
+			bindings = <&kp>, <&kp>;
+		};
+		rhm: right_home_row_mod {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "balanced";
+			require-prior-idle-ms = <100>;
+			tapping-term-ms = <250>;
+			quick-tap-ms = <200>;
+			hold-trigger-key-positions = <0 1 2 6 7 8 9 10 16 17 18 19 20 26 27>;
 			bindings = <&kp>, <&kp>;
 		};
 		mse_l: mouse_layer_hack {
@@ -379,10 +390,10 @@
 		compatible = "zmk,keymap";
 		base {
 			bindings = <
-		&kp B		&kp H		&kp G							&comma	&slash		&kp J
-&kp C	&hm LALT S	&hm LCTRL N	&lt 1 T		&kp K	&tperiod	&lt 2 A		&hm RCTRL E	&hm LALT I	&kp M
-&kp P	&kp F		&kp L		&mse_l D D	&kp V	&kp MINUS	&kp U		&kp O		&kp Y		&kp W
-					&ss LSHFT	&lt RA(APOS) R				&mt RWIN SPACE	&ss RSHFT
+		&kp B		&kp H			&kp G							&comma		&slash			&kp J
+&kp C	&lhm LALT S	&lhm LCTRL N	&lt 1 T		&kp K	&tperiod	&lt 2 A		&rhm RCTRL E	&rhm LALT I	&kp M
+&kp P	&kp F		&kp L			&mse_l D D	&kp V	&kp MINUS	&kp U		&kp O			&kp Y		&kp W
+					&ss LSHFT		&lt RA(APOS) R					&mt RWIN SPACE	&ss RSHFT
 			>;
 		};
 		nav {
