@@ -12,6 +12,7 @@
 #define ALPHA_IDLE 0
 #define DEF_IDLE 100
 #define HOME_IDLE 75
+#define COMBO_LAYERS 0 1 2 3
 
 / {
 	macros {
@@ -162,11 +163,7 @@
 	combos {
 		compatible = "zmk,combos";
 // ALPHA COMBOS
-		combo_z {
-			bindings = <&kp Z>;
-			key-positions = <7 17>;
-			timeout-ms = <VERT_TIMEOUT>;
-		};
+		ZMK_COMBO(z, &kp Z, 7 17, COMBO_LAYERS, VERT_TIMEOUT)
 		combo_x {
 			bindings = <&kp X>;
 			key-positions = <9 19>;
