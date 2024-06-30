@@ -164,8 +164,6 @@
 
 	combos {
 		compatible = "zmk,combos";
-// ALPHA COMBOS
-
 // HORIZONTAL COMBOS ON HOME ROW
 		combo_bootloader {
 			bindings = <&bootloader>;
@@ -209,62 +207,6 @@
 			require-prior-idle-ms = <HOME_IDLE>;
 			timeout-ms = <60>;
 		};
-// HORIZONTAL COMBOS
-		combo_hash {
-			bindings = <&kp HASH>;
-			key-positions = <17 18>;
-			require-prior-idle-ms = <HORZ_IDLE>;
-			timeout-ms = <HORZ_TIMEOUT>;
-		};
-		combo_at {
-			bindings = <&kp AT>;
-			key-positions = <23 24>;
-			require-prior-idle-ms = <HORZ_IDLE>;
-			timeout-ms = <HORZ_TIMEOUT>;
-		};
-		combo_semicolon {
-			bindings = <&kp SEMI>;
-			key-positions = <18 19>;
-			require-prior-idle-ms = <HORZ_IDLE>;
-			timeout-ms = <HORZ_TIMEOUT>;
-		};
-		combo_colon {
-			bindings = <&kp COLON>;
-			key-positions = <22 23>;
-			require-prior-idle-ms = <HORZ_IDLE>;
-			timeout-ms = <HORZ_TIMEOUT>;
-		};
-		combo_caps_word {
-			bindings = <&caps_word>;
-			key-positions = <26 27>;
-			require-prior-idle-ms = <100>;
-			timeout-ms = <150>;
-		};
-		combo_equal {
-			bindings = <&kp EQUAL>;
-			key-positions = <1 2>;
-			require-prior-idle-ms = <DEF_IDLE>;
-			timeout-ms = <HORZ_TIMEOUT>;
-		};
-		combo_tilde {
-			bindings = <&kp TILDE>;
-			key-positions = <3 4>;
-			require-prior-idle-ms = <DEF_IDLE>;
-			timeout-ms = <HORZ_TIMEOUT>;
-		};
-		combo_caret {
-			bindings = <&kp CARET>;
-			key-positions = <4 5>;
-			require-prior-idle-ms = <DEF_IDLE>;
-			timeout-ms = <HORZ_TIMEOUT>;
-		};
-		combo_percent {
-			bindings = <&kp PERCENT>;
-			key-positions = <0 1>;
-			require-prior-idle-ms = <DEF_IDLE>;
-			timeout-ms = <HORZ_TIMEOUT>;
-		};
-// DIAGONAL COMBOS
 	};
 };
 
@@ -313,6 +255,17 @@ ZMK_COMBO(pipe,          &kp PIPE,  0  7, COMBO_LAYERS, VERT_TIMEOUT)
 ZMK_COMBO(star,          &kp STAR,  4 13, COMBO_LAYERS, VERT_TIMEOUT)
 ZMK_COMBO(backslash,     &kp BSLH,  1  8, COMBO_LAYERS, VERT_TIMEOUT)
 ZMK_COMBO(currency,   &dolar_euro, 14 24, COMBO_LAYERS, VERT_TIMEOUT)
+
+// Horizontal combos
+ZMK_COMBO(hash,      &kp HASH, 17 18, COMBO_LAYERS, HORZ_TIMEOUT, HORZ_IDLE)
+ZMK_COMBO(at,          &kp AT, 23 24, COMBO_LAYERS, HORZ_TIMEOUT, HORZ_IDLE)
+ZMK_COMBO(semicolon, &kp SEMI, 18 19, COMBO_LAYERS, HORZ_TIMEOUT, HORZ_IDLE)
+ZMK_COMBO(colon,    &kp COLON, 22 23, COMBO_LAYERS, HORZ_TIMEOUT, HORZ_IDLE)
+ZMK_COMBO(cps_wrd, &caps_word, 26 27, COMBO_LAYERS,          150,       100)
+ZMK_COMBO(equal,    &kp EQUAL,   1 2, COMBO_LAYERS, HORZ_TIMEOUT,  DEF_IDLE)
+ZMK_COMBO(tilde,    &kp TILDE,   3 4, COMBO_LAYERS, HORZ_TIMEOUT,  DEF_IDLE)
+ZMK_COMBO(caret,    &kp CARET,   4 5, COMBO_LAYERS, HORZ_TIMEOUT,  DEF_IDLE)
+ZMK_COMBO(prcnt,  &kp PERCENT,   0 1, COMBO_LAYERS, HORZ_TIMEOUT,  DEF_IDLE)
 
 // Diagonal combos
 ZMK_COMBO(quote,          &kp SQT,   2 8, COMBO_LAYERS, DIAG_TIMEOUT, DEF_IDLE)
