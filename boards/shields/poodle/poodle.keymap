@@ -3,6 +3,10 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
 
+#define TO_V 100
+#define TO_H 60
+#define TO_D 120
+
 #define HORZ_IDLE 200
 #define ALPHA_IDLE 0
 #define DEF_IDLE 100
@@ -181,10 +185,6 @@ ZMK_LAYER(mouse,
 	16	17	18	19	20		21	22	23	24	25
 				26	27		28	29	              */
 
-#define TO_V 100
-#define TO_H 60
-#define TO_D 120
-
 // Alpha combos
 ZMK_COMBO(z,            &kp Z,	7 17,	LAYERS,	TO_V)
 ZMK_COMBO(x,            &kp X,	9 19,	LAYERS,	TO_V)
@@ -203,7 +203,6 @@ ZMK_COMBO(or,        &kp PIPE,  0  7, LAYERS, TO_V)
 ZMK_COMBO(asterisk,  &kp STAR,  4 13, LAYERS, TO_V)
 ZMK_COMBO(backslash, &kp BSLH,  1  8, LAYERS, TO_V)
 ZMK_COMBO(currency, &currency, 14 24, LAYERS, TO_V)
-
 // Horizontal combos
 ZMK_COMBO(hash,      &kp HASH, 17 18, LAYERS, TO_H, HORZ_IDLE)
 ZMK_COMBO(at,          &kp AT, 23 24, LAYERS, TO_H, HORZ_IDLE)
@@ -214,16 +213,14 @@ ZMK_COMBO(tilde,    &kp TILDE,   3 4, LAYERS, TO_H,  DEF_IDLE)
 ZMK_COMBO(caret,    &kp CARET,   4 5, LAYERS, TO_H,  DEF_IDLE)
 ZMK_COMBO(prcnt,  &kp PERCENT,   0 1, LAYERS, TO_H,  DEF_IDLE)
 ZMK_COMBO(bootl,  &bootloader,   0 5, LAYERS, TO_H,  DEF_IDLE)
-
 // Horizontal combos on home row
-ZMK_COMBO(cps_wrd, &caps_word,  8 13, LAYERS,     50, HOME_IDLE)
-ZMK_COMBO(backspace, &kp BSPC, 13 14, LAYERS,    150, HOME_IDLE)
-ZMK_COMBO(delete,     &kp DEL, 14 15, LAYERS,    120, HOME_IDLE)
-ZMK_COMBO(enter,      &kp RET,   7 8, LAYERS,     70, HOME_IDLE)
-ZMK_COMBO(escape,     &kp ESC,   7 9, LAYERS,     50, HOME_IDLE)
-ZMK_COMBO(uscore,   &kp UNDER, 12 14, LAYERS,    100, HOME_IDLE)
-ZMK_COMBO(tab,        &kp TAB, 12 13, LAYERS,     60, HOME_IDLE)
-
+ZMK_COMBO(cps_wrd, &caps_word,  8 13, LAYERS,   50, HOME_IDLE)
+ZMK_COMBO(backspace, &kp BSPC, 13 14, LAYERS,  150, HOME_IDLE)
+ZMK_COMBO(delete,     &kp DEL, 14 15, LAYERS,  120, HOME_IDLE)
+ZMK_COMBO(enter,      &kp RET,   7 8, LAYERS,   70, HOME_IDLE)
+ZMK_COMBO(escape,     &kp ESC,   7 9, LAYERS,   50, HOME_IDLE)
+ZMK_COMBO(uscore,   &kp UNDER, 12 14, LAYERS,  100, HOME_IDLE)
+ZMK_COMBO(tab,        &kp TAB, 12 13, LAYERS,   60, HOME_IDLE)
 // Diagonal combos
 ZMK_COMBO(quote,      &kp SQT,   2 8, LAYERS, TO_D, DEF_IDLE)
 ZMK_COMBO(dquote,     &kp DQT,  3 13, LAYERS, TO_D, DEF_IDLE)
