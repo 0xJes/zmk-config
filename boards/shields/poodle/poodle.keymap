@@ -14,15 +14,6 @@
 #define HOME_IDLE 75
 #define COMBO_LAYERS 0 1 2 3
 
-//     name  bindings   keys          layers         timeout
-
-ZMK_COMBO(z,            &kp Z,	7 17,	COMBO_LAYERS,	VERT_TIMEOUT)
-ZMK_COMBO(x,            &kp X,	9 19,	COMBO_LAYERS,	VERT_TIMEOUT)
-ZMK_COMBO(qu, &holdtap_qu Q Q,	8 18,	COMBO_LAYERS,   VERT_TIMEOUT)
-ZMK_COMBO(gu, &holdtap_gu G G,   2 9,	COMBO_LAYERS,	VERT_TIMEOUT)
-ZMK_COMBO(au,       &macro_au, 12 22,	COMBO_LAYERS,	VERT_TIMEOUT)
-ZMK_COMBO(ua,       &macro_ua,  3 12,	COMBO_LAYERS,	VERT_TIMEOUT)
-ZMK_COMBO(enie,     &kp RA(N), 7 19>,	COMBO_LAYERS,   HORZ_TIMEOUT, 50)
 
 / {
 	macros {
@@ -397,3 +388,13 @@ ZMK_COMBO(enie,     &kp RA(N), 7 19>,	COMBO_LAYERS,   HORZ_TIMEOUT, 50)
 		};
 	};
 };
+
+//     name  bindings   keys          layers         timeout
+
+ZMK_COMBO(z,            &kp Z,	7 17,	COMBO_LAYERS,	VERT_TIMEOUT)
+ZMK_COMBO(x,            &kp X,	9 19,	COMBO_LAYERS,	VERT_TIMEOUT)
+ZMK_COMBO(qu, &holdtap_qu Q Q,	8 18,	COMBO_LAYERS,   VERT_TIMEOUT)
+ZMK_COMBO(gu, &holdtap_gu G G,   2 9,	COMBO_LAYERS,	VERT_TIMEOUT)
+ZMK_COMBO(au,       &macro_au, 12 22,	COMBO_LAYERS,	VERT_TIMEOUT)
+ZMK_COMBO(ua,       &macro_ua,  3 12,	COMBO_LAYERS,	VERT_TIMEOUT)
+ZMK_COMBO(enie,     &kp RA(N), 7 19>,	COMBO_LAYERS,   HORZ_TIMEOUT, 50)
