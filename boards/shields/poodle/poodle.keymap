@@ -49,8 +49,13 @@ ZMK_STICKY_KEY(ss,
 };
 
 // HOLD TAPS---------------------------------------------------------------------------------------
-ZMK_HOLD_TAP(qu_q,     bindings = <&kp>, <&qu>;   tapping-term-ms = <200>;)
 ZMK_HOLD_TAP(msl,  bindings = <&kp>, <&lmou_d>;   tapping-term-ms = <200>;)
+
+ZMK_HOLD_TAP(qu_q,
+	flavor = "tap-preferred";
+	tapping-term-ms = <200>;
+	bindings = <&kp>, <&qu>;
+)
 
 ZMK_HOLD_TAP(gu_espgu,
 	flavor = "tap-preferred";
