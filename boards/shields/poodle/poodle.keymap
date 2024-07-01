@@ -52,13 +52,13 @@
 		holdtap_qu: holdtap_qu {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
-			bindings = <&macro_qu>, <&kp>;
+			bindings = <&qu>, <&kp>;
 			tapping-term-ms = <200>;
 		};
 		holdtap_gu: holdtap_gu {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
-			bindings = <&macro_gu>, <&macro_gu_diaresis>;
+			bindings = <&gu>, <&gu_d>;
 			tapping-term-ms = <200>;
 		};
 
