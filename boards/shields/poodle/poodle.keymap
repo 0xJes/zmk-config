@@ -78,6 +78,14 @@ ZMK_HOLD_TAP(rhm
 	bindings = <&kp>, <&kp>;
 )
 
+ZMK_HOLD_TAP(spc
+	flavor = "hold-preferred";
+	require-prior-idle-ms = <100>;
+	tapping-term-ms = <250>;
+	quick-tap-ms = <200>;
+	bindings = <&kp>, <&kp>;
+)
+
 // SPECIAL SHIFTED KEYS----------------------------------------------------------------------------
 ZMK_MOD_MORPH(comma,    bindings = <&kp COMMA>, <&excl_quest>;  mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(slash,    bindings = <&kp FSLH>,  <&path_here>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
@@ -147,7 +155,7 @@ ZMK_LAYER(base,
 			&kp B		&kp H			&kp G							&comma		&slash			&kp J
 &kp C		&lhm LALT S	&lhm LCTRL N	&lt 1 T		&kp K	&tperiod	&lt 2 A		&rhm RCTRL E	&rhm LALT I	&kp M
 &kp P		&kp F		&kp L			&msl D		&kp V	&kp MINUS	&kp U		&kp O			&kp Y		&kp W
-						&ss LSHFT		&lt RA(APOS) R					&mt RWIN SPACE	&ss RSHFT
+						&ss LSHFT		&lt RA(APOS) R					&spc RWIN SPACE	&ss RSHFT
 )
 
 ZMK_LAYER(navigation,
