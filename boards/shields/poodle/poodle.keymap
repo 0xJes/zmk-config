@@ -180,6 +180,6 @@ ZMK_LAYER(numbers,
 ZMK_LAYER(mouse,
 			&none		&none		&none						&none		&kp DOWN	&kp UP
 &none		&none		&none		&none		&none	&none	&kp A		&kp E		&kp I		&kp M
-&none		&kp LALT	&kp LCTRL	&none		&none	&none	&mkp MB4 &msc MOVE_DOWN	&msc MOVE_UP &mkp MB5
+&none		&kp LALT	&kp LCTRL	&none		&none	&none	&mkp MB4    &msc -100	&msc 100 &mkp MB5
 						&none		&mkp RCLK					&mkp LCLK	&mkp MCLK
 )
