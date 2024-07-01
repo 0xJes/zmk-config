@@ -44,6 +44,20 @@
 	};
 };
 
+// MACROS------------------------------------------------------------------------------------------
+ZMK_MACRO(au,         bindings = <&kp A &kp U>;)
+ZMK_MACRO(ua,         bindings = <&kp U &kp A>;)
+ZMK_MACRO(gu,         bindings = <&kp G &kp U>;)
+ZMK_MACRO(gu_d,       bindings = <&kp G &kp RA(U)>;)
+ZMK_MACRO(t_period,   bindings = <&kp PERIOD &kp PERIOD &kp PERIOD>;)
+ZMK_MACRO(path_here,  bindings = <&kp PERIOD &kp FSLH &kp STAR>;)
+ZMK_MACRO(excl_quest, bindings = <&kp EXCLAMATION &kp QUESTION>;)
+
+ZMK_MACRO(qu,
+	wait-ms = <0>;
+	tap-ms = <0>;
+	bindings = <&kp Q &kp U>;
+)
 
 ZMK_MACRO_TWO_PARAM(lm,
 	wait-ms = <0>;
@@ -61,21 +75,15 @@ ZMK_MACRO_TWO_PARAM(lm,
 		;
 )
 
-// MACROS
-ZMK_MACRO(qu,         bindings = <&kp Q &kp U>;)
-ZMK_MACRO(au,         bindings = <&kp A &kp U>;)
-ZMK_MACRO(ua,         bindings = <&kp U &kp A>;)
-ZMK_MACRO(gu,         bindings = <&kp G &kp U>;)
-ZMK_MACRO(gu_d,       bindings = <&kp G &kp RA(U)>;)
-ZMK_MACRO(t_period,   bindings = <&kp PERIOD &kp PERIOD &kp PERIOD>;)
-ZMK_MACRO(path_here,  bindings = <&kp PERIOD &kp FSLH &kp STAR>;)
-ZMK_MACRO(excl_quest, bindings = <&kp EXCLAMATION &kp QUESTION>;)
-
-// HOLD TAPS
+// HOLD TAPS---------------------------------------------------------------------------------------
 ZMK_HOLD_TAP(qu_q,     bindings = <&kp>, <&qu>;   tapping-term-ms = <200>;)
-ZMK_HOLD_TAP(gu_espgu, bindings = <&gu>, <&gu_d>; tapping-term-ms = <200>;)
+ZMK_HOLD_TAP(gu_espgu,
+	flavor = "tap-preferred";
+	tapping-term-ms = <150>;
+	bindings = <&gu>, <&gu_d>;
+)
 
-// SPECIAL SHIFTED KEYS
+// SPECIAL SHIFTED KEYS----------------------------------------------------------------------------
 ZMK_MOD_MORPH(comma,    bindings = <&kp COMMA>, <&excl_quest>;  mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(slash,    bindings = <&kp FSLH>,  <&path_here>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(tperiod,  bindings = <&kp DOT>,   <&t_period>;    mods = <(MOD_LSFT|MOD_RSFT)>;)
@@ -92,17 +100,16 @@ ZMK_MOD_MORPH(LR_angle, bindings = <&kp LT>,    <&kp GT>;       mods = <(MOD_LSF
 16	17	18	19	20		21	22	23	24	25
 			26	27		28	29			*/
 
-// Alpha combos
+// ALPHA COMBOS------------------------------------------------------------------------------------
 ZMK_COMBO(z,            &kp Z,  7 17, LAYERS, 100,   0)
 ZMK_COMBO(x,            &kp X,  9 19, LAYERS, 100,   0)
 ZMK_COMBO(enie,     &kp RA(N),  7 19, LAYERS,  50,   0)
 ZMK_COMBO(au,             &au, 12 22, LAYERS, 100,   0)
 ZMK_COMBO(ua,             &ua,  3 12, LAYERS, 100,   0)
 ZMK_COMBO(qu,       &qu_q Q Q,  8 18, LAYERS, 100,   0)
-//ZMK_COMBO(qu,           &kp Q,  8 18, LAYERS, 100,   0)
-// ZMK_COMBO(gu, &holdtap_gu G G,   2 9,	COMBO_LAYERS,	VERT_TIMEOUT)
+ZMK_COMBO(gu,   &gu_espgu G G,   2 9, LAYERS, 100,   0)
 
-// VERTICAL COMBOS
+// VERTICAL COMBOS---------------------------------------------------------------------------------
 ZMK_COMBO(plus,      &kp PLUS, 11 21, LAYERS, 100,   0)
 ZMK_COMBO(grave,    &kp GRAVE, 10 20, LAYERS, 100,   0)
 ZMK_COMBO(and,       &kp AMPS,  5 14, LAYERS, 100,   0)
@@ -111,7 +118,7 @@ ZMK_COMBO(asterisk,  &kp STAR,  4 13, LAYERS, 100,   0)
 ZMK_COMBO(backslash, &kp BSLH,  1  8, LAYERS, 100,   0)
 ZMK_COMBO(currency, &currency, 14 24, LAYERS, 100,   0)
 
-// HORIZONTAL COMBOS
+// HORIZONTAL COMBOS-------------------------------------------------------------------------------
 ZMK_COMBO(hash,      &kp HASH, 17 18, LAYERS,  60, 200)
 ZMK_COMBO(at,          &kp AT, 23 24, LAYERS,  60, 200)
 ZMK_COMBO(semi,      &kp SEMI, 18 19, LAYERS,  60, 200)
@@ -122,7 +129,7 @@ ZMK_COMBO(caret,    &kp CARET,  4  5, LAYERS,  60, 100)
 ZMK_COMBO(prcnt,    &kp PRCNT,  0  1, LAYERS,  60, 100)
 ZMK_COMBO(bootl,  &bootloader,  0  5, LAYERS,  60, 100)
 
-// HORIZONTAL COMBOS ON HOME ROW
+// HORIZONTAL COMBOS ON HOME ROW-------------------------------------------------------------------
 ZMK_COMBO(backspace, &kp BSPC, 13 14, LAYERS, 150,  75)
 ZMK_COMBO(delete,     &kp DEL, 14 15, LAYERS, 120,  75)
 ZMK_COMBO(enter,      &kp RET,  7  8, LAYERS,  70,  75)
@@ -131,7 +138,7 @@ ZMK_COMBO(uscore,   &kp UNDER, 12 14, LAYERS, 100,  75)
 ZMK_COMBO(tab,        &kp TAB, 12 13, LAYERS,  60,  75)
 ZMK_COMBO(cps_wrd, &caps_word,  8 13, LAYERS,  50,  75)
 
-// DIAGONAL COMBOS
+// DIAGONAL COMBOS---------------------------------------------------------------------------------
 ZMK_COMBO(quote,      &kp SQT,   2 8, LAYERS, 120, 100)
 ZMK_COMBO(dquote,     &kp DQT,  3 13, LAYERS, 120, 100)
 ZMK_COMBO(parent,   &LR_paren, 12 23, LAYERS, 120, 100)
