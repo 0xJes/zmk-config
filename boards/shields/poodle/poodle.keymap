@@ -68,7 +68,7 @@ ZMK_HOLD_TAP(lhm,
 	bindings = <&kp>, <&kp>;
 )
 
-ZMK_HOLD_TAP(rhm
+ZMK_HOLD_TAP(rhm,
 	flavor = "balanced";
 	require-prior-idle-ms = <100>;
 	tapping-term-ms = <250>;
@@ -78,7 +78,7 @@ ZMK_HOLD_TAP(rhm
 	bindings = <&kp>, <&kp>;
 )
 
-ZMK_HOLD_TAP(spc
+ZMK_HOLD_TAP(spc,
 	flavor = "hold-preferred";
 	require-prior-idle-ms = <100>;
 	tapping-term-ms = <250>;
