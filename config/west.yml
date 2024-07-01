@@ -14,7 +14,7 @@ manifest:
     - name: zmk-helpers
       remote: urob
       revision: v2 # this will eventually become main
-    - name: pointers-move-scroll
+    - name: zmk
       remote: petejohanson
       revision: feat/pointers-move-scroll
   self:
