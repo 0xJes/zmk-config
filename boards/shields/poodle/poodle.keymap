@@ -80,12 +80,12 @@ ZMK_MOD_MORPH(comma,    bindings = <&kp COMMA>, <&excl_quest>;  mods = <(MOD_LSF
 ZMK_MOD_MORPH(slash,    bindings = <&kp FSLH>,  <&path_here>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(tperiod,  bindings = <&kp DOT>,   <&t_period>;    mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(currency, bindings = <&kp DLLR>,  <&kp RA(N5)>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(excl,     bindings = <&kp EXCL>,  <&kp RA(N1)>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(RL_excl,  bindings = <&kp EXCL>,  <&kp RA(N1)>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(RL_quest, bindings = <&kp QUEST>, <&kp RA(FSLH)>; mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(LR_paren, bindings = <&kp LPAR>,  <&kp RPAR>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(LR_brace, bindings = <&kp LBRC>,  <&kp RBRC>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(LR_brack, bindings = <&kp LBKT>,  <&kp LBKT>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(CO_angle, bindings = <&kp LT>,    <&kp GT>;       mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(LR_angle, bindings = <&kp LT>,    <&kp GT>;       mods = <(MOD_LSFT|MOD_RSFT)>;)
 
 /*	0	1	2		 		3	4	5
 6	7	8	9	10		11	12	13	14	15
@@ -134,12 +134,12 @@ ZMK_COMBO(cps_wrd, &caps_word,  8 13, LAYERS,  50,  75)
 // DIAGONAL COMBOS
 ZMK_COMBO(quote,      &kp SQT,   2 8, LAYERS, 120, 100)
 ZMK_COMBO(dquote,     &kp DQT,  3 13, LAYERS, 120, 100)
-ZMK_COMBO(parent, &parentesis, 12 23, LAYERS, 120, 100)
-ZMK_COMBO(braces,     &braces,  9 18, LAYERS, 120, 100)
-ZMK_COMBO(brackets, &brackets, 14 23, LAYERS, 120, 100)
-ZMK_COMBO(angles,     &angles,  7 18, LAYERS, 120, 100)
-ZMK_COMBO(excl,         &excl,  5 13, LAYERS, 120, 100)
-ZMK_COMBO(quest,    &CO_quest,  0  8, LAYERS, 120, 100)
+ZMK_COMBO(parent,   &LR_paren, 12 23, LAYERS, 120, 100)
+ZMK_COMBO(braces,   &LR_brace,  9 18, LAYERS, 120, 100)
+ZMK_COMBO(brackets, &LR_brack, 14 23, LAYERS, 120, 100)
+ZMK_COMBO(angles,   &LR_angle,  7 18, LAYERS, 120, 100)
+ZMK_COMBO(excl,      &RL_excl,  5 13, LAYERS, 120, 100)
+ZMK_COMBO(quest,    &RL_quest,  0  8, LAYERS, 120, 100)
 
 ZMK_LAYER(base,
 			&kp B		&kp H			&kp G							&comma		&slash			&kp J
