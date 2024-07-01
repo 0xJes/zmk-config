@@ -135,12 +135,12 @@ ZMK_MACRO_TWO_PARAM(lm,
 // Alpha combos
 ZMK_COMBO(z,            &kp Z,	7 17,	LAYERS,	TO_V)
 ZMK_COMBO(x,            &kp X,	9 19,	LAYERS,	TO_V)
-// ZMK_COMBO(qu,   &holdtap_qu Q,	8 18,	COMBO_LAYERS,   VERT_TIMEOUT)
-ZMK_COMBO(qu,           &kp Q,	8 18,	LAYERS, TO_V)
-// ZMK_COMBO(gu, &holdtap_gu G G,   2 9,	COMBO_LAYERS,	VERT_TIMEOUT)
+ZMK_COMBO(enie,     &kp RA(N),  7 19,	LAYERS, TO_H, 50)
 ZMK_COMBO(au,       &macro_au, 12 22,	LAYERS,	TO_V)
 ZMK_COMBO(ua,       &macro_ua,  3 12,	LAYERS,	TO_V)
-// ZMK_COMBO(enie,     &kp RA(N), 7 19>,	COMBO_LAYERS,   HORZ_TIMEOUT, 50)
+ZMK_COMBO(qu,           &kp Q,	8 18,	LAYERS, TO_V)
+// ZMK_COMBO(qu,   &holdtap_qu Q,	8 18,	COMBO_LAYERS,   VERT_TIMEOUT)
+// ZMK_COMBO(gu, &holdtap_gu G G,   2 9,	COMBO_LAYERS,	VERT_TIMEOUT)
 // Vertical combos
 ZMK_COMBO(plus,      &kp PLUS, 11 21, LAYERS, TO_V)
 ZMK_COMBO(grave,    &kp GRAVE, 10 20, LAYERS, TO_V)
