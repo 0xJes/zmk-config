@@ -160,7 +160,7 @@ ZMK_LAYER(base,
 			&kp B		&kp H			&kp G							&comma		&slash			&kp J
 &kp C		&lhm LALT S	&lhm LCTRL N	&lt 1 T		&kp K	&tperiod	&lt 2 A		&rhm RCTRL E	&rhm LALT I	&kp M
 &kp P		&kp F		&kp L			&lt 3 D		&kp V	&kp MINUS	&kp U		&kp O			&kp Y		&kp W
-						&ss LSHFT		&lt RA(APOS) R					&spc RWIN SPACE	&ss RSHFT
+						&ss LSHFT		&kp R				&spc RWIN SPACE	&ss RSHFT
 )
 
 ZMK_LAYER(navigation,
@@ -180,6 +180,6 @@ ZMK_LAYER(numbers,
 ZMK_LAYER(mouse,
 			&none		&none		&none						&none		&kp DOWN	&kp UP
 &none		&none		&none		&none		&none	&none	&kp A		&kp E		&kp I		&kp M
-&none		&kp LALT	&kp LCTRL	&none		&none	&none	&mkp MB4	&msc MOVE_DOWN 100		&msc MOVE_UP 100		&mkp MB5
+&none		&kp LALT	&kp LCTRL	&none		&none	&none	&mkp MB4 &msc MOVE_DOWN 100	&msc MOVE_UP 100 &mkp MB5
 						&none		&mkp RCLK					&mkp LCLK	&mkp MCLK
 )
