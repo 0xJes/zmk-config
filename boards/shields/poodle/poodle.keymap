@@ -8,7 +8,7 @@
 #define NAV 1
 #define NUM 2
 #define MOU 3
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 10
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 5
 
 // MACROS------------------------------------------------------------------------------------------
 ZMK_MACRO(au,         bindings = <&kp A &kp U>;)
