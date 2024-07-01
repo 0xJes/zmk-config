@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
+    - name: petejohanson
+      url-base: https://github.com/petejohanson
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -12,5 +14,8 @@ manifest:
     - name: zmk-helpers
       remote: urob
       revision: v2 # this will eventually become main
+    - name: pointers-move-scroll
+      remote: petejohanson
+      revision: feat/pointers-move-scroll
   self:
     path: config
