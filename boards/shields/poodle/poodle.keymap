@@ -37,7 +37,7 @@ ZMK_MACRO(lmou_d,
 )
 
 // MISC--------------------------------------------------------------------------------------------
-ZMK_STICKY(ss,
+ZMK_STICKY_KEY(ss,
 	bindings = <&kp>;
 	release-after-ms = <2500>;
 	quick-release;
