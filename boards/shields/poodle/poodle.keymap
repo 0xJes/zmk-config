@@ -132,7 +132,7 @@ ZMK_MACRO_TWO_PARAM(lm,
 // Alpha combos
 ZMK_COMBO(z,            &kp Z,  7 17, LAYERS, 100,   0)
 ZMK_COMBO(x,            &kp X,  9 19, LAYERS, 100,   0)
-ZMK_COMBO(enie, bindings = <&kp RA(N)>;  7 19, LAYERS,  50,   0)
+ZMK_COMBO(enie,     &kp RA(N),  7 19, LAYERS,  50,   0)
 ZMK_COMBO(au,             &au, 12 22, LAYERS, 100)
 ZMK_COMBO(ua,             &ua,  3 12, LAYERS, 100)
 ZMK_COMBO(qu,           &kp Q,  8 18, LAYERS, 100)
