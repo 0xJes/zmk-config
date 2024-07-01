@@ -5,7 +5,6 @@
 
 #define TO_V 100
 
-#define HORZ_IDLE 200
 #define ALPHA_IDLE 0
 #define DEF_IDLE 100
 #define HOME_IDLE 75
@@ -131,34 +130,34 @@ ZMK_MACRO_TWO_PARAM(lm,
 				26	27		28	29	              */
 
 // Alpha combos
-ZMK_COMBO(z,            &kp Z,	7 17,	LAYERS,	TO_V)
-ZMK_COMBO(x,            &kp X,	9 19,	LAYERS,	TO_V)
-ZMK_COMBO(enie,     &kp RA(N),  7 19,	LAYERS, TO_H, 50)
-ZMK_COMBO(au,             &au, 12 22,	LAYERS,	TO_V)
-ZMK_COMBO(ua,             &ua,  3 12,	LAYERS,	TO_V)
-ZMK_COMBO(qu,           &kp Q,	8 18,	LAYERS, TO_V)
+ZMK_COMBO(z,            &kp Z,  7 17, LAYERS, 100,   0)
+ZMK_COMBO(x,            &kp X,  9 19, LAYERS, 100,   0)
+ZMK_COMBO(enie,     &kp RA(N),  7 19, LAYERS,  50,   0)
+ZMK_COMBO(au,             &au, 12 22, LAYERS, 100)
+ZMK_COMBO(ua,             &ua,  3 12, LAYERS, 100)
+ZMK_COMBO(qu,           &kp Q,  8 18, LAYERS, 100)
 // ZMK_COMBO(qu,   &holdtap_qu Q,	8 18,	COMBO_LAYERS,   VERT_TIMEOUT)
 // ZMK_COMBO(gu, &holdtap_gu G G,   2 9,	COMBO_LAYERS,	VERT_TIMEOUT)
-// Vertical combos
-ZMK_COMBO(plus,      &kp PLUS, 11 21, LAYERS, TO_V)
-ZMK_COMBO(grave,    &kp GRAVE, 10 20, LAYERS, TO_V)
-ZMK_COMBO(and,       &kp AMPS,  5 14, LAYERS, TO_V)
-ZMK_COMBO(or,        &kp PIPE,  0  7, LAYERS, TO_V)
-ZMK_COMBO(asterisk,  &kp STAR,  4 13, LAYERS, TO_V)
-ZMK_COMBO(backslash, &kp BSLH,  1  8, LAYERS, TO_V)
-ZMK_COMBO(currency, &currency, 14 24, LAYERS, TO_V)
+
+// VERTICAL COMBOS
+ZMK_COMBO(plus,      &kp PLUS, 11 21, LAYERS, 100,   0)
+ZMK_COMBO(grave,    &kp GRAVE, 10 20, LAYERS, 100,   0)
+ZMK_COMBO(and,       &kp AMPS,  5 14, LAYERS, 100,   0)
+ZMK_COMBO(or,       &kp PIPEE,  0  7, LAYERS, 100,   0)
+ZMK_COMBO(asterisk,  &kp STAR,  4 13, LAYERS, 100,   0)
+ZMK_COMBO(backslash, &kp BSLH,  1  8, LAYERS, 100,   0)
+ZMK_COMBO(currency, &currency, 14 24, LAYERS, 100,   0)
 
 // HORIZONTAL COMBOS
-ZMK_COMBO(hash,      &kp HASH, 17 18, LAYERS,  60, HORZ_IDLE)
-ZMK_COMBO(at,          &kp AT, 23 24, LAYERS,  60, HORZ_IDLE)
-ZMK_COMBO(semicolon, &kp SEMI, 18 19, LAYERS,  60, HORZ_IDLE)
-ZMK_COMBO(colon,    &kp COLON, 22 23, LAYERS,  60, HORZ_IDLE)
-ZMK_COMBO(equal,    &kp EQUAL,  1  2, LAYERS,  60,  DEF_IDLE)
-ZMK_COMBO(tilde,    &kp TILDE,  3  4, LAYERS,  60,  DEF_IDLE)
-ZMK_COMBO(caret,    &kp CARET,  4  5, LAYERS,  60,  DEF_IDLE)
-ZMK_COMBO(prcnt,  &kp PERCENT,  0  1, LAYERS,  60,  DEF_IDLE)
-ZMK_COMBO(bootl,  &bootloader,  0  5, LAYERS,  60,  DEF_IDLE)
-ZMK_COMBO(cps_wrd, &caps_word,  8 13, LAYERS,  50, HOME_IDLE)
+ZMK_COMBO(hash,      &kp HASH, 17 18, LAYERS,  60, 200)
+ZMK_COMBO(at,          &kp AT, 23 24, LAYERS,  60, 200)
+ZMK_COMBO(semicolon, &kp SEMI, 18 19, LAYERS,  60, 200)
+ZMK_COMBO(colon,    &kp COLON, 22 23, LAYERS,  60, 200)
+ZMK_COMBO(equal,    &kp EQUAL,  1  2, LAYERS,  60, 100)
+ZMK_COMBO(tilde,    &kp TILDE,  3  4, LAYERS,  60, 100)
+ZMK_COMBO(caret,    &kp CARET,  4  5, LAYERS,  60, 100)
+ZMK_COMBO(prcnt,  &kp PERCENT,  0  1, LAYERS,  60, 100)
+ZMK_COMBO(bootl,  &bootloader,  0  5, LAYERS,  60, 100)
 
 // HORIZONTAL COMBOS ON HOME ROW
 ZMK_COMBO(backspace, &kp BSPC, 13 14, LAYERS, 150,  75)
@@ -167,6 +166,7 @@ ZMK_COMBO(enter,      &kp RET,  7  8, LAYERS,  70,  75)
 ZMK_COMBO(escape,     &kp ESC,  7  9, LAYERS,  50,  75)
 ZMK_COMBO(uscore,   &kp UNDER, 12 14, LAYERS, 100,  75)
 ZMK_COMBO(tab,        &kp TAB, 12 13, LAYERS,  60,  75)
+ZMK_COMBO(cps_wrd, &caps_word,  8 13, LAYERS,  50,  75)
 
 // DIAGONAL COMBOS
 ZMK_COMBO(quote,      &kp SQT,   2 8, LAYERS, 120, 100)
