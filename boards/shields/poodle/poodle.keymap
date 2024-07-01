@@ -72,7 +72,7 @@ ZMK_MACRO(path_here,  bindings = <&kp PERIOD &kp FSLH &kp STAR>;)
 ZMK_MACRO(excl_quest, bindings = <&kp EXCLAMATION &kp QUESTION>;)
 
 // HOLD TAPS
-ZMK_HOLD_TAP(qu_q,     bindings = <&qu>, <&kp>;   tapping-term-ms = <200>;)
+ZMK_HOLD_TAP(qu_q,     bindings = <&kp>, <&qu>;   tapping-term-ms = <200>;)
 ZMK_HOLD_TAP(gu_espgu, bindings = <&gu>, <&gu_d>; tapping-term-ms = <200>;)
 
 // SPECIAL SHIFTED KEYS
@@ -81,7 +81,7 @@ ZMK_MOD_MORPH(slash,    bindings = <&kp FSLH>,  <&path_here>;   mods = <(MOD_LSF
 ZMK_MOD_MORPH(tperiod,  bindings = <&kp DOT>,   <&t_period>;    mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(currency, bindings = <&kp DLLR>,  <&kp RA(N5)>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(RL_excl,  bindings = <&kp EXCL>,  <&kp RA(N1)>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(RL_quest, bindings = <&kp QUESTION>, <&kp RA(FSLH)>; mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(RL_quest, bindings = <&kp QMARK>, <&kp RA(FSLH)>; mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(LR_paren, bindings = <&kp LPAR>,  <&kp RPAR>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(LR_brace, bindings = <&kp LBRC>,  <&kp RBRC>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(LR_brack, bindings = <&kp LBKT>,  <&kp LBKT>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
