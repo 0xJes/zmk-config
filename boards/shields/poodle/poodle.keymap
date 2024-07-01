@@ -3,11 +3,6 @@
 #include <dt-bindings/zmk/mouse.h>
 #include "zmk-helpers/helper.h"
 
-#define TO_V 100
-
-#define ALPHA_IDLE 0
-#define DEF_IDLE 100
-#define HOME_IDLE 75
 #define LAYERS 0 1 2
 
 &caps_word {
@@ -46,18 +41,6 @@
 			quick-release;
 			ignore-modifiers;
 		};
-		holdtap_qu: holdtap_qu {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <2>;
-			bindings = <&qu>, <&kp>;
-			tapping-term-ms = <200>;
-		};
-		holdtap_gu: holdtap_gu {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <2>;
-			bindings = <&gu>, <&gu_d>;
-			tapping-term-ms = <200>;
-		};
 	};
 };
 
@@ -88,6 +71,10 @@ ZMK_MACRO(t_period,   bindings = <&kp PERIOD &kp PERIOD &kp PERIOD>;)
 ZMK_MACRO(path_here,  bindings = <&kp PERIOD &kp FSLH &kp STAR>;)
 ZMK_MACRO(excl_quest, bindings = <&kp EXCLAMATION &kp QUESTION>;)
 
+// HOLD TAPS
+ZMK_HOLD_TAP(qu_q,     bindings = <&qu>, <&kp>;   tapping-term-ms = <200>;)
+ZMK_HOLD_TAP(gu_espgu, bindings = <&gu>, <&gu_d>; tapping-term-ms = <200>;)
+
 // SPECIAL SHIFTED KEYS
 ZMK_MOD_MORPH(comma,    bindings = <&kp COMMA>, <&excl_quest>;  mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(slash,    bindings = <&kp FSLH>,  <&path_here>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
@@ -111,8 +98,8 @@ ZMK_COMBO(x,            &kp X,  9 19, LAYERS, 100,   0)
 ZMK_COMBO(enie,     &kp RA(N),  7 19, LAYERS,  50,   0)
 ZMK_COMBO(au,             &au, 12 22, LAYERS, 100,   0)
 ZMK_COMBO(ua,             &ua,  3 12, LAYERS, 100,   0)
-ZMK_COMBO(qu,           &kp Q,  8 18, LAYERS, 100,   0)
-// ZMK_COMBO(qu,   &holdtap_qu Q,  8 18, LAYERS, 100,   0)
+ZMK_COMBO(qu,       &qu_q Q Q,  8 18, LAYERS, 100,   0)
+//ZMK_COMBO(qu,           &kp Q,  8 18, LAYERS, 100,   0)
 // ZMK_COMBO(gu, &holdtap_gu G G,   2 9,	COMBO_LAYERS,	VERT_TIMEOUT)
 
 // VERTICAL COMBOS
@@ -155,10 +142,10 @@ ZMK_COMBO(excl,         &excl,  5 13, LAYERS, 120, 100)
 ZMK_COMBO(quest,    &CO_quest,  0  8, LAYERS, 120, 100)
 
 ZMK_LAYER(base,
-		&kp B		&kp H			&kp G							&comma		&slash			&kp J
-&kp C	&lhm LALT S	&lhm LCTRL N	&lt 1 T		&kp K	&tperiod	&lt 2 A		&rhm RCTRL E	&rhm LALT I	&kp M
-&kp P	&kp F		&kp L			&lm 3 D		&kp V	&kp MINUS	&kp U		&kp O			&kp Y		&kp W
-					&ss LSHFT		&lt RA(APOS) R					&mt RWIN SPACE	&ss RSHFT
+			&kp B		&kp H			&kp G							&comma		&slash			&kp J
+&kp C		&lhm LALT S	&lhm LCTRL N	&lt 1 T		&kp K	&tperiod	&lt 2 A		&rhm RCTRL E	&rhm LALT I	&kp M
+&kp P		&kp F		&kp L			&lm 3 D		&kp V	&kp MINUS	&kp U		&kp O			&kp Y		&kp W
+						&ss LSHFT		&lt RA(APOS) R					&mt RWIN SPACE	&ss RSHFT
 )
 
 ZMK_LAYER(navigation,
@@ -169,15 +156,15 @@ ZMK_LAYER(navigation,
 )
 
 ZMK_LAYER(numbers,
-		&kp FSLH	&kp STAR	&kp PLUS					&none		&none		&none
-&kp N4	&kp N3		&kp N2		&kp N1		&none	&none	&none		&kp PERIOD	&kp COMMA	&kp MINUS
-&kp N8	&kp N7		&kp N6		&kp N5		&none	&none	&none		&none		&none		&none
-					&kp N9  	&kp N0						&kp SPACE	&none
+			&kp FSLH	&kp STAR	&kp PLUS					&none		&none		&none
+&kp N4		&kp N3		&kp N2		&kp N1		&none	&none	&none		&kp DOT		&kp COMMA	&kp MINUS
+&kp N8		&kp N7		&kp N6		&kp N5		&none	&none	&none		&none		&none		&none
+						&kp N9		&kp N0						&kp SPACE	&none
 )
 
 ZMK_LAYER(mouse,
-		&none		&none		&none					&none		&kp DOWN	&kp UP
-&none	&none		&none		&none	&none	&none	&kp A		&kp E		&kp I	&kp M
-&none	&kp LALT	&kp LCTRL	&none	&none	&none	&mkp MB4	&kp O		&kp Y	&mkp MB5
-					&none		&mkp RCLK				&mkp LCLK	&mkp MCLK
+			&none		&none		&none						&none		&kp DOWN	&kp UP
+&none		&none		&none		&none		&none	&none	&kp A		&kp E		&kp I		&kp M
+&none		&kp LALT	&kp LCTRL	&none		&none	&none	&mkp MB4	&kp O		&kp Y		&mkp MB5
+						&none		&mkp RCLK					&mkp LCLK	&mkp MCLK
 )
