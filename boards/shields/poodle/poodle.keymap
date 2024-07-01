@@ -58,7 +58,7 @@ ZMK_HOLD_TAP(gu_espgu,
 	bindings = <&gu_d>, <&gu>;
 )
 
-ZMK_HOLD_TAP(lhm
+ZMK_HOLD_TAP(lhm,
 	flavor = "balanced";
 	require-prior-idle-ms = <100>;
 	tapping-term-ms = <250>;
