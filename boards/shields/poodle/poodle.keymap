@@ -159,7 +159,7 @@ ZMK_COMBO(quest,    &RL_quest,  0  8, LAYERS, 120, 100)
 ZMK_LAYER(base,
 			&kp B		&kp H			&kp G							&comma		&slash			&kp J
 &kp C		&lhm LALT S	&lhm LCTRL N	&lt 1 T		&kp K	&tperiod	&lt 2 A		&rhm RCTRL E	&rhm LALT I	&kp M
-&kp P		&kp F		&kp L			&kp D		&kp V	&kp MINUS	&kp U		&kp O			&kp Y		&kp W
+&kp P		&kp F		&kp L			&msl D D	&kp V	&kp MINUS	&kp U		&kp O			&kp Y		&kp W
 						&ss LSHFT		&lt RA(APOS) R					&spc RWIN SPACE	&ss RSHFT
 )
 
