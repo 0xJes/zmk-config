@@ -4,15 +4,19 @@
 #include "zmk-helpers/helper.h"
 
 #define LAYERS 0 1 2
+#define BSE 0
+#define NAV 1
+#define NUM 2
+#define MOU 3
 
 // MACROS------------------------------------------------------------------------------------------
 ZMK_MACRO(au,         bindings = <&kp A &kp U>;)
 ZMK_MACRO(ua,         bindings = <&kp U &kp A>;)
 ZMK_MACRO(gu,         bindings = <&kp G &kp U>;)
 ZMK_MACRO(gu_d,       bindings = <&kp G &kp RA(U)>;)
-ZMK_MACRO(t_period,   bindings = <&kp PERIOD &kp PERIOD &kp PERIOD>;)
-ZMK_MACRO(path_here,  bindings = <&kp PERIOD &kp FSLH &kp STAR>;)
-ZMK_MACRO(excl_quest, bindings = <&kp EXCLAMATION &kp QUESTION>;)
+ZMK_MACRO(t_period,   bindings = <&kp DOT &kp DOT &kp DOT>;)
+ZMK_MACRO(path_here,  bindings = <&kp DOT &kp FSLH &kp STAR>;)
+ZMK_MACRO(excl_quest, bindings = <&kp EXCL &kp QMARK>;)
 
 ZMK_MACRO(qu,
 	wait-ms = <0>;
@@ -25,9 +29,9 @@ ZMK_MACRO(lmou_d,
 	tap-ms = <0>;
 	bindings
 		= <&macro_press &mo 3>
-		, <&macro_press &kp d>
+		, <&macro_press &kp D>
 		, <&macro_pause_for_release>
-		, <&macro_release &kp d>
+		, <&macro_release &kp D>
 		, <&macro_release &mo 3>
 		;
 )
