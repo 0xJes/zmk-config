@@ -106,13 +106,13 @@ ZMK_COMBO(qu,       &qu_q Q Q,  8 18, BSE     , 100,   0)
 ZMK_COMBO(gu,   &gu_espgu G G,   2 9, BSE     , 100,   0)
 
 // VERTICAL COMBOS---------------------------------------------------------------------------------
-ZMK_COMBO(plus,      &kp PLUS, 11 21, BSE     ,  85,   0)
-ZMK_COMBO(grave,    &kp GRAVE, 10 20, BSE     ,  85,   0)
-ZMK_COMBO(and,       &kp AMPS,  5 14, BSE     ,  85,   0)
-ZMK_COMBO(or,        &kp PIPE,  0  7, BSE     ,  85,   0)
-ZMK_COMBO(asterisk,  &kp STAR,  4 13, BSE     ,  85,   0)
-ZMK_COMBO(backslash, &kp BSLH,  1  8, BSE     ,  85,   0)
-ZMK_COMBO(currency, &currency, 14 24, BSE     ,  85,   0)
+ZMK_COMBO(plus,      &kp PLUS, RM0 RB0, BSE     ,  85,   0)
+ZMK_COMBO(grave,    &kp GRAVE, LM0 LB0, BSE     ,  85,   0)
+ZMK_COMBO(and,       &kp AMPS, RT3 LM3, BSE     ,  85,   0)
+ZMK_COMBO(or,        &kp PIPE, LT3 LM3, BSE     ,  85,   0)
+ZMK_COMBO(asterisk,  &kp STAR, RT2 RM2, BSE     ,  85,   0)
+ZMK_COMBO(backslash, &kp BSLH, LT2 LM2, BSE     ,  85,   0)
+ZMK_COMBO(currency, &currency, RM3 RB3, BSE     ,  85,   0)
 
 // HORIZONTAL COMBOS-------------------------------------------------------------------------------
 ZMK_COMBO(hash,      &kp HASH, LB2 LB3, BSE     ,  60, 200)
