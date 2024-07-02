@@ -57,22 +57,22 @@ ZMK_HOLD_TAP(gu_espgu,
 	bindings = <&gu_d>, <&gu>;
 )
 
-ZMK_HOLD_TAP(lm,
-	flavor = "balanced";
-	require-prior-idle-ms = <100>;
-	tapping-term-ms = <250>;
-	quick-tap-ms = <200>;
-	hold-trigger-key-positions = <LEFT_HAND_KEYS>;
-	hold-trigger-on-release;
-	bindings = <&kp>, <&kp>;
-)
-
-ZMK_HOLD_TAP(rm,
+ZMK_HOLD_TAP(hml,
 	flavor = "balanced";
 	require-prior-idle-ms = <100>;
 	tapping-term-ms = <250>;
 	quick-tap-ms = <200>;
 	hold-trigger-key-positions = <RIGHT_HAND_KEYS>;
+	hold-trigger-on-release;
+	bindings = <&kp>, <&kp>;
+)
+
+ZMK_HOLD_TAP(hmr,
+	flavor = "balanced";
+	require-prior-idle-ms = <100>;
+	tapping-term-ms = <250>;
+	quick-tap-ms = <200>;
+	hold-trigger-key-positions = <LEFT_HAND_KEYS>;
 	hold-trigger-on-release;
 	bindings = <&kp>, <&kp>;
 )
@@ -98,36 +98,36 @@ ZMK_MOD_MORPH(LR_brack, bindings = <&kp LBKT>,  <&kp LBKT>;     mods = <(MOD_LSF
 ZMK_MOD_MORPH(LR_angle, bindings = <&kp LT>,    <&kp GT>;       mods = <(MOD_LSFT|MOD_RSFT)>;)
 
 // ALPHA COMBOS------------------------------------------------------------------------------------
-ZMK_COMBO(z,            &kp Z, LM3 LB3, BSE    , 100,   0)
-ZMK_COMBO(x,            &kp X, LM1 LB1, BSE    , 100,   0)
-ZMK_COMBO(enie,     &kp RA(N), LB1 LB3, BSE    ,  50,   0)
-ZMK_COMBO(au,             &au, RM1 RB1, BSE    , 100,   0)
-ZMK_COMBO(ua,             &ua, RT1 RM1, BSE    , 100,   0)
-ZMK_COMBO(qu,       &qu_q Q Q, LM2 LB2, BSE    , 100,   0)
-ZMK_COMBO(gu,   &gu_espgu G G, LT1 LM1, BSE    , 100,   0)
+ZMK_COMBO(z,            &kp Z, LB3 LB4, BSE    , 100,   0) // p f
+ZMK_COMBO(x,            &kp X, LT3 LT1, BSE    , 100,   0) // b g
+ZMK_COMBO(enie,     &kp RA(N), LB1 LB3, BSE    ,  50,   0) // f d
+// ZMK_COMBO(au,             &au, RM1 RB1, BSE    , 100,   0)
+// ZMK_COMBO(ua,             &ua, RT1 RM1, BSE    , 100,   0)
+ZMK_COMBO(qu,       &qu_q Q Q, LB1 LB2, BSE    , 100,   0) // l d
+// ZMK_COMBO(gu,   &gu_espgu G G, LT1 LM1, BSE    , 100,   0)
 
 // VERTICAL COMBOS---------------------------------------------------------------------------------
-ZMK_COMBO(plus,      &kp PLUS, RM0 RB0, BSE    ,  85,   0)
-ZMK_COMBO(grave,    &kp GRAVE, LM0 LB0, BSE    ,  85,   0)
-ZMK_COMBO(and,       &kp AMPS, RT3 LM3, BSE    ,  85,   0)
-ZMK_COMBO(or,        &kp PIPE, LT3 LM3, BSE    ,  85,   0)
-ZMK_COMBO(asterisk,  &kp STAR, RT2 RM2, BSE    ,  85,   0)
-ZMK_COMBO(backslash, &kp BSLH, LT2 LM2, BSE    ,  85,   0)
-ZMK_COMBO(currency, &currency, RM3 RB3, BSE    ,  85,   0)
+ZMK_COMBO(plus,      &kp PLUS, RM0 RB0, BSE    ,  85,   0) // . -
+ZMK_COMBO(grave,    &kp GRAVE, LM0 LB0, BSE    ,  85,   0) // k v
+ZMK_COMBO(and,       &kp AMPS, RT3 LM3, BSE    ,  85,   0) // j i
+ZMK_COMBO(or,        &kp PIPE, LT3 LM3, BSE    ,  85,   0) // b s
+ZMK_COMBO(asterisk,  &kp STAR, RT2 RM2, BSE    ,  85,   0) // / e
+ZMK_COMBO(backslash, &kp BSLH, LT2 LM2, BSE    ,  85,   0) // h n
+ZMK_COMBO(currency, &currency, RM3 RB3, BSE    ,  85,   0) // i y
 
 // HORIZONTAL COMBOS-------------------------------------------------------------------------------
-ZMK_COMBO(hash,      &kp HASH, LB2 LB3, BSE    ,  60, 200)
-ZMK_COMBO(at,          &kp AT, RB2 RB3, BSE    ,  60, 200)
-ZMK_COMBO(semi,      &kp SEMI, LB1 LB2, BSE    ,  60, 200)
-ZMK_COMBO(colon,    &kp COLON, RB1 RB2, BSE    ,  60, 200)
-ZMK_COMBO(equal,    &kp EQUAL, LT1 LT2, BSE    ,  60, 100)
-ZMK_COMBO(tilde,    &kp TILDE, RT1 RT2, BSE    ,  60, 100)
-ZMK_COMBO(caret,    &kp CARET, RT2 RT3, BSE    ,  60, 100)
-ZMK_COMBO(prcnt,    &kp PRCNT, LT2 LT3, BSE    ,  60, 100)
-ZMK_COMBO(bootl,  &bootloader, LT3 RT3, BSE    ,  60, 100)
+ZMK_COMBO(hash,      &kp HASH, LB2 LB3, BSE    ,  60, 200) // f l
+ZMK_COMBO(at,          &kp AT, RB1 RB3, BSE    ,  60, 200) // o y
+ZMK_COMBO(semi,      &kp SEMI, RB1 RB2, BSE    ,  60, 200) // u o
+ZMK_COMBO(colon,    &kp COLON, RB2 RB3, BSE    ,  60, 200) // o y
+ZMK_COMBO(equal,    &kp EQUAL, LT1 LT2, BSE    ,  60, 100) // b h
+ZMK_COMBO(tilde,    &kp TILDE, RT1 RT2, BSE    ,  60, 100) // , /
+ZMK_COMBO(caret,    &kp CARET, RT2 RT3, BSE    ,  60, 100) // / j
+ZMK_COMBO(prcnt,    &kp PRCNT, LT2 LT3, BSE    ,  60, 100) // b h
+ZMK_COMBO(bootl,  &bootloader, LT3 RT3, BSE    ,  60, 100) // b j
 
 // HORIZONTAL COMBOS ON HOME ROW-------------------------------------------------------------------
-ZMK_COMBO(escape,     &kp ESC, LM1 LM3, BSE    ,  50,  75)
+ZMK_COMBO(escape,     &kp ESC, LM1 LM3, BSE    ,  50,  75) // s t
 ZMK_COMBO(enter,      &kp RET, LM2 LM3, BSE NAV,  70,  75)
 ZMK_COMBO(tab,        &kp TAB, RM1 RM2, BSE    ,  60,  75)
 ZMK_COMBO(uscore,   &kp UNDER, RM1 RM3, BSE    , 100,  75)
@@ -145,18 +145,25 @@ ZMK_COMBO(angles,   &LR_angle, LM3 LB2, BSE    , 120, 100)
 ZMK_COMBO(excl,      &RL_excl, RT3 RM2, BSE    , 120, 100)
 ZMK_COMBO(quest,    &RL_quest, LT3 LM2, BSE    , 120, 100)
 
+#define CUT      &kp LC(X)
+#define PASTE    &kp LC(V)
+#define COPY     &kp LC(C)
+#define ZOOM_IN  &kp LC(PLUS)
+#define ZOOM_OUT &kp LC(MINUS)
+
+
 ZMK_LAYER(base,
 				&kp B			&kp H			&kp G										&comma			&slash			&kp J
-&kp C			&lm LALT S		&lm LCTRL N		&lt NAV T		&kp K		&tperiod		&lt NUM A		&rm RCTRL E		&rm LALT I		&kp M
+&kp C			&hml LALT S		&hml LCTRL N	&lt NAV T		&kp K		&tperiod		&lt NUM A		&hmr RCTRL E	&hmr LALT I		&kp M
 &kp P			&kp F			&kp L			&kp D			&kp V		&kp MINUS		&kp U			&kp O			&kp Y			&kp W
 								&ss LSHFT		&lt MOU R									&spc RWIN SPACE	&ss RSHFT
 )
 
 ZMK_LAYER(navigation,
-				&none			&none			&none										&kp LC(V)		&kp LC(C)		&kp LC(X)
-&kp LALT		&kp LCTRL		&kp LSHFT		&none			&none		&kp LC(PLUS)	&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT
-&none			&none			&none			&none			&none		&kp LC(MINUS)	&kp HOME		&kp PG_DN		&kp PG_UP		&kp END
-								&kp LC(Z)		&kp LC(Y)									&kp SPACE		&kp RSHFT
+			&none		&none		&none							PASTE		COPY		CUT
+&kp LALT	&kp LCTRL	&kp LSHFT	&none		&none	ZOOM_IN		&kp LEFT	&kp DOWN	&kp UP		&kp RIGHT
+&none		&none		&none		&none		&none	ZOOM_OUT	&kp HOME	&kp PG_DN	&kp PG_UP	&kp END
+						&kp LC(Z)	&kp LC(Y)						&kp SPACE	&kp RSHFT
 )
 
 ZMK_LAYER(numbers,
