@@ -127,7 +127,7 @@ ZMK_COMBO(bootl,  &bootloader,  0  5, BSE     ,  60, 100)
 
 // HORIZONTAL COMBOS ON HOME ROW-------------------------------------------------------------------
 ZMK_COMBO(backspace, &kp BSPC, 13 14, BSE NAV , 150,  75)
-ZMK_COMBO(delete,     &kp DEL, 14 15, BSE NAV , 120,  75)
+ZMK_COMBO(delete,     &kp DEL, 14 15, BSE NAV , 140,  75)
 ZMK_COMBO(enter,      &kp RET,  7  8, BSE NAV ,  70,  75)
 ZMK_COMBO(escape,     &kp ESC,  7  9, BSE     ,  50,  75)
 ZMK_COMBO(uscore,   &kp UNDER, 12 14, BSE     , 100,  75)
@@ -158,11 +158,16 @@ ZMK_LAYER(navigation,
 						&kp LC(Z)	&kp LC(Y)					 		&kp SPACE	&kp RSHFT
 )
 
+ZMK_MACRO(add, bindings = <&kp SPACE &kp PLUS  &kp SPACE>;)
+ZMK_MACRO(sub, bindings = <&kp SPACE &kp MINUS &kp SPACE>;)
+ZMK_MACRO(div, bindings = <&kp SPACE &kp FSLH  &kp SPACE>;)
+ZMK_MACRO(mul, bindings = <&kp SPACE &kp STAR  &kp SPACE>;)
+
 ZMK_LAYER(numbers,
-			&kp FSLH	&kp STAR	&kp PLUS					&none		&none		&none
-&kp N4		&kp N3		&kp N2		&kp N1		&none	&none	&none		&kp DOT		&kp COMMA	&kp MINUS
-&kp N8		&kp N7		&kp N6		&kp N5		&none	&none	&none		&none		&none		&none
-						&kp N9		&kp N0						&kp SPACE	&none
+       &none  &div   &mul              &none  &none   &none
+&kp N3 &kp N2 &kp N1 &kp N0 &add &none &none  &kp DOT &kp COMMA &kp MINUS
+&kp N7 &kp N6 &kp N5 &kp N4 &sub &none &none  &none   &none     &none
+              &none  &kp N8            &kp N9 &kp SPACE
 )
 
 ZMK_LAYER(mouse,
