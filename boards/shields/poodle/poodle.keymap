@@ -9,6 +9,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
 #include "zmk-helpers/helper.h"
+#include "keylabels.h"
 
 // MACROS------------------------------------------------------------------------------------------
 ZMK_MACRO(au,			bindings = <&kp A &kp U>;)
@@ -95,11 +96,6 @@ ZMK_MOD_MORPH(LR_brace, bindings = <&kp LBRC>,  <&kp RBRC>;     mods = <(MOD_LSF
 ZMK_MOD_MORPH(LR_brack, bindings = <&kp LBKT>,  <&kp LBKT>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(LR_angle, bindings = <&kp LT>,    <&kp GT>;       mods = <(MOD_LSFT|MOD_RSFT)>;)
 
-/*	0	1	2		 		3	4	5
-6	7	8	9	10		11	12	13	14	15
-16	17	18	19	20		21	22	23	24	25
-			26	27		28	29			*/
-
 // ALPHA COMBOS------------------------------------------------------------------------------------
 ZMK_COMBO(z,            &kp Z,  7 17, BSE     , 100,   0)
 ZMK_COMBO(x,            &kp X,  9 19, BSE     , 100,   0)
@@ -133,20 +129,20 @@ ZMK_COMBO(bootl,  &bootloader,  0  5, BSE     ,  60, 100)
 ZMK_COMBO(backspace, &kp BSPC, 13 14, BSE NAV , 150,  75)
 ZMK_COMBO(delete,     &kp DEL, 14 15, BSE NAV , 140,  75)
 ZMK_COMBO(enter,      &kp RET,  7  8, BSE NAV ,  70,  75)
-ZMK_COMBO(escape,     &kp ESCRL,  7  9, BSE     ,  50,  75)
+ZMK_COMBO(escape,     &kp ESC,  7  9, BSE     ,  50,  75)
 ZMK_COMBO(uscore,   &kp UNDER, 12 14, BSE     , 100,  75)
 ZMK_COMBO(tab,        &kp TAB, 12 13, BSE     ,  60,  75)
 ZMK_COMBO(cps_wrd, &caps_word,  8 13, BSE     ,  50,  75)
 
 // DIAGONAL COMBOS---------------------------------------------------------------------------------
-ZMK_COMBO(quote,      &kp SQT,   2 8, BSE     , 120, 100)
-ZMK_COMBO(dquote,     &kp DQT,  3 13, BSE     , 120, 100)
-ZMK_COMBO(parent,   &LR_paren, 12 23, BSE     , 120, 100)
-ZMK_COMBO(braces,   &LR_brace,  9 18, BSE     , 120, 100)
-ZMK_COMBO(brackets, &LR_brack, 14 23, BSE     , 120, 100)
-ZMK_COMBO(angles,   &LR_angle,  7 18, BSE     , 120, 100)
-ZMK_COMBO(excl,      &RL_excl,  5 13, BSE     , 120, 100)
-ZMK_COMBO(quest,    &RL_quest,  0  8, BSE     , 120, 100)
+ZMK_COMBO(quote,      &kp SQT,     2 8, BSE     , 120, 100)
+ZMK_COMBO(dquote,     &kp DQT,    3 13, BSE     , 120, 100)
+ZMK_COMBO(parent,   &LR_paren,   12 23, BSE     , 120, 100)
+ZMK_COMBO(braces,   &LR_brace,    9 18, BSE     , 120, 100)
+ZMK_COMBO(brackets, &LR_brack, RM3 RB2, BSE     , 120, 100)
+ZMK_COMBO(angles,   &LR_angle, LM3 LB2, BSE     , 120, 100)
+ZMK_COMBO(excl,      &RL_excl, RT3 RM2, BSE     , 120, 100)
+ZMK_COMBO(quest,    &RL_quest, LT3 LM2, BSE     , 120, 100)
 
 ZMK_LAYER(base,
 				&kp B			&kp H			&kp G										&comma			&slash			&kp J
