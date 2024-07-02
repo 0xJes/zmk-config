@@ -1,8 +1,9 @@
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 30
 #define BSE 0
 #define NAV 1
 #define NUM 2
 #define MOU 3
+
+#define ZMK_MOUSE_DEFAULT_SCRLRL_VAL 30
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -10,13 +11,17 @@
 #include "zmk-helpers/helper.h"
 
 // MACROS------------------------------------------------------------------------------------------
-ZMK_MACRO(au,         bindings = <&kp A &kp U>;)
-ZMK_MACRO(ua,         bindings = <&kp U &kp A>;)
-ZMK_MACRO(gu,         bindings = <&kp G &kp U>;)
-ZMK_MACRO(gu_d,       bindings = <&kp G &kp RA(U)>;)
-ZMK_MACRO(t_period,   bindings = <&kp DOT &kp DOT &kp DOT>;)
-ZMK_MACRO(path_here,  bindings = <&kp DOT &kp FSLH &kp STAR>;)
-ZMK_MACRO(excl_quest, bindings = <&kp EXCL &kp QMARK>;)
+ZMK_MACRO(au,			bindings = <&kp A &kp U>;)
+ZMK_MACRO(ua,			bindings = <&kp U &kp A>;)
+ZMK_MACRO(gu,			bindings = <&kp G &kp U>;)
+ZMK_MACRO(gu_d,			bindings = <&kp G &kp RA(U)>;)
+ZMK_MACRO(t_period,		bindings = <&kp DOT &kp DOT &kp DOT>;)
+ZMK_MACRO(path_here,	bindings = <&kp DOT &kp FSLH &kp STAR>;)
+ZMK_MACRO(excl_quest,	bindings = <&kp EXCL &kp QMARK>;)
+ZMK_MACRO(add,			bindings = <&kp SPACE &kp PLUS  &kp SPACE>;)
+ZMK_MACRO(sub,			bindings = <&kp SPACE &kp MINUS &kp SPACE>;)
+ZMK_MACRO(div,			bindings = <&kp SPACE &kp FSLH  &kp SPACE>;)
+ZMK_MACRO(mul,			bindings = <&kp SPACE &kp STAR  &kp SPACE>;)
 
 ZMK_MACRO(qu,
 	wait-ms = <0>;
@@ -24,7 +29,7 @@ ZMK_MACRO(qu,
 	bindings = <&kp Q &kp U>;
 )
 
-// MISC--------------------------------------------------------------------------------------------
+// MISCRL--------------------------------------------------------------------------------------------
 ZMK_STICKY_KEY(ss,
 	bindings = <&kp>;
 	release-after-ms = <2500>;
@@ -50,7 +55,7 @@ ZMK_HOLD_TAP(gu_espgu,
 	bindings = <&gu_d>, <&gu>;
 )
 
-ZMK_HOLD_TAP(lhm,
+ZMK_HOLD_TAP(lm,
 	flavor = "balanced";
 	require-prior-idle-ms = <100>;
 	tapping-term-ms = <250>;
@@ -60,7 +65,7 @@ ZMK_HOLD_TAP(lhm,
 	bindings = <&kp>, <&kp>;
 )
 
-ZMK_HOLD_TAP(rhm,
+ZMK_HOLD_TAP(rm,
 	flavor = "balanced";
 	require-prior-idle-ms = <100>;
 	tapping-term-ms = <250>;
@@ -128,7 +133,7 @@ ZMK_COMBO(bootl,  &bootloader,  0  5, BSE     ,  60, 100)
 ZMK_COMBO(backspace, &kp BSPC, 13 14, BSE NAV , 150,  75)
 ZMK_COMBO(delete,     &kp DEL, 14 15, BSE NAV , 140,  75)
 ZMK_COMBO(enter,      &kp RET,  7  8, BSE NAV ,  70,  75)
-ZMK_COMBO(escape,     &kp ESC,  7  9, BSE     ,  50,  75)
+ZMK_COMBO(escape,     &kp ESCRL,  7  9, BSE     ,  50,  75)
 ZMK_COMBO(uscore,   &kp UNDER, 12 14, BSE     , 100,  75)
 ZMK_COMBO(tab,        &kp TAB, 12 13, BSE     ,  60,  75)
 ZMK_COMBO(cps_wrd, &caps_word,  8 13, BSE     ,  50,  75)
@@ -144,34 +149,29 @@ ZMK_COMBO(excl,      &RL_excl,  5 13, BSE     , 120, 100)
 ZMK_COMBO(quest,    &RL_quest,  0  8, BSE     , 120, 100)
 
 ZMK_LAYER(base,
-			&kp B		&kp H			&kp G							&comma		&slash			&kp J
-&kp C		&lhm LALT S	&lhm LCTRL N	&lt 1 T		&kp K	&tperiod	&lt 2 A		&rhm RCTRL E	&rhm LALT I	&kp M
-&kp P		&kp F		&kp L			&lt 3 D		&kp V	&kp MINUS	&kp U		&kp O			&kp Y		&kp W
-						&ss LSHFT		&kp R				&spc RWIN SPACE	&ss RSHFT
+				&kp B			&kp H			&kp G										&comma			&slash			&kp J
+&kp C			&lm LALT S		&lm LCTRL N		&lt NAV T		&kp K		&tperiod		&lt NUM A		&rm RCTRL E		&rm LALT I		&kp M
+&kp P			&kp F			&kp L			&kp D			&kp V		&kp MINUS		&kp U			&kp O			&kp Y			&kp W
+								&ss LSHFT		&lt MOU R									&spc RWIN SPACE	&ss RSHFT
 )
 
 ZMK_LAYER(navigation,
-			&none		&none		&none								&kp LC(V)	&kp LC(C)	&kp LC(X)
-&kp LALT	&kp LCTRL	&kp LSHFT	&none		&none	&kp LC(PLUS)	&kp LEFT	&kp DOWN	&kp UP		&kp RIGHT
-&none		&none		&none		&none		&none	&kp LC(MINUS)	&kp HOME	&kp PG_DN	&kp PG_UP	&kp END
-						&kp LC(Z)	&kp LC(Y)					 		&kp SPACE	&kp RSHFT
+				&none			&none			&none										&kp LC(V)		&kp LC(C)		&kp LC(X)
+&kp LALT		&kp LCTRL		&kp LSHFT		&none			&none		&kp LC(PLUS)	&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT
+&none			&none			&none			&none			&none		&kp LC(MINUS)	&kp HOME		&kp PG_DN		&kp PG_UP		&kp END
+								&kp LC(Z)		&kp LC(Y)									&kp SPACE		&kp RSHFT
 )
 
-ZMK_MACRO(add, bindings = <&kp SPACE &kp PLUS  &kp SPACE>;)
-ZMK_MACRO(sub, bindings = <&kp SPACE &kp MINUS &kp SPACE>;)
-ZMK_MACRO(div, bindings = <&kp SPACE &kp FSLH  &kp SPACE>;)
-ZMK_MACRO(mul, bindings = <&kp SPACE &kp STAR  &kp SPACE>;)
-
 ZMK_LAYER(numbers,
-       &none  &div   &mul              &none  &none   &none
-&kp N3 &kp N2 &kp N1 &kp N0 &add &none &none  &kp DOT &kp COMMA &kp MINUS
-&kp N7 &kp N6 &kp N5 &kp N4 &sub &none &none  &none   &none     &none
-              &none  &kp N8            &kp N9 &kp SPACE
+				&none			&div			&mul										&none			&none			&none
+&kp N3			&kp N2			&kp N1			&kp N0			&add		&none			&none			&kp DOT			&kp COMMA		&kp MINUS
+&kp N7			&kp N6			&kp N5			&kp N4			&sub		&none			&none			&none			&none			&none
+								&none			&kp N8										&kp N9			&kp SPACE
 )
 
 ZMK_LAYER(mouse,
-      &none    &none     &none              &none          &kp DOWN       &kp UP
-&none &none    &none     &none	&none &none &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT
-&none &kp LALT &kp LCTRL &none	&none &none &mkp MB4       &msc SCRL_DOWN &msc SCRL_UP &mkp MB5
-               &none     &mkp RCLK          &mkp LCLK      &mkp MCLK
+				&none			&none			&none										&none			&kp DOWN		&kp UP
+&none			&mkp MCLK		&mkp RCLK		&mkp LCLK		&none		&none			&mmv MOVE_LEFT	&mmv MOVE_DOWN	&mmv MOVE_UP	&mmv MOVE_RIGHT
+&none			&none			&none			&none			&none		&none			&msc SCRL_LEFT	&msc SCRL_DOWN	&msc SCRL_UP	&msc SCRL_RIGHT
+								&none			&none										&mkp MB4		&mkp MB5
 )
