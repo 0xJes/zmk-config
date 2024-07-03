@@ -1,3 +1,6 @@
+// TODO: lshif hold-tap for accented vowels
+
+
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 30
 
 #include <behaviors.dtsi>
@@ -124,31 +127,32 @@ ZMK_MOD_MORPH(LR_angle, bindings = <&kp LT>,    <&kp GT>;       mods = <(MOD_LSF
 
 // Combos: Alpha-----------------------------------------------------------------------------------
 ZMK_COMBO(z,            &kp Z, LB3 LB4, BSE    , 100,   0) // p f
-ZMK_COMBO(x,            &kp X, LT3 LT1, BSE    , 100,   0) // b g
+ZMK_COMBO(x,            &kp X, LT3 LT2, BSE    , 100,   0) // b g
 ZMK_COMBO(enie,     &kp RA(N), LB1 LB3, BSE    ,  50,   0) // f d
 // ZMK_COMBO(au,             &au, RM1 RB1, BSE    , 100,   0)
 // ZMK_COMBO(ua,             &ua, RT1 RM1, BSE    , 100,   0)
 ZMK_COMBO(qu,       &qu_q Q Q, LB1 LB2, BSE    , 100,   0) // l d
-// ZMK_COMBO(gu,   &gu_espgu G G, LT1 LM1, BSE    , 100,   0)
+ZMK_COMBO(gu,   &gu_espgu G G, LT1 LT3, BSE    , 100,   0) // b g
 
 // Combos: Vertical--------------------------------------------------------------------------------
 ZMK_COMBO(plus,      &kp PLUS, RM0 RB0, BSE    ,  85,   0) // . -
-ZMK_COMBO(grave,    &kp GRAVE, LM0 LB0, BSE    ,  85,   0) // k v
-ZMK_COMBO(and,       &kp AMPS, RT3 RM3, BSE    ,  85,   0) // j i
-ZMK_COMBO(or,        &kp PIPE, LT3 LM3, BSE    ,  85,   0) // b s
+ZMK_COMBO(hash,      &kp HASH, LM0 LB0, BSE    ,  85,   0) // k v
+ZMK_COMBO(and,       &kp AMPS, RT1 RM1, BSE    ,  85,   0) // j i
+ZMK_COMBO(or,        &kp PIPE, LT1 LM1, BSE    ,  85,   0) // b s
 ZMK_COMBO(asterisk,  &kp STAR, RT2 RM2, BSE    ,  85,   0) // / e
 ZMK_COMBO(backslash, &kp BSLH, LT2 LM2, BSE    ,  85,   0) // h n
-ZMK_COMBO(currency, &currency, RM3 RB3, BSE    ,  85,   0) // i y
-ZMK_COMBO(semi,      &kp SEMI, RT1 RM1, BSE    ,  85,   0) // , a
-ZMK_COMBO(colon,    &kp COLON, RM1 RB1, BSE    ,  85,   0) // a ut
+ZMK_COMBO(currency, &currency, RT3 RM3, BSE    ,  85,   0) // i y
+ZMK_COMBO(at,          &kp AT, LT3 LM3, BSE    ,  60, 200) // o y
+ZMK_COMBO(caret,    &kp CARET, RM3 RB3, BSE    ,  60, 100) // / j
+ZMK_COMBO(prcnt,    &kp PRCNT, LM3 LB3, BSE    ,  60, 100) // b h
+ZMK_COMBO(equal,    &kp EQUAL, RM2 RB2, BSE    ,  60, 100) // b h
+ZMK_COMBO(tilde,    &kp TILDE, LM2 LB2, BSE    ,  60, 100) // , /
+ZMK_COMBO(colon,    &kp COLON, RM1 RB1, BSE    ,  60, 100) // , /
+ZMK_COMBO(semi,      &kp SEMI, LM1 LB1, BSE    ,  60, 100) // h g
+ZMK_COMBO(grave,    &kp GRAVE, LM4 LB4, BSE    ,  60, 100) // h g
 
 // Combos: horizontal------------------------------------------------------------------------------
 ZMK_COMBO(hash,      &kp HASH, LB2 LB3, BSE    ,  60, 200) // f l
-ZMK_COMBO(at,          &kp AT, RB1 RB3, BSE    ,  60, 200) // o y
-ZMK_COMBO(equal,    &kp EQUAL, LT1 LT2, BSE    ,  60, 100) // b h
-ZMK_COMBO(tilde,    &kp TILDE, RT1 RT2, BSE    ,  60, 100) // , /
-ZMK_COMBO(caret,    &kp CARET, RT2 RT3, BSE    ,  60, 100) // / j
-ZMK_COMBO(prcnt,    &kp PRCNT, LT2 LT3, BSE    ,  60, 100) // b h
 ZMK_COMBO(bootl,  &bootloader, LT3 RT3, BSE    ,  60, 100) // b j
 
 // Combos: Home row-------------------------------------------------------------------------------
