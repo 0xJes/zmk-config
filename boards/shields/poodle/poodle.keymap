@@ -157,7 +157,6 @@ ZMK_COMBO(semi,      &kp SEMI, LM1 LB1, BSE    ,  60, 100) // h g
 ZMK_COMBO(grave,    &kp GRAVE, LM4 LB4, BSE    ,  60, 100) // h g
 
 // Combos: horizontal------------------------------------------------------------------------------
-ZMK_COMBO(hash,      &kp HASH, LB2 LB3, BSE    ,  60, 200) // f l
 ZMK_COMBO(bootl,  &bootloader, LT3 RT3, BSE    ,  60, 100) // b j
 
 // Combos: Home row-------------------------------------------------------------------------------
