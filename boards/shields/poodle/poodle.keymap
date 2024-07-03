@@ -1,11 +1,3 @@
-#define BSE 0
-#define NAV 1
-#define NUM 2
-#define MOU 3
-
-#define LEFT_HAND_KEYS LT3 LT2 LT1 LM4 LM3 LM2 LM1 LM0 LB4 LB3 LB2 LB1 LB0 LH1 LH0
-#define RIGHT_HAND_KEYS RT1 RT2 RT3 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4 RH0 RH1
-
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 30
 
 #include <behaviors.dtsi>
@@ -14,6 +6,17 @@
 #include "zmk-helpers/helper.h"
 #include "keylabels.h"
 
+// Layers------------------------------------------------------------------------------------------
+#define BSE 0
+#define NAV 1
+#define NUM 2
+#define MOU 3
+
+// All keys in each side---------------------------------------------------------------------------
+#define LEFT_HAND_KEYS LT3 LT2 LT1 LM4 LM3 LM2 LM1 LM0 LB4 LB3 LB2 LB1 LB0 LH1 LH0
+#define RIGHT_HAND_KEYS RT1 RT2 RT3 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4 RH0 RH1
+
+// Common shortcuts--------------------------------------------------------------------------------
 #define CUT      &kp LC(X)
 #define PASTE    &kp LC(V)
 #define COPY     &kp LC(C)
@@ -22,11 +25,11 @@
 #define UNDO     &kp LC(Z)
 #define REDO     &kp LC(Y)
 
+// Mouse operations--------------------------------------------------------------------------------
 #define WHEEL_LEFT  &msc SCRL_LEFT
 #define WHEEL_UP    &msc SCRL_UP
 #define WHEEL_DOWN  &msc SCRL_DOWN
 #define WHEEL_RIGHT &msc SCRL_RIGHT
-
 #define CURSOR_LEFT  &mmv MOVE_LEFT
 #define CURSOR_UP    &mmv MOVE_UP
 #define CURSOR_DOWN  &mmv MOVE_DOWN
@@ -34,8 +37,7 @@
 #define FORWARD      &mkp MB5
 #define BACK         &mkp MB4
 
-
-// MACROS------------------------------------------------------------------------------------------
+// Macros------------------------------------------------------------------------------------------
 ZMK_MACRO(au,			bindings = <&kp A &kp U>;)
 ZMK_MACRO(ua,			bindings = <&kp U &kp A>;)
 ZMK_MACRO(gu,			bindings = <&kp G &kp U>;)
@@ -54,7 +56,7 @@ ZMK_MACRO(qu,
 	bindings = <&kp Q &kp U>;
 )
 
-// MISCRL--------------------------------------------------------------------------------------------
+// Micelaneous-------------------------------------------------------------------------------------
 ZMK_STICKY_KEY(ss,
 	bindings = <&kp>;
 	release-after-ms = <2500>;
@@ -66,7 +68,7 @@ ZMK_STICKY_KEY(ss,
     continue-list = <UNDER MINUS BSPC>;
 };
 
-// HOLD TAPS---------------------------------------------------------------------------------------
+// Hold Taps---------------------------------------------------------------------------------------
 
 ZMK_HOLD_TAP(qu_q,
 	flavor = "tap-preferred";
@@ -108,7 +110,7 @@ ZMK_HOLD_TAP(spc,
 	bindings = <&kp>, <&kp>;
 )
 
-// SPECIAL SHIFTED KEYS----------------------------------------------------------------------------
+// Keys with special shifted versions--------------------------------------------------------------
 ZMK_MOD_MORPH(comma,    bindings = <&kp COMMA>, <&excl_quest>;  mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(slash,    bindings = <&kp FSLH>,  <&path_here>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(tperiod,  bindings = <&kp DOT>,   <&t_period>;    mods = <(MOD_LSFT|MOD_RSFT)>;)
@@ -120,7 +122,7 @@ ZMK_MOD_MORPH(LR_brace, bindings = <&kp LBRC>,  <&kp RBRC>;     mods = <(MOD_LSF
 ZMK_MOD_MORPH(LR_brack, bindings = <&kp LBKT>,  <&kp LBKT>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(LR_angle, bindings = <&kp LT>,    <&kp GT>;       mods = <(MOD_LSFT|MOD_RSFT)>;)
 
-// ALPHA COMBOS------------------------------------------------------------------------------------
+// Combos: Alpha-----------------------------------------------------------------------------------
 ZMK_COMBO(z,            &kp Z, LB3 LB4, BSE    , 100,   0) // p f
 ZMK_COMBO(x,            &kp X, LT3 LT1, BSE    , 100,   0) // b g
 ZMK_COMBO(enie,     &kp RA(N), LB1 LB3, BSE    ,  50,   0) // f d
@@ -129,7 +131,7 @@ ZMK_COMBO(enie,     &kp RA(N), LB1 LB3, BSE    ,  50,   0) // f d
 ZMK_COMBO(qu,       &qu_q Q Q, LB1 LB2, BSE    , 100,   0) // l d
 // ZMK_COMBO(gu,   &gu_espgu G G, LT1 LM1, BSE    , 100,   0)
 
-// VERTICAL COMBOS---------------------------------------------------------------------------------
+// Combos: Vertical--------------------------------------------------------------------------------
 ZMK_COMBO(plus,      &kp PLUS, RM0 RB0, BSE    ,  85,   0) // . -
 ZMK_COMBO(grave,    &kp GRAVE, LM0 LB0, BSE    ,  85,   0) // k v
 ZMK_COMBO(and,       &kp AMPS, RT3 LM3, BSE    ,  85,   0) // j i
@@ -138,7 +140,7 @@ ZMK_COMBO(asterisk,  &kp STAR, RT2 RM2, BSE    ,  85,   0) // / e
 ZMK_COMBO(backslash, &kp BSLH, LT2 LM2, BSE    ,  85,   0) // h n
 ZMK_COMBO(currency, &currency, RM3 RB3, BSE    ,  85,   0) // i y
 
-// HORIZONTAL COMBOS-------------------------------------------------------------------------------
+// Combos: horizontal------------------------------------------------------------------------------
 ZMK_COMBO(hash,      &kp HASH, LB2 LB3, BSE    ,  60, 200) // f l
 ZMK_COMBO(at,          &kp AT, RB1 RB3, BSE    ,  60, 200) // o y
 ZMK_COMBO(semi,      &kp SEMI, RB1 RB2, BSE    ,  60, 200) // u o
@@ -149,7 +151,7 @@ ZMK_COMBO(caret,    &kp CARET, RT2 RT3, BSE    ,  60, 100) // / j
 ZMK_COMBO(prcnt,    &kp PRCNT, LT2 LT3, BSE    ,  60, 100) // b h
 ZMK_COMBO(bootl,  &bootloader, LT3 RT3, BSE    ,  60, 100) // b j
 
-// HORIZONTAL COMBOS ON HOME ROW-------------------------------------------------------------------
+// Combos: Home row-------------------------------------------------------------------------------
 ZMK_COMBO(escape,     &kp ESC, LM1 LM3, BSE    ,  50,  75) // s t
 ZMK_COMBO(enter,      &kp RET, LM2 LM3, BSE NAV,  70,  75) // e i
 ZMK_COMBO(tab,        &kp TAB, RM1 RM2, BSE    ,  60,  75) // a e
@@ -158,7 +160,7 @@ ZMK_COMBO(backspace, &kp BSPC, RM2 RM3, BSE NAV, 150,  75) // e i
 ZMK_COMBO(delete,     &kp DEL, RM3 RM4, BSE NAV, 140,  75) // i m
 ZMK_COMBO(cps_wrd, &caps_word, LM2 RM2, BSE    ,  50,  75) // n e
 
-// DIAGONAL COMBOS---------------------------------------------------------------------------------
+// Combos: Diagonal pairs--------------------------------------------------------------------------
 ZMK_COMBO(quote,      &kp SQT, LT1 LM2, BSE    , 110, 100) // n g
 ZMK_COMBO(dquote,     &kp DQT, RT1 RM2, BSE    , 110, 100) // , e
 ZMK_COMBO(parent,   &LR_paren, RM1 RB2, BSE    , 110, 100) // a l
