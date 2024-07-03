@@ -2,9 +2,31 @@
 #define NAV 1
 #define NUM 2
 #define MOU 3
+
 #define LEFT_HAND_KEYS LT3 LT2 LT1 LM4 LM3 LM2 LM1 LM0 LB4 LB3 LB2 LB1 LB0 LH1 LH0
 #define RIGHT_HAND_KEYS RT1 RT2 RT3 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4 RH0 RH1
-#define ZMK_MOUSE_DEFAULT_SCRLRL_VAL 30
+
+#define CUT      &kp LC(X)
+#define PASTE    &kp LC(V)
+#define COPY     &kp LC(C)
+#define ZOOM_IN  &kp LC(PLUS)
+#define ZOOM_OUT &kp LC(MINUS)
+#define UNDO     &kp LC(Z)
+#define REDO     &kp LC(y)
+
+#define WHEEL_LEFT  &msc SCRL_LEFT
+#define WHEEL_UP    &msc SCRL_UP
+#define WHEEL_DOWN  &msc SCRL_DOWN
+#define WHEEL_RIGHT &msc SCRL_RIGHT
+
+#define CURSOR_LEFT  &mmv MOVE_LEFT
+#define CURSOR_UP    &mmv MOVE_UP
+#define CURSOR_DOWN  &mmv MOVE_DOWN
+#define CURSOR_RIGHT &mmv MOVE_RIGHT
+#define FORWARD      &mkp MB5
+#define BACK         &mkp MB4
+
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 30
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -128,29 +150,22 @@ ZMK_COMBO(bootl,  &bootloader, LT3 RT3, BSE    ,  60, 100) // b j
 
 // HORIZONTAL COMBOS ON HOME ROW-------------------------------------------------------------------
 ZMK_COMBO(escape,     &kp ESC, LM1 LM3, BSE    ,  50,  75) // s t
-ZMK_COMBO(enter,      &kp RET, LM2 LM3, BSE NAV,  70,  75)
-ZMK_COMBO(tab,        &kp TAB, RM1 RM2, BSE    ,  60,  75)
-ZMK_COMBO(uscore,   &kp UNDER, RM1 RM3, BSE    , 100,  75)
-ZMK_COMBO(backspace, &kp BSPC, RM2 RM3, BSE NAV, 150,  75)
-ZMK_COMBO(delete,     &kp DEL, RM3 RM4, BSE NAV, 140,  75)
-ZMK_COMBO(cps_wrd, &caps_word, LM2 RM2, BSE    ,  50,  75)
+ZMK_COMBO(enter,      &kp RET, LM2 LM3, BSE NAV,  70,  75) // e i
+ZMK_COMBO(tab,        &kp TAB, RM1 RM2, BSE    ,  60,  75) // a e
+ZMK_COMBO(uscore,   &kp UNDER, RM1 RM3, BSE    , 100,  75) // a i
+ZMK_COMBO(backspace, &kp BSPC, RM2 RM3, BSE NAV, 150,  75) // e i
+ZMK_COMBO(delete,     &kp DEL, RM3 RM4, BSE NAV, 140,  75) // i m
+ZMK_COMBO(cps_wrd, &caps_word, LM2 RM2, BSE    ,  50,  75) // n e
 
 // DIAGONAL COMBOS---------------------------------------------------------------------------------
-ZMK_COMBO(quote,      &kp SQT, LT1 LM2, BSE    , 120, 100)
-ZMK_COMBO(dquote,     &kp DQT, RT1 RM2, BSE    , 120, 100)
-ZMK_COMBO(parent,   &LR_paren, RM1 RB2, BSE    , 120, 100)
-ZMK_COMBO(braces,   &LR_brace, LM1 LB2, BSE    , 120, 100)
-ZMK_COMBO(brackets, &LR_brack, RM3 RB2, BSE    , 120, 100)
-ZMK_COMBO(angles,   &LR_angle, LM3 LB2, BSE    , 120, 100)
-ZMK_COMBO(excl,      &RL_excl, RT3 RM2, BSE    , 120, 100)
-ZMK_COMBO(quest,    &RL_quest, LT3 LM2, BSE    , 120, 100)
-
-#define CUT      &kp LC(X)
-#define PASTE    &kp LC(V)
-#define COPY     &kp LC(C)
-#define ZOOM_IN  &kp LC(PLUS)
-#define ZOOM_OUT &kp LC(MINUS)
-
+ZMK_COMBO(quote,      &kp SQT, LT1 LM2, BSE    , 110, 100) // n g
+ZMK_COMBO(dquote,     &kp DQT, RT1 RM2, BSE    , 110, 100) // , e
+ZMK_COMBO(parent,   &LR_paren, RM1 RB2, BSE    , 110, 100) // a l
+ZMK_COMBO(braces,   &LR_brace, LM1 LB2, BSE    , 110, 100) // t l
+ZMK_COMBO(brackets, &LR_brack, RM3 RB2, BSE    , 110, 100) // i o
+ZMK_COMBO(angles,   &LR_angle, LM3 LB2, BSE    , 110, 100) // s l
+ZMK_COMBO(excl,      &RL_excl, RT3 RM2, BSE    , 110, 100) // b n
+ZMK_COMBO(quest,    &RL_quest, LT3 LM2, BSE    , 110, 100) // j e
 
 ZMK_LAYER(base,
 				&kp B			&kp H			&kp G										&comma			&slash			&kp J
@@ -163,19 +178,19 @@ ZMK_LAYER(navigation,
 			&none		&none		&none							PASTE		COPY		CUT
 &kp LALT	&kp LCTRL	&kp LSHFT	&none		&none	ZOOM_IN		&kp LEFT	&kp DOWN	&kp UP		&kp RIGHT
 &none		&none		&none		&none		&none	ZOOM_OUT	&kp HOME	&kp PG_DN	&kp PG_UP	&kp END
-						&kp LC(Z)	&kp LC(Y)						&kp SPACE	&kp RSHFT
+						REDO		UNDO							&kp SPACE	&kp RSHFT
 )
 
 ZMK_LAYER(numbers,
-				&none			&div			&mul										&none			&none			&none
-&kp N3			&kp N2			&kp N1			&kp N0			&add		&none			&none			&kp DOT			&kp COMMA		&kp MINUS
-&kp N7			&kp N6			&kp N5			&kp N4			&sub		&none			&none			&none			&none			&none
-								&none			&kp N8										&kp N9			&kp SPACE
+			&none		&div		&mul							&none		&none		&none
+&kp N3		&kp N2		&kp N1		&kp N0		&add	&none		&none		&kp DOT		&kp COMMA	&kp MINUS
+&kp N7		&kp N6		&kp N5		&kp N4		&sub	&none		&none		&none		&none		&none
+						&none		&kp N8							&kp N9		&kp SPACE
 )
 
 ZMK_LAYER(mouse,
-				&none			&none			&none										&none			&kp DOWN		&kp UP
-&none			&mkp MCLK		&mkp RCLK		&mkp LCLK		&none		&none			&mmv MOVE_LEFT	&mmv MOVE_DOWN	&mmv MOVE_UP	&mmv MOVE_RIGHT
-&none			&none			&none			&none			&none		&none			&msc SCRL_LEFT	&msc SCRL_DOWN	&msc SCRL_UP	&msc SCRL_RIGHT
-								&none			&none										&mkp MB4		&mkp MB5
+			&none		&none		&none							&none		&kp DOWN	&kp UP
+&none		&mkp MCLK	&mkp RCLK	&mkp LCLK	&none	&none		CURSOR_LEFT	CURSOR_DOWN	CURSOR_UP	CURSOR_RIGHT
+&none		&none		&none		&none		&none	&none		WHEEL_LEFT	WHEEL_DOWN	WHEEL_UP	WHEEL_RIGHT
+						&none		&none							BACK        FORWARD
 )
