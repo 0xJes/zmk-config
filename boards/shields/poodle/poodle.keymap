@@ -14,6 +14,14 @@
 #define UNDO     &kp LC(Z)
 #define REDO     &kp LC(Y)
 
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 30
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
+#include "zmk-helpers/helper.h"
+#include "keylabels.h"
+
 #define WHEEL_LEFT  &msc SCRL_LEFT
 #define WHEEL_UP    &msc SCRL_UP
 #define WHEEL_DOWN  &msc SCRL_DOWN
@@ -26,13 +34,6 @@
 #define FORWARD      &mkp MB5
 #define BACK         &mkp MB4
 
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 30
-
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
-#include "zmk-helpers/helper.h"
-#include "keylabels.h"
 
 // MACROS------------------------------------------------------------------------------------------
 ZMK_MACRO(au,			bindings = <&kp A &kp U>;)
@@ -191,6 +192,6 @@ ZMK_LAYER(numbers,
 ZMK_LAYER(mouse,
 			&none		&none		&none							&none		&kp DOWN	&kp UP
 &none		&mkp MCLK	&mkp RCLK	&mkp LCLK	&none	&none		CURSOR_LEFT	CURSOR_DOWN	CURSOR_UP	CURSOR_RIGHT
-&none		&none		&none		&none		&none	&none		WHEEL_LEFT	WHEEL_DOWN	WHEEL_UP	WHEEL_RIGHT
+&none		&none		&none		&none		&none	&none		WHEEL_LEFT	 WHEEL_DOWN	 WHEEL_UP	 WHEEL_RIGHT
 						&none		&none							BACK        FORWARD
 )
