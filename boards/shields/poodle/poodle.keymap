@@ -12,7 +12,7 @@
 #define ZOOM_IN  &kp LC(PLUS)
 #define ZOOM_OUT &kp LC(MINUS)
 #define UNDO     &kp LC(Z)
-#define REDO     &kp LC(y)
+#define REDO     &kp LC(Y)
 
 #define WHEEL_LEFT  &msc SCRL_LEFT
 #define WHEEL_UP    &msc SCRL_UP
