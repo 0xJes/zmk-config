@@ -134,17 +134,17 @@ ZMK_COMBO(qu,       &qu_q Q Q, LB1 LB2, BSE    , 100,   0) // l d
 // Combos: Vertical--------------------------------------------------------------------------------
 ZMK_COMBO(plus,      &kp PLUS, RM0 RB0, BSE    ,  85,   0) // . -
 ZMK_COMBO(grave,    &kp GRAVE, LM0 LB0, BSE    ,  85,   0) // k v
-ZMK_COMBO(and,       &kp AMPS, RT3 LM3, BSE    ,  85,   0) // j i
+ZMK_COMBO(and,       &kp AMPS, RT3 RM3, BSE    ,  85,   0) // j i
 ZMK_COMBO(or,        &kp PIPE, LT3 LM3, BSE    ,  85,   0) // b s
 ZMK_COMBO(asterisk,  &kp STAR, RT2 RM2, BSE    ,  85,   0) // / e
 ZMK_COMBO(backslash, &kp BSLH, LT2 LM2, BSE    ,  85,   0) // h n
 ZMK_COMBO(currency, &currency, RM3 RB3, BSE    ,  85,   0) // i y
+ZMK_COMBO(semi,      &kp SEMI, RT1 RM1, BSE    ,  85,   0) // , a
+ZMK_COMBO(colon,    &kp COLON, RM1 RB1, BSE    ,  85,   0) // a ut
 
 // Combos: horizontal------------------------------------------------------------------------------
 ZMK_COMBO(hash,      &kp HASH, LB2 LB3, BSE    ,  60, 200) // f l
 ZMK_COMBO(at,          &kp AT, RB1 RB3, BSE    ,  60, 200) // o y
-ZMK_COMBO(semi,      &kp SEMI, RB1 RB2, BSE    ,  60, 200) // u o
-ZMK_COMBO(colon,    &kp COLON, RB2 RB3, BSE    ,  60, 200) // o y
 ZMK_COMBO(equal,    &kp EQUAL, LT1 LT2, BSE    ,  60, 100) // b h
 ZMK_COMBO(tilde,    &kp TILDE, RT1 RT2, BSE    ,  60, 100) // , /
 ZMK_COMBO(caret,    &kp CARET, RT2 RT3, BSE    ,  60, 100) // / j
