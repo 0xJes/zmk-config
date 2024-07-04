@@ -1,3 +1,7 @@
+// TODO: Ordered combos instead of shft+combo
+// TODO: AU sfb mitigation
+// TODO: Move important vert combos to horz combos
+
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 30
 
 #include <behaviors.dtsi>
@@ -13,8 +17,9 @@
 #define MOU 3
 
 // All keys in each side---------------------------------------------------------------------------
-#define LEFT_HAND_KEYS LT3 LT2 LT1 LM4 LM3 LM2 LM1 LM0 LB4 LB3 LB2 LB1 LB0 LH1 LH0
-#define RIGHT_HAND_KEYS RT1 RT2 RT3 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4 RH0 RH1
+#define LEFT_HAND_KEYS LT3 LT2 LT1 LM4 LM3 LM2 LM1 LM0 LB4 LB3 LB2 LB1 LB0
+#define RIGHT_HAND_KEYS RT1 RT2 RT3 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4
+#define THUMB_KEYS LH1 LH0 RH0 RH1
 
 // Common shortcuts--------------------------------------------------------------------------------
 #define CUT      &kp LC(X)
@@ -87,7 +92,7 @@ ZMK_HOLD_TAP(hml,
 	require-prior-idle-ms = <100>;
 	tapping-term-ms = <250>;
 	quick-tap-ms = <200>;
-	hold-trigger-key-positions = <RIGHT_HAND_KEYS>;
+	hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
 	hold-trigger-on-release;
 	bindings = <&kp>, <&kp>;
 )
@@ -97,7 +102,7 @@ ZMK_HOLD_TAP(hmr,
 	require-prior-idle-ms = <100>;
 	tapping-term-ms = <250>;
 	quick-tap-ms = <200>;
-	hold-trigger-key-positions = <LEFT_HAND_KEYS>;
+	hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
 	hold-trigger-on-release;
 	bindings = <&kp>, <&kp>;
 )
