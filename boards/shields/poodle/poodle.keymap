@@ -5,8 +5,7 @@
 // TODO: Use ACS for hrm on all layers
 // TODO: Format combos by side
 // TODO: Make acute modifier shot once
-// TODO: Add X to base layout
-// TODO: Put = on -, \ on /
+// TODO: Implement ü
 
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 30
 
@@ -133,21 +132,19 @@ ZMK_HOLD_TAP(spc,
 )
 
 // Keys with special shifted versions--------------------------------------------------------------
-ZMK_MOD_MORPH(comma_at,   bindings = <&kp COMMA>, <&kp AT>;       mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(tperiod,    bindings = <&kp DOT>,   <&t_period>;    mods = <(MOD_LSFT|MOD_RSFT)>;)
+// ZMK_MOD_MORPH(comma_at,   bindings = <&kp COMMA>, <&kp AT>;       mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(currency,   bindings = <&kp DLLR>,  <&kp RA(N5)>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(RL_excl,    bindings = <&kp EXCL>,  <&kp RA(N1)>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(RL_quest,   bindings = <&kp QMARK>, <&kp RA(FSLH)>; mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(LR_paren,   bindings = <&kp LPAR>,  <&kp RPAR>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(LR_brace,   bindings = <&kp LBRC>,  <&kp RBRC>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(LR_brack,   bindings = <&kp LBKT>,  <&kp LBKT>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(LR_angle,   bindings = <&kp LT>,    <&kp GT>;       mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(minu_plus,  bindings = <&kp MINUS>, <&kp PLUS>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(fslh_star,  bindings = <&kp FSLH>,  <&kp STAR>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(colo_semi,  bindings = <&kp COLON>, <&kp SEMI>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(dot_colon,  bindings = <&kp DOT>,  <&kp COLON>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(comma_semi, bindings = <&kp COMMA>, <&kp SEMI>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(sqt_dqt,    bindings = <&kp SQT>,   <&kp DQT>;      mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(amps_pipe,  bindings = <&kp AMPS>,  <&kp PIPE>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(quest_excl, bindings = <&kp QUEST>, <&kp EXCL>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(qmark_excl, bindings = <&kp QMARK>, <&kp EXCL>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 
 ZMK_MOD_MORPH(sft_capsw,
     bindings = <&sk RSFT>, <&caps_word>;
@@ -155,11 +152,19 @@ ZMK_MOD_MORPH(sft_capsw,
 )
 
 // Combos: Alpha-----------------------------------------------------------------------------------
-ZMK_COMBO(z,             &kp Z, LB3 LB4, BSE    , 150,   0) // z   p f
-ZMK_COMBO(x,             &kp X, LT3 LT2, BSE    , 150,   0) // x   b h
-ZMK_COMBO(enie,      &kp RA(N), LB1 LB3, BSE    ,  50,   0) // ñ   f d
-ZMK_COMBO(qu,        &qu_q Q Q, LM3 LB1, BSE    , 150,   0) // qu  l d
-ZMK_COMBO(gu,    &gu_espgu G G, LT1 LT3, BSE    , 100,   0) // gu  b g
+ZMK_COMBO(z,             &kp Z, LT1 LT3, BSE    , 150,   0) // bg z
+ZMK_COMBO(x,             &kp X, LT3 LT2, BSE    , 150,   0) // bh x
+ZMK_COMBO(enie,      &kp RA(N), LB1 LB3, BSE    , 150,   0) // fd ñ
+ZMK_COMBO(qu,        &qu_q Q Q, LM2 LT1, BSE    , 150,   0) // nb qu|q
+
+// Combos: Home row-------------------------------------------------------------------------------
+ZMK_COMBO(escape,      &kp ESC, LM1 LM3, BSE    ,  50,  75) // st esc MAYBE TRY ESC|RET HOLD-TAP
+ZMK_COMBO(enter,       &kp RET, LM2 LM3, BSE NAV,  70,  75) // ei ret
+
+ZMK_COMBO(tab,         &kp TAB, RM1 RM2, BSE    ,  60,  75) // ae tab
+ZMK_COMBO(uscore,    &kp UNDER, RM1 RM3, BSE    , 100,  75) // ai _   MAKE CAPSW SHIFT THIS KEY AND USE THIS COMBO FOR ANYTHING ELSE
+ZMK_COMBO(backspace,  &kp BSPC, RM2 RM3, BSE NAV, 150,  75) // ei bsp
+ZMK_COMBO(delete,      &kp DEL, RM3 RM4, BSE NAV, 140,  75) // im del
 
 // Combos: Vertical--------------------------------------------------------------------------------
 ZMK_COMBO(backslash,  &kp BSLH, LT2 LM2, BSE    ,  85,   0) // h n
@@ -171,18 +176,10 @@ ZMK_COMBO(grave,     &kp GRAVE, LM4 LB4, BSE    ,  60,   0) // c p
 
 // Combos: horizontal------------------------------------------------------------------------------
 ZMK_COMBO(bootl,   &bootloader, LT3 RT3, BSE    ,  50,  150) // b j
-ZMK_COMBO(colo_semi,&colo_semi, RT1 RT2, BSE    ,  50,  150) // :;  , / MAKE ADAPTIVE
+// ZMK_COMBO(colo_semi,&colo_semi, RT1 RT2, BSE    ,  50,  150) // :;  , / MAKE ADAPTIVE
 ZMK_COMBO(sqt_dqt,    &sqt_dqt, RT2 RT3, BSE    ,  50,  150) // '"  / j MAKE ADAPTIVE
 ZMK_COMBO(hash,       &kp HASH, RB1 RB2, BSE    ,  50,  150) // , a
 ZMK_COMBO(currency,  &currency, RB2 RB3, BSE    ,  50,  150) // j i
-
-// Combos: Home row-------------------------------------------------------------------------------
-ZMK_COMBO(escape,      &kp ESC, LM1 LM3, BSE    ,  50,  75) // s t
-ZMK_COMBO(enter,       &kp RET, LM2 LM3, BSE NAV,  70,  75) // e i
-ZMK_COMBO(tab,         &kp TAB, RM1 RM2, BSE    ,  60,  75) // a e
-ZMK_COMBO(uscore,    &kp UNDER, RM1 RM3, BSE    , 100,  75) // a i
-ZMK_COMBO(backspace,  &kp BSPC, RM2 RM3, BSE NAV, 150,  75) // e i
-ZMK_COMBO(delete,      &kp DEL, RM3 RM4, BSE NAV, 140,  75) // i m
 
 // Combos: Diagonal pairs--------------------------------------------------------------------------
 ZMK_COMBO(parent,     &LR_paren, RM1 RB2, BSE    , 110, 100) // () a o MAKE ADAPTIVE
@@ -197,8 +194,8 @@ ZMK_COMBO(quest_excl,&quest_excl, RT3 RM2, BSE    , 110, 100) // ?! i y MAKE ADA
 // ZMK_COMBO(quest,      &RL_quest, LT3 LM2, BSE    , 110, 100) // j e
 
 ZMK_LAYER(base,
-				&kp B			&kp H			&kp G										&comma_at			&fslh_star		&kp J
-&kp C			&hml LALT S		&hml LCTRL N	&lt NAV T		&kp K		&tperiod		&lt NUM A		&hmr RCTRL E	&hmr LALT I		&kp M
+				&kp B			&kp H			&kp G										&comma_semi			&fslh_star		&kp J
+&kp C			&hml LALT S		&hml LCTRL N	&lt NAV T		&kp K		&dot_colon		&lt NUM A		&hmr RCTRL E	&hmr LALT I		&kp M
 &kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
 								&lsf RA(SQT) LSHFT	&lt MOU R								&spc RWIN SPACE	&sft_capsw
 )
