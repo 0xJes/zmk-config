@@ -171,8 +171,8 @@ ZMK_COMBO(grave,     &kp GRAVE, LM4 LB4, BSE    ,  60,   0) // c p
 
 // Combos: horizontal------------------------------------------------------------------------------
 ZMK_COMBO(bootl,   &bootloader, LT3 RT3, BSE    ,  50,  150) // b j
-ZMK_COMBO(colo_semi,&colo_semi, RT1 RT2, BSE    ,  50,  150) // :;  , /  Make it sequential
-ZMK_COMBO(sqt_dqt,    &sqt_dqt, RT2 RT3, BSE    ,  50,  150) // '"  / j
+ZMK_COMBO(colo_semi,&colo_semi, RT1 RT2, BSE    ,  50,  150) // :;  , / MAKE ADAPTIVE
+ZMK_COMBO(sqt_dqt,    &sqt_dqt, RT2 RT3, BSE    ,  50,  150) // '"  / j MAKE ADAPTIVE
 ZMK_COMBO(hash,       &kp HASH, RB1 RB2, BSE    ,  50,  150) // , a
 ZMK_COMBO(currency,  &currency, RB2 RB3, BSE    ,  50,  150) // j i
 
@@ -190,10 +190,11 @@ ZMK_COMBO(braces,     &LR_brace, LM1 LB2, BSE    , 110, 100) // {} t l MAKE ADAP
 ZMK_COMBO(brackets,   &LR_brack, RM3 RB2, BSE    , 110, 100) // [] i o MAKE ADAPTIVE
 ZMK_COMBO(angles,     &LR_angle, LM3 LB2, BSE    , 110, 100) // <> s l MAKE ADAPTIVE
 
+ZMK_COMBO(amps_pipe,  &amps_pipe, RT1 RM2, BSE    , 110, 100) // &| , e MAKE ADAPTIVE
+ZMK_COMBO(quest_excl,&quest_excl, RT3 RM2, BSE    , 110, 100) // ?! i y MAKE ADAPTIVE
+
 // ZMK_COMBO(quote,       &kp SQT, LT1 LM2, BSE    , 110, 100) // n g
-ZMK_COMBO(amps_pipe, &amps_pipe, RT1 RM2, BSE    , 110, 100) // &| , e MAKE ADAPTIVE
-ZMK_COMBO(excl,        &RL_excl, RT3 RM2, BSE    , 110, 100) // b n
-ZMK_COMBO(quest,      &RL_quest, LT3 LM2, BSE    , 110, 100) // j e
+// ZMK_COMBO(quest,      &RL_quest, LT3 LM2, BSE    , 110, 100) // j e
 
 ZMK_LAYER(base,
 				&kp B			&kp H			&kp G										&comma_at			&fslh_star		&kp J
