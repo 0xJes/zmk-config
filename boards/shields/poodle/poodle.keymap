@@ -3,6 +3,7 @@
 // TODO: Move important vert combos to horz combos
 // TODO: Use double tap on sticky shfts instead of combo for caps-word
 // TODO: Implement caps-word behavior that shifts the minus key 
+// TODO: Use ACS for hrm on all layers
 
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 30
 
