@@ -5,6 +5,7 @@
 // TODO: Use ACS for hrm on all layers
 // TODO: Format combos by side
 // TODO: Make acute modifier shot once
+// TODO: Add X to base layout
 
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 30
 
@@ -175,7 +176,7 @@ ZMK_COMBO(colon,    &kp COLON, RT1 RT2, BSE    ,  50,  150) // , /
 ZMK_COMBO(semi,      &kp SEMI, RT2 RT3, BSE    ,  50,  150) // / j
 ZMK_COMBO(hash,      &kp HASH, RB1 RB2, BSE    ,  50,  150) // , a
 ZMK_COMBO(currency, &currency, RB2 RB3, BSE    ,  50,  150) // j i
- 
+
 // Combos: Home row-------------------------------------------------------------------------------
 ZMK_COMBO(escape,     &kp ESC, LM1 LM3, BSE    ,  50,  75) // s t
 ZMK_COMBO(enter,      &kp RET, LM2 LM3, BSE NAV,  70,  75) // e i
