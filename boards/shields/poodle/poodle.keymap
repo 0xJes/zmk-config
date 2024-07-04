@@ -170,11 +170,11 @@ ZMK_COMBO(prcnt,    &kp PRCNT, LM3 LB3, BSE    ,  60,   0) // i y
 ZMK_COMBO(grave,    &kp GRAVE, LM4 LB4, BSE    ,  60,   0) // c p
 
 // Combos: horizontal------------------------------------------------------------------------------
-ZMK_COMBO(bootl,  &bootloader, LT3 RT3, BSE    ,  60,  80) // b j
-ZMK_COMBO(colon,    &kp COLON, RT1 RT2, BSE    ,  60,  80) // , /
-ZMK_COMBO(semi,      &kp SEMI, RT2 RT3, BSE    ,  60,  80) // / j
-ZMK_COMBO(hash,      &kp HASH, RB1 RB2, BSE    ,  60,  80) // , a
-ZMK_COMBO(currency, &currency, RB2 RB3, BSE    ,  60,  80) // j i
+ZMK_COMBO(bootl,  &bootloader, LT3 RT3, BSE    ,  50,  150) // b j
+ZMK_COMBO(colon,    &kp COLON, RT1 RT2, BSE    ,  50,  150) // , /
+ZMK_COMBO(semi,      &kp SEMI, RT2 RT3, BSE    ,  50,  150) // / j
+ZMK_COMBO(hash,      &kp HASH, RB1 RB2, BSE    ,  50,  150) // , a
+ZMK_COMBO(currency, &currency, RB2 RB3, BSE    ,  50,  150) // j i
  
 // Combos: Home row-------------------------------------------------------------------------------
 ZMK_COMBO(escape,     &kp ESC, LM1 LM3, BSE    ,  50,  75) // s t
