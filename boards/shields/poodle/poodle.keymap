@@ -146,6 +146,7 @@ ZMK_MOD_MORPH(LR_angle,  bindings = <&kp LT>,    <&kp GT>;       mods = <(MOD_LS
 ZMK_MOD_MORPH(minu_plus, bindings = <&kp MINUS>, <&kp PLUS>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(fslh_star, bindings = <&kp FSLH>,  <&kp STAR>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(colo_semi, bindings = <&kp COLON>, <&kp SEMI>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(sqt_dqt,   bindings = <&kp SQT>,   <&kp DQT>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 
 ZMK_MOD_MORPH(sft_capsw,
     bindings = <&sk RSFT>, <&caps_word>;
@@ -156,7 +157,7 @@ ZMK_MOD_MORPH(sft_capsw,
 ZMK_COMBO(z,             &kp Z, LB3 LB4, BSE    , 150,   0) // p f
 ZMK_COMBO(x,             &kp X, LT3 LT2, BSE    , 150,   0) // b h
 ZMK_COMBO(enie,      &kp RA(N), LB1 LB3, BSE    ,  50,   0) // f d
-ZMK_COMBO(qu,        &qu_q Q Q, LB1 LB2, BSE    , 150,   0) // l d
+ZMK_COMBO(qu,        &qu_q Q Q, LM3 LB1, BSE    , 150,   0) // l d
 ZMK_COMBO(gu,    &gu_espgu G G, LT1 LT3, BSE    , 100,   0) // b g
 
 // Combos: Vertical--------------------------------------------------------------------------------
@@ -173,6 +174,7 @@ ZMK_COMBO(grave,     &kp GRAVE, LM4 LB4, BSE    ,  60,   0) // c p
 // Combos: horizontal------------------------------------------------------------------------------
 ZMK_COMBO(bootl,   &bootloader, LT3 RT3, BSE    ,  50,  150) // b j
 ZMK_COMBO(colo_semi,&colo_semi, RT1 RT2, BSE    ,  50,  150) // , /
+ZMK_COMBO(sqt_dqt,    &sqt_dqt, RT2 RT3, BSE    ,  50,  150) // / j
 ZMK_COMBO(hash,       &kp HASH, RB1 RB2, BSE    ,  50,  150) // , a
 ZMK_COMBO(currency,  &currency, RB2 RB3, BSE    ,  50,  150) // j i
 
@@ -185,8 +187,8 @@ ZMK_COMBO(backspace,  &kp BSPC, RM2 RM3, BSE NAV, 150,  75) // e i
 ZMK_COMBO(delete,      &kp DEL, RM3 RM4, BSE NAV, 140,  75) // i m
 
 // Combos: Diagonal pairs--------------------------------------------------------------------------
-ZMK_COMBO(quote,       &kp SQT, LT1 LM2, BSE    , 110, 100) // n g
-ZMK_COMBO(dquote,      &kp DQT, RT1 RM2, BSE    , 110, 100) // , e
+// ZMK_COMBO(quote,       &kp SQT, LT1 LM2, BSE    , 110, 100) // n g
+// ZMK_COMBO(dquote,      &kp DQT, RT1 RM2, BSE    , 110, 100) // , e
 ZMK_COMBO(parent,    &LR_paren, RM1 RB2, BSE    , 110, 100) // a l
 ZMK_COMBO(braces,    &LR_brace, LM1 LB2, BSE    , 110, 100) // t l
 ZMK_COMBO(brackets,  &LR_brack, RM3 RB2, BSE    , 110, 100) // i o
