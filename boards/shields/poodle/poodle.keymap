@@ -188,7 +188,7 @@ ZMK_COMBO(brackets,   &LR_brack, RM3 RB2, BSE    , 110, 100) // [] i o MAKE ADAP
 ZMK_COMBO(angles,     &LR_angle, LM3 LB2, BSE    , 110, 100) // <> s l MAKE ADAPTIVE
 
 ZMK_COMBO(amps_pipe,  &amps_pipe, RT1 RM2, BSE    , 110, 100) // &| , e MAKE ADAPTIVE
-ZMK_COMBO(quest_excl,&quest_excl, RT3 RM2, BSE    , 110, 100) // ?! i y MAKE ADAPTIVE
+// ZMK_COMBO(quest_excl,&quest_excl, RT3 RM2, BSE    , 110, 100) // ?! i y MAKE ADAPTIVE
 
 // ZMK_COMBO(quote,       &kp SQT, LT1 LM2, BSE    , 110, 100) // n g
 // ZMK_COMBO(quest,      &RL_quest, LT3 LM2, BSE    , 110, 100) // j e
