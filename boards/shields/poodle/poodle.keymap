@@ -195,7 +195,7 @@ ZMK_COMBO(excl,      &RL_excl, RT3 RM2, BSE    , 110, 100) // b n
 ZMK_COMBO(quest,    &RL_quest, LT3 LM2, BSE    , 110, 100) // j e
 
 ZMK_LAYER(base,
-				&kp B			&kp H			&kp G										&comma			&flsh_star		&kp J
+				&kp B			&kp H			&kp G										&comma			&fslh_star		&kp J
 &kp C			&hml LALT S		&hml LCTRL N	&lt NAV T		&kp K		&tperiod		&lt NUM A		&hmr RCTRL E	&hmr LALT I		&kp M
 &kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
 								&lsf RA(SQT) LSHFT	&lt MOU R								&spc RWIN SPACE	&sft_capsw
