@@ -6,6 +6,7 @@
 // TODO: Format combos by side
 // TODO: Make acute modifier shot once
 // TODO: Add X to base layout
+// TODO: Put = on -, \ on /
 
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 30
 
