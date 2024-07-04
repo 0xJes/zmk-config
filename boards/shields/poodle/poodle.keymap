@@ -5,6 +5,7 @@
 // TODO: Implement caps-word behavior that shifts the minus key 
 // TODO: Use ACS for hrm on all layers
 // TODO: Format combos by side
+// TODO: Make acute modifier shot once
 
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 30
 
@@ -86,7 +87,7 @@ ZMK_MACRO(qu,
 
 ZMK_HOLD_TAP(qu_q,
 	flavor = "tap-preferred";
-	tapping-term-ms = <120>;
+	tapping-term-ms = <150>;
 	bindings = <&kp>, <&qu>;
 )
 
@@ -144,6 +145,11 @@ ZMK_MOD_MORPH(LR_brace, bindings = <&kp LBRC>,  <&kp RBRC>;     mods = <(MOD_LSF
 ZMK_MOD_MORPH(LR_brack, bindings = <&kp LBKT>,  <&kp LBKT>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(LR_angle, bindings = <&kp LT>,    <&kp GT>;       mods = <(MOD_LSFT|MOD_RSFT)>;)
 
+ZMK_MOD_MORPH(sft_capsw,
+    bindings = <&sk RSFT>, <&caps_word>;
+    mods = <(MOD_LSFT)>;
+)
+
 // Combos: Alpha-----------------------------------------------------------------------------------
 ZMK_COMBO(z,            &kp Z, LB3 LB4, BSE    , 100,   0) // p f
 ZMK_COMBO(x,            &kp X, LT3 LT2, BSE    , 100,   0) // b h
@@ -180,7 +186,6 @@ ZMK_COMBO(tab,        &kp TAB, RM1 RM2, BSE    ,  60,  75) // a e
 ZMK_COMBO(uscore,   &kp UNDER, RM1 RM3, BSE    , 100,  75) // a i
 ZMK_COMBO(backspace, &kp BSPC, RM2 RM3, BSE NAV, 150,  75) // e i
 ZMK_COMBO(delete,     &kp DEL, RM3 RM4, BSE NAV, 140,  75) // i m
-ZMK_COMBO(cps_wrd, &caps_word, LM2 RM2, BSE    ,  50,  75) // n e
 
 // Combos: Diagonal pairs--------------------------------------------------------------------------
 ZMK_COMBO(quote,      &kp SQT, LT1 LM2, BSE    , 110, 100) // n g
@@ -196,7 +201,7 @@ ZMK_LAYER(base,
 				&kp B			&kp H			&kp G										&comma			&slash			&kp J
 &kp C			&hml LALT S		&hml LCTRL N	&lt NAV T		&kp K		&tperiod		&lt NUM A		&hmr RCTRL E	&hmr LALT I		&kp M
 &kp P			&kp F			&kp L			&kp D			&kp V		&kp MINUS		&kp U			&kp O			&kp Y			&kp W
-								&lsf RA(SQT) LSHFT	&lt MOU R									&spc RWIN SPACE	&sk RSHFT
+								&lsf RA(SQT) LSHFT	&lt MOU R									&spc RWIN SPACE	&sft_capsw
 )
 
 ZMK_LAYER(navigation,
