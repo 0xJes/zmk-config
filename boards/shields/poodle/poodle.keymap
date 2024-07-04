@@ -196,7 +196,7 @@ ZMK_LAYER(base,
 				&kp B			&kp H			&kp G										&comma			&slash			&kp J
 &kp C			&hml LALT S		&hml LCTRL N	&lt NAV T		&kp K		&tperiod		&lt NUM A		&hmr RCTRL E	&hmr LALT I		&kp M
 &kp P			&kp F			&kp L			&kp D			&kp V		&kp MINUS		&kp U			&kp O			&kp Y			&kp W
-								&lsf RA(SQT) X	&lt MOU R									&spc RWIN SPACE	&sk RSHFT
+								&lsf RA(SQT) LSHFT	&lt MOU R									&spc RWIN SPACE	&sk RSHFT
 )
 
 ZMK_LAYER(navigation,
