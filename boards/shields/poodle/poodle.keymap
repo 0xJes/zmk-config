@@ -160,18 +160,18 @@ ZMK_COMBO(and,       &kp AMPS, RM1 RB1, BSE    ,  85,   0) // a u
 ZMK_COMBO(or,        &kp PIPE, LM1 LB1, BSE    ,  85,   0) // t d
 ZMK_COMBO(asterisk,  &kp STAR, RT2 RM2, BSE    ,  85,   0) // / e
 ZMK_COMBO(backslash, &kp BSLH, LT2 LM2, BSE    ,  85,   0) // h n
-ZMK_COMBO(equal,    &kp EQUAL, RM2 RB2, BSE    ,  60, 100) // n l
-ZMK_COMBO(tilde,    &kp TILDE, LM2 LB2, BSE    ,  60, 100) // e o
+ZMK_COMBO(equal,    &kp EQUAL, RM2 RB2, BSE    ,  60,   0) // n l
+ZMK_COMBO(tilde,    &kp TILDE, LM2 LB2, BSE    ,  60,   0) // e o
 ZMK_COMBO(currency, &currency, RT3 RM3, BSE    ,  85,   0) // j i
-ZMK_COMBO(at,          &kp AT, LT3 LM3, BSE    ,  60, 200) // b s
-ZMK_COMBO(caret,    &kp CARET, RM3 RB3, BSE    ,  60, 100) // s f
-ZMK_COMBO(prcnt,    &kp PRCNT, LM3 LB3, BSE    ,  60, 100) // i y
-ZMK_COMBO(grave,    &kp GRAVE, LM4 LB4, BSE    ,  60, 100) // c p
+ZMK_COMBO(at,          &kp AT, LT3 LM3, BSE    ,  60,   0) // b s
+ZMK_COMBO(caret,    &kp CARET, RM3 RB3, BSE    ,  60,   0) // s f
+ZMK_COMBO(prcnt,    &kp PRCNT, LM3 LB3, BSE    ,  60,   0) // i y
+ZMK_COMBO(grave,    &kp GRAVE, LM4 LB4, BSE    ,  60,   0) // c p
 
 // Combos: horizontal------------------------------------------------------------------------------
 ZMK_COMBO(bootl,  &bootloader, LT3 RT3, BSE    ,  60, 100) // b j
-ZMK_COMBO(colon,    &kp COLON, LT1 LT2, BSE    ,  60, 100) // , /
-ZMK_COMBO(semi,      &kp SEMI, LT2 LT3, BSE    ,  60, 100) // / j
+ZMK_COMBO(colon,    &kp COLON, RT1 RT2, BSE    ,  60, 100) // , /
+ZMK_COMBO(semi,      &kp SEMI, RT2 RT3, BSE    ,  60, 100) // / j
 
 // Combos: Home row-------------------------------------------------------------------------------
 ZMK_COMBO(escape,     &kp ESC, LM1 LM3, BSE    ,  50,  75) // s t
