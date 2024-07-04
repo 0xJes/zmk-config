@@ -153,15 +153,15 @@ ZMK_MOD_MORPH(sft_capsw,
 )
 
 // Combos: Alpha-----------------------------------------------------------------------------------
-ZMK_COMBO(z,             &kp Z, LB3 LB4, BSE    , 150,   0) // z:  p f
-ZMK_COMBO(x,             &kp X, LT3 LT2, BSE    , 150,   0) // x:  b h
-ZMK_COMBO(enie,      &kp RA(N), LB1 LB3, BSE    ,  50,   0) // ñ:  f d
-ZMK_COMBO(qu,        &qu_q Q Q, LM3 LB1, BSE    , 150,   0) // qu: l d
-ZMK_COMBO(gu,    &gu_espgu G G, LT1 LT3, BSE    , 100,   0) // gu: b g
+ZMK_COMBO(z,             &kp Z, LB3 LB4, BSE    , 150,   0) // z   p f
+ZMK_COMBO(x,             &kp X, LT3 LT2, BSE    , 150,   0) // x   b h
+ZMK_COMBO(enie,      &kp RA(N), LB1 LB3, BSE    ,  50,   0) // ñ   f d
+ZMK_COMBO(qu,        &qu_q Q Q, LM3 LB1, BSE    , 150,   0) // qu  l d
+ZMK_COMBO(gu,    &gu_espgu G G, LT1 LT3, BSE    , 100,   0) // gu  b g
 
 // Combos: Vertical--------------------------------------------------------------------------------
-ZMK_COMBO(and,        &kp AMPS, RM1 RB1, BSE    ,  85,   0) // &:  a u
-ZMK_COMBO(or,         &kp PIPE, LM1 LB1, BSE    ,  85,   0) // |:  t d
+ZMK_COMBO(and,        &kp AMPS, RM1 RB1, BSE    ,  85,   0) // &   a u
+ZMK_COMBO(or,         &kp PIPE, LM1 LB1, BSE    ,  85,   0) // |   t d
 ZMK_COMBO(backslash,  &kp BSLH, LT2 LM2, BSE    ,  85,   0) // h n
 ZMK_COMBO(equal,     &kp EQUAL, RM2 RB2, BSE    ,  60,   0) // n l
 ZMK_COMBO(tilde,     &kp TILDE, LM2 LB2, BSE    ,  60,   0) // e o
@@ -171,8 +171,8 @@ ZMK_COMBO(grave,     &kp GRAVE, LM4 LB4, BSE    ,  60,   0) // c p
 
 // Combos: horizontal------------------------------------------------------------------------------
 ZMK_COMBO(bootl,   &bootloader, LT3 RT3, BSE    ,  50,  150) // b j
-ZMK_COMBO(colo_semi,&colo_semi, RT1 RT2, BSE    ,  50,  150) // , /
-ZMK_COMBO(sqt_dqt,    &sqt_dqt, RT2 RT3, BSE    ,  50,  150) // / j
+ZMK_COMBO(colo_semi,&colo_semi, RT1 RT2, BSE    ,  50,  150) // :;  , /  Make it sequential
+ZMK_COMBO(sqt_dqt,    &sqt_dqt, RT2 RT3, BSE    ,  50,  150) // '"  / j
 ZMK_COMBO(hash,       &kp HASH, RB1 RB2, BSE    ,  50,  150) // , a
 ZMK_COMBO(currency,  &currency, RB2 RB3, BSE    ,  50,  150) // j i
 
