@@ -1,6 +1,8 @@
 // TODO: Ordered combos instead of shft+combo
 // TODO: AU sfb mitigation
 // TODO: Move important vert combos to horz combos
+// TODO: Use double tap on sticky shfts instead of combo for caps-word
+// TODO: Implement caps-word behavior that shifts the minus key 
 
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 30
 
