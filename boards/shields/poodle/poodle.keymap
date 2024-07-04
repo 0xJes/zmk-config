@@ -77,6 +77,12 @@ ZMK_STICKY_KEY(ss,
     continue-list = <UNDER MINUS BSPC>;
 };
 
+&lt {
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+};
+
 // Hold Taps---------------------------------------------------------------------------------------
 
 ZMK_HOLD_TAP(qu_q,
