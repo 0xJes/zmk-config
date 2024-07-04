@@ -54,7 +54,6 @@ ZMK_MACRO(ua,			bindings = <&kp U &kp A>;)
 ZMK_MACRO(gu,			bindings = <&kp G &kp U>;)
 ZMK_MACRO(gu_d,			bindings = <&kp G &kp RA(U)>;)
 ZMK_MACRO(t_period,		bindings = <&kp DOT &kp DOT &kp DOT>;)
-ZMK_MACRO(path_here,	bindings = <&kp DOT &kp FSLH &kp STAR>;)
 ZMK_MACRO(excl_quest,	bindings = <&kp EXCL &kp QMARK>;)
 ZMK_MACRO(add,			bindings = <&kp SPACE &kp PLUS  &kp SPACE>;)
 ZMK_MACRO(sub,			bindings = <&kp SPACE &kp MINUS &kp SPACE>;)
@@ -135,16 +134,17 @@ ZMK_HOLD_TAP(spc,
 )
 
 // Keys with special shifted versions--------------------------------------------------------------
-ZMK_MOD_MORPH(comma,    bindings = <&kp COMMA>, <&excl_quest>;  mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(slash,    bindings = <&kp FSLH>,  <&path_here>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(tperiod,  bindings = <&kp DOT>,   <&t_period>;    mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(currency, bindings = <&kp DLLR>,  <&kp RA(N5)>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(RL_excl,  bindings = <&kp EXCL>,  <&kp RA(N1)>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(RL_quest, bindings = <&kp QMARK>, <&kp RA(FSLH)>; mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(LR_paren, bindings = <&kp LPAR>,  <&kp RPAR>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(LR_brace, bindings = <&kp LBRC>,  <&kp RBRC>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(LR_brack, bindings = <&kp LBKT>,  <&kp LBKT>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(LR_angle, bindings = <&kp LT>,    <&kp GT>;       mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(comma,     bindings = <&kp COMMA>, <&excl_quest>;  mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(tperiod,   bindings = <&kp DOT>,   <&t_period>;    mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(currency,  bindings = <&kp DLLR>,  <&kp RA(N5)>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(RL_excl,   bindings = <&kp EXCL>,  <&kp RA(N1)>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(RL_quest,  bindings = <&kp QMARK>, <&kp RA(FSLH)>; mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(LR_paren,  bindings = <&kp LPAR>,  <&kp RPAR>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(LR_brace,  bindings = <&kp LBRC>,  <&kp RBRC>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(LR_brack,  bindings = <&kp LBKT>,  <&kp LBKT>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(LR_angle,  bindings = <&kp LT>,    <&kp GT>;       mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(minu_plus, bindings = <&kp MINUS>, <&kp PLUS>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(fslh_star, bindings = <&kp FSLH>,  <&kp STAR>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 
 ZMK_MOD_MORPH(sft_capsw,
     bindings = <&sk RSFT>, <&caps_word>;
@@ -159,10 +159,8 @@ ZMK_COMBO(qu,       &qu_q Q Q, LB1 LB2, BSE    , 150,   0) // l d
 ZMK_COMBO(gu,   &gu_espgu G G, LT1 LT3, BSE    , 100,   0) // b g
 
 // Combos: Vertical--------------------------------------------------------------------------------
-ZMK_COMBO(plus,      &kp PLUS, LT1 LM1, BSE    ,  85,   0) // g t
 ZMK_COMBO(and,       &kp AMPS, RM1 RB1, BSE    ,  85,   0) // a u
 ZMK_COMBO(or,        &kp PIPE, LM1 LB1, BSE    ,  85,   0) // t d
-ZMK_COMBO(asterisk,  &kp STAR, RT2 RM2, BSE    ,  85,   0) // / e
 ZMK_COMBO(backslash, &kp BSLH, LT2 LM2, BSE    ,  85,   0) // h n
 ZMK_COMBO(equal,    &kp EQUAL, RM2 RB2, BSE    ,  60,   0) // n l
 ZMK_COMBO(tilde,    &kp TILDE, LM2 LB2, BSE    ,  60,   0) // e o
@@ -197,10 +195,10 @@ ZMK_COMBO(excl,      &RL_excl, RT3 RM2, BSE    , 110, 100) // b n
 ZMK_COMBO(quest,    &RL_quest, LT3 LM2, BSE    , 110, 100) // j e
 
 ZMK_LAYER(base,
-				&kp B			&kp H			&kp G										&comma			&slash			&kp J
+				&kp B			&kp H			&kp G										&comma			&flsh_star		&kp J
 &kp C			&hml LALT S		&hml LCTRL N	&lt NAV T		&kp K		&tperiod		&lt NUM A		&hmr RCTRL E	&hmr LALT I		&kp M
-&kp P			&kp F			&kp L			&kp D			&kp V		&kp MINUS		&kp U			&kp O			&kp Y			&kp W
-								&lsf RA(SQT) LSHFT	&lt MOU R									&spc RWIN SPACE	&sft_capsw
+&kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
+								&lsf RA(SQT) LSHFT	&lt MOU R								&spc RWIN SPACE	&sft_capsw
 )
 
 ZMK_LAYER(navigation,
