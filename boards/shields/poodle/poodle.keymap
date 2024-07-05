@@ -150,31 +150,25 @@ ZMK_COMBO(i,          &kp RA(B), LT3 LM3, BSE    , 150,   0) // ij í
 ZMK_COMBO(o,        &kp RA(DOT), LM2 LB2, BSE    , 150,   0) // eo ó
 ZMK_COMBO(u,          &kp RA(J), LM1 LB1, BSE    , 150,   0) // au ú
 ZMK_COMBO(ud,         &kp RA(U), LM3 LB3, BSE    , 150,   0) // iy ü
-
 // Combos: Home row-------------------------------------------------------------------------------
-ZMK_COMBO(escape,       &kp ESC, LM1 LM3, BSE    ,  50,  75) // st esc MAYBE TRY ESC|RET HOLD-TAP
+ZMK_COMBO(escape,       &kp ESC, LM1 LM3, BSE    ,  50,  75) // st esc 
 ZMK_COMBO(enter,        &kp RET, LM2 LM3, BSE NAV,  70,  75) // ei ret
 ZMK_COMBO(tab,          &kp TAB, RM1 RM2, BSE    ,  60,  75) // ae tab
 ZMK_COMBO(uscore,     &kp UNDER, RM1 RM3, BSE    , 100,  75) // ai _   MAKE CAPSW SHIFT THIS KEY AND USE THIS COMBO FOR ANYTHING ELSE
 ZMK_COMBO(backspace,   &kp BSPC, RM2 RM3, BSE NAV, 150,  75) // ei bsp
 ZMK_COMBO(delete,       &kp DEL, RM3 RM4, BSE NAV, 140, 100) // im del
-
 // Combos: horizontal------------------------------------------------------------------------------
-ZMK_COMBO(bootl,    &bootloader, LT3 RT3, BSE    ,  50,  150) // bj enter flash mode
-ZMK_COMBO(sqt_dqt,     &sqt_dqt, RT2 RT3, BSE    ,  50,  150) // j/ '" MAKE ORDER DEPENDENT 
-ZMK_COMBO(qmrk_excl, &qmrk_excl, RT1 RT2, BSE    ,  50,  150) // ,/ !? MAKE ADAPTIVE THEN IMPLEMENT THE OPENING VERSION WITH SHIFT
-ZMK_COMBO(hash,        &kp HASH, RB1 RB2, BSE    ,  50,  150) // , a
-ZMK_COMBO(currency,   &currency, RB2 RB3, BSE    ,  50,  150) // j i
-
+ZMK_COMBO(bootl,    &bootloader, LT3 RT3, BSE    ,  50, 150) // bj enter flash mode
+ZMK_COMBO(sqt_dqt,     &sqt_dqt, RT2 RT3, BSE    ,  50, 150) // j/ '" MAKE ORDER DEPENDENT 
+ZMK_COMBO(qmrk_excl, &qmrk_excl, RT1 RT2, BSE    ,  50, 150) // ,/ !? MAKE ADAPTIVE THEN IMPLEMENT THE OPENING VERSION WITH SHIFT
+ZMK_COMBO(currency,   &currency, RB2 RB3, BSE    ,  50, 150) // j i
 // Combos: Vertical--------------------------------------------------------------------------------
-ZMK_COMBO(grave,     &kp GRAVE, LM4 LB4, BSE    ,  60,   0) // c p
-
+ZMK_COMBO(grave,      &kp GRAVE, LM4 LB4, BSE    ,  60,   0) // c p
 // Combos: Diagonal pairs--------------------------------------------------------------------------
 ZMK_COMBO(parent,     &LR_paren, RM1 RB2, BSE    , 110, 100) // ao () MAKE ORDER DEPENDENT 
 ZMK_COMBO(braces,     &LR_brace, LM1 LB2, BSE    , 110, 100) // tl {} MAKE ORDER DEPENDENT 
 ZMK_COMBO(brackets,   &LR_brack, RM3 RB2, BSE    , 110, 100) // io [] MAKE ORDER DEPENDENT 
 ZMK_COMBO(angles,     &LR_angle, LM3 LB2, BSE    , 110, 100) // sl <> MAKE ORDER DEPENDENT 
-
 ZMK_COMBO(amps_pipe, &amps_pipe, RT1 RM2, BSE    , 110, 100) // ,e &| MAKE ORDER DEPENDENT 
 ZMK_COMBO(eql_tld,     &eql_tld, LT1 LM2, BSE    , 110, 100) // ng =~ MAKE ORDER DEPENDENT
 ZMK_COMBO(crt_pcnt,   &crt_pcnt, LT3 LM2, BSE    , 110, 100) // bn ^% MAKE ORDER DEPENDENT
