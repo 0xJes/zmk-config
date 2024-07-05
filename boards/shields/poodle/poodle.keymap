@@ -2,6 +2,8 @@
 // TODO: Use ACS for hrm on all layers
 // TODO: Format combos by side
 // todo implement u diaresis
+// TODO: sequetial combos for braces and qu
+
 
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 30
 
@@ -119,7 +121,7 @@ ZMK_HOLD_TAP(lsf,
 ZMK_HOLD_TAP(ret_esc,
 	flavor = "balanced";
 	require-prior-idle-ms = <100>;
-	tapping-term-ms = <250>;
+	tapping-term-ms = <200>;
 	quick-tap-ms = <200>;
 	bindings = <&kp>, <&kp>;
 )
