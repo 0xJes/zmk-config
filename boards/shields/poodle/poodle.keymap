@@ -143,7 +143,7 @@ ZMK_COMBO(x,             &kp X, LT3 LT2, BSE    , 150,   0)
 ZMK_COMBO(enie,      &kp RA(N), LB1 LB3, BSE    , 150,   0)
 ZMK_COMBO(qu,        &qu_q Q Q, LM2 LT1, BSE    , 150,   0)
 // HOME ROW COMBOS
-ZMK_COMBO(ret_esc, &ht ESC RET, LM2 LM3, BSE NAV,  70,  75)
+ZMK_COMBO(ret_esc, &mt ESC RET, LM2 LM3, BSE NAV,  70,  75)
 ZMK_COMBO(tab,         &kp TAB, RM1 RM2, BSE    ,  60,  75)
 ZMK_COMBO(sqt,         &kp SQT, LM1 LM3, BSE    , 100,  75) 
 ZMK_COMBO(dqt,         &kp DQT, RM1 RM3, BSE    ,  50,  75)
