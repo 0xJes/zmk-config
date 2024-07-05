@@ -115,13 +115,16 @@ ZMK_HOLD_TAP(spc,
 	bindings = <&kp>, <&kp>;
 )
 
+ZMK_HOLD_TAP(lsf,
+	flavor = "balanced";
+	require-prior-idle-ms = <100>;
+	tapping-term-ms = <250>;
+	quick-tap-ms = <200>;
+	bindings = <&kp>, <&sk>;
+)
+
 // Keys with special shifted versions--------------------------------------------------------------
-// ZMK_MOD_MORPH(comma_at,   bindings = <&kp COMMA>, <&kp AT>;    mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(currency,   bindings = <&kp DLLR>,  <&kp RA(N5)>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(LR_paren,   bindings = <&kp LPAR>,  <&kp RPAR>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(LR_brace,   bindings = <&kp LBRC>,  <&kp RBRC>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(LR_brack,   bindings = <&kp LBKT>,  <&kp LBKT>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(LR_angle,   bindings = <&kp LT>,    <&kp GT>;       mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(sqt_dqt,    bindings = <&kp SQT>,   <&kp DQT>;      mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(amps_pipe,  bindings = <&kp AMPS>,  <&kp PIPE>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(qmrk_excl,  bindings = <&kp QMARK>, <&kp EXCL>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
@@ -151,7 +154,7 @@ ZMK_COMBO(o,        &kp RA(DOT), LM2 LB2, BSE    , 150,   0) // eo ó
 ZMK_COMBO(u,          &kp RA(J), LM1 LB1, BSE    , 150,   0) // au ú
 ZMK_COMBO(ud,         &kp RA(U), LM3 LB3, BSE    , 150,   0) // iy ü
 // Combos: Home row-------------------------------------------------------------------------------
-ZMK_COMBO(escape,       &kp ESC, LM1 LM3, BSE    ,  50,  75) // st esc 
+ZMK_COMBO(escape,       &kp ESC, LM1 LM3, BSE    ,  50,  75) // st esc COMBINE WITH RET
 ZMK_COMBO(enter,        &kp RET, LM2 LM3, BSE NAV,  70,  75) // ei ret
 ZMK_COMBO(tab,          &kp TAB, RM1 RM2, BSE    ,  60,  75) // ae tab
 ZMK_COMBO(uscore,     &kp UNDER, RM1 RM3, BSE    , 100,  75) // ai _   MAKE CAPSW SHIFT THIS KEY AND USE THIS COMBO FOR ANYTHING ELSE
@@ -163,23 +166,31 @@ ZMK_COMBO(sqt_dqt,     &sqt_dqt, RT2 RT3, BSE    ,  50, 150) // j/ '" MAKE ORDER
 ZMK_COMBO(qmrk_excl, &qmrk_excl, RT1 RT2, BSE    ,  50, 150) // ,/ !? MAKE ADAPTIVE THEN IMPLEMENT THE OPENING VERSION WITH SHIFT
 ZMK_COMBO(currency,   &currency, RB2 RB3, BSE    ,  50, 150) // j i
 // Combos: Vertical--------------------------------------------------------------------------------
-ZMK_COMBO(grave,      &kp GRAVE, LM4 LB4, BSE    ,  60,   0) // c p
+ZMK_COMBO(grave,      &kp GRAVE, LM4 LB4,     BSE, 100,   0) // c p
+ZMK_COMBO(at,            &kp AT, LM1 LB1,     BSE, 100,   0) // c p
+ZMK_COMBO(currency,    &curency, LM2 LB2,     BSE, 100,   0) // c p
+ZMK_COMBO(amps,        &kp AMPS, RT3 RM3,     BSE, 100,   0) // c p
+ZMK_COMBO(pipe,        &kp PIPE, LT3 LM3,     BSE, 100,   0) // c p
+ZMK_COMBO(equal,      &kp EQUAL, RT2 RM2,     BSE, 100,   0) // c p
+ZMK_COMBO(tilde,      &kp TILDE, LT2 LM2,     BSE, 100,   0) // c p
+ZMK_COMBO(caret,      &kp CARET, RT1 RM1,     BSE, 100,   0) // c p
+ZMK_COMBO(percent,    &kp PRCNT, LT1 LM1,     BSE, 100,   0) // c p
 // Combos: Diagonal pairs--------------------------------------------------------------------------
-ZMK_COMBO(parent,     &LR_paren, RM1 RB2, BSE    , 110, 100) // ao () MAKE ORDER DEPENDENT 
-ZMK_COMBO(braces,     &LR_brace, LM1 LB2, BSE    , 110, 100) // tl {} MAKE ORDER DEPENDENT 
-ZMK_COMBO(brackets,   &LR_brack, RM3 RB2, BSE    , 110, 100) // io [] MAKE ORDER DEPENDENT 
-ZMK_COMBO(angles,     &LR_angle, LM3 LB2, BSE    , 110, 100) // sl <> MAKE ORDER DEPENDENT 
-ZMK_COMBO(amps_pipe, &amps_pipe, RT1 RM2, BSE    , 110, 100) // ,e &| MAKE ORDER DEPENDENT 
-ZMK_COMBO(eql_tld,     &eql_tld, LT1 LM2, BSE    , 110, 100) // ng =~ MAKE ORDER DEPENDENT
-ZMK_COMBO(crt_pcnt,   &crt_pcnt, LT3 LM2, BSE    , 110, 100) // bn ^% MAKE ORDER DEPENDENT
-ZMK_COMBO(hash_bslh, &hash_bslh, RT3 RM2, BSE    , 110, 100) // je \# MAKE ORDER DEPENDENT 
+ZMK_COMBO(lpar,        &kp LPAR, RM1 RB2,     BSE, 110, 100) // ao (
+ZMK_COMBO(rpar,        &kp RPAR, RM3 RB2,     BSE, 110, 100) // io )
+ZMK_COMBO(lbkt,        &kp LBKT, RT1 RM2,     BSE, 110, 100) // ,e [
+ZMK_COMBO(rbkt,        &kp RBKT, RM2 RT3,     BSE, 110, 100) // ej ]
+ZMK_COMBO(lbrc,        &kp LBRC, LM3 LB2,     BSE, 110, 100) // sl {
+ZMK_COMBO(rbrc,        &kp RBRC, LB2 LM1,     BSE, 110, 100) // lt }
+ZMK_COMBO(eql_tld,      &kp LT,  LT3 LM2,     BSE, 110, 100) // bn <
+ZMK_COMBO(hash_bslh,    &kp GT,  LT1 LM2,     BSE, 110, 100) // ng >
 
 
 ZMK_LAYER(base,
 				&kp B			&kp H			&kp G										&comma_semi			&fslh_star		&kp J
 &kp C			&hml LALT S		&hml LCTRL N	&lt NAV T		&kp K		&dot_colon		&lt NUM A		&hmr RCTRL E	&hmr LALT I		&kp M
 &kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
-								&sk LSHFT	&lt MOU R								&spc RWIN SPACE	&sft_capsw
+								&lsf RA(SQT)	&lt MOU R								&spc RWIN SPACE	&sft_capsw
 )
 
 ZMK_LAYER(navigation,
