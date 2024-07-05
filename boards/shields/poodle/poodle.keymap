@@ -4,8 +4,6 @@
 // TODO: Implement caps-word behavior that shifts the minus key 
 // TODO: Use ACS for hrm on all layers
 // TODO: Format combos by side
-// TODO: Make acute modifier shot once
-// TODO: Implement ü
 
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 30
 
@@ -89,12 +87,6 @@ ZMK_HOLD_TAP(qu_q,
 	bindings = <&kp>, <&qu>;
 )
 
-ZMK_HOLD_TAP(gu_espgu,
-	flavor = "tap-preferred";
-	tapping-term-ms = <150>;
-	bindings = <&gu_d>, <&gu>;
-)
-
 ZMK_HOLD_TAP(hml,
 	flavor = "balanced";
 	require-prior-idle-ms = <100>;
@@ -113,14 +105,6 @@ ZMK_HOLD_TAP(hmr,
 	hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
 	hold-trigger-on-release;
 	bindings = <&kp>, <&kp>;
-)
-
-ZMK_HOLD_TAP(lsf,
-	flavor = "balanced";
-	require-prior-idle-ms = <100>;
-	tapping-term-ms = <250>;
-	quick-tap-ms = <200>;
-	bindings = <&kp>, <&sk>;
 )
 
 ZMK_HOLD_TAP(spc,
@@ -160,6 +144,12 @@ ZMK_COMBO(z,              &kp Z, LT1 LT3, BSE    , 150,   0) // bg z
 ZMK_COMBO(x,              &kp X, LT3 LT2, BSE    , 150,   0) // bh x
 ZMK_COMBO(enie,       &kp RA(N), LB1 LB3, BSE    , 150,   0) // fd ñ
 ZMK_COMBO(qu,         &qu_q Q Q, LM2 LT1, BSE    , 150,   0) // nb qu|q
+ZMK_COMBO(a,          &kp RA(X), LT1 LM1, BSE    , 150,   0) // a, á
+ZMK_COMBO(e,          &kp RA(G), LT2 LM2, BSE    , 150,   0) // e/ é
+ZMK_COMBO(i,          &kp RA(B), LT3 LM3, BSE    , 150,   0) // ij í
+ZMK_COMBO(o,        &kp RA(DOT), LM2 LB2, BSE    , 150,   0) // eo ó
+ZMK_COMBO(u,          &kp RA(J), LM1 LB1, BSE    , 150,   0) // au ú
+ZMK_COMBO(ud,         &kp RA(U), LM3 LB3, BSE    , 150,   0) // iy ü
 
 // Combos: Home row-------------------------------------------------------------------------------
 ZMK_COMBO(escape,       &kp ESC, LM1 LM3, BSE    ,  50,  75) // st esc MAYBE TRY ESC|RET HOLD-TAP
@@ -177,7 +167,6 @@ ZMK_COMBO(hash,        &kp HASH, RB1 RB2, BSE    ,  50,  150) // , a
 ZMK_COMBO(currency,   &currency, RB2 RB3, BSE    ,  50,  150) // j i
 
 // Combos: Vertical--------------------------------------------------------------------------------
-ZMK_COMBO(backslash,  &kp BSLH, LT2 LM2, BSE    ,  85,   0) // h 
 ZMK_COMBO(grave,     &kp GRAVE, LM4 LB4, BSE    ,  60,   0) // c p
 
 // Combos: Diagonal pairs--------------------------------------------------------------------------
@@ -189,14 +178,14 @@ ZMK_COMBO(angles,     &LR_angle, LM3 LB2, BSE    , 110, 100) // sl <> MAKE ORDER
 ZMK_COMBO(amps_pipe, &amps_pipe, RT1 RM2, BSE    , 110, 100) // ,e &| MAKE ORDER DEPENDENT 
 ZMK_COMBO(eql_tld,     &eql_tld, LT1 LM2, BSE    , 110, 100) // ng =~ MAKE ORDER DEPENDENT
 ZMK_COMBO(crt_pcnt,   &crt_pcnt, LT3 LM2, BSE    , 110, 100) // bn ^% MAKE ORDER DEPENDENT
-ZMK_COMBO(hash_bslh, &hash_bslh, RT3 RM2, BSE    , 110, 100) // gn 
+ZMK_COMBO(hash_bslh, &hash_bslh, RT3 RM2, BSE    , 110, 100) // je \# MAKE ORDER DEPENDENT 
 
 
 ZMK_LAYER(base,
 				&kp B			&kp H			&kp G										&comma_semi			&fslh_star		&kp J
 &kp C			&hml LALT S		&hml LCTRL N	&lt NAV T		&kp K		&dot_colon		&lt NUM A		&hmr RCTRL E	&hmr LALT I		&kp M
 &kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
-								&lsf RA(SQT) LSHFT	&lt MOU R								&spc RWIN SPACE	&sft_capsw
+								&sk LSHFT	&lt MOU R								&spc RWIN SPACE	&sft_capsw
 )
 
 ZMK_LAYER(navigation,
