@@ -4,6 +4,7 @@
 // TODO: Implement caps-word behavior that shifts the minus key 
 // TODO: Use ACS for hrm on all layers
 // TODO: Format combos by side
+// todo implement u diaresis
 
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 30
 
@@ -155,12 +156,6 @@ ZMK_COMBO(z,              &kp Z, LT1 LT3, BSE    , 150,   0) // bg z
 ZMK_COMBO(x,              &kp X, LT3 LT2, BSE    , 150,   0) // bh x
 ZMK_COMBO(enie,       &kp RA(N), LB1 LB3, BSE    , 150,   0) // fd ñ
 ZMK_COMBO(qu,         &qu_q Q Q, LM2 LT1, BSE    , 150,   0) // nb qu|q
-ZMK_COMBO(a,          &kp RA(X), LT1 LM1, BSE    , 150,   0) // a, á
-ZMK_COMBO(e,          &kp RA(G), LT2 LM2, BSE    , 150,   0) // e/ é
-ZMK_COMBO(i,          &kp RA(B), LT3 LM3, BSE    , 150,   0) // ij í
-ZMK_COMBO(o,        &kp RA(DOT), LM2 LB2, BSE    , 150,   0) // eo ó
-ZMK_COMBO(u,          &kp RA(J), LM1 LB1, BSE    , 150,   0) // au ú
-ZMK_COMBO(ud,         &kp RA(U), LM3 LB3, BSE    , 150,   0) // iy ü
 // Combos: Home row-------------------------------------------------------------------------------
 ZMK_COMBO(ret_esc, &ret_esc ESC ENTER, LM2 LM3, BSE NAV,  70,  75) // ei ret
 ZMK_COMBO(tab,          &kp TAB, RM1 RM2, BSE    ,  60,  75) // ae tab
