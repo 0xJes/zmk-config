@@ -173,7 +173,7 @@ ZMK_COMBO(bootl,    &bootloader, LT3 RT3, BSE    ,  50, 150) // bj enter flash m
 ZMK_COMBO(excl,        &kp EXCL, RT2 RT3, BSE    ,  50, 150) // j/ !
 ZMK_COMBO(qmark,      &kp QMARK, RT1 RT2, BSE    ,  50, 150) // ,/ ?
 
-// Combos: Vertical--------------------------------------------------------------------------------
+// Combos: Vertical-------------------------------------------------------------------------------- &| ~= ^%
 ZMK_COMBO(pipe,        &kp PIPE, LT1 LM1,     BSE, 100,   0) // c p
 ZMK_COMBO(tilde,      &kp TILDE, LT2 LM2,     BSE, 100,   0) // c p
 ZMK_COMBO(pcnt,       &kp PRCNT, LT3 LM3,     BSE, 100,   0) // c p
