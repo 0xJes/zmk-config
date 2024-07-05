@@ -123,6 +123,14 @@ ZMK_HOLD_TAP(lsf,
 	bindings = <&kp>, <&sk>;
 )
 
+ZMK_HOLD_TAP(ret_esc,
+	flavor = "balanced";
+	require-prior-idle-ms = <100>;
+	tapping-term-ms = <250>;
+	quick-tap-ms = <200>;
+	bindings = <&kp>, <&kp>;
+)
+
 // Keys with special shifted versions--------------------------------------------------------------
 ZMK_MOD_MORPH(currency,   bindings = <&kp DLLR>,  <&kp RA(N5)>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(sqt_dqt,    bindings = <&kp SQT>,   <&kp DQT>;      mods = <(MOD_LSFT|MOD_RSFT)>;)
@@ -154,10 +162,10 @@ ZMK_COMBO(o,        &kp RA(DOT), LM2 LB2, BSE    , 150,   0) // eo ó
 ZMK_COMBO(u,          &kp RA(J), LM1 LB1, BSE    , 150,   0) // au ú
 ZMK_COMBO(ud,         &kp RA(U), LM3 LB3, BSE    , 150,   0) // iy ü
 // Combos: Home row-------------------------------------------------------------------------------
-ZMK_COMBO(escape,       &kp ESC, LM1 LM3, BSE    ,  50,  75) // st esc COMBINE WITH RET
-ZMK_COMBO(enter,        &kp RET, LM2 LM3, BSE NAV,  70,  75) // ei ret
+ZMK_COMBO(ret_esc, &ret_esc ESC ENTER, LM2 LM3, BSE NAV,  70,  75) // ei ret
 ZMK_COMBO(tab,          &kp TAB, RM1 RM2, BSE    ,  60,  75) // ae tab
-ZMK_COMBO(uscore,     &kp UNDER, RM1 RM3, BSE    , 100,  75) // ai _   MAKE CAPSW SHIFT THIS KEY AND USE THIS COMBO FOR ANYTHING ELSE
+ZMK_COMBO(sqt,          &kp SQT, LM1 LM3, BSE    , 100,  75) // ai _   
+ZMK_COMBO(dqt,          &kp DQT, RM1 RM3, BSE    ,  50,  75) // st esc
 ZMK_COMBO(backspace,   &kp BSPC, RM2 RM3, BSE NAV, 150,  75) // ei bsp
 ZMK_COMBO(delete,       &kp DEL, RM3 RM4, BSE NAV, 140, 100) // im del
 // Combos: horizontal------------------------------------------------------------------------------
@@ -165,6 +173,7 @@ ZMK_COMBO(bootl,    &bootloader, LT3 RT3, BSE    ,  50, 150) // bj enter flash m
 ZMK_COMBO(sqt_dqt,     &sqt_dqt, RT2 RT3, BSE    ,  50, 150) // j/ '" MAKE ORDER DEPENDENT 
 ZMK_COMBO(qmrk_excl, &qmrk_excl, RT1 RT2, BSE    ,  50, 150) // ,/ !? MAKE ADAPTIVE THEN IMPLEMENT THE OPENING VERSION WITH SHIFT
 ZMK_COMBO(currency,   &currency, RB2 RB3, BSE    ,  50, 150) // j i
+// LEFT _
 // Combos: Vertical--------------------------------------------------------------------------------
 ZMK_COMBO(grave,      &kp GRAVE, LM4 LB4,     BSE, 100,   0) // c p
 ZMK_COMBO(at,            &kp AT, LM1 LB1,     BSE, 100,   0) // c p
