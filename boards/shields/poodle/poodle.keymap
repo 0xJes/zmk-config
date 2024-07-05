@@ -74,6 +74,15 @@ ZMK_MACRO(qu,
     quick-tap-ms = <150>;
 };
 
+&ht {
+	flavor = "balanced";
+	require-prior-idle-ms = <100>;
+	tapping-term-ms = <200>;
+	quick-tap-ms = <200>;
+	bindings = <&kp>, <&kp>;
+};
+
+
 // HOLD TAPS
 ZMK_HOLD_TAP(qu_q,
 	flavor = "tap-preferred";
@@ -115,14 +124,6 @@ ZMK_HOLD_TAP(lsf,
 	tapping-term-ms = <250>;
 	quick-tap-ms = <200>;
 	bindings = <&kp>, <&sk>;
-)
-
-ZMK_HOLD_TAP(ret_esc,
-	flavor = "balanced";
-	require-prior-idle-ms = <100>;
-	tapping-term-ms = <200>;
-	quick-tap-ms = <200>;
-	bindings = <&kp>, <&kp>;
 )
 
 // Keys with special shifted versions--------------------------------------------------------------
