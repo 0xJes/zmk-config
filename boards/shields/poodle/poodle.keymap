@@ -47,11 +47,6 @@
 #define BACK         &mkp MB4
 
 // Macros------------------------------------------------------------------------------------------
-ZMK_MACRO(au,			bindings = <&kp A &kp U>;)
-ZMK_MACRO(ua,			bindings = <&kp U &kp A>;)
-ZMK_MACRO(gu,			bindings = <&kp G &kp U>;)
-ZMK_MACRO(gu_d,			bindings = <&kp G &kp RA(U)>;)
-ZMK_MACRO(t_period,		bindings = <&kp DOT &kp DOT &kp DOT>;)
 ZMK_MACRO(add,			bindings = <&kp SPACE &kp PLUS  &kp SPACE>;)
 ZMK_MACRO(sub,			bindings = <&kp SPACE &kp MINUS &kp SPACE>;)
 ZMK_MACRO(div,			bindings = <&kp SPACE &kp FSLH  &kp SPACE>;)
@@ -134,12 +129,6 @@ ZMK_HOLD_TAP(ret_esc,
 
 // Keys with special shifted versions--------------------------------------------------------------
 ZMK_MOD_MORPH(currency,   bindings = <&kp DLLR>,  <&kp RA(N5)>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(sqt_dqt,    bindings = <&kp SQT>,   <&kp DQT>;      mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(amps_pipe,  bindings = <&kp AMPS>,  <&kp PIPE>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(qmrk_excl,  bindings = <&kp QMARK>, <&kp EXCL>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(eql_tld,    bindings = <&kp EQUAL>, <&kp TILDE>;    mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(crt_pcnt,   bindings = <&kp CARET>, <&kp PRCNT>;    mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(hash_bslh,  bindings = <&kp HASH>,  <&kp BSLH>;    mods = <(MOD_LSFT|MOD_RSFT)>;)
 
 ZMK_MOD_MORPH(minu_plus,  bindings = <&kp MINUS>, <&kp PLUS>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(fslh_star,  bindings = <&kp FSLH>,  <&kp STAR>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
