@@ -57,7 +57,7 @@ ZMK_MACRO(qu,
 	bindings = <&kp Q &kp U>;
 )
 
-// Micelaneous-------------------------------------------------------------------------------------
+// BEHAVIOR CONFIGURATION
 &sk {
     release-after-ms = <2000>;
     quick-release; 
@@ -74,8 +74,7 @@ ZMK_MACRO(qu,
     quick-tap-ms = <150>;
 };
 
-// Hold Taps---------------------------------------------------------------------------------------
-
+// HOLD TAPS
 ZMK_HOLD_TAP(qu_q,
 	flavor = "tap-preferred";
 	tapping-term-ms = <250>;
@@ -139,12 +138,12 @@ ZMK_MOD_MORPH(sft_capsw,
     mods = <(MOD_RSFT)>;
 )
 
-// Combos: Alpha-----------------------------------------------------------------------------------
+// ALPHA COMBOS
 ZMK_COMBO(z,              &kp Z, LT1 LT3, BSE    , 150,   0) // bg z
 ZMK_COMBO(x,              &kp X, LT3 LT2, BSE    , 150,   0) // bh x
 ZMK_COMBO(enie,       &kp RA(N), LB1 LB3, BSE    , 150,   0) // fd ñ
 ZMK_COMBO(qu,         &qu_q Q Q, LM2 LT1, BSE    , 150,   0) // nb qu|q
-// Combos: Home row-------------------------------------------------------------------------------
+// HOME ROW COMBOS
 ZMK_COMBO(ret_esc, &ret_esc ESC ENTER, LM2 LM3, BSE NAV,  70,  75) // ei ret
 ZMK_COMBO(tab,          &kp TAB, RM1 RM2, BSE    ,  60,  75) // ae tab
 ZMK_COMBO(sqt,          &kp SQT, LM1 LM3, BSE    , 100,  75) // ai _   
@@ -156,7 +155,7 @@ ZMK_COMBO(bootl,    &bootloader, LT3 RT3, BSE    ,  50, 150) // bj enter flash m
 ZMK_COMBO(excl,        &kp EXCL, RT2 RT3, BSE    ,  50, 150) // j/ !
 ZMK_COMBO(qmark,      &kp QMARK, RT1 RT2, BSE    ,  50, 150) // ,/ ?
 
-// Combos: Vertical-------------------------------------------------------------------------------- &| ~= ^%
+// VERTICAL COMBOS 
 ZMK_COMBO(pipe,        &kp PIPE, LT1 LM1,     BSE, 100,   0) // c p
 ZMK_COMBO(tilde,      &kp TILDE, LT2 LM2,     BSE, 100,   0) // c p
 ZMK_COMBO(pcnt,       &kp PRCNT, LT3 LM3,     BSE, 100,   0) // c p
@@ -171,15 +170,13 @@ ZMK_COMBO(bslh,        &kp BSLH, RM1 RB1,     BSE, 100,   0) // c p
 ZMK_COMBO(currency,   &currency, RM2 RB2,     BSE, 100,   0) // c 
 ZMK_COMBO(under,      &kp UNDER, RM3 RB3,     BSE, 100,   0) // c 
 
-// Combos: Diagonal pairs--------------------------------------------------------------------------
-ZMK_COMBO(lpar,        &kp LPAR, RM1 RB2,     BSE, 110, 100) // ao (
-ZMK_COMBO(rpar,        &kp RPAR, RM3 RB2,     BSE, 110, 100) // io )
-ZMK_COMBO(lbkt,        &kp LBKT, RT1 RM2,     BSE, 110, 100) // ,e [
-ZMK_COMBO(rbkt,        &kp RBKT, RM2 RT3,     BSE, 110, 100) // ej ]
-ZMK_COMBO(lbrc,        &kp LBRC, LM3 LB2,     BSE, 110, 100) // sl {
-ZMK_COMBO(rbrc,        &kp RBRC, LB2 LM1,     BSE, 110, 100) // lt }
-ZMK_COMBO(eql_tld,      &kp LT,  LT3 LM2,     BSE, 110, 100) // bn <
-ZMK_COMBO(hash_bslh,    &kp GT,  LT1 LM2,     BSE, 110, 100) // ng >
+
+/* Sequential combos implemented in Kanata:
+ao ( oa )
+oi [ io ]
+nt { tn }
+sn < ns >
+*/
 
 
 ZMK_LAYER(base,
