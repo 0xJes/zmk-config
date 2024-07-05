@@ -142,6 +142,8 @@ ZMK_MOD_MORPH(sqt_dqt,    bindings = <&kp SQT>,   <&kp DQT>;      mods = <(MOD_L
 ZMK_MOD_MORPH(amps_pipe,  bindings = <&kp AMPS>,  <&kp PIPE>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(qmrk_excl,  bindings = <&kp QMARK>, <&kp EXCL>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(eql_tld,    bindings = <&kp EQUAL>, <&kp TILDE>;    mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(crt_pcnt,   bindings = <&kp CARET>, <&kp PRCNT>;    mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(hash_bslh,  bindings = <&kp HASH>,  <&kp BSLH>;    mods = <(MOD_LSFT|MOD_RSFT)>;)
 
 ZMK_MOD_MORPH(minu_plus,  bindings = <&kp MINUS>, <&kp PLUS>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(fslh_star,  bindings = <&kp FSLH>,  <&kp STAR>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
@@ -175,9 +177,7 @@ ZMK_COMBO(hash,        &kp HASH, RB1 RB2, BSE    ,  50,  150) // , a
 ZMK_COMBO(currency,   &currency, RB2 RB3, BSE    ,  50,  150) // j i
 
 // Combos: Vertical--------------------------------------------------------------------------------
-ZMK_COMBO(backslash,  &kp BSLH, LT2 LM2, BSE    ,  85,   0) // h n
-ZMK_COMBO(caret,     &kp CARET, RM3 RB3, BSE    ,  60,   0) // s f
-ZMK_COMBO(prcnt,     &kp PRCNT, LM3 LB3, BSE    ,  60,   0) // i y
+ZMK_COMBO(backslash,  &kp BSLH, LT2 LM2, BSE    ,  85,   0) // h 
 ZMK_COMBO(grave,     &kp GRAVE, LM4 LB4, BSE    ,  60,   0) // c p
 
 // Combos: Diagonal pairs--------------------------------------------------------------------------
@@ -187,9 +187,10 @@ ZMK_COMBO(brackets,   &LR_brack, RM3 RB2, BSE    , 110, 100) // io [] MAKE ORDER
 ZMK_COMBO(angles,     &LR_angle, LM3 LB2, BSE    , 110, 100) // sl <> MAKE ORDER DEPENDENT 
 
 ZMK_COMBO(amps_pipe, &amps_pipe, RT1 RM2, BSE    , 110, 100) // ,e &| MAKE ORDER DEPENDENT 
-ZMK_COMBO(eql_tld,     &eql_tld, LT1 LM2, BSE    , 110, 100) // nb =~ MAKE ORDER DEPENDENT 
-// ZMK_COMBO(quote,     RT3 RM2  &kp SQT, , BSE    , 110, 100) // n g
-// ZMK_COMBO(quest,      &RL_quest, LT3 LM2, BSE    , 110, 100) // j e
+ZMK_COMBO(eql_tld,     &eql_tld, LT1 LM2, BSE    , 110, 100) // ng =~ MAKE ORDER DEPENDENT
+ZMK_COMBO(crt_pcnt,   &crt_pcnt, LT3 LM2, BSE    , 110, 100) // bn ^% MAKE ORDER DEPENDENT
+ZMK_COMBO(hash_bslh, &hash_bslh, RT3 RM2, BSE    , 110, 100) // gn 
+
 
 ZMK_LAYER(base,
 				&kp B			&kp H			&kp G										&comma_semi			&fslh_star		&kp J
