@@ -76,7 +76,7 @@ ZMK_MACRO(qu,
 
 ZMK_HOLD_TAP(qu_q,
 	flavor = "tap-preferred";
-	tapping-term-ms = <150>;
+	tapping-term-ms = <250>;
 	bindings = <&kp>, <&qu>;
 )
 
