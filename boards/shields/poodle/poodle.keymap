@@ -2,8 +2,6 @@
 // TODO: Use ACS for hrm on all layers
 // TODO: Format combos by side
 // todo implement u diaresis
-// TODO: sequetial combos for braces and qu
-
 
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 30
 
@@ -18,12 +16,10 @@
 #define NAV 1
 #define NUM 2
 #define MOU 3
-
 // KEY GROUPS 
 #define LEFT_HAND_KEYS LT3 LT2 LT1 LM4 LM3 LM2 LM1 LM0 LB4 LB3 LB2 LB1 LB0
 #define RIGHT_HAND_KEYS RT1 RT2 RT3 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4
 #define THUMB_KEYS LH1 LH0 RH0 RH1
-
 // COMMON SHORTCUTS
 #define CUT      &kp LC(X)
 #define PASTE    &kp LC(V)
@@ -32,7 +28,6 @@
 #define ZOOM_OUT &kp LC(MINUS)
 #define UNDO     &kp LC(Z)
 #define REDO     &kp LC(Y)
-
 // MOUSE OPERATIONS
 #define WHEEL_LEFT  &msc SCRL_LEFT
 #define WHEEL_UP    &msc SCRL_UP
@@ -82,12 +77,6 @@ ZMK_MACRO(qu,
 };
 
 // HOLD TAPS
-ZMK_HOLD_TAP(qu_q,
-	flavor = "tap-preferred";
-	tapping-term-ms = <250>;
-	bindings = <&kp>, <&qu>;
-)
-
 ZMK_HOLD_TAP(hml,
 	flavor = "balanced";
 	require-prior-idle-ms = <100>;
@@ -141,12 +130,11 @@ ZMK_MOD_MORPH(sft_capsw,
 ZMK_COMBO(z,             &kp Z, LT1 LT3, BSE    , 150,   0)
 ZMK_COMBO(x,             &kp X, LT3 LT2, BSE    , 150,   0)
 ZMK_COMBO(enie,      &kp RA(N), LB1 LB3, BSE    , 150,   0)
-ZMK_COMBO(qu,        &qu_q Q Q, LM2 LT1, BSE    , 150,   0)
 // HOME ROW COMBOS
 ZMK_COMBO(ret_esc, &mt ESC RET, LM2 LM3, BSE NAV,  70,  75)
 ZMK_COMBO(tab,         &kp TAB, RM1 RM2, BSE    ,  60,  75)
-ZMK_COMBO(sqt,         &kp SQT, LM1 LM3, BSE    , 100,  75) 
-ZMK_COMBO(dqt,         &kp DQT, RM1 RM3, BSE    ,  50,  75)
+// ZMK_COMBO(sqt,         &kp SQT, LM1 LM3, BSE    , 100,  75) 
+// ZMK_COMBO(dqt,         &kp DQT, RM1 RM3, BSE    ,  50,  75)
 ZMK_COMBO(backspace,  &kp BSPC, RM2 RM3, BSE NAV, 150,  75)
 ZMK_COMBO(delete,      &kp DEL, RM3 RM4, BSE NAV, 140, 100)
 // HORIZONTAL COMBOS
@@ -172,6 +160,8 @@ ao ( oa )
 oi [ io ]
 nt { tn }
 sn < ns >
+/, ' ,/ "
+hg qu|q
 */
 
 
