@@ -188,9 +188,9 @@ hg qu|q
 
 ZMK_LAYER(base,
 			&kp B		&kp H		&kp G										&comma_semi	&fslh_star	&kp J
-&lm LALT C	&lm LCTRL S &lm LSHFT N &lt NAV T	&kp K	&dot_colon	&lt NUM A	&rm RSHFT E	&rm RCTRL I	&rm LALTM
+&lm LALT C	&lm LCTRL S &lm LSHFT N &lt NAV T	&kp K	&dot_colon	&lt NUM A	&rm RSHFT E	&rm RCTRL I	&rm LALT
 &kp P		&kp F		&kp L		&kp D		&kp V	&minu_plus	&kp U		&kp O		&kp Y		&kp W
-								&lsf RA(SQT) LSHFT	&lt MOU R								&spc RWIN SPACE	&sft_capsw
+				&lsf RA(SQT) LSHFT	&lt MOU R							&spc RWIN SPACE	&sft_capsw
 )
 
 ZMK_LAYER(navigation,
