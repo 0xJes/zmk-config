@@ -113,15 +113,13 @@ ZMK_HOLD_TAP(lsf,
 	bindings = <&kp>, <&sk>;
 )
 
-
 ZMK_HOLD_TAP(qhold,
 	flavor = "hold-preferred";
 	require-prior-idle-ms = <0>;
 	tapping-term-ms = <250>;
 	quick-tap-ms = <200>;
-	bindings = <&kp>, <&kp>;
+	bindings = <&mo>, <&kp>;
 )
-
 
 // Keys with special shifted versions--------------------------------------------------------------
 ZMK_MOD_MORPH(sft_capsw,  bindings = <&sk RSFT>, <&caps_word>;    mods = <(         MOD_RSFT)>;)
@@ -207,7 +205,7 @@ ZMK_LAYER(mouse,
 )
 
 ZMK_LAYER(q,
-			&trans		&trans		&kp Q							&trans		&trans		&trans
+			&trans		&none		&kp Q							&trans		&trans		&trans
 &trans		&trans	    &trans		&trans		&trans	&trans		&trans		&trans		&trans       &trans
 &trans		&trans		&trans		&trans		&trans	&trans		&trans		&trans		&trans		&trans
 						&trans		&trans							&trans		&trans
