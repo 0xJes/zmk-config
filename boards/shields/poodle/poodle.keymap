@@ -71,8 +71,8 @@ ZMK_MACRO(qu,
 
 &mt {
 	flavor = "balanced";
-	tapping-term-ms = <200>;
-	quick-tap-ms = <200>;
+	tapping-term-ms = <180>;
+	quick-tap-ms = <180>;
 	bindings = <&kp>, <&kp>;
 };
 
@@ -80,7 +80,7 @@ ZMK_MACRO(qu,
 ZMK_HOLD_TAP(hml,
 	flavor = "balanced";
 	require-prior-idle-ms = <100>;
-	tapping-term-ms = <250>;
+	tapping-term-ms = <350>;
 	quick-tap-ms = <200>;
 	hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
 	hold-trigger-on-release;
@@ -90,7 +90,7 @@ ZMK_HOLD_TAP(hml,
 ZMK_HOLD_TAP(hmr,
 	flavor = "balanced";
 	require-prior-idle-ms = <100>;
-	tapping-term-ms = <250>;
+	tapping-term-ms = <350>;
 	quick-tap-ms = <200>;
 	hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
 	hold-trigger-on-release;
