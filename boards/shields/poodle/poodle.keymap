@@ -114,6 +114,7 @@ ZMK_HOLD_TAP(lsf,
 )
 
 // Keys with special shifted versions--------------------------------------------------------------
+ZMK_MOD_MORPH(sft_capsw,  bindings = <&sk RSFT>, <&caps_word>;    mods = <(         MOD_RSFT)>;)
 ZMK_MOD_MORPH(currency,   bindings = <&kp DLLR>,  <&kp RA(N5)>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(minu_plus,  bindings = <&kp MINUS>, <&kp PLUS>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(fslh_star,  bindings = <&kp FSLH>,  <&kp STAR>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
@@ -127,12 +128,6 @@ ZMK_MOD_MORPH(lt_gt,      bindings = <&kp LT>,      <&kp GT>;     mods = <(MOD_L
 // ZMK_MOD_MORPH(fslh_star,  bindings = <&kp FSLH>,  <&kp STAR>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 // ZMK_MOD_MORPH(fslh_star,  bindings = <&kp FSLH>,  <&kp STAR>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 // ZMK_MOD_MORPH(fslh_star,  bindings = <&kp FSLH>,  <&kp STAR>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
-
-
-ZMK_MOD_MORPH(sft_capsw,
-    bindings = <&sk RSFT>, <&caps_word>;
-    mods = <(MOD_RSFT)>;
-)
 
 // ALPHA COMBOS
 ZMK_COMBO(z,             &kp Z, LT1 LT3, BSE    , 150,   0)
@@ -163,10 +158,6 @@ ZMK_COMBO(brakets,  &lbkt_rbkt, RM3 RB2,     BSE, 140, 100)
 ZMK_COMBO(angles,       &lt_gt, LM3 LB2,     BSE, 140, 100)
 
 /* Sequential combos implemented in Kanata:
-ao ( oa )
-oi [ io ]
-nt { tn }
-sn < ns >
 ej ¡ je !
 bn ¿ nb ?
 ,e & e, |
@@ -176,19 +167,10 @@ ng = gn ~
 /j ; j/ :
 hg qu|q
 */
-/ {
-    leader_sequences {
-        compatible = "zmk,leader-sequences";
-        seq_esc {
-            key-positions = <LT1 LT2>;
-            bindings = <&kp Q>;
-        };
-    };
-};
 
 ZMK_LAYER(base,
 			&kp B		&kp H		&kp G										&comma_semi	&fslh_star	&kp J
-&lm LALT C	&lm LCTRL S &lm LSHFT N &lt NAV T	&kp K	&dot_colon	&lt NUM A	&rm RSHFT E	&rm RCTRL I	&rm LALT
+&lm LALT C	&lm LCTRL S &lm LSHFT N &lt NAV T	&kp K	&dot_colon	&lt NUM A	&rm RSHFT E	&rm RCTRL I	&rm LALT M
 &kp P		&kp F		&kp L		&kp D		&kp V	&minu_plus	&kp U		&kp O		&kp Y		&kp W
 				&lsf RA(SQT) LSHFT	&lt MOU R							&spc RWIN SPACE	&sft_capsw
 )
