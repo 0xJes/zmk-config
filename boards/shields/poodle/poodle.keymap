@@ -160,7 +160,15 @@ ng = gn ~
 /j ; j/ :
 hg qu|q
 */
-
+/ {
+    leader_sequences {
+        compatible = "zmk,leader-sequences";
+        seq_esc {
+            key-positions = <LT1 LT2>;
+            bindings = <&kp Q>;
+        };
+    };
+};
 
 ZMK_LAYER(base,
 				&kp B			&kp H			&kp G										&kp COMMA		&fslh_star		&kp J
