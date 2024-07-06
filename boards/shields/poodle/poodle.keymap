@@ -169,7 +169,7 @@ hg qu|q
 */
 
 ZMK_LAYER(base,
-			&kp B		&kp H		&kp G										&comma_semi	&fslh_star	&kp J
+			&kp B		&lt 4 H		&kp G										&comma_semi	&fslh_star	&kp J
 &lm LALT C	&lm LCTRL S &lm LSHFT N &lt NAV T	&kp K	&dot_colon	&lt NUM A	&rm RSHFT E	&rm RCTRL I	&rm LALT M
 &kp P		&kp F		&kp L		&kp D		&kp V	&minu_plus	&kp U		&kp O		&kp Y		&kp W
 				&lsf RA(SQT) LSHFT	&lt MOU R							&spc RWIN SPACE	&sft_capsw
@@ -194,4 +194,11 @@ ZMK_LAYER(mouse,
 &kp LALT	&kp LCTRL	&kp LSHFT	&mkp MCLK	&none	&none		CURSOR_LEFT	CURSOR_DOWN	CURSOR_UP	CURSOR_RIGHT
 &none		BACK		FORWARD		&none		&none	&none		WHEEL_LEFT	WHEEL_DOWN	WHEEL_UP	 WHEEL_RIGHT
 						&none		&none							&mkp LCLK   &mkp RCLK
+)
+
+ZMK_LAYER(numbers
+			&none		&none		&kp Q							&none		&none		&none
+&none		&none	    &none		&none		&none	&none		&none		&none		&none       &none
+&none		&none		&none		&none		&none	&none		&none		&none		&none		&none
+						&none		&none							&none		&none
 )
