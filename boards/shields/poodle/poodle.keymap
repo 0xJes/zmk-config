@@ -159,7 +159,7 @@ ZMK_COMBO(underscr,  &kp UNDER, RM3 RB3,     BSE, 100,   0)
 // DIAGONAL COMBOS
 ZMK_COMBO(parent,   &lpar_rpar, RM1 RB2,     BSE, 140, 100)
 ZMK_COMBO(braces,   &lbrc_rbrc, LM1 LB2,     BSE, 140, 100)
-ZMK_COMBO(brakets,  &lbtk_rbtk, RM3 RB2,     BSE, 140, 100)
+ZMK_COMBO(brakets,  &lbkt_rbkt, RM3 RB2,     BSE, 140, 100)
 ZMK_COMBO(angles,       &lt_gt, LM3 LB2,     BSE, 140, 100)
 
 /* Sequential combos implemented in Kanata:
