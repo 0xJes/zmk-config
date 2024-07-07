@@ -99,7 +99,7 @@ ZMK_HOLD_TAP(rm,
 ZMK_HOLD_TAP(qu_q,
 	flavor = "tap-preferred";
 	tapping-term-ms = <250>;
-	bindings = <&qu>, <&kp>;
+	bindings = <&kp>, <&qu>;
 )
 
 ZMK_HOLD_TAP(spc,
@@ -139,7 +139,7 @@ ZMK_MOD_MORPH(lbkt_rbkt,  bindings = <&kp LBKT>,  <&kp RBKT>;     mods = <(MOD_L
 ZMK_MOD_MORPH(lt_gt,      bindings = <&kp LT>,    <&kp GT>;       mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(sqt_dqt,    bindings = <&kp SQT>,   <&kp DQT>;      mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(rl_qmark,   bindings = <&kp QMARK>, <&kp RA(FSLH)>; mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(rl_excl,    bindings = <&kp EXCL>,  <&kp RA(1)>;    mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(rl_excl,    bindings = <&kp EXCL>,  <&kp RA(N1)>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(amps_pipe,  bindings = <&kp AMPS>,  <&kp PIPE>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(equl_tild,  bindings = <&kp EQUAL>, <&kp TILDE>;    mods = <(MOD_LSFT|MOD_RSFT)>;)
 
