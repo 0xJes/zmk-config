@@ -47,7 +47,6 @@ ZMK_MACRO(div,			bindings = <&kp SPACE &kp FSLH  &kp SPACE>;)
 ZMK_MACRO(mul,			bindings = <&kp SPACE &kp STAR  &kp SPACE>;)
 
 ZMK_MACRO(qu,
-	wait-ms = <0>;
 	tap-ms = <0>;
 	bindings = <&kp Q &kp U>;
 )
@@ -71,7 +70,7 @@ ZMK_MACRO(qu,
 
 &mt {
 	flavor = "balanced";
-	tapping-term-ms = <180>;
+	tapping-term-ms = <150>;
 	quick-tap-ms = <180>;
 	bindings = <&kp>, <&kp>;
 };
@@ -95,6 +94,12 @@ ZMK_HOLD_TAP(rm,
 	hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
 	hold-trigger-on-release;
 	bindings = <&kp>, <&kp>;
+)
+
+ZMK_HOLD_TAP(qu_q,
+	flavor = "tap-preferred";
+	tapping-term-ms = <250>;
+	bindings = <&kp>, <&qu>;
 )
 
 ZMK_HOLD_TAP(spc,
@@ -133,8 +138,8 @@ ZMK_MOD_MORPH(lbrc_rbrc,  bindings = <&kp LBRC>,  <&kp RBRC>;     mods = <(MOD_L
 ZMK_MOD_MORPH(lbkt_rbkt,  bindings = <&kp LBKT>,  <&kp RBKT>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(lt_gt,      bindings = <&kp LT>,    <&kp GT>;       mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(sqt_dqt,    bindings = <&kp SQT>,   <&kp DQT>;      mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(rl_qmark,   bindings = <&kp QMARK>, <&kp RA(N1)>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(rl_excl,    bindings = <&kp EXCL>,  <&kp RA(FSLH)>; mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(rl_qmark,   bindings = <&kp QMARK>, <&kp RA(FSLH)>; mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(rl_excl,    bindings = <&kp EXCL>,  <&kp RA(1)>;    mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(amps_pipe,  bindings = <&kp AMPS>,  <&kp PIPE>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(equl_tild,  bindings = <&kp EQUAL>, <&kp TILDE>;    mods = <(MOD_LSFT|MOD_RSFT)>;)
 
@@ -169,14 +174,7 @@ ZMK_COMBO(quotes,     &sqt_dqt, RT1 RT2,     BSE, 140, 100)
 ZMK_COMBO(qmark,     &rl_qmark, RT1 RM2,     BSE, 140, 100)
 ZMK_COMBO(excl,       &rl_excl, RT3 RM2,     BSE, 140, 100)
 ZMK_COMBO(and_or,   &amps_pipe, LT1 LM2,     BSE, 140, 100)
-ZMK_COMBO(excl,     &equl_tild, LT3 LM2,     BSE, 140, 100)
-
-
-/* Sequential combos implemented in Kanata:
-,e & e, |
-ng = gn ~
-
-*/
+ZMK_COMBO(equl_tild,&equl_tild, LT3 LM2,     BSE, 140, 100)
 
 ZMK_LAYER(base,
 			&kp B		&qhold 4 H	&kp G										&comma_semi	&fslh_star	&kp J
@@ -207,7 +205,7 @@ ZMK_LAYER(mouse,
 )
 
 ZMK_LAYER(q,
-			&trans		&none		&kp Q							&trans		&trans		&trans
+			&trans		&none		&qu_q							&trans		&trans		&trans
 &trans		&trans	    &trans		&trans		&trans	&trans		&trans		&trans		&trans       &trans
 &trans		&trans		&trans		&trans		&trans	&trans		&trans		&trans		&trans		&trans
 						&trans		&trans							&trans		&trans
