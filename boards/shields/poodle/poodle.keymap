@@ -1,7 +1,12 @@
 // TODO: Implement caps-word behavior that shifts the minus key 
-// TODO: Use ACS for hrm on all layers
 // TODO: Format combos by side
 // todo implement u diaresis
+// todo remove shift from homerow
+// todo move mouse layer toggle from left thumb
+// todo implemet especial symbols with left thumb hold
+// todo implement mouse layer toggling
+// todo move shifted chars outside base and make them combos
+// todo maybe create a box drawing layer
 
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 30
 
@@ -171,10 +176,10 @@ ZMK_COMBO(and_or,   &amps_pipe, LT1 LM2,     BSE, 140, 100)
 ZMK_COMBO(equl_tild,&equl_tild, LT3 LM2,     BSE, 140, 100)
 
 ZMK_LAYER(base,
-			&kp B		&qhold 4 H	&kp G										&comma_semi	&fslh_star	&kp J
-&lm LALT C	&lm LCTRL S &lm LSHFT N &lt NAV T	&kp K	&dot_colon	&lt NUM A	&rm RSHFT E	&rm RCTRL I	&rm LALT M
-&kp P		&kp F		&kp L		&kp D		&kp V	&minu_plus	&kp U		&kp O		&kp Y		&kp W
-				&lsf RA(SQT) LSHFT	&lt MOU R							&spc RWIN SPACE	&sft_capsw
+			&kp B		&qhold 5 H	&kp G							&comma_semi	&fslh_star	&kp J
+&kp C		&lm LALT S	&lm LCTRL N	&lt NAV T	&kp K	&dot_colon	&lt NUM A	&rm RCTRL E	&rm RALT I	&kp M
+&kp P		&kp F		&kp L		&lt MOU D	&kp V	&minu_plus	&lt 4 U		&kp O		&kp Y		&kp W
+				&lsf RA(SQT) LSHFT	&kp R							&spc RWIN SPACE	&sft_capsw
 )
 
 ZMK_LAYER(navigation,
@@ -198,9 +203,16 @@ ZMK_LAYER(mouse,
 						&none		&none							&mkp LCLK   &mkp RCLK
 )
 
+ZMK_LAYER(wm,
+			&kp B		&kp H		&kp G							&none		&kp FLSH	&kp J
+&kp C		&kp S		&kp N		&kp T		&kp K	&none		&none		&kp E		&kp I		&kp M
+&kp P		&kp F		&kp L		&kp D		&kp V	&none		&none		&kp O		&kp Y		&kp W
+						&kp X		&kp R							&kp SPACE	&kp Z
+)
 ZMK_LAYER(q,
 			&trans		&none		&qu_q Q Q						&trans		&trans		&trans
-&trans		&trans	    &trans		&trans		&trans	&trans		&trans		&trans		&trans       &trans
+&trans		&trans		&trans		&trans		&trans	&trans		&trans		&trans		&trans		&trans
 &trans		&trans		&trans		&trans		&trans	&trans		&trans		&trans		&trans		&trans
 						&trans		&trans							&trans		&trans
 )
+
