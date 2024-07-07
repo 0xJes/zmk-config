@@ -45,7 +45,6 @@ ZMK_MACRO(add,			bindings = <&kp SPACE &kp PLUS  &kp SPACE>;)
 ZMK_MACRO(sub,			bindings = <&kp SPACE &kp MINUS &kp SPACE>;)
 ZMK_MACRO(div,			bindings = <&kp SPACE &kp FSLH  &kp SPACE>;)
 ZMK_MACRO(mul,			bindings = <&kp SPACE &kp STAR  &kp SPACE>;)
-
 ZMK_MACRO(qu,
 	tap-ms = <0>;
 	bindings = <&kp Q &kp U>;
@@ -205,7 +204,7 @@ ZMK_LAYER(mouse,
 )
 
 ZMK_LAYER(q,
-			&trans		&none		&qu_q							&trans		&trans		&trans
+			&trans		&none		&qu_q Q Q						&trans		&trans		&trans
 &trans		&trans	    &trans		&trans		&trans	&trans		&trans		&trans		&trans       &trans
 &trans		&trans		&trans		&trans		&trans	&trans		&trans		&trans		&trans		&trans
 						&trans		&trans							&trans		&trans
