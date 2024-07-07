@@ -204,7 +204,7 @@ ZMK_LAYER(mouse,
 )
 
 ZMK_LAYER(wm,
-			&kp B		&kp H		&kp G							&none		&kp FLSH	&kp J
+			&kp B		&kp H		&kp G							&none		&kp FSLH	&kp J
 &kp C		&kp S		&kp N		&kp T		&kp K	&none		&none		&kp E		&kp I		&kp M
 &kp P		&kp F		&kp L		&kp D		&kp V	&none		&none		&kp O		&kp Y		&kp W
 						&kp X		&kp R							&kp SPACE	&kp Z
