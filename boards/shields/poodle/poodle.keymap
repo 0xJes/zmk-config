@@ -46,6 +46,7 @@ ZMK_MACRO(sub,			bindings = <&kp SPACE &kp MINUS &kp SPACE>;)
 ZMK_MACRO(div,			bindings = <&kp SPACE &kp FSLH  &kp SPACE>;)
 ZMK_MACRO(mul,			bindings = <&kp SPACE &kp STAR  &kp SPACE>;)
 ZMK_MACRO(qu,
+    wait-ms = <0>;
 	tap-ms = <0>;
 	bindings = <&kp Q &kp U>;
 )
@@ -98,7 +99,7 @@ ZMK_HOLD_TAP(rm,
 ZMK_HOLD_TAP(qu_q,
 	flavor = "tap-preferred";
 	tapping-term-ms = <250>;
-	bindings = <&kp>, <&qu>;
+	bindings = <&qu>, <&kp>;
 )
 
 ZMK_HOLD_TAP(spc,
@@ -147,9 +148,9 @@ ZMK_COMBO(z,             &kp Z, LT1 LT3, BSE    , 150,   0)
 ZMK_COMBO(x,             &kp X, LT3 LT2, BSE    , 150,   0)
 ZMK_COMBO(enie,      &kp RA(N), LB1 LB3, BSE    , 150,   0)
 // HOME ROW COMBOS
-ZMK_COMBO(ret_esc, &mt ESC RET, LM2 LM3, BSE NAV,  70,  75)
+ZMK_COMBO(ret,         &kp RET, LM2 LM3, BSE NAV,  70,  75)
 ZMK_COMBO(tab,         &kp TAB, RM1 RM2, BSE    ,  60,  75)
-// ZMK_COMBO(sqt,         &kp SQT, LM1 LM3, BSE    , 100,  75) 
+ZMK_COMBO(esc,         &kp ESC, LM1 LM3, BSE    , 100,  75) 
 // ZMK_COMBO(dqt,         &kp DQT, RM1 RM3, BSE    ,  50,  75)
 ZMK_COMBO(backspace,  &kp BSPC, RM2 RM3, BSE NAV, 150,  75)
 ZMK_COMBO(delete,      &kp DEL, RM3 RM4, BSE NAV, 140, 100)
