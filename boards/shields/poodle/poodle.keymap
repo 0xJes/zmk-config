@@ -9,7 +9,7 @@
 // todo maybe create a box drawing layer
 
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 30
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 600
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 800
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -78,7 +78,7 @@ ZMK_MACRO(qu,           bindings = <&kp Q &kp U>                  ;)
 };
 
 &mmv {
-	time-to-max-speed-ms = <800>;
+	time-to-max-speed-ms = <500>;
 };
 
 // HOLD TAPS
