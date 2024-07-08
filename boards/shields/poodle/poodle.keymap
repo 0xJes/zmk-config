@@ -103,14 +103,6 @@ ZMK_HOLD_TAP(qu_q,
 	bindings = <&kp>, <&qu>;
 )
 
-ZMK_HOLD_TAP(spc,
-	flavor = "hold-preferred";
-	require-prior-idle-ms = <100>;
-	tapping-term-ms = <250>;
-	quick-tap-ms = <200>;
-	bindings = <&kp>, <&kp>;
-)
-
 ZMK_HOLD_TAP(lsf,
 	flavor = "balanced";
 	tapping-term-ms = <250>;
@@ -174,13 +166,11 @@ ZMK_COMBO(excl,       &rl_excl, RT3 RM2,     BSE, 140, 100)
 ZMK_COMBO(and_or,   &amps_pipe, LT1 LM2,     BSE, 140, 100)
 ZMK_COMBO(equl_tild,&equl_tild, LT3 LM2,     BSE, 140, 100)
 
-
-
 ZMK_LAYER(base,
 			&kp B		&qhold 5 H	&kp G							&comma_semi	&fslh_star	&kp J
 &kp C		&lm LALT S	&lm LCTRL N	&lt NAV T	&kp K	&dot_colon	&lt NUM A	&rm RCTRL E	&rm RALT I	&kp M
 &kp P		&kp F		&kp L		&lt MOU D	&kp V	&minu_plus	&lt 4 U		&kp O		&kp Y		&kp W
-				&lsf RA(SQT) LSHFT	&kp R							&spc RWIN SPACE	&sft_capsw
+				&lsf RA(SQT) LSHFT	&kp R							&kp SPACE	&sft_capsw
 )
 
 ZMK_LAYER(navigation,
