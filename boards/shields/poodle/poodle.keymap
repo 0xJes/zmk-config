@@ -76,6 +76,10 @@ ZMK_MACRO(qu,           bindings = <&kp Q &kp U>                  ;)
 	bindings = <&kp>, <&kp>;
 };
 
+&mmv {
+	time-to-max-speed = <1000>;
+};
+
 // HOLD TAPS
 ZMK_HOLD_TAP(lm,
 	flavor = "balanced";
