@@ -1,7 +1,5 @@
 // TODO: Implement caps-word behavior that shifts the minus key 
 // TODO: Format combos by side
-// todo implement u diaresis
-// todo move mouse layer toggle from left thumb
 // todo implemet especial symbols with left thumb hold
 // todo implement mouse layer toggling
 // todo move shifted chars outside base and make them combos
@@ -52,7 +50,7 @@ ZMK_MACRO(add, bindings = <&kp SPACE &kp PLUS  &kp SPACE>;)
 ZMK_MACRO(sub, bindings = <&kp SPACE &kp MINUS &kp SPACE>;)
 ZMK_MACRO(div, bindings = <&kp SPACE &kp FSLH  &kp SPACE>;)
 ZMK_MACRO(mul, bindings = <&kp SPACE &kp STAR  &kp SPACE>;)
-ZMK_MACRO(gu_dr, bindings = <&kp G &kp U_DR;)
+ZMK_MACRO(gu_dr, bindings = <&kp G &kp U_DR>;)
 ZMK_MACRO(qu, bindings = <&kp Q &kp U>;)
 
 // BEHAVIOR CONFIGURATION
