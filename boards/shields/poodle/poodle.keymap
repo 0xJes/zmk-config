@@ -20,11 +20,13 @@
 #define OQMARK RA(FSLH)
 #define OEXCL  RA(N1)
 #define EURO   RA(N5)
-#define AC_A   RA(X)
-#define AC_E   RA(G)
-#define AC_I   RA(B)
-#define AC_O   RA(DOT)
-#define AC_U   RA(J)
+#define A_AC   RA(X)
+#define E_AC   RA(G)
+#define I_AC   RA(B)
+#define O_AC   RA(DOT)
+#define U_AC   RA(J)
+#define U_DR   RA(U)
+#define N_TL   RA(N)
 
 // LAYERS
 #define BSE 0
@@ -150,7 +152,7 @@ ZMK_MOD_MORPH(equl_tild,  bindings = <&kp EQUAL>, <&kp TILDE>;  mods = <(MOD_LSF
 // ALPHA COMBOS
 ZMK_COMBO(z,             &kp Z, LT1 LT3, BSE    , 150,   0)
 ZMK_COMBO(x,             &kp X, LT3 LT2, BSE    , 150,   0)
-ZMK_COMBO(enie,      &kp RA(N), LB1 LB3, BSE    , 150,   0)
+ZMK_COMBO(enie,       &kp N_TL, LB1 LB3, BSE    , 150,   0)
 // HOME ROW COMBOS
 ZMK_COMBO(ret,         &kp RET, LM2 LM3, BSE NAV,  70,  75)
 ZMK_COMBO(tab,         &kp TAB, RM1 RM2, BSE    ,  60,  75)
@@ -164,7 +166,7 @@ ZMK_COMBO(quotes,     &sqt_dqt, RT1 RT2,     BSE, 140, 100)
 ZMK_COMBO(percent,   &kp PRCNT, LT1 LM1,     BSE, 100,   0)
 ZMK_COMBO(caret,     &kp CARET, RT1 RM1,     BSE, 100,   0)
 ZMK_COMBO(dolar,      &kp DLLR, RM1 RB1,     BSE, 100,   0)
-ZMK_COMBO(euro,     &kp RA(N5), LM1 LB1,     BSE,  50,  75)
+ZMK_COMBO(euro,       &kp EURO, LM1 LB1,     BSE,  50,  75)
 ZMK_COMBO(hash,       &kp HASH, RM2 RB2,     BSE, 100,   0)
 ZMK_COMBO(backslash,  &kp BSLH, LM2 LB2,     BSE, 100,   0)
 ZMK_COMBO(at,           &kp AT, RT2 RM2,     BSE, 100,   0)
