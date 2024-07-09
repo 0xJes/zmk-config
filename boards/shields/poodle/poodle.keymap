@@ -7,6 +7,7 @@
 // todo implement mouse layer toggling
 // todo move shifted chars outside base and make them combos
 // todo maybe create a box drawing layer
+// todo put shift hrm on pinkies
 
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 30
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 800
@@ -185,7 +186,7 @@ ZMK_LAYER(base,
 			&kp B		&qhold 5 H	&kp G							&comma_semi	&fslh_star	&kp J
 &kp C		&lm LALT S	&lm LCTRL N	&lt NAV T	&kp K	&dot_colon	&lt NUM A	&rm RCTRL E	&rm RALT I	&kp M
 &kp P		&kp F		&kp L		&lt MOU D	&kp V	&minu_plus	&lt 4 U		&kp O		&kp Y		&kp W
-				&lsf RA(SQT) LSHFT	&kp R							&kp SPACE	&sft_capsw
+				&lsf RA(SQT) LSHFT	&lt 6 R							&kp SPACE	&sft_capsw
 )
 
 ZMK_LAYER(navigation,
@@ -223,3 +224,9 @@ ZMK_LAYER(q,
 						&trans		&trans							&trans		&trans
 )
 
+ZMK_LAYER(accents,
+			&trans		&none		&trans							&trans		&trans		&trans
+&trans		&trans		&trans		&trans		&trans	&trans		&kp A_AC	&kp E_AC	&kp I_AC	&trans
+&trans		&trans		&trans		&trans		&trans	&trans		&kp U_AC	&kp O_AC	&trans		&trans
+						&trans		&trans							&trans		&trans
+)
