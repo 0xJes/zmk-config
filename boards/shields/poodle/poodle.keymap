@@ -205,7 +205,7 @@ ZMK_LAYER(q,
 )
 
 ZMK_LAYER(accents,
-			&trans		&trans		&kp gu_dr						&trans		&trans		&trans
+			&trans		&trans		&gu_dr							&trans		&trans		&trans
 &trans		&trans		&kp N_TL	&trans		&trans	&trans		&kp A_AC	&kp E_AC	&kp I_AC	&trans
 &trans		&trans		&trans		&trans		&trans	&trans		&kp U_AC	&kp O_AC	&trans		&trans
 						&trans		&trans							&trans		&trans
