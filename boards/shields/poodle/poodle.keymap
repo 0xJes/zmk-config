@@ -17,6 +17,15 @@
 #include "zmk-helpers/helper.h"
 #include "keylabels.h"
 
+#define OQMARK RA(FSLH)
+#define OEXCL  RA(N1)
+#define EURO   RA(N5)
+#define AC_A   RA(X)
+#define AC_E   RA(G)
+#define AC_I   RA(B)
+#define AC_O   RA(DOT)
+#define AC_U   RA(J)
+
 // LAYERS
 #define BSE 0
 #define NAV 1
@@ -123,21 +132,20 @@ ZMK_HOLD_TAP(qhold,
 )
 
 // Keys with special shifted versions--------------------------------------------------------------
-ZMK_MOD_MORPH(sft_capsw,  bindings = <&sk RSFT>,  <&caps_word>;   mods = <(         MOD_RSFT)>;)
-ZMK_MOD_MORPH(currency,   bindings = <&kp DLLR>,  <&kp RA(N5)>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(minu_plus,  bindings = <&kp MINUS>, <&kp PLUS>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(fslh_star,  bindings = <&kp FSLH>,  <&kp STAR>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(dot_colon,  bindings = <&kp DOT>,   <&kp COLON>;    mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(comma_semi, bindings = <&kp COMMA>, <&kp SEMI>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(lpar_rpar,  bindings = <&kp LPAR>,  <&kp RPAR>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(lbrc_rbrc,  bindings = <&kp LBRC>,  <&kp RBRC>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(lbkt_rbkt,  bindings = <&kp LBKT>,  <&kp RBKT>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(lt_gt,      bindings = <&kp LT>,    <&kp GT>;       mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(sqt_dqt,    bindings = <&kp SQT>,   <&kp DQT>;      mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(rl_qmark,   bindings = <&kp QMARK>, <&kp RA(FSLH)>; mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(rl_excl,    bindings = <&kp EXCL>,  <&kp RA(N1)>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(amps_pipe,  bindings = <&kp AMPS>,  <&kp PIPE>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(equl_tild,  bindings = <&kp EQUAL>, <&kp TILDE>;    mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(sft_capsw,  bindings = <&sk RSFT>,  <&caps_word>; mods = <(         MOD_RSFT)>;)
+ZMK_MOD_MORPH(minu_plus,  bindings = <&kp MINUS>, <&kp PLUS>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(fslh_star,  bindings = <&kp FSLH>,  <&kp STAR>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(dot_colon,  bindings = <&kp DOT>,   <&kp COLON>;  mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(comma_semi, bindings = <&kp COMMA>, <&kp SEMI>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(lpar_rpar,  bindings = <&kp LPAR>,  <&kp RPAR>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(lbrc_rbrc,  bindings = <&kp LBRC>,  <&kp RBRC>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(lbkt_rbkt,  bindings = <&kp LBKT>,  <&kp RBKT>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(lt_gt,      bindings = <&kp LT>,    <&kp GT>;     mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(sqt_dqt,    bindings = <&kp SQT>,   <&kp DQT>;    mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(rl_qmark,   bindings = <&kp QMARK>, <&kp OQMARK>; mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(rl_excl,    bindings = <&kp EXCL>,  <&kp OEXCL>;  mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(amps_pipe,  bindings = <&kp AMPS>,  <&kp PIPE>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(equl_tild,  bindings = <&kp EQUAL>, <&kp TILDE>;  mods = <(MOD_LSFT|MOD_RSFT)>;)
 
 // ALPHA COMBOS
 ZMK_COMBO(z,             &kp Z, LT1 LT3, BSE    , 150,   0)
