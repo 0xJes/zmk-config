@@ -78,7 +78,7 @@ ZMK_MACRO(qu,           bindings = <&kp Q &kp U>                  ;)
 
 &lt {
     flavor = "balanced";
-    tapping-term-ms = <200>;
+    tapping-term-ms = <250>;
     quick-tap-ms = <150>;
 };
 
@@ -90,7 +90,7 @@ ZMK_MACRO(qu,           bindings = <&kp Q &kp U>                  ;)
 };
 
 &mmv {
-	time-to-max-speed-ms = <500>;
+	time-to-max-speed-ms = <400>;
 };
 
 // HOLD TAPS
