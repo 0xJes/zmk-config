@@ -7,7 +7,6 @@
 // todo implement mouse layer toggling
 // todo move shifted chars outside base and make them combos
 // todo maybe create a box drawing layer
-// todo put shift hrm on pinkies
 
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 30
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 800
@@ -184,14 +183,14 @@ ZMK_COMBO(equl_tild,&equl_tild, LT3 LM2,     BSE, 140, 100)
 
 ZMK_LAYER(base,
 			&kp B		&qhold 5 H	&kp G							&comma_semi	&fslh_star	&kp J
-&kp C		&lm LALT S	&lm LCTRL N	&lt NAV T	&kp K	&dot_colon	&lt NUM A	&rm RCTRL E	&rm RALT I	&kp M
+&lm LSHFT C	&lm LALT S	&lm LCTRL N	&lt NAV T	&kp K	&dot_colon	&lt NUM A	&rm RCTRL E	&rm LALT I	&rm RSHFT M
 &kp P		&kp F		&kp L		&lt MOU D	&kp V	&minu_plus	&lt 4 U		&kp O		&kp Y		&kp W
-				&lsf RA(SQT) LSHFT	&lt 6 R							&kp SPACE	&sft_capsw
+				&lsf RA(SQT) LSHFT	&lt 6 R							&mt RSHFT SPACE	&sft_capsw
 )
 
 ZMK_LAYER(navigation,
 			&none		&none		&none							PASTE		COPY		CUT
-&kp LALT	&kp LCTRL	&kp LSHFT	&none		&none	ZOOM_IN		&kp LEFT	&kp DOWN	&kp UP		&kp RIGHT
+&kp LSHFT	&kp LALT	&kp LCTRL	&none		&none	ZOOM_IN		&kp LEFT	&kp DOWN	&kp UP		&kp RIGHT
 &none		&none		&none		&none		&none	ZOOM_OUT	&kp HOME	&kp PG_DN	&kp PG_UP	&kp END
 						REDO		UNDO							&kp SPACE	&kp RSHFT
 )
@@ -205,7 +204,7 @@ ZMK_LAYER(numbers,
 
 ZMK_LAYER(mouse,
 			&none		&none		&none							&none		&kp DOWN	&kp UP
-&kp LALT	&kp LCTRL	&kp LSHFT	&mkp MCLK	&none	&none		CURSOR_LEFT	CURSOR_DOWN	CURSOR_UP	CURSOR_RIGHT
+&kp LSHFT	&kp LALT	&kp LCTRL	&mkp MCLK	&none	&none		CURSOR_LEFT	CURSOR_DOWN	CURSOR_UP	CURSOR_RIGHT
 &none		BACK		FORWARD		&none		&none	&none		WHEEL_LEFT	WHEEL_DOWN	WHEEL_UP	 WHEEL_RIGHT
 						&none		&none							&mkp LCLK   &mkp RCLK
 )
@@ -225,7 +224,7 @@ ZMK_LAYER(q,
 )
 
 ZMK_LAYER(accents,
-			&trans		&none		&trans							&trans		&trans		&trans
+			&trans		&trans		&trans							&trans		&trans		&trans
 &trans		&trans		&trans		&trans		&trans	&trans		&kp A_AC	&kp E_AC	&kp I_AC	&trans
 &trans		&trans		&trans		&trans		&trans	&trans		&kp U_AC	&kp O_AC	&trans		&trans
 						&trans		&trans							&trans		&trans
