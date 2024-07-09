@@ -7,6 +7,7 @@
 // todo implement mouse layer toggling
 // todo move shifted chars outside base and make them combos
 // todo maybe create a box drawing layer
+// todo make mouse layer tap dance on left index key
 
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 30
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 800
@@ -16,17 +17,7 @@
 #include <dt-bindings/zmk/mouse.h>
 #include "zmk-helpers/helper.h"
 #include "keylabels.h"
-
-#define OQMARK RA(FSLH)
-#define OEXCL  RA(N1)
-#define EURO   RA(N5)
-#define A_AC   RA(X)
-#define E_AC   RA(G)
-#define I_AC   RA(B)
-#define O_AC   RA(DOT)
-#define U_AC   RA(J)
-#define U_DR   RA(U)
-#define N_TL   RA(N)
+#include "eurkey.h"
 
 // LAYERS
 #define BSE 0
@@ -58,11 +49,11 @@
 #define BACK         &mkp MB4
 
 // MACROS
-ZMK_MACRO(add,			bindings = <&kp SPACE &kp PLUS  &kp SPACE>;)
-ZMK_MACRO(sub,			bindings = <&kp SPACE &kp MINUS &kp SPACE>;)
-ZMK_MACRO(div,			bindings = <&kp SPACE &kp FSLH  &kp SPACE>;)
-ZMK_MACRO(mul,			bindings = <&kp SPACE &kp STAR  &kp SPACE>;)
-ZMK_MACRO(qu,           bindings = <&kp Q &kp U>                  ;)
+ZMK_MACRO(add, bindings = <&kp SPACE &kp PLUS  &kp SPACE>;)
+ZMK_MACRO(sub, bindings = <&kp SPACE &kp MINUS &kp SPACE>;)
+ZMK_MACRO(div, bindings = <&kp SPACE &kp FSLH  &kp SPACE>;)
+ZMK_MACRO(mul, bindings = <&kp SPACE &kp STAR  &kp SPACE>;)
+ZMK_MACRO(qu,  bindings = <&kp Q &kp U>                  ;)
 
 // BEHAVIOR CONFIGURATION
 &sk {
@@ -152,7 +143,6 @@ ZMK_MOD_MORPH(equl_tild,  bindings = <&kp EQUAL>, <&kp TILDE>;  mods = <(MOD_LSF
 // ALPHA COMBOS
 ZMK_COMBO(z,             &kp Z, LT1 LT3, BSE    , 150,   0)
 ZMK_COMBO(x,             &kp X, LT3 LT2, BSE    , 150,   0)
-ZMK_COMBO(enie,       &kp N_TL, LB1 LB3, BSE    , 150,   0)
 // HOME ROW COMBOS
 ZMK_COMBO(ret,         &kp RET, LM2 LM3, BSE NAV,  70,  75)
 ZMK_COMBO(tab,         &kp TAB, RM1 RM2, BSE    ,  60,  75)
@@ -182,10 +172,10 @@ ZMK_COMBO(and_or,   &amps_pipe, LT1 LM2,     BSE, 140, 100)
 ZMK_COMBO(equl_tild,&equl_tild, LT3 LM2,     BSE, 140, 100)
 
 ZMK_LAYER(base,
-			&kp B		&qhold 5 H	&kp G							&comma_semi	&fslh_star	&kp J
+			&kp B		&qhold 4 H	&kp G							&comma_semi	&fslh_star	&kp J
 &lm LSHFT C	&lm LALT S	&lm LCTRL N	&lt NAV T	&kp K	&dot_colon	&lt NUM A	&rm RCTRL E	&rm LALT I	&rm RSHFT M
 &kp P		&kp F		&kp L		&lt MOU D	&kp V	&minu_plus	&lt 4 U		&kp O		&kp Y		&kp W
-				&lsf RA(SQT) LSHFT	&lt 6 R							&mt RSHFT SPACE	&sft_capsw
+						&sk LSHFT	&lt 5 R							&rm RGUI SPACE	&sft_capsw
 )
 
 ZMK_LAYER(navigation,
@@ -209,13 +199,6 @@ ZMK_LAYER(mouse,
 						&none		&none							&mkp LCLK   &mkp RCLK
 )
 
-ZMK_LAYER(wm,
-			&kp LG(B)	&kp LG(H)	&kp LG(G)						&none		&kp LG(FSLH) &kp LG(J)
-&kp LG(C)	&kp LG(S)	&kp LG(N)	&kp LG(T)	&kp LG(K)	&none	&none		&kp LG(E)	&kp LG(I)		&kp LG(M)
-&kp LG(P)	&kp LG(F)	&kp LG(L)	&kp LG(D)	&kp LG(V)	&none	&none		&kp LG(O)	&kp LG(Y)		&kp LG(W)
-						&kp LG(X)	&kp LG(R)						&kp LG(SPACE)	&kp LG(Z)
-)
-
 ZMK_LAYER(q,
 			&trans		&none		&qu_q Q Q						&trans		&trans		&trans
 &trans		&trans		&trans		&trans		&trans	&trans		&trans		&trans		&trans		&trans
@@ -225,7 +208,7 @@ ZMK_LAYER(q,
 
 ZMK_LAYER(accents,
 			&trans		&trans		&trans							&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans	&trans		&kp A_AC	&kp E_AC	&kp I_AC	&trans
+&trans		&trans		&kp N_TL	&trans		&trans	&trans		&kp A_AC	&kp E_AC	&kp I_AC	&trans
 &trans		&trans		&trans		&trans		&trans	&trans		&kp U_AC	&kp O_AC	&trans		&trans
 						&trans		&trans							&trans		&trans
 )
