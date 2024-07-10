@@ -130,8 +130,8 @@ ZMK_MOD_MORPH(rl_excl,    bindings = <&kp EXCL>,  <&kp OEXCL>;  mods = <(MOD_LSF
 ZMK_MOD_MORPH(amps_pipe,  bindings = <&kp AMPS>,  <&kp PIPE>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(equl_tild,  bindings = <&kp EQUAL>, <&kp TILDE>;  mods = <(MOD_LSFT|MOD_RSFT)>;)
 
-// combos
-ZMK_COMBO(z,            &kp Z, LT1 LT3,     BSE, 150,   0) // alphas
+// alpha combos 
+ZMK_COMBO(z,            &kp Z, LT1 LT3,     BSE, 150,   0) 
 ZMK_COMBO(x,            &kp X, LT3 LT2,     BSE, 150,   0)
 ZMK_COMBO(ret,        &kp RET, LM2 LM3, BSE NAV,  70,  75) // horizontal
 ZMK_COMBO(esc,        &kp ESC, LM1 LM3,     BSE,  80,  75)
