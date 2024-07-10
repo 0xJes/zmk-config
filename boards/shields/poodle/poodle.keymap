@@ -13,11 +13,12 @@
 #include "keylabels.h"
 #include "eurkey.h"
 
-// LAYERS
-#define BSE 0
-#define NAV 1
-#define NUM 2
-#define MOU 3
+// layers
+#define ALPH 0
+#define ALP2 2
+#define NAVG 3
+#define NUMB 4
+#define MOUS 5
 // KEY GROUPS 
 #define LEFT_HAND_KEYS LT3 LT2 LT1 LM4 LM3 LM2 LM1 LM0 LB4 LB3 LB2 LB1 LB0
 #define RIGHT_HAND_KEYS RT1 RT2 RT3 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4
@@ -105,14 +106,7 @@ ZMK_HOLD_TAP(qu_q,
 	bindings = <&kp>, <&qu>;
 )
 
-ZMK_HOLD_TAP(lsf,
-	flavor = "balanced";
-	tapping-term-ms = <250>;
-	quick-tap-ms = <200>;
-	bindings = <&kp>, <&sk>;
-)
-
-ZMK_HOLD_TAP(qhold,
+ZMK_HOLD_TAP(ql,
 	flavor = "hold-preferred";
 	tapping-term-ms = <250>;
 	quick-tap-ms = <200>;
@@ -168,11 +162,18 @@ ZMK_COMBO(excl,      &rl_excl, RT3 RM2,     BSE, 140, 100)
 ZMK_COMBO(and_or,  &amps_pipe, LT1 LM2,     BSE, 140, 100)
 ZMK_COMBO(e_t     ,&equl_tild, LT3 LM2,     BSE, 140, 100)
 
-ZMK_LAYER(base,
-			&kp B		&qhold 4 H	&kp G							&comma_semi	&fslh_star	&kp J
-&lm LSHFT C	&lm LALT S	&lm LCTRL N	&lt NAV T	&kp K	&dot_colon	&lt NUM A	&rm RCTRL E	&rm LALT I	&rm RSHFT M
-&kp P		&kp F		&kp L		&lt MOU D	&kp V	&minu_plus	&lt 4 U		&kp O		&kp Y		&kp W
-						&sk LSHFT	&lt 5 R							&rm RGUI SPACE	&sft_capsw
+ZMK_LAYER(alpha,
+			&kp B		&ql 5 H		&kp G							&comma_semi	&fslh_star	&kp J
+&lm LSHFT C	&lm LALT S	&lm LCTRL N	&lt NAVG T	&kp K	&dot_colon	&lt NUM A	&rm RCTRL E	&rm LALT I	&rm RSHFT M
+&kp P		&kp F		&kp L		&KP D		&kp V	&minu_plus	&kp U		&kp O		&kp Y		&kp W
+						&sk LSHFT	&lt ALP2 R						&rm RGUI SPACE	&sft_capsw
+)
+
+ZMK_LAYER(alpha2,
+			&trans		&trans		&gu_dr							&trans		&trans		&trans
+&trans		&trans		&kp N_TL	&trans		&trans	&trans		&kp A_AC	&kp E_AC	&kp I_AC	&trans
+&trans		&trans		&trans		&trans		&trans	&trans		&kp U_AC	&kp O_AC	&trans		&trans
+						&trans		&trans							&trans		&trans
 )
 
 ZMK_LAYER(navigation,
@@ -203,9 +204,5 @@ ZMK_LAYER(q,
 						&trans		&trans							&trans		&trans
 )
 
-ZMK_LAYER(accents,
-			&trans		&trans		&gu_dr							&trans		&trans		&trans
-&trans		&trans		&kp N_TL	&trans		&trans	&trans		&kp A_AC	&kp E_AC	&kp I_AC	&trans
-&trans		&trans		&trans		&trans		&trans	&trans		&kp U_AC	&kp O_AC	&trans		&trans
-						&trans		&trans							&trans		&trans
-)
+
+
