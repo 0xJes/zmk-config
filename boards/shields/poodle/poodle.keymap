@@ -20,14 +20,6 @@
 #define LEFT_HAND_KEYS LT3 LT2 LT1 LM4 LM3 LM2 LM1 LM0 LB4 LB3 LB2 LB1 LB0
 #define RIGHT_HAND_KEYS RT1 RT2 RT3 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4
 #define THUMB_KEYS LH1 LH0 RH0 RH1
-// COMMON SHORTCUTS
-#define CUT      &kp LC(X)
-#define PASTE    &kp LC(V)
-#define COPY     &kp LC(C)
-#define ZOOM_IN  &kp LC(PLUS)
-#define ZOOM_OUT &kp LC(MINUS)
-#define UNDO     &kp LC(Z)
-#define REDO     &kp LC(Y)
 
 // MACROS
 ZMK_MACRO(add, bindings = <&kp SPACE &kp PLUS  &kp SPACE>;)
@@ -171,10 +163,10 @@ ZMK_LAYER(alpha2,
 )
 
 ZMK_LAYER(navigation,
-				&none			&none			&none										PASTE			COPY			CUT
-&kp LSHFT		&kp LALT		&kp LCTRL		&none			&none		ZOOM_IN			&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT
-&none			&none			&none			&none			&none		ZOOM_OUT		&kp HOME		&kp PG_DN		&kp PG_UP		&kp END
-								REDO			UNDO										&kp SPACE		&kp RSHFT
+				&none			&none			&none										&kp LC(V)		&kp LC(C)		&kp LC(X)
+&kp LSHFT		&kp LALT		&kp LCTRL		&none			&none		&kp LC(PLUS)	&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT
+&none			&none			&none			&none			&none		&kp LC(MINUS)	&kp HOME		&kp PG_DN		&kp PG_UP		&kp END
+								&kp LC(Y)		&kp LC(Z)									&kp SPACE		&kp RSHFT
 )
 
 ZMK_LAYER(numbers,
