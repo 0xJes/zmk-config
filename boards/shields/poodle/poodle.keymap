@@ -100,6 +100,14 @@ ZMK_HOLD_TAP(rm,
 	bindings = <&kp>, <&kp>;
 )
 
+ZMK_HOLD_TAP(mtsk,
+	flavor = "balanced";
+	require-prior-idle-ms = <100>;
+	tapping-term-ms = <350>;
+	quick-tap-ms = <200>;
+	bindings = <&sk>, <&kp>;
+)
+
 ZMK_HOLD_TAP(qu_q,
 	flavor = "tap-preferred";
 	tapping-term-ms = <190>;
@@ -164,8 +172,8 @@ ZMK_COMBO(e_t     ,&equl_tild, LT3 LM2,     BSE, 140, 100)
 ZMK_LAYER(alpha,
 			&kp B		&ql 5 H		&kp G							&comma_semi	&fslh_star	&kp J
 &lm LSHFT C	&lm LALT S	&lm LCTRL N	&lt NAV T	&kp K	&dot_colon	&lt NUM A	&rm RCTRL E	&rm LALT I	&rm RSHFT M
-&kp P		&kp F		&kp L		&KP D		&kp V	&minu_plus	&kp U		&kp O		&kp Y		&kp W
-						&sk LSHFT	&lt ACC R						&rm RGUI SPACE	&sft_capsw
+&kp P		&kp F		&kp L		&kp D		&kp V	&minu_plus	&kp U		&kp O		&kp Y		&kp W
+					&mtsk MOU LSHFT	&lt ACC R						&rm RGUI SPACE	&sft_capsw
 )
 
 ZMK_LAYER(alpha2,
