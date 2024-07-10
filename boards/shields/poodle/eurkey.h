@@ -1,7 +1,8 @@
-#define OQMARK  RA(FSLH)
 #define DEGREE  RA(SEMI)
+#define ELIPSIS RA(LS(FSLH))
 #define BALLTX  RA(EQUAL)
 #define CHECKM  RA(MINUS)
+#define OQMARK  RA(FSLH)
 #define OEXCL   RA(N1)
 #define EURO    RA(N5)
 #define FEM_OR  RA(2)
@@ -13,5 +14,3 @@
 #define U_AC    RA(J)
 #define U_DR    RA(U)
 #define N_TL    RA(N)
-
-
