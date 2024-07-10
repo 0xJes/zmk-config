@@ -16,6 +16,7 @@
 #define NAV 3
 #define NUM 4
 #define MOU 5
+#define BOX 6
 // KEY GROUPS 
 #define LEFT_HAND_KEYS LT3 LT2 LT1 LM4 LM3 LM2 LM1 LM0 LB4 LB3 LB2 LB1 LB0
 #define RIGHT_HAND_KEYS RT1 RT2 RT3 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4
@@ -149,7 +150,7 @@ ZMK_COMBO(and_or,  &amps_pipe, LT1 LM2,     BSE, 140, 100)
 ZMK_COMBO(e_t     ,&equl_tild, LT3 LM2,     BSE, 140, 100)
 
 ZMK_LAYER(alpha,
-				&kp B			&ql 5 H			&kp G										&comma_semi		&fslh_star		&kp J
+				&kp B			&ql 6 H			&kp G										&comma_semi		&fslh_star		&kp J
 &lm LSHFT C		&lm LALT S		&lm LCTRL N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&rm RCTRL E		&rm LALT I		&rm RSHFT M
 &kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
 								&mtsk MOU LSHFT	&lt ACC R									&rm RGUI SPACE	&sft_capsw
@@ -181,6 +182,13 @@ ZMK_LAYER(mouse,
 &kp LSHFT		&kp LALT		&kp LCTRL		&tog MOU		&none		&none			&mmv MOVE_LEFT	&mmv MOVE_DOWN	&mmv MOVE_UP	&mmv MOVE_RIGHT
 &none			&mkp MB4		&mkp MB5		&none			&none		&none			&msc SCRL_LEFT	&msc SCRL_DOWN	&msc SCRL_UP	&msc SCRL_RIGHT
 								&none			&mkp MCLK									&mkp LCLK		&mkp RCLK
+)
+
+ZMK_LAYER(box_drawing,
+				&none			&none			&none										&none			&none			&none
+&none			&none			&none			&none			&none		&none			&none			&none			&none			&none
+&none			&none			&none			&none			&none		&none			&none			&none			&none			&none
+								&none			&none										&none			&none
 )
 
 ZMK_LAYER(q,
