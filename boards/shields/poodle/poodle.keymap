@@ -1,7 +1,4 @@
-// TODO: Format combos by side
-// todo implement mouse layer toggling
 // todo maybe create a box drawing layer
-// todo make mouse layer tap dance on left index key
 
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 30
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 800
