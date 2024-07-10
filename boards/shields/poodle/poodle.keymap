@@ -14,11 +14,11 @@
 #include "eurkey.h"
 
 // layers
-#define ALPH 0
-#define ALP2 2
-#define NAVG 3
-#define NUMB 4
-#define MOUS 5
+#define BSE 0
+#define ACC 2
+#define NAV 3
+#define NUM 4
+#define MOU 5
 // KEY GROUPS 
 #define LEFT_HAND_KEYS LT3 LT2 LT1 LM4 LM3 LM2 LM1 LM0 LB4 LB3 LB2 LB1 LB0
 #define RIGHT_HAND_KEYS RT1 RT2 RT3 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4
@@ -130,10 +130,9 @@ ZMK_MOD_MORPH(rl_excl,    bindings = <&kp EXCL>,  <&kp OEXCL>;  mods = <(MOD_LSF
 ZMK_MOD_MORPH(amps_pipe,  bindings = <&kp AMPS>,  <&kp PIPE>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(equl_tild,  bindings = <&kp EQUAL>, <&kp TILDE>;  mods = <(MOD_LSFT|MOD_RSFT)>;)
 
-// alpha combos 
-ZMK_COMBO(z,            &kp Z, LT1 LT3,     BSE, 150,   0) 
+ZMK_COMBO(z,            &kp Z, LT1 LT3,     BSE, 150,   0) // horizontal 
 ZMK_COMBO(x,            &kp X, LT3 LT2,     BSE, 150,   0)
-ZMK_COMBO(ret,        &kp RET, LM2 LM3, BSE NAV,  70,  75) // horizontal
+ZMK_COMBO(ret,        &kp RET, LM2 LM3, BSE NAV,  70,  75) 
 ZMK_COMBO(esc,        &kp ESC, LM1 LM3,     BSE,  80,  75)
 ZMK_COMBO(bootl,  &bootloader, LT3 RT3,     BSE,  50, 150)
 ZMK_COMBO(tab,        &kp TAB, RM1 RM2,     BSE,  60,  75)
@@ -164,9 +163,9 @@ ZMK_COMBO(e_t     ,&equl_tild, LT3 LM2,     BSE, 140, 100)
 
 ZMK_LAYER(alpha,
 			&kp B		&ql 5 H		&kp G							&comma_semi	&fslh_star	&kp J
-&lm LSHFT C	&lm LALT S	&lm LCTRL N	&lt NAVG T	&kp K	&dot_colon	&lt NUM A	&rm RCTRL E	&rm LALT I	&rm RSHFT M
+&lm LSHFT C	&lm LALT S	&lm LCTRL N	&lt NAV T	&kp K	&dot_colon	&lt NUM A	&rm RCTRL E	&rm LALT I	&rm RSHFT M
 &kp P		&kp F		&kp L		&KP D		&kp V	&minu_plus	&kp U		&kp O		&kp Y		&kp W
-						&sk LSHFT	&lt ALP2 R						&rm RGUI SPACE	&sft_capsw
+						&sk LSHFT	&lt ACC R						&rm RGUI SPACE	&sft_capsw
 )
 
 ZMK_LAYER(alpha2,
