@@ -1,5 +1,3 @@
-// todo maybe create a box drawing layer
-
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 30
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 800
 
