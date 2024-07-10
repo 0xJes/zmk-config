@@ -28,15 +28,6 @@
 #define ZOOM_OUT &kp LC(MINUS)
 #define UNDO     &kp LC(Z)
 #define REDO     &kp LC(Y)
-// MOUSE OPERATIONS
-#define WHEEL_LEFT  &msc SCRL_LEFT
-#define WHEEL_UP    &msc SCRL_UP
-#define WHEEL_DOWN  &msc SCRL_DOWN
-#define WHEEL_RIGHT &msc SCRL_RIGHT
-#define CURSOR_LEFT  &mmv MOVE_LEFT
-#define CURSOR_UP    &mmv MOVE_UP
-#define CURSOR_DOWN  &mmv MOVE_DOWN
-#define CURSOR_RIGHT &mmv MOVE_RIGHT
 
 // MACROS
 ZMK_MACRO(add, bindings = <&kp SPACE &kp PLUS  &kp SPACE>;)
@@ -166,45 +157,45 @@ ZMK_COMBO(and_or,  &amps_pipe, LT1 LM2,     BSE, 140, 100)
 ZMK_COMBO(e_t     ,&equl_tild, LT3 LM2,     BSE, 140, 100)
 
 ZMK_LAYER(alpha,
-			&kp B		&ql 5 H		&kp G							&comma_semi	&fslh_star	&kp J
-&lm LSHFT C	&lm LALT S	&lm LCTRL N	&lt NAV T	&kp K	&dot_colon	&lt NUM A	&rm RCTRL E	&rm LALT I	&rm RSHFT M
-&kp P		&kp F		&kp L		&kp D		&kp V	&minu_plus	&kp U		&kp O		&kp Y		&kp W
-					&mtsk MOU LSHFT	&lt ACC R						&rm RGUI SPACE	&sft_capsw
+				&kp B			&ql 5 H			&kp G										&comma_semi		&fslh_star		&kp J
+&lm LSHFT C		&lm LALT S		&lm LCTRL N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&rm RCTRL E		&rm LALT I		&rm RSHFT M
+&kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
+								&mtsk MOU LSHFT	&lt ACC R									&rm RGUI SPACE	&sft_capsw
 )
 
 ZMK_LAYER(alpha2,
-			&trans		&trans		&gu_dr							&trans		&trans		&trans
-&trans		&trans		&kp N_TL	&trans		&trans	&trans		&kp A_AC	&kp E_AC	&kp I_AC	&trans
-&trans		&trans		&trans		&trans		&trans	&trans		&kp U_AC	&kp O_AC	&trans		&trans
-						&trans		&trans							&trans		&trans
+				&trans			&trans			&gu_dr										&trans			&trans			&trans
+&trans			&trans			&kp N_TL		&trans			&trans		&trans			&kp A_AC		&kp E_AC		&kp I_AC		&trans
+&trans			&trans			&trans			&trans			&trans		&trans			&kp U_AC		&kp O_AC		&trans			&trans
+								&trans			&trans										&trans			&trans
 )
 
 ZMK_LAYER(navigation,
-			&none		&none		&none							PASTE		COPY		CUT
-&kp LSHFT	&kp LALT	&kp LCTRL	&none		&none	ZOOM_IN		&kp LEFT	&kp DOWN	&kp UP		&kp RIGHT
-&none		&none		&none		&none		&none	ZOOM_OUT	&kp HOME	&kp PG_DN	&kp PG_UP	&kp END
-						REDO		UNDO							&kp SPACE	&kp RSHFT
+				&none			&none			&none										PASTE			COPY			CUT
+&kp LSHFT		&kp LALT		&kp LCTRL		&none			&none		ZOOM_IN			&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT
+&none			&none			&none			&none			&none		ZOOM_OUT		&kp HOME		&kp PG_DN		&kp PG_UP		&kp END
+								REDO			UNDO										&kp SPACE		&kp RSHFT
 )
 
 ZMK_LAYER(numbers,
-			&none		&div		&mul							&none		&none		&none
-&kp N3		&kp N2		&kp N1		&kp N0		&add	&none		&none		&kp DOT		&kp COMMA	&kp MINUS
-&kp N7		&kp N6		&kp N5		&kp N4		&sub	&none		&none		&none		&none		&none
-						&none		&kp N8							&kp N9		&kp SPACE
+				&none			&div			&mul										&none			&none			&none
+&kp N3			&kp N2			&kp N1			&kp N0			&add		&none			&none			&kp DOT			&kp COMMA		&kp MINUS
+&kp N7			&kp N6			&kp N5			&kp N4			&sub		&none			&none			&none			&none			&none
+								&none			&kp N8										&kp N9			&kp SPACE
 )
 
 ZMK_LAYER(mouse,
-			&none		&none		&none							&none		&kp DOWN	&kp UP
-&kp LSHFT	&kp LALT	&kp LCTRL	&tog MOU	&none	&none		CURSOR_LEFT	CURSOR_DOWN	CURSOR_UP	CURSOR_RIGHT
-&none		&mkp MB4	&mkp MB5	&none		&none	&none		WHEEL_LEFT	WHEEL_DOWN	WHEEL_UP	 WHEEL_RIGHT
-						&none		&mkp MCLK						&mkp LCLK   &mkp RCLK
+				&none			&none			&none										&none			&kp DOWN		&kp UP
+&kp LSHFT		&kp LALT		&kp LCTRL		&tog MOU		&none		&none			&mmv MOVE_LEFT	&mmv MOVE_DOWN	&mmv MOVE_UP	&mmv MOVE_RIGHT
+&none			&mkp MB4		&mkp MB5		&none			&none		&none			&msc SCRL_LEFT	&msc SCRL_DOWN	&msc SCRL_UP	&msc SCRL_RIGHT
+								&none			&mkp MCLK									&mkp LCLK		&mkp RCLK
 )
 
 ZMK_LAYER(q,
-			&trans		&none		&qu_q Q Q						&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans	&trans		&trans		&trans		&trans		&trans
-&trans		&trans		&trans		&trans		&trans	&trans		&trans		&trans		&trans		&trans
-						&trans		&trans							&trans		&trans
+				&trans			&none			&qu_q Q Q									&trans			&trans			&trans
+&trans			&trans			&trans			&trans			&trans		&trans			&trans			&trans			&trans			&trans
+&trans			&trans			&trans			&trans			&trans		&trans			&trans			&trans			&trans			&trans
+								&trans			&trans										&trans			&trans
 )
 
 
