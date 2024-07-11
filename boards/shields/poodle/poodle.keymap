@@ -100,13 +100,13 @@ ZMK_COMBO(x,          &kp X,       LT3 LT2,     BSE, 150,   0)
 ZMK_COMBO(return,     &kp RET,     LM2 LM3, BSE NAV,  70,  75) 
 ZMK_COMBO(escape,     &kp ESC,     LM1 LM3,     BSE,  80,  75)
 ZMK_COMBO(mouse,      &tog MOU,    LM1 LM2,     BSE,  70, 150)
-ZMK_COMBO(bootl,      &bootloader, LT3 RT3,     BSE,  50, 150)
 ZMK_COMBO(tab,        &kp TAB,     RM1 RM2,     BSE,  60,  75)
 ZMK_COMBO(underscore, &kp UNDER,   RM1 RM3,     BSE,  50,  75)
 ZMK_COMBO(backspace,  &kp BSPC,    RM2 RM3, BSE NAV, 150,  75)
 ZMK_COMBO(delete,     &kp DEL,     RM3 RM4, BSE NAV, 180, 120)
 ZMK_COMBO(quotes,     &sqt_dqt,    RT1 RT2,     BSE, 140,   0)
 ZMK_COMBO(equal_tild, &equl_tild,  RT2 RT3,     BSE, 140,   0)
+ZMK_COMBO(box_drwng,  &tog BOX,    LT3 RT3,     BSE,  50, 150)
 
 // vertical combos
 ZMK_COMBO(ballot_x,   &kp BALLTX,  LM0 LB0,     BSE, 100, 100)
@@ -176,10 +176,10 @@ ZMK_LAYER(mouse,
 )
 
 ZMK_LAYER(box_drawing,
-				&none			&none			&none										&none			&none			&none
-&none			&none			&none			&none			&none		&none			&none			&none			&none			&none
-&none			&none			&none			&none			&none		&none			&none			&none			&none			&none
-								&none			&none										&none			&none
+				&none			&none			&none										&bd_l_dr		&bd_l_dh		&bd_l_dl
+&none			&none			&bd_l_v			&bd_l_h			&none		&none			&bd_l_vr		&bd_l_vh		&bd_l_vl		&none
+&none			&none			&none			&none			&none		&none			&bd_l_ul		&bd_l_uh		&bd_l_ul		&none
+								&none			&tog BOX									&none			&none
 )
 
 ZMK_LAYER(q,
