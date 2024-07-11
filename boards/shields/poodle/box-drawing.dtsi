@@ -9,6 +9,6 @@ ZMK_UNICODE_SINGLE(bd_l_ul, N2, N5, N1, N8) // ┘ Box Drawings Light Up and Lef
 ZMK_UNICODE_SINGLE(bd_l_vr, N2, N5, N1, C)  // ├ Box Drawings Light Vertical and Right
 ZMK_UNICODE_SINGLE(bd_l_vl, N2, N5, N2, N4) // ┤ Box Drawings Light Vertical and Left
 ZMK_UNICODE_SINGLE(bd_l_dh, N2, N5, N2, C)  // ┬ Box Drawings Light Down and Horizontal
-ZMK_UNICODE_SINGLE(bd_l_ul, N2, N5, N3, N4) // ┴ Box Drawings Light Up and Horizontal
+ZMK_UNICODE_SINGLE(bd_l_uh, N2, N5, N3, N4) // ┴ Box Drawings Light Up and Horizontal
 ZMK_UNICODE_SINGLE(bd_l_vh, N2, N5, N3, C)  // ┼ Box Drawings Light Vertical and Horizontal
   
