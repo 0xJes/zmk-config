@@ -1,9 +1,6 @@
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 30
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 800
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
+#include "mouse.dtsi"
 #include "zmk-helpers/helper.h"
 #include "box-drawing.dtsi"
 #include "keylabels.h"
@@ -44,10 +41,6 @@ ZMK_MACRO(qu, bindings = <&kp Q &kp U>;)
     flavor = "balanced";
     tapping-term-ms = <300>;
     quick-tap-ms = <150>;
-};
-
-&mmv {
-	time-to-max-speed-ms = <350>;
 };
 
 // HOLD TAPS
