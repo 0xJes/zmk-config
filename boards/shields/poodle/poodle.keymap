@@ -46,13 +46,6 @@ ZMK_MACRO(qu, bindings = <&kp Q &kp U>;)
     quick-tap-ms = <150>;
 };
 
-&mt {
-	flavor = "balanced";
-	tapping-term-ms = <150>;
-	quick-tap-ms = <180>;
-	bindings = <&kp>, <&kp>;
-};
-
 &mmv {
 	time-to-max-speed-ms = <350>;
 };
@@ -72,18 +65,10 @@ ZMK_HOLD_TAP(rm,
 	flavor = "balanced";
 	require-prior-idle-ms = <100>;
 	tapping-term-ms = <350>;
-	quick-tap-ms = <200>;
+	quick-tap-ms = <200>; 
 	hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
 	hold-trigger-on-release;
 	bindings = <&kp>, <&kp>;
-)
-
-ZMK_HOLD_TAP(mtsk,
-	flavor = "balanced";
-	require-prior-idle-ms = <100>;
-	tapping-term-ms = <350>;
-	quick-tap-ms = <200>;
-	bindings = <&sk>, <&kp>;
 )
 
 ZMK_HOLD_TAP(qu_q,
@@ -151,20 +136,22 @@ ZMK_COMBO(hash,       &kp HASH,    RM2 RB2,     BSE, 100, 100)
 ZMK_COMBO(f_ordinal,  &kp FEM_OR,  RM3 RB3,     BSE, 100, 100)
 
 // diagonal combos
-ZMK_COMBO(parent,     &lr_par,     RM1 RB2,     BSE, 140, 100) 
 ZMK_COMBO(braces,     &lr_brc,     LM1 LB2,     BSE, 140, 100)
-ZMK_COMBO(brakets,    &lr_bkt,     RM3 RB2,     BSE, 140, 100)
 ZMK_COMBO(angles,     &lt_gt,      LM3 LB2,     BSE, 140, 100)
-ZMK_COMBO(qmark,      &rl_qmark,   RT1 RM2,     BSE, 140, 100)
-ZMK_COMBO(excl,       &rl_excl,    RT3 RM2,     BSE, 140, 100)
 ZMK_COMBO(and_or,     &amps_pipe,  LT1 LM2,     BSE, 140, 100)
 //ZMK_COMBO(,                   ,  LT3 LM2,     BSE, 140, 100)
+
+ZMK_COMBO(parent,     &lr_par,     RM1 RB2,     BSE, 140, 100) 
+ZMK_COMBO(brakets,    &lr_bkt,     RM3 RB2,     BSE, 140, 100)
+ZMK_COMBO(qmark,      &rl_qmark,   RT1 RM2,     BSE, 140, 100)
+ZMK_COMBO(excl,       &rl_excl,    RT3 RM2,     BSE, 140, 100)
+
 
 ZMK_LAYER(alpha,
 				&kp B			&ql 6 H			&kp G										&comma_semi		&fslh_star		&kp J
 &lm LSHFT C		&lm LALT S		&lm LCTRL N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&rm RCTRL E		&rm LALT I		&rm RSHFT M
 &kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
-								&mtsk MOU LSHFT	&lt ACC R									&rm RGUI SPACE	&sft_capsw
+								&sk LSHFT		&lt ACC R									&rm RGUI SPACE	&sft_capsw
 )
 
 ZMK_LAYER(alpha2,
