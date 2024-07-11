@@ -4,6 +4,7 @@ todo
 Features not yet in mainline ZMK:
 - Mouse scrolling/movement: https://github.com/zmkfirmware/zmk/pull/2027
 - Combos that must press in order: https://github.com/zmkfirmware/zmk/issues/2260
+- Adaptive keys: https://github.com/zmkfirmware/zmk/pull/2042
 
 ## Resources and references
 - urob's config: https://github.com/urob/zmk-config
