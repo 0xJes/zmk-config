@@ -44,6 +44,13 @@ ZMK_MACRO(qu, bindings = <&kp Q &kp U>;)
     quick-tap-ms = <150>;
 };
 
+&mt {
+	flavor = "balanced";
+	tapping-term-ms = <150>;
+	quick-tap-ms = <180>;
+	bindings = <&kp>, <&kp>;
+};
+
 // HOLD TAPS
 ZMK_HOLD_TAP(lm,
 	flavor = "balanced";
@@ -145,7 +152,7 @@ ZMK_LAYER(alpha,
 				&kp B			&ql 6 H			&kp G										&comma_semi		&fslh_star		&kp J
 &lm LSHFT C		&lm LALT S		&lm LCTRL N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&rm RCTRL E		&rm LALT I		&rm RSHFT M
 &kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
-								&sk LSHFT		&lt ACC R									&rm RGUI SPACE	&sft_capsw
+								&sk LSHFT		&lt ACC R									&mt RGUI SPACE	&sft_capsw
 )
 
 ZMK_LAYER(alpha2,
