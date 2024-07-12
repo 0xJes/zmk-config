@@ -1,7 +1,6 @@
 Layout based on Hands Down Rhodium, adapted to a Hummingbird style 30-keys keyboard
 
-## Wishlist
-Features not yet in mainline ZMK:
+## Features not yet in ZMK
 - Mouse scrolling/movement: https://github.com/zmkfirmware/zmk/pull/2027
 - Combos that must press in order: https://github.com/zmkfirmware/zmk/issues/2260
 - Adaptive keys: https://github.com/zmkfirmware/zmk/pull/2042
