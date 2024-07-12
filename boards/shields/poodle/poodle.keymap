@@ -84,12 +84,19 @@ ZMK_HOLD_TAP(cl, // hold-tap used for sequential combos
 	quick-tap-ms = <200>;
 	bindings = <&mo>, <&kp>;
 )
+ZMK_HOLD_TAP(cli, // hold-tap used for sequential combos, version with idle 
+	flavor = "hold-preferred";
+	require-prior-idle-ms = <100>;
+	tapping-term-ms = <250>;
+	quick-tap-ms = <200>;
+	bindings = <&mo>, <&kp>;
+)
 
 // keys with different shift behavior
 ZMK_MOD_MORPH(minu_plus,  bindings = <&kp MINUS>, <&kp PLUS>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(fslh_star,  bindings = <&kp FSLH>,  <&kp STAR>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(dot_colon,  bindings = <&kp DOT>,   <&kp COLON>;  mods = <(MOD_LSFT|MOD_RSFT)>;)
-	ZMK_MOD_MORPH(comma_semi, bindings = <&kp COMMA>, <&kp SEMI>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(comma_semi, bindings = <&kp COMMA>, <&kp SEMI>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
 // WHISLIST: Replace those with combos where order matters.
 ZMK_MOD_MORPH(lr_par,     bindings = <&kp LPAR>,  <&kp RPAR>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(lr_brc,     bindings = <&kp LBRC>,  <&kp RBRC>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
@@ -151,7 +158,7 @@ ZMK_COMBO(excl,       &rl_excl,    RT3 RM2,     BSE, 140, 100)
 ZMK_LAYER(alpha,
 				&kp B			&cl 6 H			&kp G										&comma_semi		&fslh_star		&kp J
 &lm LALT C		&lm LCTRL S		&lt MOU N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&kp E			&rm RCTRL I		&rm LALT M
-&kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&cl 7 O			&kp Y			&kp W
+&kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&cli 7 O		&kp Y			&kp W
 								&sk LSHFT		&lt ACC R									&mt RGUI SPACE	&sk RSHFT
 )
 
