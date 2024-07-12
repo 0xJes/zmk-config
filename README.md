@@ -1,4 +1,4 @@
-todo
+Layout based on Hands Down Rhodium, adapted to a Hummingbird style 30-keys keyboard
 
 ## Wishlist
 Features not yet in mainline ZMK:
