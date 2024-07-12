@@ -107,7 +107,6 @@ ZMK_COMBO(z,          &kp Z,       LT1 LT3,     BSE, 150,   0)
 ZMK_COMBO(x,          &kp X,       LT3 LT2,     BSE, 150,   0)
 ZMK_COMBO(return,     &kp RET,     LM2 LM3, BSE NAV,  70,  75) 
 ZMK_COMBO(escape,     &kp ESC,     LM1 LM3,     BSE,  80,  75)
-ZMK_COMBO(mouse,      &tog MOU,    LM1 LM2,     BSE,  70, 150)
 ZMK_COMBO(tab,        &kp TAB,     RM1 RM2,     BSE,  60,  75)
 ZMK_COMBO(underscore, &kp UNDER,   RM1 RM3,     BSE,  50,  75)
 ZMK_COMBO(backspace,  &kp BSPC,    RM2 RM3, BSE NAV, 150,  75)
@@ -150,7 +149,7 @@ ZMK_COMBO(excl,       &rl_excl,    RT3 RM2,     BSE, 140, 100)
 
 ZMK_LAYER(alpha,
 				&kp B			&ql 6 H			&kp G										&comma_semi		&fslh_star		&kp J
-&lm LSHFT C		&lm LALT S		&lm LCTRL N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&rm RCTRL E		&rm LALT I		&rm RSHFT M
+&lm LALT C		&lm LCTRL S		&lt MOU N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&kp E			&rm RCTRL I		&rm LALT M
 &kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
 								&sk LSHFT		&lt ACC R									&mt RGUI SPACE	&sft_capsw
 )
@@ -178,9 +177,9 @@ ZMK_LAYER(numbers,
 
 ZMK_LAYER(mouse,
 				&none			&none			&none										&none			&kp DOWN		&kp UP
-&kp LSHFT		&kp LALT		&kp LCTRL		&tog MOU		&none		&none			&mmv MOVE_LEFT	&mmv MOVE_DOWN	&mmv MOVE_UP	&mmv MOVE_RIGHT
+&kp LALT		&kp LCTRL		&none			&mkp LCLK		&none		&none			&mmv MOVE_LEFT	&mmv MOVE_DOWN	&mmv MOVE_UP	&mmv MOVE_RIGHT
 &none			&mkp MB4		&mkp MB5		&none			&none		&none			&msc SCRL_LEFT	&msc SCRL_DOWN	&msc SCRL_UP	&msc SCRL_RIGHT
-								&none			&mkp MCLK									&mkp LCLK		&mkp RCLK
+								&kp LSHFT		&mkp MCLK									&mkp RCLK		&kp RCLK
 )
 
 ZMK_LAYER(box_drawing,
