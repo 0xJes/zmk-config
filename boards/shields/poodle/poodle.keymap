@@ -5,7 +5,6 @@
 #include "mouse.dtsi"
 #include "box-drawing.dtsi"
 #include "keylabels.h"
-#include "eurkey.dtsi"
 
 // layers
 #define BSE 0
