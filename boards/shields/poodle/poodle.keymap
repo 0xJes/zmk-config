@@ -28,7 +28,7 @@
 	ignore-modifiers;
 };
 
-&caps_word {
+&caps_word { // enables kebab and snake case
 	continue-list = <UNDER MINUS BSPC>;
 };
 
@@ -40,19 +40,10 @@
 
 &mt {
 	flavor = "balanced";
-	tapping-term-ms = <150>;
+	tapping-term-ms = <300>;
 	quick-tap-ms = <180>;
 	bindings = <&kp>, <&kp>;
 };
-
-// macros
-ZMK_MACRO(add,    bindings = <&kp SPACE &kp PLUS &kp SPACE>;)
-ZMK_MACRO(sub,    bindings = <&kp SPACE &kp MINUS &kp SPACE>;)
-ZMK_MACRO(div,    bindings = <&kp SPACE &kp FSLH &kp SPACE>;)
-ZMK_MACRO(mul,    bindings = <&kp SPACE &kp STAR &kp SPACE>;)
-ZMK_MACRO(tgrave, bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;)
-ZMK_MACRO(gu_dr,  bindings = <&kp G &kp RA(U)>;)
-ZMK_MACRO(qu,     bindings = <&kp Q &kp U>;)
 
 // HOLD TAPS
 ZMK_HOLD_TAP(lm,
@@ -94,7 +85,14 @@ ZMK_HOLD_TAP(mo_sk,
 	bindings = <&mo>, <&sk>;
 )
 
-// keys with different shift behavior
+ZMK_MACRO(add,    bindings = <&kp SPACE &kp PLUS &kp SPACE>;)
+ZMK_MACRO(sub,    bindings = <&kp SPACE &kp MINUS &kp SPACE>;)
+ZMK_MACRO(div,    bindings = <&kp SPACE &kp FSLH &kp SPACE>;)
+ZMK_MACRO(mul,    bindings = <&kp SPACE &kp STAR &kp SPACE>;)
+ZMK_MACRO(tgrave, bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;)
+ZMK_MACRO(gu_dr,  bindings = <&kp G &kp RA(U)>;)
+ZMK_MACRO(qu,     bindings = <&kp Q &kp U>;)
+
 ZMK_MOD_MORPH(minu_plus,  bindings = <&kp MINUS>, <&kp PLUS>; mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(fslh_star,  bindings = <&kp FSLH>, <&kp STAR>;  mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(dot_colon,  bindings = <&kp DOT>, <&kp COLON>;  mods = <(MOD_LSFT|MOD_RSFT)>;)
@@ -113,7 +111,8 @@ ZMK_COMBO(delete,     &kp DEL,     RM3 RM4, BSE NAV, 180, 120)
 ZMK_COMBO(squote,     &kp SQT,     RT1 RT2,     BSE, 140,   0)
 ZMK_COMBO(dquote,     &kp DQT,     RT2 RT3,     BSE, 140,   0)
 ZMK_COMBO(cpslock,    &kp CAPS,    RB1 RB3,     BSE,  70, 150)
-ZMK_COMBO(cpsword,    &caps_word,  RT1 RT3,     BSE,  70, 150) 
+ZMK_COMBO(cpsword,    &caps_word,  RT1 RT3,     BSE,  70, 150)
+
 ZMK_COMBO(box_drwng,  &tog BOX,    LT2 RT2,     BSE,  50, 150)
 ZMK_COMBO(bootldr,    &bootloader, LT3 RT3,     BSE,  50, 200)
  
@@ -124,7 +123,6 @@ ZMK_COMBO(openexcl,   &kp RA(N1),  RM0 RB0,     BSE, 100, 150)
 ZMK_COMBO(percent,    &kp PRCNT,   LT1 LM1,     BSE, 100, 150) 
 ZMK_COMBO(tilde,      &kp TILDE,   LT2 LM2,     BSE, 100, 150)
 ZMK_COMBO(pipe,       &kp PIPE,    LT3 LM3,     BSE, 100, 150)
-
 ZMK_COMBO(at,         &kp AT,      LM1 LB1,     BSE, 100, 150)
 ZMK_COMBO(bslh,       &kp BSLH,    LM2 LB2,     BSE, 100, 150)
 ZMK_COMBO(excl,       &kp EXCL,    LM3 LB3,     BSE, 100, 150)
@@ -132,7 +130,6 @@ ZMK_COMBO(excl,       &kp EXCL,    LM3 LB3,     BSE, 100, 150)
 ZMK_COMBO(caret,      &kp CARET,   RT1 RM1,     BSE, 100, 150)
 ZMK_COMBO(equal,      &kp EQUAL,   RT2 RM2,     BSE, 100, 150)
 ZMK_COMBO(ampersand,  &kp AMPS,    RT3 RM3,     BSE, 100, 150)
-
 ZMK_COMBO(dolar,      &kp DLLR,    RM1 RB1,     BSE, 100, 150)
 ZMK_COMBO(hash,       &kp HASH,    RM2 RB2,     BSE, 100, 150)
 ZMK_COMBO(qmark,      &kp QMARK,   RM3 RB3,     BSE, 100, 150)
@@ -145,20 +142,16 @@ ZMK_COMBO(lbrace,     &kp RBRC,    LM1 LB2,     BSE, 140, 100)
 ZMK_COMBO(rbrace,     &kp LBRC,    LM3 LB2,     BSE, 140, 100)
 ZMK_COMBO(langle,     &kp GT,      LT1 LM2,     BSE, 140, 100)
 ZMK_COMBO(rangle,     &kp LT,      LT3 LM2,     BSE, 140, 100)
-
 ZMK_COMBO(lparent,    &kp LPAR,    RM1 RB2,     BSE, 140, 100) 
 ZMK_COMBO(rparent,    &kp RPAR,    RM3 RB2,     BSE, 140, 100)
 ZMK_COMBO(lbraket,    &kp LBKT,    RT1 RM2,     BSE, 140, 100)
 ZMK_COMBO(rbraket,    &kp RBKT,    RT3 RM2,     BSE, 140, 100)
 
-ZMK_COMBO(qmark,      &kp QMARK,   RT2 RM1,     BSE,  70, 150) 
-ZMK_COMBO(excl,       &kp EXCL,    RT2 RM3,     BSE,  70, 150)
-
 ZMK_LAYER(alpha,
 				&kp B			&cl 6 H			&kp G										&comma_semi		&fslh_star		&kp J
 &lm LALT C		&lm LCTRL S		&lt MOU N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&kp E			&rm RCTRL I		&rm LALT M
 &kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
-							&mo_sk ACC LSHFT	&lt ACC R									&mt RGUI SPACE	&mo_sk ACC RSHFT
+							&mo_sk ACC LSHFT	&mt RGUI R									&kp SPACE	    &mo_sk ACC RSHFT
 )
 
 ZMK_LAYER(alpha2,
