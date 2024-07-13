@@ -1,8 +1,8 @@
 #define  HOST_OS 1 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <zmk-helpers/helper.h>
 #include "mouse.dtsi"
-#include "zmk-helpers/helper.h"
 #include "box-drawing.dtsi"
 #include "keylabels.h"
 #include "eurkey.h"
