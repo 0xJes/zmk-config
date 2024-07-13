@@ -121,7 +121,8 @@ ZMK_COMBO(quotes,     &sqt_dqt,    RT1 RT2,     BSE, 140,   0)
 ZMK_COMBO(equal_tild, &equl_tild,  RT2 RT3,     BSE, 140,   0)
 ZMK_COMBO(cpslock,    &kp CAPS,    RB1 RB3,     BSE,  70, 150)
 ZMK_COMBO(cpsword,    &caps_word,  RT1 RT3,     BSE,  70, 150) 
-ZMK_COMBO(box_drwng,  &tog BOX,    LT3 RT3,     BSE,  50, 150)
+ZMK_COMBO(box_drwng,  &tog BOX,    LT2 RT2,     BSE,  50, 150)
+ZMK_COMBO(bootldr,    &bootloader, LT3 RT3,     BSE,  50, 200)
 
 // vertical combos
 ZMK_COMBO(ballot_x,   &kp BALLTX,  LM0 LB0,     BSE, 100, 150)
@@ -158,7 +159,7 @@ ZMK_COMBO(excl,       &rl_excl,    RT3 RM2,     BSE, 140, 100)
 ZMK_LAYER(alpha,
 				&kp B			&cl 6 H			&kp G										&comma_semi		&fslh_star		&kp J
 &lm LALT C		&lm LCTRL S		&lt MOU N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&kp E			&rm RCTRL I		&rm LALT M
-&kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&cli 7 O		&kp Y			&kp W
+&kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
 								&sk LSHFT		&lt ACC R									&mt RGUI SPACE	&sk RSHFT
 )
 
@@ -205,13 +206,3 @@ ZMK_LAYER(q, // 6
 &trans			&trans			&trans			&trans			&trans		&trans			&trans			&trans			&trans			&trans
 								&trans			&trans										&trans			&trans
 )
-
-ZMK_LAYER(right_braces, // 7
-				&trans			&none			&qu_q Q Q									&trans			&trans			&trans
-&trans			&trans			&trans			&trans			&trans		&trans			&kp RPAR		&trans			&kp LBKT		&trans
-&trans			&trans			&trans			&trans			&trans		&trans			&trans			&none			&trans			&trans
-								&trans			&trans										&trans			&trans
-)
-
-
-
