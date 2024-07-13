@@ -118,8 +118,8 @@ ZMK_COMBO(box_drwng,  &tog BOX,    LT2 RT2,     BSE,  50, 150)
 ZMK_COMBO(bootldr,    &bootloader, LT3 RT3,     BSE,  50, 200)
  
 // vertical combos
-ZMK_COMBO(degree,     &kp DEGREE,  LM0 LB0,     BSE, 100, 150) 
-ZMK_COMBO(grave,	  &kp GRAVE,   RM0 RB0,     BSE, 100, 150)
+// ZMK_COMBO(,                   , LM0 LB0,     BSE, 100, 150) 
+ZMK_COMBO(grave,      &kp GRAVE,   RM0 RB0,     BSE, 100, 150)
 
 ZMK_COMBO(percent,    &kp PRCNT,   LT1 LM1,     BSE, 100, 150) 
 ZMK_COMBO(tilde,      &kp TILDE,   LT2 LM2,     BSE, 100, 150)
@@ -138,7 +138,7 @@ ZMK_COMBO(hash,       &kp HASH,    RM2 RB2,     BSE, 100, 150)
 ZMK_COMBO(qmark,      &kp QMARK,   RM3 RB3,     BSE, 100, 150)
 
 ZMK_COMBO(openqmark,  &kp RA(FSLH),LM0 LB0,     BSE, 100, 150) 
-ZMK_COMBO(openexcl,	  &kp RA(N1),  RM0 RB0,     BSE, 100, 150)
+ZMK_COMBO(openexcl,   &kp RA(N1),  RM0 RB0,     BSE, 100, 150)
 
 // diagonal combos
 ZMK_COMBO(lbrace,     &kp RBRC,    LM1 LB2,     BSE, 140, 100)
