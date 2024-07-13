@@ -19,6 +19,19 @@
 #define RIGHT_HAND_KEYS RT1 RT2 RT3 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4
 #define THUMB_KEYS LH1 LH0 RH0 RH1
 
+#define DEGREE  RA(SEMI)
+#define OQMARK  RA(FSLH)
+#define OEXCL   RA(N1)
+#define FEM_OR  RA(2)
+#define MASC_OR RA(3)
+#define A_AC    RA(X)
+#define E_AC    RA(G)
+#define I_AC    RA(B)
+#define O_AC    RA(DOT)
+#define U_AC    RA(J)
+#define U_DR    RA(U)
+#define N_TL    RA(N)
+
 // MACROS
 ZMK_MACRO(add, bindings = <&kp SPACE &kp PLUS  &kp SPACE>;)
 ZMK_MACRO(sub, bindings = <&kp SPACE &kp MINUS &kp SPACE>;)
