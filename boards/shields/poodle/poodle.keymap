@@ -21,8 +21,6 @@
 #define DEGREE  RA(SEMI)
 #define FEM_OR  RA(2)
 #define MASC_OR RA(3)
-#define A_AC    RA(X)
-#define E_AC    RA(G)
 #define I_AC    RA(B)
 #define O_AC    RA(DOT)
 #define U_AC    RA(J)
@@ -169,7 +167,7 @@ ZMK_LAYER(alpha,
 
 ZMK_LAYER(alpha2,
 				&trans			&trans			&gu_dr										&trans			&trans			&trans
-&trans			&trans			&kp N_TL		&trans			&trans		&trans			&kp A_AC		&kp E_AC		&kp I_AC		&trans
+&trans			&trans			&kp N_TL		&trans			&trans		&trans			&kp RA(X)		&kp RA(G)		&kp I_AC		&trans
 &trans			&trans			&trans			&trans			&trans		&trans			&kp U_AC		&kp O_AC		&trans			&trans
 								&trans			&trans										&trans			&trans
 )
