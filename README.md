@@ -9,6 +9,7 @@ This layout uses Eurkey on the OS side for characters in the spanish languague.
 
 ## Resources and references
 - EurKEY kb layout: https://eurkey.steffen.bruentjen.eu/
+- EurKEY 1.3 for XKB: https://github.com/xiamaz/eurkey
 - Hands Down: https://sites.google.com/alanreiser.com/handsdown/home
 - urob's config: https://github.com/urob/zmk-config
 - urob's zmk helpers: https://github.com/urob/zmk-helpers/tree/v2
