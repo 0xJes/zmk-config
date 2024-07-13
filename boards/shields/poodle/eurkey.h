@@ -1,3 +1,6 @@
+#pragma once
+#include <dt-bindings/zmk/keys.h>
+
 #define DEGREE  RA(SEMI)
 #define ELIPSIS RA(LS(FSLH))
 #define BALLTX  RA(EQUAL)
