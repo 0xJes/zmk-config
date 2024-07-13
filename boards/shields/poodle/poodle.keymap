@@ -45,15 +45,14 @@
 	bindings = <&kp>, <&kp>;
 };
 
-
-
 // macros
-ZMK_MACRO(add,   bindings = <&kp SPACE &kp PLUS  &kp SPACE>;)
-ZMK_MACRO(sub,   bindings = <&kp SPACE &kp MINUS &kp SPACE>;)
-ZMK_MACRO(div,   bindings = <&kp SPACE &kp FSLH  &kp SPACE>;)
-ZMK_MACRO(mul,   bindings = <&kp SPACE &kp STAR  &kp SPACE>;)
-ZMK_MACRO(gu_dr, bindings = <&kp G &kp RA(U)>;)
-ZMK_MACRO(qu,    bindings = <&kp Q &kp U>;)
+ZMK_MACRO(add,    bindings = <&kp SPACE &kp PLUS &kp SPACE>;)
+ZMK_MACRO(sub,    bindings = <&kp SPACE &kp MINUS &kp SPACE>;)
+ZMK_MACRO(div,    bindings = <&kp SPACE &kp FSLH &kp SPACE>;)
+ZMK_MACRO(mul,    bindings = <&kp SPACE &kp STAR &kp SPACE>;)
+ZMK_MACRO(tgrave, bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;)
+ZMK_MACRO(gu_dr,  bindings = <&kp G &kp RA(U)>;)
+ZMK_MACRO(qu,     bindings = <&kp Q &kp U>;)
 
 // HOLD TAPS
 ZMK_HOLD_TAP(lm,
@@ -96,10 +95,11 @@ ZMK_HOLD_TAP(mo_sk,
 )
 
 // keys with different shift behavior
-ZMK_MOD_MORPH(minu_plus,  bindings = <&kp MINUS>, <&kp PLUS>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(fslh_star,  bindings = <&kp FSLH>,  <&kp STAR>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(dot_colon,  bindings = <&kp DOT>,   <&kp COLON>;  mods = <(MOD_LSFT|MOD_RSFT)>;)
-ZMK_MOD_MORPH(comma_semi, bindings = <&kp COMMA>, <&kp SEMI>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(minu_plus,  bindings = <&kp MINUS>, <&kp PLUS>; mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(fslh_star,  bindings = <&kp FSLH>, <&kp STAR>;  mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(dot_colon,  bindings = <&kp DOT>, <&kp COLON>;  mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(comma_semi, bindings = <&kp COMMA>, <&kp SEMI>; mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(grave_x3,   bindings = <&kp GRAVE>, <&tgrave>;  mods = <(MOD_LSFT|MOD_RSFT)>;)
 
 // horizontal combos
 ZMK_COMBO(z,          &kp Z,       LT1 LT3,     BSE, 150,   0) 
@@ -118,8 +118,8 @@ ZMK_COMBO(box_drwng,  &tog BOX,    LT2 RT2,     BSE,  50, 150)
 ZMK_COMBO(bootldr,    &bootloader, LT3 RT3,     BSE,  50, 200)
  
 // vertical combos
-// ZMK_COMBO(,                   , LM0 LB0,     BSE, 100, 150) 
-ZMK_COMBO(grave,      &kp GRAVE,   RM0 RB0,     BSE, 100, 150)
+ZMK_COMBO(openqmark,  &kp RA(FSLH),LM0 LB0,     BSE, 100, 150) 
+ZMK_COMBO(openexcl,   &kp RA(N1),  RM0 RB0,     BSE, 100, 150)
 
 ZMK_COMBO(percent,    &kp PRCNT,   LT1 LM1,     BSE, 100, 150) 
 ZMK_COMBO(tilde,      &kp TILDE,   LT2 LM2,     BSE, 100, 150)
@@ -137,8 +137,8 @@ ZMK_COMBO(dolar,      &kp DLLR,    RM1 RB1,     BSE, 100, 150)
 ZMK_COMBO(hash,       &kp HASH,    RM2 RB2,     BSE, 100, 150)
 ZMK_COMBO(qmark,      &kp QMARK,   RM3 RB3,     BSE, 100, 150)
 
-ZMK_COMBO(openqmark,  &kp RA(FSLH),LM0 LB0,     BSE, 100, 150) 
-ZMK_COMBO(openexcl,   &kp RA(N1),  RM0 RB0,     BSE, 100, 150)
+// ZMK_COMBO(                      LM4 LB4,     BSE, 100, 150) 
+ZMK_COMBO(grave_x3,    &grave_x3,  RM4 RB4,     BSE, 100, 150)
 
 // diagonal combos
 ZMK_COMBO(lbrace,     &kp RBRC,    LM1 LB2,     BSE, 140, 100)
