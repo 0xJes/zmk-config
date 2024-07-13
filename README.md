@@ -1,6 +1,14 @@
-Layout based on Hands Down Rhodium, adapted to a Hummingbird style keyboard.
-This layout uses Eurkey on the OS side for characters in the spanish languague.
+This is my personal layout based on Hands Down Rhodium, adapted to a Hummingbird style keyboard and with Spanish Support.
+This layout relies on Eurkey for especial characters.
 
+# Layers
+All extra layers are layer-tap under index and middle fingers, this reduces holding thumb keys as i find it uncomfortable long run. 
+## Base
+## Navigation
+## Numbers
+## Window Management
+
+# Links
 ## Features not yet in ZMK
 - Mouse scrolling/movement: https://github.com/zmkfirmware/zmk/pull/2027
 - Combos that must press in order: https://github.com/zmkfirmware/zmk/issues/2260
