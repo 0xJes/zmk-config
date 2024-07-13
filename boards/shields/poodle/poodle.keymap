@@ -99,46 +99,38 @@ ZMK_MOD_MORPH(dot_colon,  bindings = <&kp DOT>, <&kp COLON>;  mods = <(MOD_LSFT|
 ZMK_MOD_MORPH(comma_semi, bindings = <&kp COMMA>, <&kp SEMI>; mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(grave_x3,   bindings = <&kp GRAVE>, <&tgrave>;  mods = <(MOD_LSFT|MOD_RSFT)>;)
 
-// horizontal combos
-ZMK_COMBO(z,          &kp Z,       LT1 LT3,     BSE, 150,   0) 
+ZMK_COMBO(z,          &kp Z,       LT1 LT3,     BSE, 150,   0) // horz combos
 ZMK_COMBO(x,          &kp X,       LT3 LT2,     BSE, 150,   0)
-ZMK_COMBO(return,     &kp RET,     LM2 LM3, BSE NAV,  70,  75) 
 ZMK_COMBO(escape,     &kp ESC,     LM1 LM3,     BSE,  80,  75)
+ZMK_COMBO(return,     &kp RET,     LM2 LM3, BSE NAV,  70,  75) 
+ZMK_COMBO(squote,     &kp SQT,     RT1 RT2,     BSE, 140,   0)
+ZMK_COMBO(dquote,     &kp DQT,     RT2 RT3,     BSE, 140,   0)
+ZMK_COMBO(cpsword,    &caps_word,  RT1 RT3,     BSE,  70, 150)
 ZMK_COMBO(tab,        &kp TAB,     RM1 RM2,     BSE,  60,  75)
 ZMK_COMBO(underscore, &kp UNDER,   RM1 RM3,     BSE,  50,  75)
 ZMK_COMBO(backspace,  &kp BSPC,    RM2 RM3, BSE NAV, 150,  75)
 ZMK_COMBO(delete,     &kp DEL,     RM3 RM4, BSE NAV, 180, 120)
-ZMK_COMBO(squote,     &kp SQT,     RT1 RT2,     BSE, 140,   0)
-ZMK_COMBO(dquote,     &kp DQT,     RT2 RT3,     BSE, 140,   0)
-ZMK_COMBO(cpslock,    &kp CAPS,    RB1 RB3,     BSE,  70, 150)
-ZMK_COMBO(cpsword,    &caps_word,  RT1 RT3,     BSE,  70, 150)
-
 ZMK_COMBO(box_drwng,  &tog BOX,    LT2 RT2,     BSE,  50, 150)
 ZMK_COMBO(bootldr,    &bootloader, LT3 RT3,     BSE,  50, 200)
- 
-// vertical combos
-ZMK_COMBO(openqmark,  &kp RA(FSLH),LM0 LB0,     BSE, 100, 150) 
-ZMK_COMBO(openexcl,   &kp RA(N1),  RM0 RB0,     BSE, 100, 150)
 
-ZMK_COMBO(percent,    &kp PRCNT,   LT1 LM1,     BSE, 100, 150) 
+ZMK_COMBO(percent,    &kp PRCNT,   LM0 LB0,     BSE, 100, 150) // vert combos
+ZMK_COMBO(pipe,       &kp PIPE,    LT1 LM1,     BSE, 100, 150)
 ZMK_COMBO(tilde,      &kp TILDE,   LT2 LM2,     BSE, 100, 150)
-ZMK_COMBO(pipe,       &kp PIPE,    LT3 LM3,     BSE, 100, 150)
+ZMK_COMBO(openexcl,   &kp RA(N1),  LT3 LM3,     BSE, 100, 150)
 ZMK_COMBO(at,         &kp AT,      LM1 LB1,     BSE, 100, 150)
 ZMK_COMBO(bslh,       &kp BSLH,    LM2 LB2,     BSE, 100, 150)
 ZMK_COMBO(excl,       &kp EXCL,    LM3 LB3,     BSE, 100, 150)
-
-ZMK_COMBO(caret,      &kp CARET,   RT1 RM1,     BSE, 100, 150)
+ZMK_COMBO(degree,     &kp RA(semi),LM4 LB4,     BSE, 100, 150) 
+ZMK_COMBO(caret,      &kp CARET,   RM0 RB0,     BSE, 100, 150)
+ZMK_COMBO(ampersand,  &kp AMPS,    RT1 RM1,     BSE, 100, 150)
 ZMK_COMBO(equal,      &kp EQUAL,   RT2 RM2,     BSE, 100, 150)
-ZMK_COMBO(ampersand,  &kp AMPS,    RT3 RM3,     BSE, 100, 150)
+ZMK_COMBO(openqmark,  &kp RA(FSLH),RT3 RM3,     BSE, 100, 150) 
 ZMK_COMBO(dolar,      &kp DLLR,    RM1 RB1,     BSE, 100, 150)
 ZMK_COMBO(hash,       &kp HASH,    RM2 RB2,     BSE, 100, 150)
 ZMK_COMBO(qmark,      &kp QMARK,   RM3 RB3,     BSE, 100, 150)
+ZMK_COMBO(grave_x3,   &grave_x3,   RM4 RB4,     BSE, 100, 150)
 
-// ZMK_COMBO(                      LM4 LB4,     BSE, 100, 150) 
-ZMK_COMBO(grave_x3,    &grave_x3,  RM4 RB4,     BSE, 100, 150)
-
-// diagonal combos
-ZMK_COMBO(lbrace,     &kp RBRC,    LM1 LB2,     BSE, 140, 100)
+ZMK_COMBO(lbrace,     &kp RBRC,    LM1 LB2,     BSE, 140, 100) // diag combos
 ZMK_COMBO(rbrace,     &kp LBRC,    LM3 LB2,     BSE, 140, 100)
 ZMK_COMBO(langle,     &kp GT,      LT1 LM2,     BSE, 140, 100)
 ZMK_COMBO(rangle,     &kp LT,      LT3 LM2,     BSE, 140, 100)
@@ -189,8 +181,7 @@ ZMK_LAYER(box_drawing,
 								&none			&tog BOX									&none			&none
 )
 
-// layers shenanigans for sequential combos
-
+// layer-tap shenaningas because Qu combo should trigger on hg but not gh
 ZMK_LAYER(q, // 6
 				&trans			&none			&qu_q Q Q									&trans			&trans			&trans
 &trans			&trans			&trans			&trans			&trans		&trans			&trans			&trans			&trans			&trans
