@@ -1,4 +1,5 @@
-Layout based on Hands Down Rhodium, adapted to a Hummingbird style 30-keys keyboard
+Layout based on Hands Down Rhodium, adapted to a Hummingbird style 30-keys keyboard.
+This layout uses Eurkey on the OS side for characters in the spanish languague.
 
 ## Features not yet in ZMK
 - Mouse scrolling/movement: https://github.com/zmkfirmware/zmk/pull/2027
