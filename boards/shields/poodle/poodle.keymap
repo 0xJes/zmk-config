@@ -141,8 +141,8 @@ ZMK_COMBO(hash,       &kp HASH,    RM2 RB2,     BSE, 100, 150)
 ZMK_COMBO(f_ordinal,  &kp FEM_OR,  RM3 RB3,     BSE, 100, 150)
 
 // diagonal combos
-ZMK_COMBO(lbrace,     &kp LBRC,    LM1 LB2,     BSE, 140, 100)
-ZMK_COMBO(rbrace,     &kp RBRC,    LM3 LB2,     BSE, 140, 100)
+ZMK_COMBO(lbrace,     &kp RBRC,    LM1 LB2,     BSE, 140, 100)
+ZMK_COMBO(rbrace,     &kp LBRC,    LM3 LB2,     BSE, 140, 100)
 ZMK_COMBO(langle,     &kp GT,      LT1 LM2,     BSE, 140, 100)
 ZMK_COMBO(rangle,     &kp LT,      LT3 LM2,     BSE, 140, 100)
 
