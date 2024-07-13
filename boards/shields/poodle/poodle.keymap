@@ -1,7 +1,9 @@
-#define  HOST_OS 1 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+
+#define HOST_OS 1 // Linux setting for unicode helpers
 #include <zmk-helpers/helper.h>
+
 #include "mouse.dtsi"
 #include "box-drawing.dtsi"
 #include "keylabels.h"
@@ -13,34 +15,27 @@
 #define NUM 3
 #define MOU 4
 #define BOX 5
-// KEY GROUPS 
-#define LEFT_HAND_KEYS LT3 LT2 LT1 LM4 LM3 LM2 LM1 LM0 LB4 LB3 LB2 LB1 LB0
+
+// key groups
+#define LEFT_HAND_KEYS  LT3 LT2 LT1 LM4 LM3 LM2 LM1 LM0 LB4 LB3 LB2 LB1 LB0
 #define RIGHT_HAND_KEYS RT1 RT2 RT3 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4
-#define THUMB_KEYS LH1 LH0 RH0 RH1
+#define THUMB_KEYS      LH1 LH0 RH0 RH1
 
-// MACROS
-ZMK_MACRO(add, bindings = <&kp SPACE &kp PLUS  &kp SPACE>;)
-ZMK_MACRO(sub, bindings = <&kp SPACE &kp MINUS &kp SPACE>;)
-ZMK_MACRO(div, bindings = <&kp SPACE &kp FSLH  &kp SPACE>;)
-ZMK_MACRO(mul, bindings = <&kp SPACE &kp STAR  &kp SPACE>;)
-ZMK_MACRO(gu_dr, bindings = <&kp G &kp RA(U)>;)
-ZMK_MACRO(qu, bindings = <&kp Q &kp U>;)
-
-// BEHAVIOR CONFIGURATION
+// behavior configuration
 &sk {
-    release-after-ms = <2000>;
-    quick-release; 
-    ignore-modifiers;
+	release-after-ms = <2000>;
+	quick-release; 
+	ignore-modifiers;
 };
 
 &caps_word {
-    continue-list = <UNDER MINUS BSPC>;
+	continue-list = <UNDER MINUS BSPC>;
 };
 
 &lt {
-    flavor = "balanced";
-    tapping-term-ms = <300>;
-    quick-tap-ms = <150>;
+	flavor = "balanced";
+	tapping-term-ms = <300>;
+	quick-tap-ms = <150>;
 };
 
 &mt {
@@ -49,6 +44,16 @@ ZMK_MACRO(qu, bindings = <&kp Q &kp U>;)
 	quick-tap-ms = <180>;
 	bindings = <&kp>, <&kp>;
 };
+
+
+
+// macros
+ZMK_MACRO(add,   bindings = <&kp SPACE &kp PLUS  &kp SPACE>;)
+ZMK_MACRO(sub,   bindings = <&kp SPACE &kp MINUS &kp SPACE>;)
+ZMK_MACRO(div,   bindings = <&kp SPACE &kp FSLH  &kp SPACE>;)
+ZMK_MACRO(mul,   bindings = <&kp SPACE &kp STAR  &kp SPACE>;)
+ZMK_MACRO(gu_dr, bindings = <&kp G &kp RA(U)>;)
+ZMK_MACRO(qu,    bindings = <&kp Q &kp U>;)
 
 // HOLD TAPS
 ZMK_HOLD_TAP(lm,
