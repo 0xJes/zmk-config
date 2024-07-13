@@ -7,6 +7,7 @@ Layout based on Hands Down Rhodium, adapted to a Hummingbird style 30-keys keybo
 - String output: https://github.com/zmkfirmware/zmk/pull/1893
 
 ## Resources and references
+- EurKEY kb layout: https://eurkey.steffen.bruentjen.eu/
 - Hands Down: https://sites.google.com/alanreiser.com/handsdown/home
 - urob's config: https://github.com/urob/zmk-config
 - urob's zmk helpers: https://github.com/urob/zmk-helpers/tree/v2
