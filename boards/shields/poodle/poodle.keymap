@@ -19,8 +19,6 @@
 #define THUMB_KEYS LH1 LH0 RH0 RH1
 
 #define DEGREE  RA(SEMI)
-#define OQMARK  RA(FSLH)
-#define OEXCL   RA(N1)
 #define FEM_OR  RA(2)
 #define MASC_OR RA(3)
 #define A_AC    RA(X)
@@ -138,7 +136,7 @@ ZMK_COMBO(pipe,       &kp PIPE,    LT3 LM3,     BSE, 100, 150)
 
 ZMK_COMBO(at,         &kp AT,      LM1 LB1,     BSE, 100, 150)
 ZMK_COMBO(bslh,       &kp BSLH,    LM2 LB2,     BSE, 100, 150)
-// ZMK_COMBO(m_ordinal,  &kp MASC_OR, LM3 LB3,     BSE, 100, 150)
+ZMK_COMBO(excl,       &kp EXCL,    LM3 LB3,     BSE, 100, 150)
 
 ZMK_COMBO(caret,      &kp CARET,   RT1 RM1,     BSE, 100, 150)
 ZMK_COMBO(equal,      &kp EQUAL,   RT2 RM2,     BSE, 100, 150)
@@ -146,7 +144,10 @@ ZMK_COMBO(ampersand,  &kp AMPS,    RT3 RM3,     BSE, 100, 150)
 
 ZMK_COMBO(dolar,      &kp DLLR,    RM1 RB1,     BSE, 100, 150)
 ZMK_COMBO(hash,       &kp HASH,    RM2 RB2,     BSE, 100, 150)
-// ZMK_COMBO(f_ordinal,  &kp FEM_OR,  RM3 RB3,     BSE, 100, 150)
+ZMK_COMBO(qmark,      &kp QMARK,   RM3 RB3,     BSE, 100, 150)
+
+ZMK_COMBO(openqmark,  &kp RA(FSLH),LM0 LB0,     BSE, 100, 150) 
+ZMK_COMBO(openexcl,	  &kp RA(N1),  RM0 RB0,     BSE, 100, 150)
 
 // diagonal combos
 ZMK_COMBO(lbrace,     &kp RBRC,    LM1 LB2,     BSE, 140, 100)
