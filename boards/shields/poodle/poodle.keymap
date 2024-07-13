@@ -94,12 +94,11 @@ ZMK_HOLD_TAP(cl, // hold-tap used for sequential combos
 	quick-tap-ms = <200>;
 	bindings = <&mo>, <&kp>;
 )
-ZMK_HOLD_TAP(cli, // hold-tap used for sequential combos, version with idle 
+
+ZMK_HOLD_TAP(mo_sk,
 	flavor = "hold-preferred";
-	require-prior-idle-ms = <100>;
-	tapping-term-ms = <250>;
-	quick-tap-ms = <200>;
-	bindings = <&mo>, <&kp>;
+	tapping-term-ms = <150>;
+	bindings = <&mo>, <&sk>;
 )
 
 // keys with different shift behavior
@@ -165,7 +164,7 @@ ZMK_LAYER(alpha,
 				&kp B			&cl 6 H			&kp G										&comma_semi		&fslh_star		&kp J
 &lm LALT C		&lm LCTRL S		&lt MOU N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&kp E			&rm RCTRL I		&rm LALT M
 &kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
-								&sk LSHFT		&lt ACC R									&mt RGUI SPACE	&sk RSHFT
+							&mo_sk ACC LSHFT	&lt ACC R									&mt RGUI SPACE	&mo_sk ACC RSHFT
 )
 
 ZMK_LAYER(alpha2,
