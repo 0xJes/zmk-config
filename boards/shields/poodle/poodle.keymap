@@ -45,7 +45,6 @@
 	bindings = <&kp>, <&kp>;
 };
 
-// HOLD TAPS
 ZMK_HOLD_TAP(lm,
 	flavor = "balanced";
 	require-prior-idle-ms = <100>;
@@ -91,7 +90,10 @@ ZMK_MACRO(div,    bindings = <&kp SPACE &kp FSLH &kp SPACE>;)
 ZMK_MACRO(mul,    bindings = <&kp SPACE &kp STAR &kp SPACE>;)
 ZMK_MACRO(tgrave, bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;)
 ZMK_MACRO(gu_dr,  bindings = <&kp G &kp RA(U)>;)
+ZMK_MACRO(gu_dr,  bindings = <&kp G &kp RA(U)>;)
 ZMK_MACRO(qu,     bindings = <&kp Q &kp U>;)
+ZMK_MACRO(au_sbf, bindings = <&kp A &kp U>;)
+ZMK_MACRO(ua_sbf, bindings = <&kp U &kp A>;)
 
 ZMK_MOD_MORPH(minu_plus,  bindings = <&kp MINUS>, <&kp PLUS>; mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(fslh_star,  bindings = <&kp FSLH>, <&kp STAR>;  mods = <(MOD_LSFT|MOD_RSFT)>;)
@@ -147,7 +149,7 @@ ZMK_LAYER(alpha,
 )
 
 ZMK_LAYER(alpha2,
-				&trans			&trans			&gu_dr										&trans			&trans			&trans
+				&trans			&trans			&gu_dr										&kp au_sbf		&kp ua_sbf		&trans
 &trans			&trans			&kp RA(N)		&trans			&trans		&trans			&kp RA(X)		&kp RA(G)		&kp RA(B)		&trans
 &trans			&trans			&trans			&trans			&trans		&trans			&kp RA(J)		&kp RA(DOT)		&trans			&trans
 								&trans			&trans										&trans			&trans
