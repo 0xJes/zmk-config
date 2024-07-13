@@ -18,21 +18,12 @@
 #define RIGHT_HAND_KEYS RT1 RT2 RT3 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4
 #define THUMB_KEYS LH1 LH0 RH0 RH1
 
-#define DEGREE  RA(SEMI)
-#define FEM_OR  RA(2)
-#define MASC_OR RA(3)
-#define I_AC    RA(B)
-#define O_AC    RA(DOT)
-#define U_AC    RA(J)
-#define U_DR    RA(U)
-#define N_TL    RA(N)
-
 // MACROS
 ZMK_MACRO(add, bindings = <&kp SPACE &kp PLUS  &kp SPACE>;)
 ZMK_MACRO(sub, bindings = <&kp SPACE &kp MINUS &kp SPACE>;)
 ZMK_MACRO(div, bindings = <&kp SPACE &kp FSLH  &kp SPACE>;)
 ZMK_MACRO(mul, bindings = <&kp SPACE &kp STAR  &kp SPACE>;)
-ZMK_MACRO(gu_dr, bindings = <&kp G &kp U_DR>;)
+ZMK_MACRO(gu_dr, bindings = <&kp G &kp RA(U)>;)
 ZMK_MACRO(qu, bindings = <&kp Q &kp U>;)
 
 // BEHAVIOR CONFIGURATION
@@ -167,8 +158,8 @@ ZMK_LAYER(alpha,
 
 ZMK_LAYER(alpha2,
 				&trans			&trans			&gu_dr										&trans			&trans			&trans
-&trans			&trans			&kp N_TL		&trans			&trans		&trans			&kp RA(X)		&kp RA(G)		&kp I_AC		&trans
-&trans			&trans			&trans			&trans			&trans		&trans			&kp U_AC		&kp O_AC		&trans			&trans
+&trans			&trans			&kp RA(N)		&trans			&trans		&trans			&kp RA(X)		&kp RA(G)		&kp RA(B)		&trans
+&trans			&trans			&trans			&trans			&trans		&trans			&kp RA(J)		&kp RA(DOT)		&trans			&trans
 								&trans			&trans										&trans			&trans
 )
 
