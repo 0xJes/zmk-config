@@ -80,7 +80,7 @@ ZMK_HOLD_TAP(cl, // hold-tap used for sequential combos
 
 ZMK_HOLD_TAP(mo_sk,
 	flavor = "hold-preferred";
-	tapping-term-ms = <150>;
+	tapping-term-ms = <350>;
 	bindings = <&mo>, <&sk>;
 )
 
