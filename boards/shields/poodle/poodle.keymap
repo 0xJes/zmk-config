@@ -149,7 +149,7 @@ ZMK_LAYER(alpha,
 )
 
 ZMK_LAYER(alpha2,
-				&trans			&trans			&gu_dr										&kp au_sbf		&kp ua_sbf		&trans
+				&trans			&trans			&gu_dr										&au_sbf			&ua_sbf			&trans
 &trans			&trans			&kp RA(N)		&trans			&trans		&trans			&kp RA(X)		&kp RA(G)		&kp RA(B)		&trans
 &trans			&trans			&trans			&trans			&trans		&trans			&kp RA(J)		&kp RA(DOT)		&trans			&trans
 								&trans			&trans										&trans			&trans
