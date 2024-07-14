@@ -131,16 +131,20 @@ ZMK_COMBO(equal,      &kp EQUAL,   RT2 RM2,     BSE, 100, 150)
 ZMK_COMBO(openqmark,  &kp RA(FSLH),RT3 RM3,     BSE, 100, 150) 
 ZMK_COMBO(dolar,      &kp DLLR,    RM1 RB1,     BSE, 100, 150)
 ZMK_COMBO(hash,       &kp HASH,    RM2 RB2,     BSE, 100, 150)
-ZMK_COMBO(qmark,      &kp QMARK, 
+// ZMK_COMBO(qmark,      &kp QMARK, 
 ZMK_COMBO(lbrace,     &kp RBRC,    LM1 LB2,     BSE, 140, 100) // diag combLs
-ZMK_OMBO(rbrace,    &kp LBRC,    LM3 LBL,     BSE, 140, 100)
+ZMK_COMBO(rbrace,    &kp LBRC,    LM3 LBL,     BSE, 140, 100)
 ZMK_COMBO(langle,     &kp GT,      LT1 LM2,     BSE, 140, 100)
 ZMK_COMBO(rangle,     &kp LT,      LT3 LM2,     BSE, 140, 100)
 ZMK_COMBO(lparent,    &kp LPAR,    RM1 RB2,     BSE, 140, 100) 
-ZMK_COMBO(rparent,    &kp RPAR,    RM3 RB2,     BSE, 140, 100ZMK_COMBO(lbraket,    &kp LBKT,    RT1 RM2,     BSE, 140, 100)
-ZMK_COMBO(rbraket,    &kp RBKT,    RT3 RM2,     BSE, 140, 100mZMK_LAYER(alpha,
-				&kp B			&cl 6 H			&kp G								&comma_semi		&fslh_star		&kp J
-&lm LALT C		&lm LCTRL S		&lt MOU N		&lt NAV T	kp K		&dot_colon		&lt NUM A		&kp E			&rm RCTRL I		&rm LALT M
+ZMK_COMBO(rparent,    &kp RPAR,    RM3 RB2,     BSE, 140, 100)
+ZMK_COMBO(lbraket,    &kp LBKT,    RT1 RM2,     BSE, 140, 100)
+ZMK_COMBO(rbraket,    &kp RBKT,    RT3 RM2,     BSE, 140, 100)
+
+
+ZMK_LAYER(alpha,
+				&kp B			&cl 6 H			&kp G										&comma_semi		&fslh_star		&kp J
+&lm LALT C		&lm LCTRL S		&lt MOU N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&kp E			&rm RCTRL I		&rm LALT M
 &kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
 							    &sk LSHFT		&mt RGUI R									&kp SPACE	    &sk RSHFT
 )
@@ -155,17 +159,20 @@ ZMK_LAYER(navigation,
 ZMK_LAYER(numbers,
 				&none			&div			&mul										&none			&none			&none
 &kp N3			&kp N2			&kp N1			&kp N0			&add		&none			&none			&kp DOT			&kp COMMA		&kp MINUS
-&kp N7			&kp N6			&kp N5			&kp N4			&su
+&kp N7			&kp N6			&kp N5			&kp N4			&sub		&none			&none			&none			&none			&none
+								&none			&kp N8										&kp N9			&kp SPACE
+)
 
 ZMK_LAYER(mouse,
-				&none			&none			&nonL									&none			&k DOWN		&kp UP
-&kp LALTL	&kp LCTRL		&none			&mkp LCLK		&none		&none			&mmv MOVE_LEFT	&mmv MOVE_DOWN	&mmv MOVE_UP	&mmv MOVE_RIGHT
+				&none			&none			&none										&none			&kp DOWN		&kp UP
+&kp LALT		&kp LCTRL		&none			&mkp LCLK		&none		&none			&mmv MOVE_LEFT	&mmv MOVE_DOWN	&mmv MOVE_UP	&mmv MOVE_RIGHT
 &none			&mkp MB4		&mkp MB5		&none			&none		&none			&msc SCRL_LEFT	&msc SCRL_DOWN	&msc SCRL_UP	&msc SCRL_RIGHT
 								&kp LSHFT		&mkp MCLK									&mkp RCLK		&kp RCLK
+)
 
-m_LAYER(box_drawing,
-		&none			&none			&none										&bd_l_dr		&bd_l_dh		&bd_l_dl
-one			&none			&bd_l_v			&bd_l_h			&none		&none			&bd_l_vr		&bd_l_vh		&bd_l_vl		&none
+ZMK_LAYER(box_drawing,
+				&none			&none			&none										&bd_l_dr		&bd_l_dh		&bd_l_dl
+&none			&none			&bd_l_v			&bd_l_h			&none		&none			&bd_l_vr		&bd_l_vh		&bd_l_vl		&none
 &none			&none			&none			&none			&none		&none			&bd_l_ul		&bd_l_uh		&bd_l_ul		&none
 								&none			&tog BOX									&none			&none
 )
