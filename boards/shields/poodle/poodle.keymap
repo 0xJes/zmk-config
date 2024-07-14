@@ -98,7 +98,7 @@ ZMK_MOD_MORPH(grave_x3,   bindings = <&kp GRAVE>, <&tgrave>;  mods = <(MOD_LSFT|
 ZMK_COMBO(z,          &kp Z,       LT1 LT3,     BSE, 150,   0) // alpha combos
 ZMK_COMBO(x,          &kp X,       LT3 LT2,     BSE, 150,   0)
 ZMK_COMBO(enie,       &kp RA(N),   LB3 LB1,     BSE, 150,   0)
-ZMK_COMBO(gudiars,    &gu_diar,    LM3 LT1,     BSE, 150,   0)
+ZMK_COMBO(gudiars,    &gu_dr,      LM3 LT1,     BSE, 150,   0)
 
 ZMK_COMBO(escape,     &kp ESC,     LM1 LM3,     BSE,  80,  75) // horz combos
 ZMK_COMBO(return,     &kp RET,     LM2 LM3, BSE NAV,  70,  75) 
