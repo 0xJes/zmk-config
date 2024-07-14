@@ -133,7 +133,7 @@ ZMK_COMBO(dolar,      &kp DLLR,    RM1 RB1,     BSE, 100, 150)
 ZMK_COMBO(hash,       &kp HASH,    RM2 RB2,     BSE, 100, 150)
 // ZMK_COMBO(qmark,      &kp QMARK, 
 ZMK_COMBO(lbrace,     &kp RBRC,    LM1 LB2,     BSE, 140, 100) // diag combLs
-ZMK_COMBO(rbrace,    &kp LBRC,    LM3 LBL,     BSE, 140, 100)
+ZMK_COMBO(rbrace,     &kp LBRC,    LM3 LB2,     BSE, 140, 100)
 ZMK_COMBO(langle,     &kp GT,      LT1 LM2,     BSE, 140, 100)
 ZMK_COMBO(rangle,     &kp LT,      LT3 LM2,     BSE, 140, 100)
 ZMK_COMBO(lparent,    &kp LPAR,    RM1 RB2,     BSE, 140, 100) 
