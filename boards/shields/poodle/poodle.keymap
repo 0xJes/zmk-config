@@ -99,20 +99,20 @@ ZMK_MOD_MORPH(lr_brc,     bindings = <&kp LBRC>,  <&kp RBRC>; mods = <(MOD_LSFT|
 ZMK_MOD_MORPH(lr_bkt,     bindings = <&kp LBKT>,  <&kp RBKT>; mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(lt_gt,      bindings = <&kp LT>,    <&kp GT>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
 
-// éú ua au
-ZMK_COMBO(z,          &kp Z,       LT1 LT3,     BSE, 150,   0) // alpha combos
-ZMK_COMBO(x,          &kp X,       LT3 LT2,     BSE, 150,   0)
-ZMK_COMBO(enie,       &kp RA(N),   LB3 LB1,     BSE, 150,   0)
-ZMK_COMBO(gudiaresis, &gu_dr,      LM3 LT1,     BSE, 150,   0)
+ZMK_COMBO(z,          &kp Z,       LT1 LT3,     BSE, 100,   0) // alpha combos
+ZMK_COMBO(x,          &kp X,       LT3 LT2,     BSE, 100,   0)
+ZMK_COMBO(enie,       &kp RA(N),   LB3 LB1,     BSE, 100,   0)
+ZMK_COMBO(gudiaresis, &gu_dr,      LM3 LT1,     BSE, 100,   0)
 ZMK_COMBO(acute_o,    &kp RA(DOT), RT1 RM2,     BSE, 100,   0)
 ZMK_COMBO(acute_i,    &kp RA(B),   RT2 RM3,     BSE, 100,   0)
 ZMK_COMBO(acute_a,    &kp RA(X),   RB1 RB3,     BSE, 100,   0)
+ZMK_COMBO(acute_e,    &kp RA(G),   RT1 RT3,     BSE, 100,   0)
+ZMK_COMBO(acute_u,    &kp RA(J),   RB2 RB4,     BSE, 100,   0)
 
 ZMK_COMBO(escape,     &kp ESC,     LM1 LM3,     BSE,  80,  75) // horz combos
 ZMK_COMBO(return,     &kp RET,     LM2 LM3, BSE NAV,  70,  75) 
 ZMK_COMBO(squote,     &kp SQT,     RT1 RT2,     BSE, 140,   0)
 ZMK_COMBO(dquote,     &kp DQT,     RT2 RT3,     BSE, 140,   0)
-// ZMK_COMBO(cpsword,    &caps_word,  RT1 RT3,     BSE,  70, 150)
 ZMK_COMBO(tab,        &kp TAB,     RM1 RM2,     BSE,  60,  75)
 ZMK_COMBO(underscore, &kp UNDER,   RM1 RM3,     BSE,  50,  75)
 ZMK_COMBO(backspace,  &kp BSPC,    RM2 RM3, BSE NAV, 150,  75)
@@ -123,18 +123,18 @@ ZMK_COMBO(bootldr,    &bootloader, LT3 RT3,     BSE,  50, 200)
 ZMK_COMBO(percent,    &kp PRCNT,   LM0 LB0,     BSE, 100, 150) // vert combos
 ZMK_COMBO(pipe,       &kp PIPE,    LT1 LM1,     BSE, 100, 150)
 ZMK_COMBO(tilde,      &kp TILDE,   LT2 LM2,     BSE, 100, 150)
-// ZMK_COMBO(openexcl,   &kp RA(N1),  LT3 LM3,     BSE, 100, 150)
+ZMK_COMBO(openexcl,   &kp RA(N1),  LT3 LM3,     BSE, 100, 150)
 ZMK_COMBO(at,         &kp AT,      LM1 LB1,     BSE, 100, 150)
 ZMK_COMBO(bslh,       &kp BSLH,    LM2 LB2,     BSE, 100, 150)
-ZMK_COMBO(excl,       &kp EXCL,    LM3 LB3,     BSE, 100, 150)
-// ZMK_COMBO(degree,     &kp RA(SEMI),LM4 LB4,     BSE, 100, 150) 
+ZMK_COMBO(openquest,  &kp RA(FLSH),LM3 LB3,     BSE, 100, 150) 
 ZMK_COMBO(caret,      &kp CARET,   RM0 RB0,     BSE, 100, 150)
 ZMK_COMBO(ampersand,  &kp AMPS,    RT1 RM1,     BSE, 100, 150)
 ZMK_COMBO(equal,      &kp EQUAL,   RT2 RM2,     BSE, 100, 150)
-ZMK_COMBO(openqmark,  &kp RA(FSLH),RT3 RM3,     BSE, 100, 150) 
+ZMK_COMBO(excl,       &kp EXCL,    RT3 RM3,     BSE, 100, 150) 
 ZMK_COMBO(dolar,      &kp DLLR,    RM1 RB1,     BSE, 100, 150)
 ZMK_COMBO(hash,       &kp HASH,    RM2 RB2,     BSE, 100, 150)
-// ZMK_COMBO(qmark,      &kp QMARK, 
+ZMK_COMBO(quest,      &kp QUEST,   RM3 RB3,     BSE, 100, 150)
+
 ZMK_COMBO(lbrace,     &lr_par,     LM1 LB2,     BSE, 140, 100) // diag combLs
 ZMK_COMBO(rbrace,     &lr_brc,     LM3 LB2,     BSE, 140, 100)
 ZMK_COMBO(langle,     &lr_bkt,     LT1 LM2,     BSE, 140, 100)
