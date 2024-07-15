@@ -147,7 +147,7 @@ ZMK_COMBO(rangle,     &lt_gt,      LT3 LM2,     BSE, 140, 100)
 ZMK_LAYER(alpha,
 				&kp B			&cl 5 H			&kp G										&comma_semi		&fslh_star		&kp J
 &lm LALT C		&lm LCTRL S		&lt MOU N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&kp E			&rm RCTRL I		&rm LALT M
-&kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
+&kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&cl 7 O			&kp Y			&kp W
 							    &sft_capsw		&mt RGUI R									&kp SPACE	    &sk RSHFT
 )
 
@@ -179,10 +179,18 @@ ZMK_LAYER(box_drawing,
 								&none			&tog BOX									&none			&none
 )
 
-// layer-tap shenaningas because Qu combo should trigger on hg but not gh
-ZMK_LAYER(q, // 6
+ 
+// layer-tap shenanigans to enable "sequential combos" where order matters
+
+ZMK_LAYER(q, // 6 hg: qu
 				&trans			&none			&qu_q Q Q									&trans			&trans			&trans
 &trans			&trans			&trans			&trans			&trans		&trans			&trans			&trans			&trans			&trans
 &trans			&trans			&trans			&trans			&trans		&trans			&trans			&trans			&trans			&trans
+								&trans			&trans										&trans			&trans
+)
+ZMK_LAYER(accute_u, // 7 oy: ú
+				&trans			&none			&qu_q Q Q									&trans			&trans			&trans
+&trans			&trans			&trans			&trans			&trans		&trans			&trans			&trans			&trans			&trans
+&trans			&trans			&trans			&trans			&trans		&trans			&trans			&trans			&kp RA(J)		&trans
 								&trans			&trans										&trans			&trans
 )
