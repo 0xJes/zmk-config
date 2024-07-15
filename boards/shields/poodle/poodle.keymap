@@ -99,11 +99,14 @@ ZMK_MOD_MORPH(lr_brc,     bindings = <&kp LBRC>,  <&kp RBRC>; mods = <(MOD_LSFT|
 ZMK_MOD_MORPH(lr_bkt,     bindings = <&kp LBKT>,  <&kp RBKT>; mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(lt_gt,      bindings = <&kp LT>,    <&kp GT>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
 
-// áéú ua au
+// éú ua au
 ZMK_COMBO(z,          &kp Z,       LT1 LT3,     BSE, 150,   0) // alpha combos
 ZMK_COMBO(x,          &kp X,       LT3 LT2,     BSE, 150,   0)
 ZMK_COMBO(enie,       &kp RA(N),   LB3 LB1,     BSE, 150,   0)
-ZMK_COMBO(gudiars,    &gu_dr,      LM3 LT1,     BSE, 150,   0)
+ZMK_COMBO(gudiaresis, &gu_dr,      LM3 LT1,     BSE, 150,   0)
+ZMK_COMBO(acute_o,    &kp RA(DOT), RT1 RM2,     BSE, 100,   0)
+ZMK_COMBO(acute_i,    &kp RA(B),   RT2 RM3,     BSE, 100,   0)
+ZMK_COMBO(acute_a,    &kp RA(X),   RB1 RB3,     BSE, 100,   0)
 
 ZMK_COMBO(escape,     &kp ESC,     LM1 LM3,     BSE,  80,  75) // horz combos
 ZMK_COMBO(return,     &kp RET,     LM2 LM3, BSE NAV,  70,  75) 
@@ -136,9 +139,6 @@ ZMK_COMBO(lbrace,     &lr_par,     LM1 LB2,     BSE, 140, 100) // diag combLs
 ZMK_COMBO(rbrace,     &lr_brc,     LM3 LB2,     BSE, 140, 100)
 ZMK_COMBO(langle,     &lr_bkt,     LT1 LM2,     BSE, 140, 100)
 ZMK_COMBO(rangle,     &lt_gt,      LT3 LM2,     BSE, 140, 100)
-
-ZMK_COMBO(acute_o,    &kp RA(DOT), RT1 RM2,     BSE, 100,   0)
-ZMK_COMBO(acute_i,    &kp RA(B),   RT2 RM3,     BSE, 100,   0)
 
 //ZMK_COMBO(acute_o,    &kp LPAR,    RM1 RB2,     BSE, 140, 100) 
 //ZMK_COMBO(rparent,    &kp RPAR,    RM3 RB2,     BSE, 140, 100)
