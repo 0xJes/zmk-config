@@ -189,8 +189,8 @@ ZMK_LAYER(q, // 6 hg: qu
 								&trans			&trans										&trans			&trans
 )
 ZMK_LAYER(accute_u, // 7 oy: ú
-				&trans			&none			&qu_q Q Q									&trans			&trans			&trans
+				&trans			&trans			&trans										&trans			&trans			&trans
 &trans			&trans			&trans			&trans			&trans		&trans			&trans			&trans			&trans			&trans
-&trans			&trans			&trans			&trans			&trans		&trans			&trans			&trans			&kp RA(J)		&trans
+&trans			&trans			&trans			&trans			&trans		&trans			&trans			&none			&kp RA(J)		&trans
 								&trans			&trans										&trans			&trans
 )
