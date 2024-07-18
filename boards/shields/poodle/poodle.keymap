@@ -33,8 +33,9 @@
 
 &lt {
 	flavor = "balanced";
-	tapping-term-ms = <300>;
+	tapping-term-ms = <250>;
 	quick-tap-ms = <150>;
+	require-prior-idle-ms = <100>;
 };
 
 &mt {
@@ -47,7 +48,7 @@
 ZMK_HOLD_TAP(lm,
 	flavor = "balanced";
 	require-prior-idle-ms = <100>;
-	tapping-term-ms = <350>;
+	tapping-term-ms = <300>;
 	quick-tap-ms = <200>;
 	hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
 	hold-trigger-on-release;
@@ -57,7 +58,7 @@ ZMK_HOLD_TAP(lm,
 ZMK_HOLD_TAP(rm,
 	flavor = "balanced";
 	require-prior-idle-ms = <100>;
-	tapping-term-ms = <350>;
+	tapping-term-ms = <300>;
 	quick-tap-ms = <200>; 
 	hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
 	hold-trigger-on-release;
@@ -72,8 +73,8 @@ ZMK_HOLD_TAP(qu_q,
 
 ZMK_HOLD_TAP(cl, // hold-tap used for sequential combos 
 	flavor = "hold-preferred";
-	tapping-term-ms = <250>;
-	quick-tap-ms = <200>;
+	tapping-term-ms = <150>;
+	quick-tap-ms = <150>;
 	bindings = <&mo>, <&kp>;
 )
 
@@ -99,15 +100,15 @@ ZMK_MOD_MORPH(lr_brc,     bindings = <&kp LBRC>, <&kp RBRC>;   mods = <(MOD_LSFT
 ZMK_MOD_MORPH(lr_bkt,     bindings = <&kp LBKT>, <&kp RBKT>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(lt_gt,      bindings = <&kp LT>, <&kp GT>;       mods = <(MOD_LSFT|MOD_RSFT)>;)
 
-ZMK_COMBO(z,          &kp Z,       LT1 LT3,     BSE,  70,   0) // alpha combos
-ZMK_COMBO(x,          &kp X,       LT3 LT2,     BSE,  70,   0)
-ZMK_COMBO(enie,       &kp RA(N),   LB3 LB1,     BSE,  70,   0)
-ZMK_COMBO(gudiaresis, &gu_dr,      LM3 LT1,     BSE,  70,   0)
-ZMK_COMBO(acute_o,    &kp RA(DOT), RT1 RM2,     BSE, 100,   0)
-ZMK_COMBO(acute_i,    &kp RA(B),   RT2 RM3,     BSE, 100,   0)
-ZMK_COMBO(acute_a,    &kp RA(X),   RB1 RB3,     BSE, 100,   0)
-ZMK_COMBO(acute_e,    &kp RA(G),   RT1 RT3,     BSE, 100,   0)
-ZMK_COMBO(acute_u,    &kp RA(J),   RB2 RB4,     BSE, 100,   0)
+ZMK_COMBO(z,          &kp Z,       LT1 LT3,     BSE,  65,   0) // alpha combos
+ZMK_COMBO(x,          &kp X,       LT3 LT2,     BSE,  65,   0)
+ZMK_COMBO(enie,       &kp RA(N),   LB3 LB1,     BSE,  65,   0)
+ZMK_COMBO(gudiaresis, &gu_dr,      LM3 LT1,     BSE,  65,   0)
+ZMK_COMBO(acute_o,    &kp RA(DOT), RT1 RM2,     BSE,  80,   0)
+ZMK_COMBO(acute_i,    &kp RA(B),   RT2 RM3,     BSE,  80,   0)
+ZMK_COMBO(acute_a,    &kp RA(X),   RB1 RB3,     BSE,  65,   0)
+ZMK_COMBO(acute_e,    &kp RA(G),   RT1 RT3,     BSE,  65,   0)
+ZMK_COMBO(acute_u,    &kp RA(J),   RB2 RB4,     BSE,  90,   0)
 
 ZMK_COMBO(escape,     &kp ESC,     LM1 LM3,     BSE,  80,  75) // horz combos
 ZMK_COMBO(return,     &kp RET,     LM2 LM3, BSE NAV,  70,  75) 
