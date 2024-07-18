@@ -75,6 +75,8 @@ ZMK_HOLD_TAP(cl, // hold-tap used for sequential combos
 	flavor = "hold-preferred";
 	tapping-term-ms = <150>;
 	quick-tap-ms = <150>;
+	hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS LT3 LM4 LM3 LM2 LM1 LM0 LB4 LB3 LB2 LB1 LB0>;
+	hold-trigger-on-release;
 	bindings = <&mo>, <&kp>;
 )
 
