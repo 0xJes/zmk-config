@@ -168,9 +168,9 @@ ZMK_LAYER(numbers,
 )
 
 ZMK_LAYER(mouse,
-				&none			&none			&none										&none			&kp DOWN		&kp UP
-&kp LALT		&kp LCTRL		&none			&mkp LCLK		&none		&none			&mmv MOVE_LEFT	&mmv MOVE_DOWN	&mmv MOVE_UP	&mmv MOVE_RIGHT
-&none			&mkp MB4		&mkp MB5		&none			&none		&none			&msc SCRL_LEFT	&msc SCRL_DOWN	&msc SCRL_UP	&msc SCRL_RIGHT
+				&none			&none			&none										&mkp MB5			&kp DOWN		&kp UP
+&kp LALT		&kp LCTRL		&none			&mkp LCLK		&mkp MB4		&mkp5			&mmv MOVE_LEFT	&mmv MOVE_DOWN	&mmv MOVE_UP	&mmv MOVE_RIGHT
+&none			&none		&none		&none			&none		&mkp MB4		&msc SCRL_LEFT	&msc SCRL_DOWN	&msc SCRL_UP	&msc SCRL_RIGHT
 								&kp LSHFT		&mkp MCLK									&mkp RCLK		&kp RCLK
 )
 
