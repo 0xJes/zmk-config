@@ -118,7 +118,7 @@ ZMK_COMBO(dquote,     &kp DQT,     RT2 RT3,     BSE, 140,   0)
 ZMK_COMBO(tab,        &kp TAB,     RM1 RM2,     BSE,  45, 125)
 ZMK_COMBO(underscore, &kp UNDER,   RM1 RM3,     BSE,  50,  75)
 ZMK_COMBO(backspace,  &kp BSPC,    RM2 RM3, BSE NAV, 100,  80)
-ZMK_COMBO(delete,     &kp DEL,     RM3 RM4, BSE NAV, 180, 120)
+ZMK_COMBO(delete,     &kp DEL,     RM3 RM4, BSE NAV, 140, 120)
 ZMK_COMBO(box_drwng,  &tog BOX,    LT2 RT2,     BSE,  50, 150)
 ZMK_COMBO(bootldr,    &bootloader, LT3 RT3,     BSE,  50, 200)
 
