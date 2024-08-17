@@ -169,9 +169,9 @@ ZMK_LAYER(numbers,
 
 ZMK_LAYER(mouse,
 				&none			&none			&none										&none			&kp DOWN		&kp UP
-&kp LALT		&kp LCTRL		&none			&mkp LCLK		&mkp MB4		&mkp MB5	&mmv MOVE_LEFT	&mmv MOVE_DOWN	&mmv MOVE_UP	&mmv MOVE_RIGHT
+&kp LALT		&kp LCTRL		&none			&kp LGUI		&none			&mkp MB5	&mmv MOVE_LEFT	&mmv MOVE_DOWN	&mmv MOVE_UP	&mmv MOVE_RIGHT
 &none			&none			&none			&none			&none			&mkp MB4	&msc SCRL_LEFT	&msc SCRL_DOWN	&msc SCRL_UP	&msc SCRL_RIGHT
-								&kp LSHFT		&mkp MCLK									&mkp RCLK		&kp RGUI
+								&kp LSHFT		&mkp LCLK									&mkp RCLK		&mkp MCLK
 )
 
 ZMK_LAYER(box_drawing,
