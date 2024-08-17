@@ -150,7 +150,7 @@ ZMK_LAYER(alpha,
 				&kp B			&cl 5 H			&kp G										&comma_semi		&fslh_star		&kp J
 &lm LALT C		&lm LCTRL S		&lt MOU N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&kp E			&rm RCTRL I		&rm LALT M
 &kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
-							    &sft_capsw		&mt RGUI R									&kp SPACE	    &sk RSHFT
+							    &sft_capsw		&mt LGUI R									&kp SPACE	    &sk RSHFT
 )
 
 ZMK_LAYER(navigation,
@@ -168,10 +168,10 @@ ZMK_LAYER(numbers,
 )
 
 ZMK_LAYER(mouse,
-				&none			&none			&none										&mkp MB5			&kp DOWN		&kp UP
-&kp LALT		&kp LCTRL		&none			&mkp LCLK		&mkp MB4		&mkp5			&mmv MOVE_LEFT	&mmv MOVE_DOWN	&mmv MOVE_UP	&mmv MOVE_RIGHT
-&none			&none		&none		&none			&none		&mkp MB4		&msc SCRL_LEFT	&msc SCRL_DOWN	&msc SCRL_UP	&msc SCRL_RIGHT
-								&kp LSHFT		&mkp MCLK									&mkp RCLK		&kp RCLK
+				&none			&none			&none										&none			&kp DOWN		&kp UP
+&kp LALT		&kp LCTRL		&none			&mkp LCLK		&mkp MB4		&mkp MB5	&mmv MOVE_LEFT	&mmv MOVE_DOWN	&mmv MOVE_UP	&mmv MOVE_RIGHT
+&none			&none			&none			&none			&none			&mkp MB4	&msc SCRL_LEFT	&msc SCRL_DOWN	&msc SCRL_UP	&msc SCRL_RIGHT
+								&kp LSHFT		&mkp MCLK									&mkp RCLK		&kp RGUI
 )
 
 ZMK_LAYER(box_drawing,
