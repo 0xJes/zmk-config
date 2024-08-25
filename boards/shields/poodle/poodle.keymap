@@ -142,10 +142,6 @@ ZMK_COMBO(rbrace,     &lr_brc,     LM3 LB2,     BSE, 140, 100)
 ZMK_COMBO(langle,     &lr_bkt,     LT1 LM2,     BSE, 140, 100)
 ZMK_COMBO(rangle,     &lt_gt,      LT3 LM2,     BSE, 140, 100)
 
-//ZMK_COMBO(acute_o,    &kp LPAR,    RM1 RB2,     BSE, 140, 100) 
-//ZMK_COMBO(rparent,    &kp RPAR,    RM3 RB2,     BSE, 140, 100)
-//ZMK_COMBO(rbraket,    &kp RBKT,    RT3 RM2,     BSE, 140, 100)
-
 ZMK_LAYER(alpha,
 				&kp B			&cl 5 H			&kp G										&comma_semi		&fslh_star		&kp J
 &lm LALT C		&lm LCTRL S		&lt MOU N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&kp E			&rm RCTRL I		&rm LALT M
