@@ -181,7 +181,7 @@ ZMK_LAYER(box_drawing,
 // layer-tap shenanigans to enable "sequential combos" where order matters
 
 ZMK_LAYER(q, // 6 hg: qu
-				&trans			&none			&qu_q Q Q									&trans			&trans			&trans
+				&trans			&kp H			&qu_q Q Q									&trans			&trans			&trans
 &trans			&trans			&trans			&trans			&trans		&trans			&trans			&trans			&trans			&trans
 &trans			&trans			&trans			&trans			&trans		&trans			&trans			&trans			&trans			&trans
 								&trans			&trans										&trans			&trans
