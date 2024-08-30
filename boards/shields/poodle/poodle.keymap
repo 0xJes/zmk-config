@@ -109,7 +109,9 @@ ZMK_COMBO(acute_o,    &kp RA(DOT), RT1 RM2,     BSE,  80,   0)
 ZMK_COMBO(acute_i,    &kp RA(B),   RT2 RM3,     BSE,  80,   0)
 ZMK_COMBO(acute_a,    &kp RA(X),   RB1 RB3,     BSE,  65,   0)
 ZMK_COMBO(acute_e,    &kp RA(G),   RT1 RT3,     BSE,  65,   0)
+
 ZMK_COMBO(acute_u,    &kp RA(J),   RB2 RB4,     BSE,  90,   0)
+ZMK_COMBO(qu,         &qu_q,       LT2 LT1,       5,  90,   0)
 
 ZMK_COMBO(escape,     &kp ESC,     LM1 LM3,     BSE,  80,  75) // horz combos
 ZMK_COMBO(return,     &kp RET,     LM2 LM3, BSE NAV,  70,  75) 
@@ -181,7 +183,7 @@ ZMK_LAYER(box_drawing,
 // layer-tap shenanigans to enable "sequential combos" where order matters
 
 ZMK_LAYER(q, // 6 hg: qu
-				&trans			&trans			&qu_q Q Q									&trans			&trans			&trans
+				&trans			&trans			&trans										&trans			&trans			&trans
 &trans			&trans			&trans			&trans			&trans		&trans			&trans			&trans			&trans			&trans
 &trans			&trans			&trans			&trans			&trans		&trans			&trans			&trans			&trans			&trans
 								&trans			&trans										&trans			&trans
