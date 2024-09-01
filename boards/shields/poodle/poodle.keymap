@@ -187,7 +187,7 @@ ZMK_LAYER(q, // 6 hg: qu
 								&trans			&trans										&trans			&trans
 )
 
-ZMK_LAYER(function keys, 
+ZMK_LAYER(function, 
 				&kp F11			&kp F10			&kp F9  									&trans			&trans			&trans
 &kp F4			&kp F3			&kp F2			&kp F1			&trans		&trans			&trans			&trans			&trans			&trans
 &kp F8			&kp F7			&kp F6			&kp F5			&trans		&trans			&trans			&trans			&trans			&trans
