@@ -13,7 +13,6 @@
 #define NAV 1
 #define NUM 2
 #define MOU 3
-#define BOX 4
 
 // key groups
 #define LEFT_HAND_KEYS  LT3 LT2 LT1 LM4 LM3 LM2 LM1 LM0 LB4 LB3 LB2 LB1 LB0
