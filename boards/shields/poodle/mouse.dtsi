@@ -1,7 +1,7 @@
 #pragma once
 
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 30
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 800
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 950
 
 #include <dt-bindings/zmk/mouse.h>
 
