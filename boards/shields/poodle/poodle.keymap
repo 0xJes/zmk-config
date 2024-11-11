@@ -13,6 +13,7 @@
 #define NAV 1
 #define NUM 2
 #define MOU 3
+#define GME 4
 
 // key groups
 #define LEFT_HAND_KEYS  LT3 LT2 LT1 LM4 LM3 LM2 LM1 LM0 LB4 LB3 LB2 LB1 LB0
@@ -120,7 +121,7 @@ ZMK_COMBO(backspace,  &kp BSPC,    RM2 RM3, BSE NAV, 100,  80)
 ZMK_COMBO(delete,     &kp DEL,     RM3 RM4, BSE NAV, 140, 120)
 ZMK_COMBO(bootldr,    &bootloader, LT3 RT3,     BSE,  50, 200)
 
-ZMK_COMBO(gaming,     &to 6,       LT2 RT2,  6  BSE,  50, 200)
+ZMK_COMBO(gaming,     &to 6,       LT2 RT2, GME BSE,  50, 200)
 
 ZMK_COMBO(percent,    &kp PRCNT,   LM0 LB0,     BSE, 100, 150) // vert combos
 ZMK_COMBO(pipe,       &kp PIPE,    LT1 LM1,     BSE, 100, 150)
@@ -143,8 +144,8 @@ ZMK_COMBO(langle,     &lr_bkt,     LT1 LM2,     BSE, 140, 100)
 ZMK_COMBO(rangle,     &lt_gt,      LT3 LM2,     BSE, 140, 100)
 
 ZMK_LAYER(alpha,
-				&kp B			&cl 4 H			&kp G										&comma_semi		&fslh_star		&kp J
-&lm LALT C		&lm LCTRL S		&lt MOU N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&lt 5 E			&rm RCTRL I		&rm LALT M
+				&kp B			&cl 6 H			&kp G										&comma_semi		&fslh_star		&kp J
+&lm LALT C		&lm LCTRL S		&lt MOU N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&lt 6 E			&rm RCTRL I		&rm LALT M
 &kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
 							    &sft_capsw		&mt LGUI R									&kp SPACE	    &sk RSHFT
 )
@@ -170,6 +171,13 @@ ZMK_LAYER(mouse,
 								&kp LSHFT		&mkp LCLK									&mkp RCLK		&mkp MCLK
 )
 
+ZMK_LAYER(gaming, 
+				&kp B			&kp H			&kp G  										&kp COMMA		&kp FSLH		&kp J
+&kp C			&kp S			&kp N			&kp T			&kp K		&kp DOT			&kp A			&kp E			&kp I			&kp M
+&kp P			&kp F			&kp L			&kp D			&kp V		&kp MINUS		&kp U			&kp O			&kp Y			&kp W
+								&kp X			&kp R										&kp SPACE		&kp Z
+)
+
 ZMK_LAYER(q,
 				&trans			&trans			&qu_q Q Q									&trans			&trans			&trans
 &trans			&trans			&trans			&trans			&trans		&trans			&trans			&trans			&trans			&trans
@@ -184,9 +192,3 @@ ZMK_LAYER(function,
 								&trans			&kp F12										&trans			&trans
 )
 
-ZMK_LAYER(gaming, 
-				&kp B			&kp H			&kp G  										&kp COMMA		&kp FSLH		&kp J
-&kp C			&kp S			&kp N			&kp T			&kp K		&kp DOT			&kp A			&kp E			&kp I			&kp M
-&kp P			&kp F			&kp L			&kp D			&kp V		&kp MINUS		&kp U			&kp O			&kp Y			&kp W
-								&kp X			&kp R										&kp SPACE		&kp Z
-)
