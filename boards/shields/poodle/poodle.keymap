@@ -121,7 +121,7 @@ ZMK_COMBO(backspace,  &kp BSPC,    RM2 RM3, BSE NAV, 100,  80)
 ZMK_COMBO(delete,     &kp DEL,     RM3 RM4, BSE NAV, 140, 120)
 ZMK_COMBO(bootldr,    &bootloader, LT3 RT3,     BSE,  50, 200)
 
-ZMK_COMBO(gaming,     &to 6,       LT2 RT2, GME BSE,  50, 200)
+ZMK_COMBO(gaming,     &to 4,       LT2 RT2, GME BSE,  50, 200)
 
 ZMK_COMBO(percent,    &kp PRCNT,   LM0 LB0,     BSE, 100, 150) // vert combos
 ZMK_COMBO(pipe,       &kp PIPE,    LT1 LM1,     BSE, 100, 150)
@@ -144,7 +144,7 @@ ZMK_COMBO(langle,     &lr_bkt,     LT1 LM2,     BSE, 140, 100)
 ZMK_COMBO(rangle,     &lt_gt,      LT3 LM2,     BSE, 140, 100)
 
 ZMK_LAYER(alpha,
-				&kp B			&cl 6 H			&kp G										&comma_semi		&fslh_star		&kp J
+				&kp B			&cl 5 H			&kp G										&comma_semi		&fslh_star		&kp J
 &lm LALT C		&lm LCTRL S		&lt MOU N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&lt 6 E			&rm RCTRL I		&rm LALT M
 &kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
 							    &sft_capsw		&mt LGUI R									&kp SPACE	    &sk RSHFT
