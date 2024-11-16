@@ -162,9 +162,9 @@ ZMK_LAYER(navigation,
 )
 
 ZMK_LAYER(numbers,
-				&none			&div			&mul										&none			&kp RA(N2)		&kp RA(N3)
+				&none			&div			&mul										&none			&none			&none
 &kp N3			&kp N2			&kp N1			&kp N0			&add		&none			&none			&kp DOT			&kp COMMA		&kp MINUS
-&kp N7			&kp N6			&kp N5			&kp N4			&sub		&none			&none			&kp RA(SEMI)	&none			&none
+&kp N7			&kp N6			&kp N5			&kp N4			&sub		&none			&none			&none			&none			&none
 								&none			&kp N8										&kp N9			&kp SPACE
 )
 
