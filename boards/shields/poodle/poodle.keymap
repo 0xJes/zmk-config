@@ -177,8 +177,8 @@ ZMK_LAYER(mouse,
 
 ZMK_LAYER(gaming, 
 				&kp B			&kp UP			&kp G  										&kp COMMA		&kp FSLH		&kp J
-&kp ESC			&kp LEFT		&kp DOWN		&kp RIGHT		&kp K		&kp DOT			&kp A			&kp E			&kp I			&kp M
-&kp Z			&kp X			&kp C			&kp V			&kp V		&kp MINUS		&kp U			&kp O			&kp Y			&kp W
+&kp ESC			&kp LEFT		&kp DOWN		&kp RIGHT		&kp LALT	&kp LALT		&kp A			&kp E			&kp I			&kp M
+&kp Z			&kp X			&kp C			&kp V			&kp LCTRL	&kp RCTRL		&kp U			&kp O			&kp Y			&kp W
 								&kp TAB			&kp R										&kp SPACE		&kp RET
 )
 
