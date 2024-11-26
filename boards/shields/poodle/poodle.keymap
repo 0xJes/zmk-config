@@ -139,9 +139,9 @@ ZMK_COMBO(rbrace,     &lr_brc,     LM3 LB2,     BSE, 140, 100)
 ZMK_COMBO(langle,     &lr_bkt,     LT1 LM2,     BSE, 140, 100)
 ZMK_COMBO(rangle,     &lt_gt,      LT3 LM2,     BSE, 140, 100)
 
-ZMK_COMBO(bootldr,    &bootloader, LT3 LB2 LM1, BSE,  50, 200)
 ZMK_COMBO(gaming,     &tog GME,    LT1 RT1, GME BSE,  50, 200)
 ZMK_COMBO(function,   &tog FUN,    LT2 RT2, FUN BSE,  50, 200)
+ZMK_COMBO(capsword, &caps_word,    LM4 RM4,     BSE,  50, 200)
 
 ZMK_LAYER(alpha,
 				&kp B			&cl 6 H			&kp G										&comma_semi		&fslh_star		&kp J
@@ -166,7 +166,7 @@ ZMK_LAYER(numbers,
 
 ZMK_LAYER(mouse,
 				&none			&none			&none										&none			&none			&none
-&none			&mkp RCLK		&mkp MCLK		&kp LCLK		&none		&mkp MB5		&mmv MOVE_LEFT	&mmv MOVE_DOWN	&mmv MOVE_UP	&mmv MOVE_RIGHT
+&none			&mkp RCLK		&mkp MCLK		&mkp LCLK		&none		&mkp MB5		&mmv MOVE_LEFT	&mmv MOVE_DOWN	&mmv MOVE_UP	&mmv MOVE_RIGHT
 &none			&none			&none			&none			&none		&mkp MB4		&msc SCRL_LEFT	&msc SCRL_DOWN	&msc SCRL_UP	&msc SCRL_RIGHT
 								&none			&none										&none			&none
 )
