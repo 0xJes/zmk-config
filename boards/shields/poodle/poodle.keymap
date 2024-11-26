@@ -89,7 +89,6 @@ ZMK_MACRO(qu,     bindings = <&kp Q &kp U>;)
 ZMK_MACRO(au_sbf, bindings = <&kp A &kp U>;)
 ZMK_MACRO(ua_sbf, bindings = <&kp U &kp A>;)
 
-ZMK_MOD_MORPH(sft_capsw,  bindings = <&sk LSFT>, <&caps_word>; mods = <(         MOD_LSFT)>;)
 ZMK_MOD_MORPH(minu_plus,  bindings = <&kp MINUS>, <&kp PLUS>;  mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(fslh_star,  bindings = <&kp FSLH>, <&kp STAR>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(dot_colon,  bindings = <&kp DOT>, <&kp COLON>;   mods = <(MOD_LSFT|MOD_RSFT)>;)
@@ -147,14 +146,14 @@ ZMK_LAYER(alpha,
 				&kp B			&cl 6 H			&kp G										&comma_semi		&fslh_star		&kp J
 &lm LSHFT C		&lm LALT S		&lm LCTRL N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&rm RCTRL E		&rm LALT I		&rm LSHFT M
 &kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
-							    &sft_capsw		&lt MOU R									&mt LGUI SPACE	    &sk RSHFT
+							    &none			&lt MOU R									&mt LGUI SPACE	&none
 )
 
 ZMK_LAYER(navigation,
 				&none			&none			&none										&none			&none			&none
 &kp LSHFT		&kp LALT		&kp LCTRL		&none			&none		&kp LC(PLUS)	&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT
 &none			&none			&none			&none			&none		&kp LC(MINUS)	&kp HOME		&kp PG_DN		&kp PG_UP		&kp END
-								&kp LC(Y)		&kp LC(Z)									&kp SPACE		&kp RSHFT
+								&none			&none										&none			&none
 )
 
 ZMK_LAYER(numbers,
