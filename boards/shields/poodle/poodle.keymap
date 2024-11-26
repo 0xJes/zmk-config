@@ -145,9 +145,9 @@ ZMK_COMBO(function,   &tog FUN,    LT2 RT2, FUN BSE,  50, 200)
 
 ZMK_LAYER(alpha,
 				&kp B			&cl 6 H			&kp G										&comma_semi		&fslh_star		&kp J
-&lm LALT C		&lm LCTRL S		&lt MOU N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&kp E			&rm RCTRL I		&rm LALT M
+&lm LALT C		&lm LCTRL S		&kp N			&lt NAV T		&kp K		&dot_colon		&lt NUM A		&kp E			&rm RCTRL I		&rm LALT M
 &kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
-							    &sft_capsw		&mt LGUI R									&kp SPACE	    &sk RSHFT
+							    &sft_capsw		&lt MOU R									&mt LGUI SPACE	    &sk RSHFT
 )
 
 ZMK_LAYER(navigation,
