@@ -145,7 +145,7 @@ ZMK_COMBO(function,   &tog FUN,    LT2 RT2, FUN BSE,  50, 200)
 
 ZMK_LAYER(alpha,
 				&kp B			&cl 6 H			&kp G										&comma_semi		&fslh_star		&kp J
-&lm LALT C		&lm LCTRL S		&kp N			&lt NAV T		&kp K		&dot_colon		&lt NUM A		&kp E			&rm RCTRL I		&rm LALT M
+&lm LSHFT C		&lm LALT S		&lm LCTRL N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&rm RCTRL E		&rm LALT I		&rm LSHFT M
 &kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
 							    &sft_capsw		&lt MOU R									&mt LGUI SPACE	    &sk RSHFT
 )
@@ -165,10 +165,10 @@ ZMK_LAYER(numbers,
 )
 
 ZMK_LAYER(mouse,
-				&none			&none			&none										&none			&kp DOWN		&kp UP
-&kp LALT		&kp LCTRL		&none			&kp LGUI		&none		&mkp MB5		&mmv MOVE_LEFT	&mmv MOVE_DOWN	&mmv MOVE_UP	&mmv MOVE_RIGHT
+				&none			&none			&none										&none			&none			&none
+&none			&mkp RCLK		&mkp MCLK		&kp LCLK		&none		&mkp MB5		&mmv MOVE_LEFT	&mmv MOVE_DOWN	&mmv MOVE_UP	&mmv MOVE_RIGHT
 &none			&none			&none			&none			&none		&mkp MB4		&msc SCRL_LEFT	&msc SCRL_DOWN	&msc SCRL_UP	&msc SCRL_RIGHT
-								&kp LSHFT		&mkp LCLK									&mkp RCLK		&mkp MCLK
+								&none			&none										&none			&none
 )
 
 ZMK_LAYER(gaming, 
