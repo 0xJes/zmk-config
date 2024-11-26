@@ -82,10 +82,6 @@ ZMK_HOLD_TAP(cl, // hold-tap used for sequential combos
 	bindings = <&mo>, <&kp>;
 )
 
-ZMK_MACRO(add,    bindings = <&kp SPACE &kp PLUS &kp SPACE>;)
-ZMK_MACRO(sub,    bindings = <&kp SPACE &kp MINUS &kp SPACE>;)
-ZMK_MACRO(div,    bindings = <&kp SPACE &kp FSLH &kp SPACE>;)
-ZMK_MACRO(mul,    bindings = <&kp SPACE &kp STAR &kp SPACE>;)
 ZMK_MACRO(tgrave, bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;)
 ZMK_MACRO(gu_dr,  bindings = <&kp G &kp RA(U)>;)
 ZMK_MACRO(gu_dr,  bindings = <&kp G &kp RA(U)>;)
@@ -162,10 +158,10 @@ ZMK_LAYER(navigation,
 )
 
 ZMK_LAYER(numbers,
-				&none			&div			&mul										&none			&none			&none
-&kp N3			&kp N2			&kp N1			&kp N0			&add		&none			&none			&kp DOT			&kp COMMA		&kp MINUS
-&kp N7			&kp N6			&kp N5			&kp N4			&sub		&none			&none			&none			&none			&none
-								&none			&kp N8										&kp N9			&kp SPACE
+				&trans			&trans			&trans										&trans			&trans			&trans
+&kp N3			&kp N2			&kp N1			&kp N0			&trans		&trans			&trans			&kp DOT			&kp COMMA		&kp MINUS
+&kp N7			&kp N6			&kp N5			&kp N4			&trans		&trans			&trans			&trans			&trans			&trans
+								&trans			&kp N8										&kp N9			&kp SPACE
 )
 
 ZMK_LAYER(mouse,
