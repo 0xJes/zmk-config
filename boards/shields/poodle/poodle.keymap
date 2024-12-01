@@ -146,9 +146,9 @@ ZMK_COMBO(capsword, &caps_word,    LM4 RM4,     BSE,  50, 200)
 
 ZMK_LAYER(alpha,
 				&kp B			&cl 6 H			&kp G										&comma_semi		&fslh_star		&kp J
-&lm LSHFT C		&lm LALT S		&lm LCTRL N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&rm RCTRL E		&rm LALT I		&rm LSHFT M
-&kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
-							    &none			&lt MOU R									&mt LGUI SPACE	&none
+&lm LSHFT C		&lm LCTRL S		&lm LGUI N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&rm RGUI E		&rm RCTRL I		&rm LSHFT M
+&kp P			&kp F			&kp L			&lm LALT D		&kp V		&minu_plus		&rm LALT U		&kp O			&kp Y			&kp W
+							    &none			&lt MOU R									&kp SPACE		&none
 )
 
 ZMK_LAYER(navigation,
