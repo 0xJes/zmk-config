@@ -5,7 +5,6 @@
 #include <zmk-helpers/helper.h>
 
 #include "mouse.dtsi"
-#include "box-drawing.dtsi"
 #include "keylabels.h"
 
 // Function layer toggle
@@ -21,7 +20,7 @@
 // key groups
 #define LEFT_HAND_KEYS  LT3 LT2 LT1 LM4 LM3 LM2 LM1 LM0 LB4 LB3 LB2 LB1 LB0
 #define RIGHT_HAND_KEYS RT1 RT2 RT3 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4
-#define THUMB_KEYS      LH1 LH0 RH0 RH1
+#define THUMB_KEYS      LH0 RH0
 
 // behavior configuration
 &sk {
@@ -148,47 +147,47 @@ ZMK_LAYER(alpha,
 				&kp B			&cl 6 H			&kp G										&comma_semi		&fslh_star		&kp J
 &lm LSHFT C		&lm LCTRL S		&lm LGUI N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&rm RGUI E		&rm RCTRL I		&rm LSHFT M
 &kp P			&kp F			&kp L			&lm LALT D		&kp V		&minu_plus		&rm LALT U		&kp O			&kp Y			&kp W
-							    &none			&lt MOU R									&kp SPACE		&none
+												&lt MOU R									&kp SPACE
 )
 
 ZMK_LAYER(navigation,
 				&none			&none			&none										&none			&none			&none
 &kp LSHFT		&kp LALT		&kp LCTRL		&none			&none		&kp LC(PLUS)	&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT
 &none			&none			&none			&none			&none		&kp LC(MINUS)	&kp HOME		&kp PG_DN		&kp PG_UP		&kp END
-								&none			&none										&none			&none
+												&none										&none
 )
 
 ZMK_LAYER(numbers,
 				&trans			&trans			&trans										&trans			&trans			&trans
 &kp N3			&kp N2			&kp N1			&kp N0			&trans		&trans			&trans			&kp DOT			&kp COMMA		&kp MINUS
 &kp N7			&kp N6			&kp N5			&kp N4			&trans		&trans			&trans			&trans			&trans			&trans
-								&trans			&kp N8										&kp N9			&kp SPACE
+												&kp N8										&kp N9
 )
 
 ZMK_LAYER(mouse,
 				&none			&none			&none										&none			&none			&none
 &none			&mkp RCLK		&mkp MCLK		&mkp LCLK		&none		&mkp MB5		&mmv MOVE_LEFT	&mmv MOVE_DOWN	&mmv MOVE_UP	&mmv MOVE_RIGHT
 &none			&none			&none			&none			&none		&mkp MB4		&msc SCRL_LEFT	&msc SCRL_DOWN	&msc SCRL_UP	&msc SCRL_RIGHT
-								&none			&none										&none			&none
+												&none										&none
 )
 
 ZMK_LAYER(gaming, 
 				&kp B			&kp UP			&kp G  										&kp COMMA		&kp FSLH		&kp J
 &kp C			&kp LEFT		&kp DOWN		&kp RIGHT		&kp ESC		&kp BSPC		&kp A			&kp E			&kp I			&kp M
 &kp Z			&kp X			&kp C			&kp V			&kp LALT	&kp RCTRL		&kp U			&kp O			&kp Y			&kp W
-								&kp TAB			&kp R										&kp SPACE		&kp RET
+												&kp R										&kp SPACE
 )
 
 ZMK_LAYER(function, 
 				&none			&none			&none	  									&none			&none			&none
 &kp F8			&kp F7			&kp F6			&kp F5			&none		&none			&kp F1			&kp F2			&kp F3			&kp F4
 &none			&none			&none			&none			&none		&none			&kp F9			&kp F10			&kp F11			&kp F12
-								&none			&none										&none			&none
+												&none										&none
 )
 
 ZMK_LAYER(q,
 				&trans			&trans			&qu_q Q Q									&trans			&trans			&trans
 &trans			&trans			&trans			&trans			&trans		&trans			&trans			&trans			&trans			&trans
 &trans			&trans			&trans			&trans			&trans		&trans			&trans			&trans			&trans			&trans
-								&trans			&trans										&trans			&trans
+												&trans										&trans
 )
