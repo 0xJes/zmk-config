@@ -1,7 +1,10 @@
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 35
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1000
+#define HOST_OS 1 // Linux setting for unicode helpers
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-
-#define HOST_OS 1 // Linux setting for unicode helpers
+#include <dt-bindings/zmk/mouse.h>
 #include <zmk-helpers/helper.h>
 
 #include "mouse.dtsi"
@@ -25,6 +28,16 @@
 	release-after-ms = <2000>;
 	quick-release; 
 	ignore-modifiers;
+};
+
+&mmv {
+	time-to-max-speed-ms = <350>;
+};
+
+&msc {
+	acceleration-exponent = <1>;
+	time-to-max-speed-ms = <40>;
+	delay-ms = <0>;
 };
 
 &caps_word { // enables kebab and snake case
