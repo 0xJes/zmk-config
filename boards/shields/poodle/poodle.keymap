@@ -86,7 +86,7 @@ ZMK_HOLD_TAP(rm,
 ZMK_HOLD_TAP(qu_q,
 	flavor = "tap-preferred";
 	tapping-term-ms = <190>;
-	bindings = <&kp>, <&qu>;
+	bindings = <&dq>, <&dqu>;
 )
 
 ZMK_HOLD_TAP(cl, // hold-tap used for sequential combos 
@@ -100,10 +100,11 @@ ZMK_HOLD_TAP(cl, // hold-tap used for sequential combos
 ZMK_MACRO(tgrave, bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;)
 ZMK_MACRO(gu_dr,  bindings = <&kp G &kp RA(U)>;)
 ZMK_MACRO(gu_dr,  bindings = <&kp G &kp RA(U)>;)
-ZMK_MACRO(qu,     bindings = <&kp Q &kp U>;)
 ZMK_MACRO(au_sbf, bindings = <&kp A &kp U>;)
 ZMK_MACRO(ua_sbf, bindings = <&kp U &kp A>;)
 
+ZMK_MACRO(dq,     bindings = <&kp BSPC &kp Q &kp U>;)
+ZMK_MACRO(dqu,     bindings = <&kp BSPC &kp Q>;)
 
 ZMK_MOD_MORPH(star_bslh,   bindings = <&kp STAR>  ,<&kp BSLH>     ;mods = <(         MOD_LALT)>;)
 ZMK_MOD_MORPH(fslh,        bindings = <&kp FSLH>  ,<&star_bslh>   ;mods = <(MOD_LSFT|MOD_LALT)>;)
@@ -201,9 +202,3 @@ ZMK_LAYER(function,
 												&none										&none
 )
 
-ZMK_LAYER(q,
-				&trans			&trans			&qu_q Q Q									&trans			&trans			&trans
-&trans			&trans			&trans			&trans			&trans		&trans			&trans			&trans			&trans			&trans
-&trans			&trans			&trans			&trans			&trans		&trans			&trans			&trans			&trans			&trans
-												&trans										&trans
-)
