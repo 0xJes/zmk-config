@@ -131,7 +131,7 @@ ZMK_COMBO(acute_u,     &kp RA(J),   RT2 RT3,     BSE,  90,   0)
 
 ZMK_COMBO(escape,      &kp ESC,     LM1 LM3,     BSE,  80,  75) // horz combos
 ZMK_COMBO(return,      &kp RET,     LM2 LM3, BSE NAV,  70,  75) 
-#ZMK_COMBO(squote,      &kp SQT,     RT1 RT2,     BSE, 140,   0)
+// ZMK_COMBO(squote,      &kp SQT,     RT1 RT2,     BSE, 140,   0)
 ZMK_COMBO(tab,         &kp TAB,      RM1 RM2,     BSE,  45, 125)
 ZMK_COMBO(under_caret, &under_caret,  RM1 RM3,     BSE,  50,  75)
 ZMK_COMBO(backspace,   &kp BSPC,    RM2 RM3, BSE NAV, 100,  80)
