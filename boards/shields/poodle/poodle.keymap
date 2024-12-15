@@ -27,7 +27,7 @@
             label = "ADAPTIVE_A";
             #binding-cells = <0>;
             defaults = <&kp G>;
-            bindings = <&kp Q>;
+            bindings = <&qu_q>;
             antecedents = <H>;
             max-delay-ms = <250>;
         };
@@ -89,13 +89,6 @@ ZMK_HOLD_TAP(qu_q,
 	bindings = <&dq>, <&dqu>;
 )
 
-ZMK_HOLD_TAP(cl, // hold-tap used for sequential combos 
-	flavor = "tap-preferred";
-	tapping-term-ms = <150>;
-	quick-tap-ms = <100>;
-	hold-trigger-key-positions = <LT1>;
-	bindings = <&mo>, <&kp>;
-)
 
 ZMK_MACRO(tgrave, bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;)
 ZMK_MACRO(gu_dr,  bindings = <&kp G &kp RA(U)>;)
