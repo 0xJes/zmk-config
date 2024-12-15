@@ -1,6 +1,6 @@
 manifest:
   defaults:
-    revision: v0.1 # version to use for this module and for ZMK
+    revision: v0.1.0 # version to use for this module and for ZMK
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
