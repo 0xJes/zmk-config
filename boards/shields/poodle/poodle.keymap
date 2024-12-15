@@ -20,7 +20,7 @@
 #define RIGHT_HAND_KEYS RT1 RT2 RT3 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4
 #define THUMB_KEYS      LH0 RH0
 
-/ {
+/* {
     behaviors {
         ak_h: ak_h {
             compatible = "zmk,behavior-adaptive-key";
@@ -32,6 +32,42 @@
 				bindings = <&kp Q>;
 			};
         };
+    };
+}; */
+
+
+/ {
+    behaviors {
+        ak_h: ak_h {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp H>;
+
+            akt_ah { trigger-keys = <A>; max-prior-idle-ms = <300>; bindings = <&kp U>; };
+            akt_uh { trigger-keys = <U>; max-prior-idle-ms = <300>; bindings = <&kp A>; };
+            akt_eh { trigger-keys = <E>; max-prior-idle-ms = <300>; bindings = <&kp O>; };
+        };
+
+        ak_m: ak_m {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp M>;
+
+            akt_gm { trigger-keys = <G>; max-prior-idle-ms = <300>; bindings = <&kp L>; };
+            akt_pm { trigger-keys = <P>; max-prior-idle-ms = <300>; bindings = <&kp L>; };
+        };
+
+        // And similarly for VP->VL, PV->LV, BT->BL, TB->LB
+
+        ak_g: ak_g {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp G>;
+
+            // Binding two behaviors: JG->JPG
+            akt_jg { trigger-keys = <J>; max-prior-idle-ms = <300>; bindings = <&kp P &kp G>; };
+        };
+
     };
 };
 
