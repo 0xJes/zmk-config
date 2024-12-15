@@ -1,6 +1,5 @@
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 35
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 3000
-
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 3200  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 35    // default: 10
 #define BSE 0
 #define NAV 1
 #define NUM 2
