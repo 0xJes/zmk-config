@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 2300
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 2100
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 35  
 
 #include <dt-bindings/zmk/mouse.h>
