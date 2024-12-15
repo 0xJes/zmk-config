@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1800
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1700
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 38
 
 #include <dt-bindings/zmk/mouse.h>
@@ -140,8 +140,8 @@ ZMK_COMBO(acute_a,     &kp RA(X),   RB1 RB3,     BSE,  65,   0)
 ZMK_COMBO(acute_e,     &kp RA(G),   RT1 RT3,     BSE,  65,   0)
 ZMK_COMBO(acute_u,     &kp RA(J),   RT2 RT3,     BSE,  90,   0)
 
-ZMK_COMBO(escape,      &kp ESC,     LM1 LM3,     BSE,  80,  75) // horz combos
-ZMK_COMBO(return,      &kp RET,     LM2 LM3, BSE NAV,  70,  75) 
+// ZMK_COMBO(escape,      &kp ESC,     LM1 LM3,     BSE,  80,  75) // horz combos
+// ZMK_COMBO(return,      &kp RET,     LM2 LM3, BSE NAV,  70,  75) 
 ZMK_COMBO(tab,         &kp TAB,      RM1 RM2,     BSE,  45, 125)
 ZMK_COMBO(under_caret, &under_caret,  RM1 RM3,     BSE,  50,  75)
 ZMK_COMBO(backspace,   &kp BSPC,    RM2 RM3, BSE NAV,  80,  80)
@@ -171,41 +171,41 @@ ZMK_LAYER(alpha,
 				&kp B			&kp H			&ad_h										&ad_comma		&ad_slash			&kp J
 &lm LSHFT C		&lm LALT S		&lm LCTRL N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&rm RCTRL E		&rm LALT I		&rm RSHFT M
 &kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
-												&lt MOU R									&mt RGUI SPACE
+								&kp RET			&lt MOU R									&mt RGUI SPACE  &kp ESC
 )
 
 ZMK_LAYER(navigation,
 				&none			&none			&none										&none			&none			&none
 &kp LSHFT		&kp LALT		&kp LCTRL		&none			&none		&kp LC(PLUS)	&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT
 &none			&none			&none			&none			&none		&kp LC(MINUS)	&kp HOME		&kp PG_DN		&kp PG_UP		&kp END
-												&none										&none
+								&none			&none										&none			&none
 )
 
 ZMK_LAYER(numbers,
 				&trans			&trans			&trans										&trans			&trans			&trans
 &kp N3			&kp N2			&kp N1			&kp N0			&trans		&trans			&trans			&kp DOT			&kp COMMA		&kp MINUS
 &kp N7			&kp N6			&kp N5			&kp N4			&trans		&trans			&trans			&trans			&trans			&trans
-												&kp N8										&kp N9
+								&none			&kp N8										&kp N9          &none
 )
 
 ZMK_LAYER(mouse,
 				&none			&none			&none										&none			&none			&none
 &kp LSHFT		&mkp RCLK		&mkp MCLK		&mkp LCLK		&none		&mkp MB5		&mmv MOVE_LEFT	&mmv MOVE_DOWN	&mmv MOVE_UP	&mmv MOVE_RIGHT
 &none			&none			&none			&none			&none		&mkp MB4		&msc SCRL_LEFT	&msc SCRL_DOWN	&msc SCRL_UP	&msc SCRL_RIGHT
-												&none										&kp RGUI
+								&none			&none										&kp RGUI        &none
 )
 
 ZMK_LAYER(gaming, 
 				&kp B			&kp UP			&kp G  										&kp COMMA		&kp FSLH		&kp J
 &kp C			&kp LEFT		&kp DOWN		&kp RIGHT		&kp ESC		&kp BSPC		&kp A			&kp E			&kp I			&kp M
 &kp P			&kp F			&kp L			&kp D			&kp TAB		&kp RET			&kp U			&kp O			&kp Y			&kp W
-												&kp R										&kp SPACE
+								&none			&kp R										&kp SPACE		&none
 )
 
 ZMK_LAYER(function, 
 				&none			&none			&none	  									&none			&none			&none
 &kp F8			&kp F7			&kp F6			&kp F5			&none		&none			&kp F1			&kp F2			&kp F3			&kp F4
 &none			&none			&none			&none			&none		&none			&kp F9			&kp F10			&kp F11			&kp F12
-												&none										&none
+								&none			&none										&none			&none
 )
 
