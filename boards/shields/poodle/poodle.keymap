@@ -20,14 +20,6 @@
 
 / {
     behaviors {
-        ad_h: adaptive_q_qu {
-            compatible = "zmk,behavior-antecedent-morph";
-            #binding-cells = <0>;
-            defaults = <&kp G>;
-            bindings = <&qu_q Q Q>;
-            antecedents = <H>;
-            max-delay-ms = <250>;
-        };
         ad_comma: adaptive_quote {
             compatible = "zmk,behavior-antecedent-morph";
             #binding-cells = <0>;
@@ -98,8 +90,8 @@ ZMK_HOLD_TAP(rm,
 )
 
 
-ZMK_MACRO(dq,     bindings = <&kp BSPC &kp Q &kp U>;)
-ZMK_MACRO(dqu,     bindings = <&kp BSPC &kp Q>;)
+ZMK_MACRO(dq,     bindings = < &kp Q &kp U>;)
+ZMK_MACRO(dqu,     bindings = <&kp Q>;)
 ZMK_HOLD_TAP(qu_q,
 	flavor = "tap-preferred";
 	tapping-term-ms = <190>;
@@ -168,7 +160,7 @@ ZMK_COMBO(function,   &tog FUN,    LT2 RT2, FUN BSE,  50, 200)
 ZMK_COMBO(capsword, &caps_word,    LM4 RM4,     BSE,  50, 200)
 
 ZMK_LAYER(alpha,
-				&kp B			&kp H			&ad_h										&ad_comma		&ad_slash			&kp J
+				&kp B			&kp H			&kp G										&ad_comma		&ad_slash			&kp J
 &lm LSHFT C		&lm LALT S		&lm LCTRL N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&rm RCTRL E		&rm LALT I		&rm RSHFT M
 &kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
 								&kp RET			&lt MOU R									&mt RGUI SPACE  &kp ESC
