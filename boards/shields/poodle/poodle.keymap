@@ -31,7 +31,7 @@
         ad_comma: adaptive_quote {
             compatible = "zmk,behavior-antecedent-morph";
             #binding-cells = <0>;
-            defaults = <&kp COMMA>;
+            defaults = <&comma>;
             bindings = <&m_sqt>;
             antecedents = <FSLH>;
             max-delay-ms = <250>;
@@ -39,7 +39,7 @@
         ad_slash: adaptive_dquote {
             compatible = "zmk,behavior-antecedent-morph";
             #binding-cells = <0>;
-            defaults = <&kp FSLH>;
+            defaults = <&m_fslh>;
             bindings = <&m_dqt>;
             antecedents = <COMMA>;
             max-delay-ms = <250>;
@@ -115,7 +115,7 @@ ZMK_MACRO(au_sbf, bindings = <&kp A &kp U>;)
 ZMK_MACRO(ua_sbf, bindings = <&kp U &kp A>;)
 
 ZMK_MOD_MORPH(star_bslh,   bindings = <&kp STAR>  ,<&kp BSLH>     ;mods = <(         MOD_LALT)>;)
-ZMK_MOD_MORPH(fslh,        bindings = <&kp FSLH>  ,<&star_bslh>   ;mods = <(MOD_LSFT|MOD_LALT)>;)
+ZMK_MOD_MORPH(m_fslh,        bindings = <&kp FSLH>  ,<&star_bslh>   ;mods = <(MOD_LSFT|MOD_LALT)>;)
 
 ZMK_MOD_MORPH(semi_at,     bindings = <&kp SEMI>  ,<&kp AT>       ;mods = <(         MOD_LALT)>;)
 ZMK_MOD_MORPH(comma,       bindings = <&kp COMMA> ,<&semi_at>     ;mods = <(MOD_LSFT|MOD_LALT)>;)
