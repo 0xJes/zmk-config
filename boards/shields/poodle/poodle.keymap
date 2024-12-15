@@ -1,5 +1,5 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 2000
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 35  
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1900
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 38
 
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/keys.h>
@@ -144,7 +144,7 @@ ZMK_COMBO(escape,      &kp ESC,     LM1 LM3,     BSE,  80,  75) // horz combos
 ZMK_COMBO(return,      &kp RET,     LM2 LM3, BSE NAV,  70,  75) 
 ZMK_COMBO(squote,      &ad_comma,     RT1 RT2,     BSE, 140,   0)
 ZMK_COMBO(tab,         &kp TAB,      RM1 RM2,     BSE,  45, 125)
-ZMK_COMBO(under_caret, &under_caret,  RM1 RM3,     BSE,  50,  75)
+// ZMK_COMBO(under_caret, &under_caret,  RM1 RM3,     BSE,  50,  75)
 ZMK_COMBO(backspace,   &kp BSPC,    RM2 RM3, BSE NAV,  80,  80)
 ZMK_COMBO(delete,      &kp DEL,     RM3 RM4, BSE NAV, 140, 120)
 
@@ -169,7 +169,7 @@ ZMK_COMBO(function,   &tog FUN,    LT2 RT2, FUN BSE,  50, 200)
 ZMK_COMBO(capsword, &caps_word,    LM4 RM4,     BSE,  50, 200)
 
 ZMK_LAYER(alpha,
-				&kp B			&kp H			&ad_h										&comma			&ad_slash			&kp J
+				&kp B			&kp H			&ad_h										&ad_comma		&ad_slash			&kp J
 &lm LSHFT C		&lm LALT S		&lm LCTRL N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&rm RCTRL E		&rm LALT I		&rm RSHFT M
 &kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
 												&lt MOU R									&mt RGUI SPACE
