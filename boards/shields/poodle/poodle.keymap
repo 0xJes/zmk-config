@@ -86,7 +86,7 @@ ZMK_HOLD_TAP(rm,
 ZMK_HOLD_TAP(qu_q,
 	flavor = "tap-preferred";
 	tapping-term-ms = <190>;
-	bindings = <&dq>, <&dqu>;
+	bindings = <&dqu>, <&dq>;
 )
 
 
