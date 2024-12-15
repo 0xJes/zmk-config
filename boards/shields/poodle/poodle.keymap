@@ -21,12 +21,6 @@
 #define THUMB_KEYS      LH0 RH0
 
 // behavior configuration
-&sk {
-	release-after-ms = <2000>;
-	quick-release; 
-	ignore-modifiers;
-};
-
 &mmv {
 	time-to-max-speed-ms = <350>;
 };
