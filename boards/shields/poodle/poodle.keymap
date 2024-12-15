@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 2500
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 2300
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 35  
 
 #include <dt-bindings/zmk/mouse.h>
@@ -28,14 +28,23 @@
             antecedents = <H>;
             max-delay-ms = <250>;
         };
-        ad_comma: adaptive_quote_dquote {
+        ad_comma: adaptive_quote {
             compatible = "zmk,behavior-antecedent-morph";
             #binding-cells = <0>;
             defaults = <&kp COMMA>;
-            bindings = <&kp SQT>;
+            bindings = <&m_sqt>;
             antecedents = <FSLH>;
             max-delay-ms = <250>;
         };
+        ad_slash: adaptive_dquote {
+            compatible = "zmk,behavior-antecedent-morph";
+            #binding-cells = <0>;
+            defaults = <&kp FSLH>;
+            bindings = <&m_dqt>;
+            antecedents = <COMMA>;
+            max-delay-ms = <250>;
+        };
+		
     };
 };
 
@@ -97,6 +106,8 @@ ZMK_HOLD_TAP(qu_q,
 	bindings = <&dqu>, <&dq>;
 )
 
+ZMK_MACRO(m_sqt,     bindings = <&kp BSPC &kp SQT>;)
+ZMK_MACRO(m_dqt,     bindings = <&kp BSPC &kp DQT>;)
 
 ZMK_MACRO(gu_dr,  bindings = <&kp G &kp RA(U)>;)
 ZMK_MACRO(gu_dr,  bindings = <&kp G &kp RA(U)>;)
@@ -158,7 +169,7 @@ ZMK_COMBO(function,   &tog FUN,    LT2 RT2, FUN BSE,  50, 200)
 ZMK_COMBO(capsword, &caps_word,    LM4 RM4,     BSE,  50, 200)
 
 ZMK_LAYER(alpha,
-				&kp B			&kp H			&ad_h										&ad_comma		&fslh			&kp J
+				&kp B			&kp H			&ad_h										&ad_comma		&ad_slash			&kp J
 &lm LSHFT C		&lm LALT S		&lm LCTRL N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&rm RCTRL E		&rm LALT I		&rm RSHFT M
 &kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
 												&lt MOU R									&mt RGUI SPACE
