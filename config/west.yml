@@ -11,6 +11,7 @@ manifest:
       import: app/west.yml
     - name: zmk-leader-key
       remote: urob
+      revision: v0.1
     - name: zmk-helpers
       remote: urob
       revision: v2 # this will eventually become main
