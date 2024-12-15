@@ -19,17 +19,17 @@
 #define RIGHT_HAND_KEYS RT1 RT2 RT3 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4
 #define THUMB_KEYS      LH0 RH0
 
+
 / {
     behaviors {
-        ak_h: ak_h {
-            compatible = "zmk,behavior-adaptive-key";
+        ad_h: adaptive_a {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "ADAPTIVE_A";
             #binding-cells = <0>;
-            bindings = <&kp H>;
-            akt_ah { 
-				trigger-keys = <G>;
-				max-prior-idle-ms = <300>;
-				bindings = <&kp Q>;
-			};
+            defaults = <&kp G>;
+            bindings = <&kp G>;
+            antecedents = <H>;
+            max-delay-ms = <250>;
         };
     };
 };
@@ -160,7 +160,7 @@ ZMK_COMBO(function,   &tog FUN,    LT2 RT2, FUN BSE,  50, 200)
 ZMK_COMBO(capsword, &caps_word,    LM4 RM4,     BSE,  50, 200)
 
 ZMK_LAYER(alpha,
-				&kp B			&ak_h			&kp G										&comma			&fslh			&kp J
+				&kp B			&ad_h			&kp G										&comma			&fslh			&kp J
 &lm LSHFT C		&lm LALT S		&lm LCTRL N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&rm RCTRL E		&rm LALT I		&rm RSHFT M
 &kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
 												&lt MOU R									&mt RGUI SPACE
