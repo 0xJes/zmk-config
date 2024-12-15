@@ -27,7 +27,7 @@
             label = "ADAPTIVE_A";
             #binding-cells = <0>;
             defaults = <&kp G>;
-            bindings = <&qu_q>;
+            bindings = <&qu_q Q Q>;
             antecedents = <H>;
             max-delay-ms = <250>;
         };
