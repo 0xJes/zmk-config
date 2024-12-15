@@ -21,14 +21,15 @@
 
 / {
     behaviors {
-        ad_a: adaptive_a {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "ADAPTIVE_A";
+        ak_h: ak_h {
+            compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            defaults = <&kp G>;
-            bindings = <&kp Q>;
-            antecedents = <H>;
-            max-delay-ms = <250>;
+            bindings = <&kp H>;
+            akt_ah { 
+				trigger-keys = <G>;
+				max-prior-idle-ms = <300>;
+				bindings = <&kp Q>;
+			};
         };
     };
 };

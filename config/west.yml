@@ -4,16 +4,13 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob   
-    - name: ssbb
-      url-base: https://github.com/ssbu 
   projects:
     - name: zmk
       remote: zmkfirmware
-      import: app/west.yml
       revision: main
-    - name: zmk-antecedent-morph
-      remote: ssbb
-      revision: v1
+      import: app/west.yml
+    - name: zmk-leader-key
+      remote: urob
     - name: zmk-helpers
       remote: urob
       revision: v2 # this will eventually become main
