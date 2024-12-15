@@ -26,7 +26,7 @@
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&kp H>;
-            akt_ah { trigger-keys = <B>; max-prior-idle-ms = <300>; bindings = <&kp U>; };
+            akt_ah { trigger-keys = <G>; max-prior-idle-ms = <300>; bindings = <&kp Q>; };
         };
     };
 };
