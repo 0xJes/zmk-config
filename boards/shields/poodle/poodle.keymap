@@ -69,11 +69,11 @@ ZMK_HOLD_TAP(rm,
 )
 
 
-ZMK_HOLD_TAP(qu_q,
-	flavor = "tap-preferred";
-	tapping-term-ms = <190>;
-	bindings = <&dq &kp Q>;
-)
+//ZMK_HOLD_TAP(qu_q,
+//	flavor = "tap-preferred";
+//	tapping-term-ms = <190>;
+//	bindings = <&dq>, <&kp Q>;
+//)
 
 ZMK_MACRO(dq,     bindings = <&kp Q &kp U>;)
 ZMK_MACRO(gu_dr,  bindings = <&kp G &kp RA(U)>;)
