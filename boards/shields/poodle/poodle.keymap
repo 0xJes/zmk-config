@@ -18,27 +18,6 @@
 #define GME 4
 #define FUN 5
 
-/ {
-    behaviors {
-        ad_comma: adaptive_quote {
-            compatible = "zmk,behavior-antecedent-morph";
-            #binding-cells = <0>;
-            defaults = <&comma>;
-            bindings = <&m_sqt>;
-            antecedents = <FSLH>;
-            max-delay-ms = <250>;
-        };
-        ad_slash: adaptive_dquote {
-            compatible = "zmk,behavior-antecedent-morph";
-            #binding-cells = <0>;
-            defaults = <&m_fslh>;
-            bindings = <&m_dqt>;
-            antecedents = <COMMA>;
-            max-delay-ms = <250>;
-        };
-		
-    };
-};
 
 // behavior configuration
 &mmv {
@@ -91,11 +70,10 @@ ZMK_HOLD_TAP(rm,
 
 
 ZMK_MACRO(dq,     bindings = < &kp Q &kp U>;)
-ZMK_MACRO(dqu,     bindings = <&kp Q>;)
 ZMK_HOLD_TAP(qu_q,
 	flavor = "tap-preferred";
 	tapping-term-ms = <190>;
-	bindings = <&dqu>, <&dq>;
+	bindings = <&dqu>, <&kp Q>;
 )
 
 ZMK_MACRO(m_sqt,     bindings = <&kp BSPC &kp SQT>;)
@@ -114,14 +92,12 @@ ZMK_MOD_MORPH(comma,       bindings = <&kp COMMA> ,<&semi_at>     ;mods = <(MOD_
 
 ZMK_MOD_MORPH(minu_plus,   bindings = <&kp MINUS> ,<&kp PLUS>     ;mods = <(MOD_LSFT         )>;)
 ZMK_MOD_MORPH(dot_colon,   bindings = <&kp DOT>   ,<&kp COLON>    ;mods = <(MOD_LSFT         )>;)
-ZMK_MOD_MORPH(lr_par,      bindings = <&kp LPAR>  ,<&kp RPAR>     ;mods = <(         MOD_RSFT)>;)
-ZMK_MOD_MORPH(lr_brc,      bindings = <&kp LBRC>  ,<&kp RBRC>     ;mods = <(         MOD_RSFT)>;)
-ZMK_MOD_MORPH(lr_bkt,      bindings = <&kp LBKT>  ,<&kp RBKT>     ;mods = <(         MOD_RSFT)>;)
-ZMK_MOD_MORPH(lt_gt,       bindings = <&kp LT>    ,<&kp GT>       ;mods = <(         MOD_RSFT)>;)
 ZMK_MOD_MORPH(questmrks,   bindings = <&kp QMARK> ,<&kp RA(FSLH)> ;mods = <(MOD_LSFT         )>;)
 ZMK_MOD_MORPH(exclmrks,    bindings = <&kp EXCL>  ,<&kp RA(N1)>   ;mods = <(MOD_LSFT         )>;)
 ZMK_MOD_MORPH(under_caret, bindings = <&kp UNDER> ,<&kp CARET>    ;mods = <(MOD_LSFT         )>;)
 
+
+//        NAME         OUTPUT       COMBOS    LAYERS TIME IDLE
 ZMK_COMBO(z,           &kp Z,       LT1 LT3,     BSE,  65,   0) // alpha combos
 ZMK_COMBO(x,           &kp X,       LT3 LT2,     BSE,  65,   0)
 ZMK_COMBO(enie,        &kp RA(N),   LB3 LB1,     BSE,  65,   0)
@@ -132,8 +108,7 @@ ZMK_COMBO(acute_a,     &kp RA(X),   RB1 RB3,     BSE,  65,   0)
 ZMK_COMBO(acute_e,     &kp RA(G),   RT1 RT3,     BSE,  65,   0)
 ZMK_COMBO(acute_u,     &kp RA(J),   RT2 RT3,     BSE,  90,   0)
 
-// ZMK_COMBO(escape,      &kp ESC,     LM1 LM3,     BSE,  80,  75) // horz combos
-ZMK_COMBO(qu_ad,      &qu_q Q Q,   LM2 LM3, BSE NAV,  70,  75) 
+ZMK_COMBO(qu_ad,       &qu_q Q Q,   LM2 LM3, BSE NAV,  70,  75) 
 ZMK_COMBO(tab,         &kp TAB,      RM1 RM2,     BSE,  45, 125)
 ZMK_COMBO(under_caret, &under_caret, RM1 RM3,     BSE,  50,  75)
 ZMK_COMBO(backspace,   &kp BSPC,    RM2 RM3, BSE NAV,  80,  80)
@@ -150,7 +125,6 @@ ZMK_COMBO(dolar,      &kp DLLR,    RM1 RB1,     BSE, 100, 150)
 ZMK_COMBO(hash,       &kp HASH,    RM2 RB2,     BSE, 100, 150)
 ZMK_COMBO(questmrks,  &questmrks,  RM3 RB3,     BSE, 100, 150)
 
-ZMK_COMBO(lbrace,     &lr_par,     LM1 LB1,     BSE, 140, 100) // diag combLs
 ZMK_COMBO(rbrace,     &lr_brc,     LM3 LB2,     BSE, 140, 100)
 ZMK_COMBO(langle,     &lr_bkt,     LM3 LB3,     BSE, 140, 100)
 ZMK_COMBO(rangle,     &lt_gt,      LT3 LM3,     BSE, 140, 100)
@@ -159,8 +133,26 @@ ZMK_COMBO(gaming,     &tog GME,    LT1 RT1, GME BSE,  50, 200)
 ZMK_COMBO(function,   &tog FUN,    LT2 RT2, FUN BSE,  50, 200)
 ZMK_COMBO(capsword, &caps_word,    LM4 RM4,     BSE,  50, 200)
 
+ZMK_COMBO(lbrc,       &kp LBRC,    LT1 LM1,     BSE, 100, 150)
+ZMK_COMBO(lpar,       &kp LPAR,    LM1 LB1,     BSE, 100, 150)
+ZMK_COMBO(lt,         &kp LT,      LT2 LM2,     BSE, 100, 150)
+ZMK_COMBO(lbkt,       &kp LBKT,    LM2 LB2,     BSE, 100, 150)
+ZMK_COMBO(rbrc,       &kp RBRC,    RT1 RM1,     BSE, 100, 150)
+ZMK_COMBO(rpar,       &kp RPAR,    RM1 RB1,     BSE, 100, 150)
+ZMK_COMBO(gt,         &kp GT,      RT2 RM2,     BSE, 100, 150)
+ZMK_COMBO(rbkt,       &kp RBKT,    RM2 RB2,     BSE, 100, 150)
+
+
+ZMK_COMBO(function,   &tog FUN,    LT2 RT2, FUN BSE,  50, 200)
+ZMK_COMBO(function,   &tog FUN,    LT2 RT2, FUN BSE,  50, 200)
+ZMK_COMBO(function,   &tog FUN,    LT2 RT2, FUN BSE,  50, 200)
+ZMK_COMBO(function,   &tog FUN,    LT2 RT2, FUN BSE,  50, 200)
+ZMK_COMBO(function,   &tog FUN,    LT2 RT2, FUN BSE,  50, 200)
+
+
+
 ZMK_LAYER(alpha,
-				&kp B			&kp H			&kp G										&ad_comma		&ad_slash			&kp J
+				&kp B			&kp H			&kp G										&comma			&m_fslh			&kp J
 &lm LSHFT C		&lm LALT S		&lm LCTRL N		&lt NAV T		&kp K		&dot_colon		&lt NUM A		&rm RCTRL E		&rm LALT I		&rm RSHFT M
 &kp P			&kp F			&kp L			&kp D			&kp V		&minu_plus		&kp U			&kp O			&kp Y			&kp W
 								&kp RET			&lt MOU R									&mt RGUI SPACE  &kp ESC
