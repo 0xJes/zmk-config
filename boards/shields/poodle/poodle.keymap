@@ -69,14 +69,13 @@ ZMK_HOLD_TAP(rm,
 )
 
 
-ZMK_MACRO(dq,        bindings = <&kp Q &kp U>;)
 ZMK_HOLD_TAP(qu_q,
 	flavor = "tap-preferred";
 	tapping-term-ms = <190>;
 	bindings = <&dq>, <&kp Q>;
 )
 
-
+ZMK_MACRO(dq,     bindings = <&kp Q &kp U>;)
 ZMK_MACRO(gu_dr,  bindings = <&kp G &kp RA(U)>;)
 ZMK_MACRO(gu_dr,  bindings = <&kp G &kp RA(U)>;)
 ZMK_MACRO(au_sbf, bindings = <&kp A &kp U>;)
@@ -103,7 +102,7 @@ ZMK_COMBO(acute_i,    &kp RA(B),    RT2 RM3,     BSE,  80,   0)
 ZMK_COMBO(acute_a,    &kp RA(X),    RB1 RB3,     BSE,  65,   0)
 ZMK_COMBO(acute_e,    &kp RA(G),    RT1 RT3,     BSE,  65,   0)
 ZMK_COMBO(acute_u,    &kp RA(J),    RT2 RT3,     BSE,  90,   0)
-ZMK_COMBO(qu_ad,      &qu_q Q Q,    LM2 LM3,     BSE,  70,  75)
+ZMK_COMBO(qu_ad,      &kp Q,        LM2 LM3,     BSE,  70,  75)
  
 ZMK_COMBO(tab,        &kp TAB,      RM1 RM2,     BSE,  45, 125)
 ZMK_COMBO(under,      &kp UNDER,    RM1 RM3,     BSE,  50,  75)
