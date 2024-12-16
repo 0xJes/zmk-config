@@ -73,7 +73,7 @@ ZMK_MACRO(dq,     bindings = < &kp Q &kp U>;)
 ZMK_HOLD_TAP(qu_q,
 	flavor = "tap-preferred";
 	tapping-term-ms = <190>;
-	bindings = <&dqu>, <&kp Q>;
+	bindings = <&dq>, <&kp Q>;
 )
 
 ZMK_MACRO(m_sqt,     bindings = <&kp BSPC &kp SQT>;)
@@ -95,7 +95,6 @@ ZMK_MOD_MORPH(dot_colon,   bindings = <&kp DOT>   ,<&kp COLON>    ;mods = <(MOD_
 ZMK_MOD_MORPH(questmrks,   bindings = <&kp QMARK> ,<&kp RA(FSLH)> ;mods = <(MOD_LSFT         )>;)
 ZMK_MOD_MORPH(exclmrks,    bindings = <&kp EXCL>  ,<&kp RA(N1)>   ;mods = <(MOD_LSFT         )>;)
 ZMK_MOD_MORPH(under_caret, bindings = <&kp UNDER> ,<&kp CARET>    ;mods = <(MOD_LSFT         )>;)
-
 
 //        NAME         OUTPUT       COMBOS    LAYERS TIME IDLE
 ZMK_COMBO(z,           &kp Z,       LT1 LT3,     BSE,  65,   0) // alpha combos
