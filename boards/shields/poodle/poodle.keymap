@@ -124,10 +124,6 @@ ZMK_COMBO(dolar,      &kp DLLR,    RM1 RB1,     BSE, 100, 150)
 ZMK_COMBO(hash,       &kp HASH,    RM2 RB2,     BSE, 100, 150)
 ZMK_COMBO(questmrks,  &questmrks,  RM3 RB3,     BSE, 100, 150)
 
-ZMK_COMBO(rbrace,     &lr_brc,     LM3 LB2,     BSE, 140, 100)
-ZMK_COMBO(langle,     &lr_bkt,     LM3 LB3,     BSE, 140, 100)
-ZMK_COMBO(rangle,     &lt_gt,      LT3 LM3,     BSE, 140, 100)
-
 ZMK_COMBO(gaming,     &tog GME,    LT1 RT1, GME BSE,  50, 200)
 ZMK_COMBO(function,   &tog FUN,    LT2 RT2, FUN BSE,  50, 200)
 ZMK_COMBO(capsword, &caps_word,    LM4 RM4,     BSE,  50, 200)
