@@ -93,7 +93,6 @@ ZMK_MOD_MORPH(comma,       bindings = <&kp COMMA> ,<&semi_at>     ;mods = <(MOD_
 ZMK_MOD_MORPH(minu_plus,   bindings = <&kp MINUS> ,<&kp PLUS>     ;mods = <(MOD_LSFT         )>;)
 ZMK_MOD_MORPH(dot_colon,   bindings = <&kp DOT>   ,<&kp COLON>    ;mods = <(MOD_LSFT         )>;)
 ZMK_MOD_MORPH(questmrks,   bindings = <&kp QMARK> ,<&kp RA(FSLH)> ;mods = <(MOD_LSFT         )>;)
-ZMK_MOD_MORPH(exclmrks,    bindings = <&kp EXCL>  ,<&kp RA(N1)>   ;mods = <(MOD_LSFT         )>;)
 ZMK_MOD_MORPH(under_caret, bindings = <&kp UNDER> ,<&kp CARET>    ;mods = <(MOD_LSFT         )>;)
 
 //        NAME         OUTPUT       COMBOS    LAYERS TIME IDLE
@@ -127,14 +126,18 @@ ZMK_COMBO(gaming,     &tog GME,    LT1 RT1, GME BSE,  50, 200)
 ZMK_COMBO(function,   &tog FUN,    LT2 RT2, FUN BSE,  50, 200)
 ZMK_COMBO(capsword, &caps_word,    LM4 RM4,     BSE,  50, 200)
 
-ZMK_COMBO(lbrc,       &kp LBRC,    LT1 LM1,     BSE, 100, 150)
-ZMK_COMBO(lpar,       &kp LPAR,    LM1 LB1,     BSE, 100, 150)
-ZMK_COMBO(lt,         &kp LT,      LT2 LM2,     BSE, 100, 150)
-ZMK_COMBO(lbkt,       &kp LBKT,    LM2 LB2,     BSE, 100, 150)
-ZMK_COMBO(rbrc,       &kp RBRC,    RT1 RM1,     BSE, 100, 150)
-ZMK_COMBO(rpar,       &kp RPAR,    RM1 RB1,     BSE, 100, 150)
-ZMK_COMBO(gt,         &kp GT,      RT2 RM2,     BSE, 100, 150)
-ZMK_COMBO(rbkt,       &kp RBKT,    RM2 RB2,     BSE, 100, 150)
+ZMK_COMBO(lbrc,       &kp LBRC,     LT1 LM1,     BSE, 100, 150)
+ZMK_COMBO(lpar,       &kp LPAR,     LM1 LB1,     BSE, 100, 150)
+ZMK_COMBO(lt,         &kp LT,       LT2 LM2,     BSE, 100, 150)
+ZMK_COMBO(lbkt,       &kp LBKT,     LM2 LB2,     BSE, 100, 150)
+ZMK_COMBO(lexcl,      &kp RA(N1),   LT3 LM3,     BSE, 100, 150)
+ZMK_COMBO(lqmark,     &kp RA(FSLH), LT3 LM3,     BSE, 100, 150)
+ZMK_COMBO(rbrc,       &kp RBRC,     RT1 RM1,     BSE, 100, 150)
+ZMK_COMBO(rpar,       &kp RPAR,     RM1 RB1,     BSE, 100, 150)
+ZMK_COMBO(gt,         &kp GT,       RT2 RM2,     BSE, 100, 150)
+ZMK_COMBO(rbkt,       &kp RBKT,     RM2 RB2,     BSE, 100, 150)
+ZMK_COMBO(rexcl,      &kp EXCL,     RT3 RM3,     BSE, 100, 150)
+ZMK_COMBO(rqmark,     &kp QMARK,    RM3 RB3,     BSE, 100, 150)
 
 ZMK_LAYER(alpha,
 				&kp B			&kp H			&kp G										&comma			&m_fslh			&kp J
