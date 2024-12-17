@@ -122,12 +122,13 @@ ZMK_COMBO(dqt,        &kp DQT,      RT1 RT3,     BSE, 100, 150)
 ZMK_COMBO(gaming,     &tog GME,     LT1 RT1, GME BSE,  50, 200) // layer switches
 ZMK_COMBO(function,   &tog FUN,     LT2 RT2, FUN BSE,  50, 200)
 ZMK_COMBO(capsword,   &caps_word,   LM4 RM4,     BSE,  50, 200)
+
 ZMK_COMBO(lbrc,       &kp LBRC,     LT1 LM1,     BSE, 100, 150) // symbols pairs
 ZMK_COMBO(lpar,       &kp LPAR,     LM1 LB1,     BSE, 100, 150)
 ZMK_COMBO(lt,         &kp LT,       LT2 LM2,     BSE, 100, 150)
 ZMK_COMBO(lbkt,       &kp LBKT,     LM2 LB2,     BSE, 100, 150)
 ZMK_COMBO(lexcl,      &kp RA(N1),   LT3 LM3,     BSE, 100, 150)
-ZMK_COMBO(lqmark,     &kp RA(FSLH), LT3 LM3,     BSE, 100, 150)
+ZMK_COMBO(lqmark,     &kp RA(FSLH), LM3 LB3,     BSE, 100, 150)
 ZMK_COMBO(rbrc,       &kp RBRC,     RT1 RM1,     BSE, 100, 150)
 ZMK_COMBO(rpar,       &kp RPAR,     RM1 RB1,     BSE, 100, 150)
 ZMK_COMBO(gt,         &kp GT,       RT2 RM2,     BSE, 100, 150)
