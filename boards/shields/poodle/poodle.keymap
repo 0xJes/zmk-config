@@ -115,8 +115,8 @@ ZMK_COMBO(tilde,      &kp TILDE,    LM1 LB2 LM3, BSE, 100, 150)
 ZMK_COMBO(equal,      &kp EQUAL,    LT1 LM2 LT3, BSE, 100, 150)
 ZMK_COMBO(dolar,      &kp DLLR,     RB3 RB2 RB1, BSE, 100, 150)
 ZMK_COMBO(hash,       &kp HASH,     RM3 RT2 RM1, BSE, 100, 150)
-ZMK_COMBO(sqt,        &kp SQT,      LT1 LT2,     BSE, 100, 150)
-ZMK_COMBO(dqt,        &kp DQT,      RT1 RT3,     BSE, 100, 150)
+ZMK_COMBO(sqt,        &kp SQT,      RT1 RT2,     BSE, 100, 150)
+ZMK_COMBO(dqt,        &kp DQT,      LT1 LT3,     BSE, 100, 150)
 
 
 ZMK_COMBO(gaming,     &tog GME,     LT1 RT1, GME BSE,  50, 200) // layer switches
