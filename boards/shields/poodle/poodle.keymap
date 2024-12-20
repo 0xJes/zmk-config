@@ -81,11 +81,6 @@ ZMK_MACRO(gu_dr,  bindings = <&kp G &kp RA(U)>;)
 ZMK_MACRO(au_sbf, bindings = <&kp A &kp U>;)
 ZMK_MACRO(ua_sbf, bindings = <&kp U &kp A>;)
 
-ZMK_MOD_MORPH(star_bslh,   bindings = <&kp STAR>  ,<&kp BSLH>     ;mods = <(         MOD_LALT)>;)
-ZMK_MOD_MORPH(m_fslh,      bindings = <&kp FSLH>  ,<&star_bslh>   ;mods = <(MOD_LSFT|MOD_LALT)>;)
-ZMK_MOD_MORPH(semi_at,     bindings = <&kp SEMI>  ,<&kp AT>       ;mods = <(         MOD_LALT)>;)
-ZMK_MOD_MORPH(comma,       bindings = <&kp COMMA> ,<&semi_at>     ;mods = <(MOD_LSFT|MOD_LALT)>;)
-
 //        NAME        OUTPUT        COMBOS    LAYERS TIME IDLE
 ZMK_COMBO(z,          &kp Z,        LT1 LT3,     BSE,  65,   0) // alpha combos
 ZMK_COMBO(x,          &kp X,        LT3 LT2,     BSE,  65,   0)
@@ -103,15 +98,18 @@ ZMK_COMBO(under,      &kp UNDER,    RM1 RM3,     BSE,  50,  75)
 ZMK_COMBO(backspace,  &kp BSPC,     RM2 RM3, BSE NAV,  80,  80)
 ZMK_COMBO(delete,     &kp DEL,      RM3 RM4, BSE NAV, 140, 120)
 
-ZMK_COMBO(amps,       &kp AMPS,     RT1 RT2 RT3, BSE, 150, 150) // triple key combos: symbols
-ZMK_COMBO(pipe,       &kp PIPE,     LT1 LT2 LT3, BSE, 150, 150)
+ZMK_COMBO(amps,       &kp AMPS,     RT1 RT2 RT3, BSE, 150,   0) // triple key combos: symbols
+ZMK_COMBO(pipe,       &kp PIPE,     LT1 LT2 LT3, BSE, 150,   0)
 ZMK_COMBO(dolar,      &kp DLLR,     RB3 RB2 RB1, BSE, 100, 150)
-ZMK_COMBO(hash,       &kp HASH,     LB3 LB2 LB1, BSE, 100, 150)
+ZMK_COMBO(hash,       &kp HASH,     LB3 LB2 LB1, BSE, 100,   0)
+ZMK_COMBO(colon,      &kp COLON,    LM1 LM2 LM3, BSE, 150,   0)
+ZMK_COMBO(semi,       &kp SEMI,     RM1 RM2 RM3, BSE, 150,   0)
+ZMK_COMBO(bslh,       &kp BSLH,     LM0 LM1,     BSE, 150,   0)
+ZMK_COMBO(star,       &kp STAR,     RM0 RM1,     BSE, 150,   0)
 
 ZMK_COMBO(sqt,        &kp SQT,      RT1 RT2,     BSE, 100,   0)
 ZMK_COMBO(dqt,        &kp DQT,      LT1 LT3,     BSE, 100, 150)
 ZMK_COMBO(plus,       &kp PLUS,     RB0 RB1,     BSE, 150,   0)
-ZMK_COMBO(colon,      &kp COLON,    RM0 RM1,     BSE, 150,   0)
 ZMK_COMBO(at,         &kp AT,       RM1 RB0,     BSE, 150,   0)
 
 // layer switchers
@@ -140,7 +138,7 @@ ZMK_COMBO(caret,      &kp CARET,    RM4 RB4,     BSE, 150, 150)
 
 
 ZMK_LAYER(alpha,
-				&kp B			&kp H			&kp G										&comma			&m_fslh			&kp J
+				&kp B			&kp H			&kp G										&kp COMMA		&kp FSLH		&kp J
 &lm LSHFT C		&lm LALT S		&lm LCTRL N		&lt NAV T		&kp K		&kp DOT			&lt NUM A		&rm RCTRL E		&rm LALT I		&rm RSHFT M
 &kp P			&kp F			&kp L			&kp D			&kp V		&kp MINUS		&kp U			&kp O			&kp Y			&kp W
 								&kp RET			&lt MOU R									&mt RGUI SPACE  &kp ESC
