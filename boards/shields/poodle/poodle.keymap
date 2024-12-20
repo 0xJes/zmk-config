@@ -75,24 +75,24 @@ ZMK_HOLD_TAP(rm,
 //	bindings = <&dq>, <&kp Q>;
 //)
 
-ZMK_MACRO(dq,     bindings = <&kp Q &kp U>;)
-ZMK_MACRO(gu_dr,  bindings = <&kp G &kp RA(U)>;)
-ZMK_MACRO(gu_dr,  bindings = <&kp G &kp RA(U)>;)
-ZMK_MACRO(au_sbf, bindings = <&kp A &kp U>;)
-ZMK_MACRO(ua_sbf, bindings = <&kp U &kp A>;)
+ZMK_MACRO(M_gu, bindings = <&kp G &kp RA(U)>;)
+ZMK_MACRO(M_qu, bindings = <&kp U &kp A>;)
 
+
+// hg for qu
 //        NAME        OUTPUT        COMBOS    LAYERS TIME IDLE
 ZMK_COMBO(z,          &kp Z,        LT1 LT3,     BSE,  65,   0) // alpha combos
 ZMK_COMBO(x,          &kp X,        LT3 LT2,     BSE,  65,   0)
+ZMK_COMBO(q,          &kp Q,        LM2 LM3,     BSE,  70, 250)
+ZMK_COMBO(qu,         &M_q,         LB1 LB2,     BSE,  70,   0)
 ZMK_COMBO(enie,       &kp RA(N),    LB3 LB1,     BSE,  65,   0)
-ZMK_COMBO(gudiaresis, &gu_dr,       LM3 LT1,     BSE,  65,   0)
+ZMK_COMBO(gudiaresis, &M_qu,        LM3 LT1,     BSE, 100,   0)
 ZMK_COMBO(acute_o,    &kp RA(DOT),  RT1 RM2,     BSE,  80,   0)
 ZMK_COMBO(acute_i,    &kp RA(B),    RT2 RM3,     BSE,  80,   0)
 ZMK_COMBO(acute_a,    &kp RA(X),    RB1 RB3,     BSE,  65,   0)
 ZMK_COMBO(acute_e,    &kp RA(G),    RT1 RT3,     BSE,  65,   0)
 ZMK_COMBO(acute_u,    &kp RA(J),    RT2 RT3,     BSE,  90,   0)
-ZMK_COMBO(qu_ad,      &kp Q,        LM2 LM3,     BSE,  70,  75)
- 
+
 ZMK_COMBO(tab,        &kp TAB,      RM1 RM2,     BSE,  45, 125) // control characters
 ZMK_COMBO(under,      &kp UNDER,    RM1 RM3,     BSE,  50,  75)
 ZMK_COMBO(backspace,  &kp BSPC,     RM2 RM3, BSE NAV,  80,  80)
@@ -108,7 +108,7 @@ ZMK_COMBO(bslh,       &kp BSLH,     LM0 LM1,     BSE, 150,   0)
 ZMK_COMBO(star,       &kp STAR,     RM0 RM1,     BSE, 150,   0)
 
 ZMK_COMBO(sqt,        &kp SQT,      RT1 RT2,     BSE, 100,   0)
-ZMK_COMBO(dqt,        &kp DQT,      LT1 LT3,     BSE, 100, 150)
+// ZMK_COMBO(dqt,        &kp DQT,      LT1 LT3,     BSE, 100, 150)
 ZMK_COMBO(plus,       &kp PLUS,     RB0 RB1,     BSE, 150,   0)
 ZMK_COMBO(at,         &kp AT,       RM1 RB0,     BSE, 150,   0)
 
