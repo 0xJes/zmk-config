@@ -102,8 +102,8 @@ ZMK_COMBO(amps,       &kp AMPS,     RT1 RT2 RT3, BSE, 150,   0) // triple key co
 ZMK_COMBO(pipe,       &kp PIPE,     LT1 LT2 LT3, BSE, 150,   0)
 ZMK_COMBO(dolar,      &kp DLLR,     RB3 RB2 RB1, BSE, 100, 150)
 ZMK_COMBO(hash,       &kp HASH,     LB3 LB2 LB1, BSE, 100,   0)
-ZMK_COMBO(colon,      &kp COLON,    LM1 LM2 LM3, BSE, 150,   0)
-ZMK_COMBO(semi,       &kp SEMI,     RM1 RM2 RM3, BSE, 150,   0)
+ZMK_COMBO(colon,      &kp COLON,    RM1 RM2 RM3, BSE, 150,   0)
+ZMK_COMBO(semi,       &kp SEMI,     LM1 LM2 LM3, BSE, 150,   0)
 ZMK_COMBO(bslh,       &kp BSLH,     LM0 LM1,     BSE, 150,   0)
 ZMK_COMBO(star,       &kp STAR,     RM0 RM1,     BSE, 150,   0)
 
