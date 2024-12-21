@@ -68,13 +68,6 @@ ZMK_HOLD_TAP(rm,
 	bindings = <&kp>, <&kp>;
 )
 
-
-//ZMK_HOLD_TAP(qu_q,
-//	flavor = "tap-preferred";
-//	tapping-term-ms = <190>;
-//	bindings = <&dq>, <&kp Q>;
-//)
-
 ZMK_MACRO(M_gu, bindings = <&kp G &kp RA(U)>;)
 ZMK_MACRO(M_qu, bindings = <&kp U &kp A>;)
 
@@ -82,7 +75,7 @@ ZMK_MACRO(M_qu, bindings = <&kp U &kp A>;)
 ZMK_COMBO(z,          &kp Z,        LT1 LT3,     BSE,  65,   0) // alpha combos
 ZMK_COMBO(x,          &kp X,        LT3 LT2,     BSE,  65,   0)
 ZMK_COMBO(q,          &kp Q,        LM2 LM3,     BSE,  70, 250)
-ZMK_COMBO(qu,         &M_qu,         LB1 LB2,     BSE,  70,   0)
+ZMK_COMBO(qu,         &M_qu,        LB1 LB2,     BSE,  70,   0)
 ZMK_COMBO(enie,       &kp RA(N),    LB3 LB1,     BSE,  65,   0)
 ZMK_COMBO(gudiaresis, &M_gu,        LM3 LT1,     BSE, 100,   0)
 
@@ -136,7 +129,7 @@ ZMK_LAYER(alpha,
 				&kp B			&kp H			&kp G										&kp COMMA		&kp FSLH		&kp J
 &lm LSHFT C		&lm LALT S		&lm LCTRL N		&lt NAV T		&kp K		&kp DOT			&lt NUM A		&rm RCTRL E		&rm LALT I		&rm RSHFT M
 &kp P			&kp F			&kp L			&kp D			&kp V		&kp MINUS		&kp U			&kp O			&kp Y			&kp W
-								&kp RALT(APOS)	&lt MOU R									&mt RGUI SPACE  &none
+								&kp RALT(SQT)	&lt MOU R									&mt RGUI SPACE  &none
 )
 
 ZMK_LAYER(navigation,
@@ -162,9 +155,9 @@ ZMK_LAYER(mouse,
 
 ZMK_LAYER(gaming, 
 				&kp B			&kp UP			&kp G  										&kp COMMA		&kp FSLH		&kp J
-&kp C			&kp LEFT		&kp DOWN		&kp RIGHT		&kp TAB		&kp DEL			&kp A			&kp E			&kp I			&kp M
-&kp P			&kp F			&kp L			&kp D			&kp TAB		&kp BSPC		&kp U			&kp O			&kp Y			&kp W
-								&kp RET			&kp R										&kp SPACE		&kp ESC
+&kp C			&kp LEFT		&kp DOWN		&kp RIGHT		&kp ESC		&kp BSPC		&kp A			&kp E			&kp I			&kp M
+&kp P			&kp F			&kp L			&kp D			&kp TAB		&kp RET			&kp U			&kp O			&kp Y			&kp W
+								&kp X			&kp R										&kp SPACE		&kp Z
 )
 
 ZMK_LAYER(function, 
