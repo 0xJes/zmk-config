@@ -93,12 +93,12 @@ ZMK_COMBO(hash,       &kp HASH,     LB3 LB2 LB1, BSE, 100,   0)
 ZMK_COMBO(colon,      &kp COLON,    RT1 RT3,     BSE, 150,   0)
 ZMK_COMBO(semi,       &kp SEMI,     RB1 RB3,     BSE, 150,   0)
 ZMK_COMBO(bslh,       &kp BSLH,     LM0 LM1,     BSE, 150,   0)
-ZMK_COMBO(star,       &kp STAR,     RM0 RM1,     BSE, 150,   0)
+ZMK_COMBO(star,       &kp STAR,     RM3 RT2,     BSE, 150,   0)
 
 ZMK_COMBO(sqt,        &kp SQT,      RT1 RT2,     BSE, 100,   0)
 ZMK_COMBO(dqt,        &kp DQT,      RT2 RT3,     BSE, 100, 150)
-ZMK_COMBO(plus,       &kp PLUS,     RB0 RB1,     BSE, 150,   0)
-ZMK_COMBO(at,         &kp AT,       RM1 RB0,     BSE, 150,   0)
+ZMK_COMBO(plus,       &kp PLUS,     RB0 RB1,     BSE, 150,   0)	
+ZMK_COMBO(at,         &kp AT,       RT1 RM2,     BSE, 150,   0)
 
 // layer switchers
 ZMK_COMBO(gaming,     &tog GME,     LT1 RT1, GME BSE,  50, 200)
