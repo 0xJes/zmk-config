@@ -69,7 +69,7 @@ ZMK_HOLD_TAP(rm,
 )
 
 ZMK_MACRO(M_gu, bindings = <&kp G &kp RA(U)>;)
-ZMK_MACRO(M_qu, bindings = <&kp U &kp A>;)
+ZMK_MACRO(M_qu, bindings = <&kp Q &kp U>;)
 
 //        NAME        OUTPUT        COMBOS    LAYERS TIME IDLE
 ZMK_COMBO(z,          &kp Z,        LT1 LT3,     BSE,  65,   0) // alpha combos
