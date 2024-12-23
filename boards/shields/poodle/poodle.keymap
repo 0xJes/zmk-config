@@ -83,8 +83,8 @@ ZMK_COMBO(delete,     &kp DEL,      RM3 RM4, BSE NAV, 140, 120)
 ZMK_COMBO(ret,        &kp RET,      LM2 LM3, BSE NAV,  80,  80)
 ZMK_COMBO(esc,        &kp ESC,      LM1 LM3, BSE NAV,  80,  80)
 
-ZMK_COMBO(amps,       &kp AMPS,     RT2 RM3,     BSE, 150,   0) // triple key combos: symbols
-ZMK_COMBO(pipe,       &kp PIPE,     RT1 RM2,     BSE, 150,   0)
+ZMK_COMBO(amps,       &kp AMPS,     RT1 RM2,     BSE, 100,   0) // triple key combos: symbols
+ZMK_COMBO(pipe,       &kp PIPE,     LT1 LM2,     BSE, 100, 150)
 ZMK_COMBO(dolar,      &kp DLLR,     RT1 RT3,     BSE,  50, 150)
 ZMK_COMBO(hash,       &kp HASH,     RB1 RB3,	 BSE, 100,   0)
 ZMK_COMBO(colon,      &kp COLON,    RM3 RT1,     BSE,  50,   0)
