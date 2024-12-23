@@ -73,9 +73,8 @@ ZMK_MACRO(M_qu, bindings = <&kp Q &kp U>;)
 //        NAME        OUTPUT        COMBOS    LAYERS TIME IDLE
 ZMK_COMBO(z,          &kp Z,        LT1 LT3,     BSE,  65,   0) // alpha combos
 ZMK_COMBO(x,          &kp X,        LT3 LT2,     BSE,  65,   0)
-// ZMK_COMBO(q,          &kp Q,        LM2 LM3,     BSE,  70, 250)
 ZMK_COMBO(qu,         &M_qu,        LB1 LB2,     BSE,  70,   0)
-ZMK_COMBO(enie,       &kp RA(N),    LB3 LB1,     BSE,  65,   0)
+ZMK_COMBO(q,          &kp Q,        LB3 LB1,     BSE,  65,   0)
 ZMK_COMBO(m_gu,       &M_gu,        LM3 LT1,     BSE, 100,   0)
 
 ZMK_COMBO(tab,        &kp TAB,      RM1 RM2,     BSE,  45, 125) // control characters
@@ -87,10 +86,10 @@ ZMK_COMBO(esc,        &kp ESC,      LM1 LM3, BSE NAV,  80,  80)
 
 ZMK_COMBO(amps,       &kp AMPS,     RT2 RM3,     BSE, 150,   0) // triple key combos: symbols
 ZMK_COMBO(pipe,       &kp PIPE,     RT1 RM2,     BSE, 150,   0)
-ZMK_COMBO(dolar,      &kp DLLR,     RB3 RB2 RB1, BSE,  50, 150)
-ZMK_COMBO(hash,       &kp HASH,     LB3 LB2 LB1, BSE, 100,   0)
-ZMK_COMBO(colon,      &kp COLON,    RT1 RT3,     BSE,  50,   0)
-ZMK_COMBO(semi,       &kp SEMI,     RB1 RB3,     BSE, 150,   0)
+ZMK_COMBO(dolar,      &kp DLLR,     RT1 RT3,     BSE,  50, 150)
+ZMK_COMBO(hash,       &kp HASH,     RT1 RM3,	 BSE, 100,   0)
+ZMK_COMBO(colon,      &kp COLON,    RB1 RB3,     BSE,  50,   0)
+ZMK_COMBO(semi,       &kp SEMI,     LB1 LB3,     BSE, 150,   0)
 ZMK_COMBO(bslh,       &kp BSLH,     LM0 LM1,     BSE, 150,   0)
 ZMK_COMBO(star,       &kp STAR,     RM0 RM1,     BSE, 150,   0)
 ZMK_COMBO(sqt,        &kp SQT,      RT1 RT2,     BSE, 100,   0)
@@ -129,8 +128,8 @@ ZMK_LAYER(alpha,
 )
 
 ZMK_LAYER(alpha2,
-				&none			&none			&none										&none			&none			&none
-&none			&none			&none 			&none			&none		&none			&kp RA(X)		&kp RA(G)		&kp RA(B)		&none
+				&none			&none			&M_gu										&none			&none			&none
+&none			&none			&kp RA(N) 		&none			&none		&none			&kp RA(X)		&kp RA(G)		&kp RA(B)		&none
 &none			&none			&none			&none			&none		&none			&kp RA(J)		&kp RA(DOT)		&none			&none
 								&none			&none										&none			&none
 )
