@@ -125,7 +125,7 @@ ZMK_LAYER(alpha,
 				&kp B			&kp H			&kp G										&kp COMMA		&kp FSLH		&kp J
 &lm LSHIFT C	&lm LALT S		&lm LCTRL N		&lt NAV T		&kp K		&kp DOT			&lt NUM A		&rm RCTRL E		&rm LALT I		&rm RSHFT M
 &kp P			&kp F			&kp L			&kp D			&kp V		&kp MINUS		&kp U			&kp O			&kp Y			&kp W
-								&sl AL2		&lt MOU R									&mt RGUI SPACE  &key_repeat
+								&sl AP2			&lt MOU R									&mt RGUI SPACE  &key_repeat
 )
 
 ZMK_LAYER(alpha2,
