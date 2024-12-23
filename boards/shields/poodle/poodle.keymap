@@ -75,7 +75,6 @@ ZMK_COMBO(z,          &kp Z,        LT1 LT3,     BSE,  65,   0) // alpha combos
 ZMK_COMBO(x,          &kp X,        LT3 LT2,     BSE,  65,   0)
 ZMK_COMBO(qu,         &M_qu,        LB1 LB2,     BSE,  70,   0)
 ZMK_COMBO(q,          &kp Q,        LB3 LB1,     BSE,  65,   0)
-ZMK_COMBO(m_gu,       &M_gu,        LM3 LT1,     BSE, 100,   0)
 
 ZMK_COMBO(tab,        &kp TAB,      RM1 RM2,     BSE,  45, 125) // control characters
 ZMK_COMBO(under,      &kp UNDER,    RM1 RM3,     BSE,  50,  75)
