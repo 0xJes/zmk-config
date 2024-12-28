@@ -78,10 +78,10 @@ ZMK_COMBO(q,          &kp Q,        LB3 LB1,     BSE,  65,   0)
 
 ZMK_COMBO(tab,        &kp TAB,      RM1 RM2,     BSE,  45, 180) // control characters
 ZMK_COMBO(under,      &kp UNDER,    RM1 RM3,     BSE,  50,  75)
-ZMK_COMBO(backspace,  &kp BSPC,     RM2 RM3, BSE NAV,  80,  80)
+ZMK_COMBO(backspace,  &kp BSPC,     RM2 RM3, BSE NAV,  70,  80)
 ZMK_COMBO(delete,     &kp DEL,      RM3 RM4, BSE NAV, 140, 120)
-ZMK_COMBO(ret,        &kp RET,      LM2 LM3, BSE NAV,  80,  80)
-ZMK_COMBO(esc,        &kp ESC,      LM1 LM3, BSE NAV,  80, 180)
+ZMK_COMBO(ret,        &kp RET,      LM2 LM3, BSE NAV,  70,  80)
+ZMK_COMBO(esc,        &kp ESC,      LM1 LM3, BSE NAV,  70, 180)
 
 ZMK_COMBO(amps,       &kp AMPS,     RT1 RM2,     BSE, 100,   0) // triple key combos: symbols
 ZMK_COMBO(pipe,       &kp PIPE,     LT1 LM2,     BSE, 100, 150)
