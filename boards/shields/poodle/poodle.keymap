@@ -94,7 +94,7 @@ ZMK_COMBO(star,       &kp STAR,     RM0 RM1,     BSE, 150,   0)
 
 ZMK_COMBO(sqt,        &kp SQT,      RT1 RT2,     BSE, 100,   0)
 ZMK_COMBO(dqt,        &kp DQT,      RT2 RT3,     BSE, 100,   0)
-ZMK_COMBO(grave,      &kp GRAVE,    RT1 RT2,     BSE,  50,   0)
+ZMK_COMBO(grave,      &kp GRAVE,    LT1 LT2,     BSE,  50,   0)
  
 ZMK_COMBO(plus,       &kp PLUS,     RB0 RM1,     BSE, 150,   0)
 
