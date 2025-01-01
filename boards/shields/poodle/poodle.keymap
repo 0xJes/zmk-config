@@ -111,7 +111,7 @@ ZMK_COMBO(caret,      &kp CARET,    RM4 RB4,     BSE, 100,   0)
 
 ZMK_LAYER(alpha,
 				&kp B			&kp H			&kp G										&kp COMMA		&kp FSLH		&kp J
-&lm LGUI C		&lm LALT S		&lm LCTRL N		&lm LSHIFT T	&kp K		&kp DOT			&rm LSHIFT A	&rm RCTRL E		&rm LALT I		&rm RGUI M
+&lm LALT C		&lm LCTRL S		&lm LGUI N		&lm LSHIFT T	&kp K		&kp DOT			&rm LSHIFT A	&rm RGUI E		&rm LCTRL I		&rm LALT M
 &kp P			&kp F			&kp L			&kp D			&kp V		&kp MINUS		&kp U			&kp O			&kp Y			&kp W
 								&sl AP2			&lt NAV R									&lt NUM SPACE	&kp CAPS
 )
