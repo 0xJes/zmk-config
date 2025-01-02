@@ -134,7 +134,7 @@ ZMK_LAYER(numbers,
 				&kp RA(N3)		&kp RA(N2)		&none										&kp COMMA		&kp FSLH		&none
 &kp N4			&kp N3			&kp N2			&kp N1			&trans		&kp DOT			&trans			&kp DOT			&kp COMMA		&none
 &kp N8			&kp N7			&kp N6			&kp N5			&trans		&kp MINUS		&trans			&trans			&trans			&trans
-								&kp 9			&kp N0										&none	        &none
+								&kp N9			&kp N0										&none	        &none
 )
 
 
