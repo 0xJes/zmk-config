@@ -93,8 +93,6 @@ ZMK_COMBO(at,         &kp AT,       RM0 RT1,     BSE, 150,   0)
 ZMK_COMBO(gaming,     &tog GME,     LT1 RT1, GME BSE, 100,   0)
 ZMK_COMBO(capsword,   &caps_word,   LM1 RM1,     BSE, 100,   0)
 
-ZMK_COMBO(gui, 		  &kp LGUI,     LH0 RH0,     BSE, 200,   0)
-
 // vertical combos
 ZMK_COMBO(lbrc,       &kp LBRC,     LT1 LM1,     BSE, 100,   0)
 ZMK_COMBO(lpar,       &kp LPAR,     LM1 LB1,     BSE, 100,   0)
@@ -113,7 +111,7 @@ ZMK_COMBO(caret,      &kp CARET,    RM4 RB4,     BSE, 100,   0)
 
 ZMK_LAYER(alpha,
 				&kp B			&kp H			&kp G										&kp COMMA		&kp FSLH		&kp J
-&lm LALT C		&lm LCTRL S		&lm LGUI N		&lm LSHIFT T	&kp K		&kp DOT			&rm LSHIFT A	&rm RGUI E		&rm LCTRL I		&rm LALT M
+&kp C			&lm LCTRL S		&lm LALT N		&lm LSHIFT T	&kp K		&kp DOT			&rm LSHIFT A	&rm LALT E		&rm LCTRL I		&kp M
 &kp P			&kp F			&kp L			&kp D			&kp V		&kp MINUS		&kp U			&kp O			&kp Y			&kp W
 								&sl AP2			&lt NAV R									&lt NUM SPACE	&sk RGUI
 )
