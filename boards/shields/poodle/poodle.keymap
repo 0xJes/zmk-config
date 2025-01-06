@@ -91,7 +91,9 @@ ZMK_COMBO(at,         &kp AT,       RM0 RT1,     BSE, 150,   0)
 
 // layer switchers
 ZMK_COMBO(gaming,     &tog GME,     LT1 RT1, GME BSE, 100,   0)
-ZMK_COMBO(capsword,   &caps_word,   LM4 RM4,     BSE, 100,   0)
+ZMK_COMBO(capsword,   &caps_word,   LM1 RM1,     BSE, 100,   0)
+
+ZMK_COMBO(gui, 		  &sk LGUI,     LH0 RH0,     BSE, 100,   0)
 
 // vertical combos
 ZMK_COMBO(lbrc,       &kp LBRC,     LT1 LM1,     BSE, 100,   0)
