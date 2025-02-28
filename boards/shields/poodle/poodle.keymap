@@ -36,7 +36,7 @@
 ZMK_HOLD_TAP(ct,
 	flavor = "balanced";
 	require-prior-idle-ms = <0>;
-	tapping-term-ms = <220>;
+	tapping-term-ms = <200>;
 	quick-tap-ms = <200>;
 	bindings = <&kp>, <&kp>;
 )
