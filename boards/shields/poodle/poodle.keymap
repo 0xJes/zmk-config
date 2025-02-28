@@ -35,11 +35,9 @@
 
 ZMK_HOLD_TAP(ct,
 	flavor = "balanced";
-	require-prior-idle-ms = <100>;
-	tapping-term-ms = <300>;
+	require-prior-idle-ms = <0>;
+	tapping-term-ms = <250>;
 	quick-tap-ms = <200>;
-	hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
-	hold-trigger-on-release;
 	bindings = <&kp>, <&kp>;
 )
 
@@ -102,16 +100,12 @@ ZMK_COMBO(at,         &kp AT,       RM0 RT1,     BSE,  90, 250)
 ZMK_COMBO(gaming,     &tog GME,     LT1 RT1, GME BSE, 100, 250)
 ZMK_COMBO(capsword,   &caps_word,   26 27,       BSE, 100, 250)
 // vertical combos
-ZMK_COMBO(lbrc,       &kp LBRC,       LT1 LM1,     BSE,  90, 250)
+ZMK_COMBO(lbrc,       &kp RBRC LBRC,  LT1 LM1,     BSE,  90, 250)
 ZMK_COMBO(lpar,       &ct RPAR LPAR,  LM1 LB1,     BSE,  90, 250)
-ZMK_COMBO(lt,         &kp LT,         LT2 LM2,     BSE,  90, 250)
-ZMK_COMBO(lbkt,       &kp LBKT,       LM2 LB2,     BSE,  90, 250)
+ZMK_COMBO(lt,         &kp GT LT,      LT2 LM2,     BSE,  90, 250)
+ZMK_COMBO(lbkt,       &kp RBKT LBKT,  LM2 LB2,     BSE,  90, 250)
 ZMK_COMBO(lexcl,      &kp RA(N1),     LT3 LM3,     BSE,  90, 250)
 ZMK_COMBO(lqmark,     &kp RA(FSLH),   LM3 LB3,     BSE,  90, 250)
-ZMK_COMBO(rbrc,       &kp RBRC,       RT1 RM1,     BSE,  90, 250)
-ZMK_COMBO(rpar,       &kp RPAR,       RM1 RB1,     BSE,  90, 250)
-ZMK_COMBO(gt,         &kp GT,         RT2 RM2,     BSE,  90, 250)
-ZMK_COMBO(rbkt,       &kp RBKT,       RM2 RB2,     BSE,  90, 250)
 ZMK_COMBO(rexcl,      &kp EXCL,       RT3 RM3,     BSE,  90, 250)
 ZMK_COMBO(rqmark,     &kp QMARK,      RM3 RB3,     BSE,  60,   0)
 ZMK_COMBO(percent,    &kp PRCNT,      LM4 LB4,     BSE,  90, 250)
