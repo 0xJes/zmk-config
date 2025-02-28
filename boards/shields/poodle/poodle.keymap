@@ -88,6 +88,8 @@ ZMK_COMBO(hash,       &kp HASH,       LM0 LT1,	   BSE,  90, 150)
 ZMK_COMBO(colon,      &kp COLON,      RM3 RT1,     BSE,  50, 250)
 ZMK_COMBO(semi,       &kp SEMI,       LM3 LT1,     BSE, 100, 180)
 ZMK_COMBO(star,       &kp STAR,       RM0 RM1,     BSE, 150, 250)
+ZMK_COMBO(BSLH,       &kp BLSH,       LM0 LM1,     BSE, 150, 250)
+
 ZMK_COMBO(sqt,        &kp SQT,        RT1 RT2,     BSE,  70,   0)
 ZMK_COMBO(dqt,        &kp DQT,        RT2 RT3,     BSE,  70,   0)
 ZMK_COMBO(grave,      &kp GRAVE,      LT1 LT2,     BSE,  50, 250)
@@ -110,7 +112,7 @@ ZMK_COMBO(percent,    &kp PRCNT,      LM4 LB4,     BSE,  90, 250)
 
 
 ZMK_LAYER(alpha,
-				&kp B			&kp H			&kp G										&kp COMMA		&ct BSLH FSLH   &kp J
+				&kp B			&kp H			&kp G										&kp COMMA		&kp FSLH        &kp J
 &kp C			&lm LCTRL S		&lm LALT N		&lm LSHIFT T	&kp K		&kp DOT			&rm LSHIFT A	&rm LALT E		&rm LCTRL I		&kp M
 &kp P			&kp F			&kp L			&kp D			&kp V		&kp MINUS		&kp U			&kp O			&kp Y			&kp W
 								&lt NAV R	&sl AP2											&kp RGUI		&lt NUM SPACE
