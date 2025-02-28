@@ -87,7 +87,6 @@ ZMK_COMBO(dolar,      &kp DLLR,     RT1 RT3,     BSE,  50, 150)
 ZMK_COMBO(hash,       &kp HASH,     LM0 LT1,	 BSE,  90, 150)
 ZMK_COMBO(colon,      &kp COLON,    RM3 RT1,     BSE,  50, 250)
 ZMK_COMBO(semi,       &kp SEMI,     LM3 LT1,     BSE, 100, 180)
-ZMK_COMBO(bslh,       &kp BSLH,     RM3 RT2,     BSE, 150, 250)
 ZMK_COMBO(star,       &kp STAR,     RM0 RM1,     BSE, 150, 250)
 ZMK_COMBO(sqt,        &kp SQT,      RT1 RT2,     BSE,  70,   0)
 ZMK_COMBO(dqt,        &kp DQT,      RT2 RT3,     BSE,  70,   0)
@@ -100,10 +99,10 @@ ZMK_COMBO(at,         &kp AT,       RM0 RT1,     BSE,  90, 250)
 ZMK_COMBO(gaming,     &tog GME,     LT1 RT1, GME BSE, 100, 250)
 ZMK_COMBO(capsword,   &caps_word,   26 27,       BSE, 100, 250)
 // vertical combos
-ZMK_COMBO(lbrc,       &kp RBRC LBRC,  LT1 LM1,     BSE,  90, 250)
+ZMK_COMBO(lbrc,       &ct RBRC LBRC,  LT1 LM1,     BSE,  90, 250)
 ZMK_COMBO(lpar,       &ct RPAR LPAR,  LM1 LB1,     BSE,  90, 250)
-ZMK_COMBO(lt,         &kp GT LT,      LT2 LM2,     BSE,  90, 250)
-ZMK_COMBO(lbkt,       &kp RBKT LBKT,  LM2 LB2,     BSE,  90, 250)
+ZMK_COMBO(lt,         &ct GT LT,      LT2 LM2,     BSE,  90, 250)
+ZMK_COMBO(lbkt,       &ct RBKT LBKT,  LM2 LB2,     BSE,  90, 250)
 ZMK_COMBO(lexcl,      &kp RA(N1),     LT3 LM3,     BSE,  90, 250)
 ZMK_COMBO(lqmark,     &kp RA(FSLH),   LM3 LB3,     BSE,  90, 250)
 ZMK_COMBO(rexcl,      &kp EXCL,       RT3 RM3,     BSE,  90, 250)
@@ -112,7 +111,7 @@ ZMK_COMBO(percent,    &kp PRCNT,      LM4 LB4,     BSE,  90, 250)
 
 
 ZMK_LAYER(alpha,
-				&kp B			&kp H			&kp G										&kp COMMA		&kp FSLH		&kp J
+				&kp B			&kp H			&kp G										&kp COMMA		&ct BSLH FSLH   &kp J
 &kp C			&lm LCTRL S		&lm LALT N		&lm LSHIFT T	&kp K		&kp DOT			&rm LSHIFT A	&rm LALT E		&rm LCTRL I		&kp M
 &kp P			&kp F			&kp L			&kp D			&kp V		&kp MINUS		&kp U			&kp O			&kp Y			&kp W
 								&lt NAV R	&sl AP2											&mt RGUI CAPS	&lt NUM SPACE
