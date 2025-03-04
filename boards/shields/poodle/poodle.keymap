@@ -99,13 +99,10 @@ ZMK_COMBO(Lparent,    &kp LPAR,       LM1 LB1,     BSE,  90, 250)
 ZMK_COMBO(Rparent,    &kp RPAR,       RM1 RB1,     BSE,  90, 250)
 ZMK_COMBO(Lbraket,    &kp LBKT,       LT1 LM1,     BSE,  90, 250)
 ZMK_COMBO(Rbraket,    &kp RBKT,       RT1 RM1,     BSE,  90, 250)
-
-
 ZMK_COMBO(Lbrace,     &kp LBRC,       LM2 LB2,     BSE,  90, 250)
 ZMK_COMBO(Rbrace,     &kp RBRC,       RM2 RB2,     BSE,  90, 250)
-
-ZMK_COMBO(lessThan,   &kp LT,         LM0 LB0,     BSE,  90, 250)
-ZMK_COMBO(greather,   &kp GT,         RM0 RB0,     BSE,  90, 250)
+ZMK_COMBO(lessThan,   &kp LT,         LT2 LM2,     BSE,  90, 250)
+ZMK_COMBO(greather,   &kp GT,         RT2 RM2,     BSE,  90, 250)
 
 
 ZMK_COMBO(lexcl,      &kp RA(N1),     LT3 LM3,     BSE,  90, 250)
