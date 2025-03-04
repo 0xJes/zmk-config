@@ -33,20 +33,11 @@
 	bindings = <&kp>, <&kp>;
 };
 
-ZMK_HOLD_TAP(ct,
-	flavor = "balanced";
-	require-prior-idle-ms = <0>;
-	tapping-term-ms = <200>;
-	quick-tap-ms = <200>;
-	bindings = <&kp>, <&kp>;
-)
-
-
 
 ZMK_HOLD_TAP(lm,
 	flavor = "balanced";
 	require-prior-idle-ms = <100>;
-	tapping-term-ms = <300>;
+	tapping-term-ms = <350>;
 	quick-tap-ms = <200>;
 	hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
 	hold-trigger-on-release;
@@ -56,7 +47,7 @@ ZMK_HOLD_TAP(lm,
 ZMK_HOLD_TAP(rm,
 	flavor = "balanced";
 	require-prior-idle-ms = <100>;
-	tapping-term-ms = <300>;
+	tapping-term-ms = <350>;
 	quick-tap-ms = <200>; 
 	hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
 	hold-trigger-on-release;
@@ -100,12 +91,18 @@ ZMK_COMBO(equal,      &kp EQUAL,      RB0 RB1,     BSE,  90, 250)
 ZMK_COMBO(tilde,      &kp TILDE,      LB0 LB1,     BSE,  90, 250) 
 ZMK_COMBO(at,         &kp AT,         RM0 RT1,     BSE,  90, 250)
 ZMK_COMBO(gaming,     &tog GME,       LT1 RT1, GME BSE, 100, 250)
-ZMK_COMBO(lcaps,      &caps_word,     LM1 LM4,     BSE, 100, 250)
-ZMK_COMBO(rcaps,      &caps_word,     RM1 RM4,     BSE, 100, 250)
-ZMK_COMBO(lbrc,       &ct RBRC LBRC,  LT1 LM1,     BSE,  90, 250)
-ZMK_COMBO(lpar,       &ct RPAR LPAR,  LM1 LB1,     BSE,  90, 250)
-ZMK_COMBO(lt,         &ct GT LT,      LT2 LM2,     BSE,  90, 250)
-ZMK_COMBO(lbkt,       &ct RBKT LBKT,  LM2 LB2,     BSE,  90, 250)
+ZMK_COMBO(lcaps,      &caps_word,     LM1 LM4,     BSE,  80, 250)
+ZMK_COMBO(rcaps,      &caps_word,     RM1 RM4,     BSE,  80, 250)
+
+ZMK_COMBO(lbrc,       &kp LBRC,       LT1 LM1,     BSE,  90, 250)
+ZMK_COMBO(rbrc,       &kp RBRC,       RT1 RM1,     BSE,  90, 250)
+ZMK_COMBO(lpar,       &kp LPAR,       LM1 LB1,     BSE,  90, 250)
+ZMK_COMBO(rpar,       &kp RPAR,       RM1 RB1,     BSE,  90, 250)
+ZMK_COMBO(lt,         &kp GT,         LT0 LM0,     BSE,  90, 250)
+ZMK_COMBO(gt,         &kp LT,         RT0 RM0,     BSE,  90, 250)
+ZMK_COMBO(lbkt,       &kp LBKT,       LM2 LB2,     BSE,  90, 250)
+ZMK_COMBO(lbkt,       &kp RBKT,       LM2 LB2,     BSE,  90, 250)
+
 ZMK_COMBO(lexcl,      &kp RA(N1),     LT3 LM3,     BSE,  90, 250)
 ZMK_COMBO(lqmark,     &kp RA(FSLH),   LM3 LB3,     BSE,  90, 250)
 ZMK_COMBO(rexcl,      &kp EXCL,       RT3 RM3,     BSE,  90, 250)
@@ -122,7 +119,7 @@ ZMK_LAYER(alpha,
 
 ZMK_LAYER(alpha2,
 				&none			&none			&M_gu										&none			&none			&none
-&none			&none			&kp RA(N) 		&none			&none		&none			&kp RA(X)		&kp RA(G)		&kp RA(B)		&none
+&kp RA(C)		&none			&kp RA(N) 		&none			&none		&none			&kp RA(X)		&kp RA(G)		&kp RA(B)		&none
 &none			&none			&none			&none			&none		&none			&kp RA(J)		&kp RA(DOT)		&none			&none
 								&none			&none										&none			&none
 )
