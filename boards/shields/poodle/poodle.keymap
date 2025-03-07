@@ -54,14 +54,14 @@ ZMK_HOLD_TAP(rm,
 	bindings = <&kp>, <&kp>;
 )
 
-ZMK_MACRO(M_gu, bindings = <&kp G &kp RA(U)>;)
-ZMK_MACRO(M_qu, bindings = <&kp Q &kp U>;)
+ZMK_MACRO(lol,  bindings = <&kp G &kp RA(U)> ;)
+ZMK_MACRO(M_qu, bindings = <&kp Q &kp U    > ;)
 
 //        NAME        OUTPUT          COMBOS    LAYERS TIME IDLE
 ZMK_COMBO(z,        &kp Z,        LT1 LT3,         BSE,  50,   0) // alpha combos
 ZMK_COMBO(x,        &kp X,        LT3 LT2,         BSE,  50,   0)
 ZMK_COMBO(qu,       &M_qu,        LB1 LB2,         BSE,  50,   0)
-ZMK_COMBO(gu,       &M_gu,        LM2 L01,         BSE,  50,   0)
+ZMK_COMBO(gu,       &lol,        LM2 L01,         BSE,  50,   0)
 ZMK_COMBO(q,        &kp Q,        LB3 LB1,         BSE,  50,   0)
 
 ZMK_COMBO(tab,      &kp TAB,      RM1 RM2,         BSE,  35, 180) // control chars
