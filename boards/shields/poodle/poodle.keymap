@@ -136,7 +136,7 @@ ZMK_LAYER(numbers,
 ZMK_LAYER(gaming, 
 				&kp Q			&kp UP			&kp E  										&kp COMMA		&kp FSLH		&kp J
 &kp TAB			&kp LEFT		&kp DOWN		&kp RIGHT		&kp ESC		&kp BSPC		&kp A			&kp E			&kp I			&kp M
-&kp Z			&kp X			&kp C			&kp V			&kp TAB		&kp RET			&kp U			&kp O			&kp Y			&kp W
+&kp LSHIFT		&kp X			&kp C			&kp V			&kp TAB		&kp RET			&kp U			&kp O			&kp Y			&kp RSHIFT
 								&kp X			&kp R										&kp SPACE		&kp Z
 )
 
