@@ -106,9 +106,9 @@ ZMK_COMBO(Rqmark,   &kp QMARK,    RM3 RB3,         BSE,  50,   0)
 
 ZMK_LAYER(alpha,
 				&kp B			&kp H			&kp G										&kp COMMA		&kp FSLH        &kp J
-&kp C			&lm LCTRL S		&lm LALT N		&lm LSHIFT T	&kp K		&kp DOT			&rm LSHIFT A	&rm LALT E		&rm LCTRL I		&kp M
+&lm LGUI C		&lm LCTRL S		&lm LALT N		&lm LSHFT T		&kp K		&kp DOT			&rm RSHFT A		&rm RCTRL E		&rm LALT I		&rm RGUI M
 &kp P			&kp F			&kp L			&kp D			&kp V		&kp MINUS		&kp U			&kp O			&kp Y			&kp W
-								&lt NAV R   	&sl AP2										&kp RGUI		&lt NUM SPACE
+								&lt NAV R   	&sl AP2										&sl AP2			&lt NUM SPACE
 )
 
 ZMK_LAYER(alpha2,
@@ -136,7 +136,7 @@ ZMK_LAYER(numbers,
 ZMK_LAYER(gaming, 
 				&kp Q			&kp UP			&kp E  										&kp COMMA		&kp FSLH		&kp J
 &kp TAB			&kp LEFT		&kp DOWN		&kp RIGHT		&kp ESC		&kp BSPC		&kp A			&kp E			&kp I			&kp M
-&kp LSHIFT		&kp X			&kp C			&kp V			&kp TAB		&kp RET			&kp U			&kp O			&kp Y			&kp RSHIFT
+&kp LSHFT		&kp X			&kp C			&kp V			&kp TAB		&kp RET			&kp U			&kp O			&kp Y			&kp RSHFT
 								&kp X			&kp R										&kp SPACE		&kp Z
 )
 
