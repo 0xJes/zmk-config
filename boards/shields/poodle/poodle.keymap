@@ -57,16 +57,16 @@ ZMK_HOLD_TAP(rm,
 ZMK_MACRO(M_qu, bindings = <&kp Q &kp U    > ;)
 
 //        NAME        OUTPUT          COMBOS    LAYERS TIME IDLE
-ZMK_COMBO(z,        &kp Z,        LT1 LT3,         BSE,  50,   0) // alpha combos
-ZMK_COMBO(x,        &kp X,        LT3 LT2,         BSE,  50,   0)
+ZMK_COMBO(z,        &kp Z,        LT1 LT3,         BSE,  45,   0) // alpha combos
+ZMK_COMBO(x,        &kp X,        LT3 LT2,         BSE,  45,   0)
 ZMK_COMBO(qu,       &M_qu,        LB1 LB2,         BSE,  50,   0)
 ZMK_COMBO(q,        &kp Q,        LB3 LB1,         BSE,  50,   0)
 
 ZMK_COMBO(tab,      &kp TAB,      RM1 RM2,         BSE,  35, 180) // control chars
-ZMK_COMBO(under,    &kp UNDER,    RM1 RM3,         BSE,  50,  75)
-ZMK_COMBO(bspc,     &kp BSPC,     RM2 RM3, NUM BSE NAV,  70,  80)
+ZMK_COMBO(under,    &kp UNDER,    RM1 RM3,         BSE,  45, 100)
+ZMK_COMBO(bspc,     &kp BSPC,     RM2 RM3, NUM BSE NAV,  65, 100)
 ZMK_COMBO(delete,   &kp DEL,      RM3 RM4, NUM BSE NAV, 140, 350)
-ZMK_COMBO(ret,      &kp RET,      LM2 LM3, NUM BSE NAV,  55,  80)
+ZMK_COMBO(ret,      &kp RET,      LM2 LM3, NUM BSE NAV,  55, 100)
 ZMK_COMBO(esc,      &kp ESC,      LM1 LM3, NUM BSE NAV,  55, 180)
 
 ZMK_COMBO(lcapsw,   &caps_word,   LM1 LM4,         BSE,  60, 250) // Layers
@@ -74,6 +74,7 @@ ZMK_COMBO(rcapsw,   &caps_word,   RM1 RM4,         BSE,  60, 250)
 ZMK_COMBO(gaming,   &tog GME,     LT1 RT1,     GME BSE,  50, 250)
 
 ZMK_COMBO(dolar,    &kp DLLR,     RT1 RT3,         BSE,  50,   0) // symbols
+ZMK_COMBO(at,       &kp AT,       RM0 RT1,         BSE,  80,   0)
 ZMK_COMBO(hash,     &kp HASH,     LM0 LT1,	       BSE,  90, 150)
 ZMK_COMBO(colon,    &kp COLON,    RM3 RT1,         BSE,  50, 250)
 ZMK_COMBO(semi,     &kp SEMI,     LM3 LT1,         BSE, 100, 180)
@@ -87,7 +88,6 @@ ZMK_COMBO(grave,    &kp GRAVE,    LT1 LT2,         BSE,  50, 250)
 ZMK_COMBO(plus,     &kp PLUS,     RB0 RM1,         BSE,  80, 250)
 ZMK_COMBO(equal,    &kp EQUAL,    RB0 RB1,         BSE,  80, 250)
 ZMK_COMBO(tilde,    &kp TILDE,    LB0 LB1,         BSE,  80, 250) 
-ZMK_COMBO(at,       &kp AT,       RM0 RT1,         BSE,  80, 250)
 
 ZMK_COMBO(amps,     &kp AMPS,     RM0 RB0,         BSE,  50, 200)
 ZMK_COMBO(pipe,     &kp PIPE,     LM0 LB0,         BSE,  50,   0)
@@ -108,7 +108,7 @@ ZMK_LAYER(alpha,
 				&kp B			&kp H			&kp G										&kp COMMA		&kp FSLH        &kp J
 &kp C			&lm LCTRL S		&lm LALT N		&lm LSHIFT T	&kp K		&kp DOT			&rm LSHIFT A	&rm LALT E		&rm LCTRL I		&kp M
 &kp P			&kp F			&kp L			&kp D			&kp V		&kp MINUS		&kp U			&kp O			&kp Y			&kp W
-								&lt NAV R	&sl AP2											&kp RGUI		&lt NUM SPACE
+								&lt NAV R   	&sl AP2										&kp RGUI		&lt NUM SPACE
 )
 
 ZMK_LAYER(alpha2,
