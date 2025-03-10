@@ -110,7 +110,7 @@ ZMK_LAYER(alpha,
 &kp P			&kp MINUS		&kp FSLH		&kp SQT			&kp DOT 	&kp X   		&kp M			&kp G			&kp W			&kp B
 								&lt NAV SPACE  	&sl AP2										&sl AP2			&lt NUM R
 )
-o
+
 ZMK_LAYER(alpha2,
 				&none			&kp RA(DOT)		&kp RA(J)									&kp RA(U)		&none			&none
 &kp RA(C)		&kp RA(B)		&kp RA(G) 		&kp RA(X		&none		&none			&none   		&kp RA(N)		&none   		&none
