@@ -78,7 +78,7 @@ ZMK_COMBO(dolar,    &kp DLLR,     LT1 LT3,         BSE,  50,   0) // symbols
 ZMK_COMBO(at,       &kp AT,       RM0 RT1,         BSE,  80,   0)
 ZMK_COMBO(hash,     &kp HASH,     LM0 LT1,	       BSE,  90, 150)
 ZMK_COMBO(colon,    &kp COLON,    LM1 LM4,         BSE,  50, 250)
-ZMK_COMBO(semi,     &kp SEMI,     RM1 RT4,         BSE, 100, 180)
+ZMK_COMBO(semi,     &kp SEMI,     RM1 RM4,         BSE, 100, 180)
 ZMK_COMBO(star,     &kp STAR,     RM0 RM1,         BSE, 150, 250)
 ZMK_COMBO(blsh,     &kp BSLH,     LM0 LM1,         BSE, 150, 250)
 ZMK_COMBO(caret,    &kp CARET,    LB0 LM1,         BSE, 150, 250)
