@@ -61,7 +61,7 @@ ZMK_COMBO(z,        &kp Z,        RT1 RT3,         BSE,  45,   0) // alpha combo
 ZMK_COMBO(v,        &kp V,        RT2 RT3,         BSE,  45,   0)
 ZMK_COMBO(qu,       &M_qu,        RB1 RB2,         BSE,  50,   0)
 ZMK_COMBO(q,        &kp Q,        RB3 RB1,         BSE,  50,   0)
-ZMK_COMBO(j,        &kp J,        RM1 RT3,         BSE,  50,   0)
+ZMK_COMBO(j,        &kp J,        RB2 RB3,         BSE,  50,   0)
 
 ZMK_COMBO(tab,      &kp TAB,      LM1 LM2,         BSE,  35, 180) // control chars
 ZMK_COMBO(under,    &kp UNDER,    LM1 LM3,         BSE,  45, 100)
@@ -86,7 +86,7 @@ ZMK_COMBO(percent,  &kp PRCNT,    RB1 RB3,         BSE,  90, 250)
 ZMK_COMBO(dqt,      &kp DQT,      LB1 LB2,         BSE,  70,   0)
 ZMK_COMBO(grave,    &kp GRAVE,    LT1 LT2,         BSE,  50, 250)
 ZMK_COMBO(plus,     &kp PLUS,     RB0 RM1,         BSE,  80, 250)
-ZMK_COMBO(equal,    &kp EQUAL,    RB0 RB1,         BSE,  80, 250)
+ZMK_COMBO(equal,    &kp EQUAL,    LB2 LB3,         BSE,  80, 250)
 ZMK_COMBO(tilde,    &kp TILDE,    LB0 LB1,         BSE,  80, 250)
 
 ZMK_COMBO(amps,     &kp AMPS,     RM0 RB0,         BSE,  50, 200)
@@ -110,11 +110,11 @@ ZMK_LAYER(alpha,
 &kp P			&kp MINUS		&kp FSLH		&kp SQT			&kp DOT 	&kp X   		&kp M			&kp G			&kp W			&kp B
 								&lt NAV SPACE  	&sl AP2										&sl AP2			&lt NUM R
 )
-
+o
 ZMK_LAYER(alpha2,
-				&none			&none			&none										&kp RA(U)		&none			&none
-&kp RA(C)		&kp RA(B)		&kp RA(G) 		&kp RA(X)		&none		&none			&none   		&kp RA(N)		&none   		&none
-&none			&none			&kp RA(DOT)		&kp RA(J)		&none		&none			&kp RA(SEMI)	&none   		&none			&none
+				&none			&kp RA(DOT)		&kp RA(J)									&kp RA(U)		&none			&none
+&kp RA(C)		&kp RA(B)		&kp RA(G) 		&kp RA(X		&none		&none			&none   		&kp RA(N)		&none   		&none
+&none			&none			&none			&none			&none		&none			&kp RA(SEMI)	&none   		&none			&none
 								&none			&none										&none			&none
 )
 
