@@ -57,10 +57,10 @@ ZMK_HOLD_TAP(rm,
 ZMK_MACRO(M_qu, bindings = <&kp Q &kp U    > ;)
 
 //        NAME        OUTPUT          COMBOS    LAYERS TIME IDLE
-ZMK_COMBO(z,        &kp Z,        RT1 RT3,         BSE,  45,   0) // alpha combos
+ZMK_COMBO(z,        &kp Z,        RB1 RB3,         BSE,  45,   0) // alpha combos
 ZMK_COMBO(v,        &kp V,        RT2 RT3,         BSE,  45,   0)
-ZMK_COMBO(qu,       &M_qu,        RB1 RB2,         BSE,  50,   0)
-ZMK_COMBO(q,        &kp Q,        RB3 RB1,         BSE,  50,   0)
+ZMK_COMBO(qu,       &M_qu,        RT1 RT2,         BSE,  50,   0)
+ZMK_COMBO(q,        &kp Q,        RT3 RT1,         BSE,  50,   0)
 ZMK_COMBO(j,        &kp J,        RB2 RB3,         BSE,  50,   0)
 
 ZMK_COMBO(tab,      &kp TAB,      LM1 LM2,         BSE,  35, 180) // control chars
@@ -105,9 +105,9 @@ ZMK_COMBO(Lqmark,   &kp RA(FSLH), LM3 LB3,         BSE,  50, 200)
 ZMK_COMBO(Rqmark,   &kp QMARK,    RM3 RB3,         BSE,  50,   0)
 
 ZMK_LAYER(alpha,
-				&kp Y			&kp O			&kp U										&kp L	    	&kp D           &kp F
+				&kp MINUS		&kp FLSH		&kp SQT 									&kp M	    	&kp M           &kp W
 &lm LALT C		&lm LCTRL I		&lm LGUI E		&lm LSHFT A		&kp COMMA	&kp K			&rm RSHFT H		&rm RGUI T		&rm LCTRL N		&rm RALT S
-&kp P			&kp MINUS		&kp FSLH		&kp SQT			&kp DOT 	&kp X   		&kp M			&kp G			&kp W			&kp B
+&kp P			&kp Y   		&kp O   		&kp U			&kp DOT 	&kp X   		&kp L			&kp D			&kp F   		&kp B
 								&lt NAV SPACE  	&sl AP2										&sl AP2			&lt NUM R
 )
 
