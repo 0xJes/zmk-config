@@ -63,15 +63,13 @@ ZMK_COMBO(qu,       &M_qu,        RT1 RT2,         BSE,  50,   0)
 ZMK_COMBO(q,        &kp Q,        RT3 RT1,         BSE,  50,   0)
 ZMK_COMBO(j,        &kp J,        RB2 RB3,         BSE,  50,   0)
 
-ZMK_COMBO(tab,      &kp TAB,      LM1 LM2,         BSE,  35, 180) // control chars
-ZMK_COMBO(under,    &kp UNDER,    LM1 LM3,         BSE,  45, 100)
-ZMK_COMBO(bspc,     &kp BSPC,     LM2 LM3, NUM BSE NAV,  65, 100)
-ZMK_COMBO(delete,   &kp DEL,      LM3 LM4, NUM BSE NAV, 140, 350)
-ZMK_COMBO(ret,      &kp RET,      RM2 RM3, NUM BSE NAV,  55, 100)
-ZMK_COMBO(esc,      &kp ESC,      RM1 RM3, NUM BSE NAV,  55, 180)
+ZMK_COMBO(tab,      &kp TAB,      RM1 RM2,         BSE,  35, 180) // control chars
+ZMK_COMBO(under,    &kp UNDER,    RM1 RM3,         BSE,  45, 100)
+ZMK_COMBO(bspc,     &kp BSPC,     RM2 RM3, NUM BSE NAV,  65, 100)
+ZMK_COMBO(delete,   &kp DEL,      RM3 RM4, NUM BSE NAV, 140, 350)
+ZMK_COMBO(ret,      &kp RET,      LM2 LM3, NUM BSE NAV,  55, 100)
+ZMK_COMBO(esc,      &kp ESC,      LM1 LM3, NUM BSE NAV,  55, 180)
 
-ZMK_COMBO(lcapsw,   &caps_word,   LM1 LM4,         BSE,  60, 250) // Layers
-ZMK_COMBO(rcapsw,   &caps_word,   RM1 RM4,         BSE,  60, 250)
 ZMK_COMBO(gaming,   &tog GME,     LT1 RT1,     GME BSE,  50, 250)
 
 ZMK_COMBO(dolar,    &kp DLLR,     LT1 LT3,         BSE,  50,   0) // symbols
