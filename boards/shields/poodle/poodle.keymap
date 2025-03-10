@@ -113,7 +113,7 @@ ZMK_LAYER(alpha,
 
 ZMK_LAYER(alpha2,
 				&none			&kp RA(DOT)		&kp RA(J)									&kp RA(U)		&none			&none
-&kp RA(C)		&kp RA(B)		&kp RA(G) 		&kp RA(X		&none		&none			&none   		&kp RA(N)		&none   		&none
+&kp RA(C)		&kp RA(B)		&kp RA(G) 		&kp RA(X)		&none		&none			&none   		&kp RA(N)		&none   		&none
 &none			&none			&none			&none			&none		&none			&kp RA(SEMI)	&none   		&none			&none
 								&none			&none										&none			&none
 )
