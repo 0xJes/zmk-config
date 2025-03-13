@@ -8,10 +8,9 @@
 #define THUMB_KEYS      LH0 LH1 RH0 RH1
 
 #define BSE 0
-#define AP2 1
-#define NAV 2
-#define NUM 3
-#define GME 4
+#define NAV 1
+#define NUM 2
+#define GME 3
 
 // behavior configuration
 
@@ -61,6 +60,7 @@ ZMK_COMBO(v,        &kp V,        RT2 RT3,         BSE,  45,   0)
 ZMK_COMBO(qu,       &M_qu,        RT1 RT2,         BSE,  50,   0)
 ZMK_COMBO(q,        &kp Q,        RM1 RM4,         BSE,  45,   0)
 ZMK_COMBO(j,        &kp J,        RB2 RB3,         BSE,  50,   0)
+ZMK_COMBO(enie,     &kp RA(N),    RM2 RT1,         BSE,  50,   0)
 ZMK_COMBO(ausfb,    &au,          LM1 LT2,         BSE,  50,   0)
 
 ZMK_COMBO(tab,      &kp TAB,      RM1 RM2,         BSE,  35, 180) // control chars
@@ -103,16 +103,9 @@ ZMK_COMBO(Rqmark,   &kp QMARK,    RM3 RB3,         BSE,  50,   0)
 
 ZMK_LAYER(alpha,
 				&sqt_dqt		&fsl_bsl		&dot_star									&kp M			&kp G			&kp W
-&lm LALT C		&lm LCTRL I		&lm AP2 E		&lm LSHFT A		&com_sem	&kp K			&rm RSHFT H		&rm AP2 T		&rm LCTRL N		&rm RALT S
+&lm LALT C		&lm LCTRL I		&kp E			&lm LSHFT A		&com_sem	&kp K			&rm RSHFT H		&kp T			&rm LCTRL N		&rm RALT S
 &kp B			&kp Y			&kp O			&kp U			&min_equ	&kp X			&kp L			&kp D			&kp P			&kp F
 								&kp SQT			&lt NAV SPACE								&lt NUM R		&kp RA(SQT)
-)
-
-ZMK_LAYER(alpha2,
-				&none			&none			&none										&kp RA(U)		&none			&none
-&kp RA(C)		&kp RA(B)		&kp RA(G)		&kp RA(X)		&none		&none			&none			&none			&kp RA(N)		&none
-&none			&none			&kp RA(DOT)		&kp RA(J)		&none		&none			&kp RA(SEMI)	&none			&none			&none
-								&none			&none										&none			&none
 )
 
 ZMK_LAYER(navigation,
