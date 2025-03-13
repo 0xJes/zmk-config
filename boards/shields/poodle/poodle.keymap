@@ -26,14 +26,6 @@
 	require-prior-idle-ms = <100>;
 };
 
-&mt {
-	flavor = "balanced";
-	tapping-term-ms = <300>;
-	quick-tap-ms = <180>;
-	bindings = <&kp>, <&kp>;
-};
-
-
 ZMK_HOLD_TAP(lm,
 	flavor = "balanced";
 	require-prior-idle-ms = <100>;
@@ -113,12 +105,12 @@ ZMK_LAYER(alpha,
 				&sqt_dqt		&fsl_bsl		&dot_star									&kp M			&kp G			&kp W
 &lm LALT C		&lm LCTRL I		&lm AP2 E		&lm LSHFT A		&com_sem	&kp K			&rm RSHFT H		&rm AP2 T		&rm LCTRL N		&rm RALT S
 &kp B			&kp Y			&kp O			&kp U			&min_equ	&kp X			&kp L			&kp D			&kp P			&kp F
-								&sl AP2			&lt NAV SPACE								&lt NUM R		&sl AP2
+								&kp SQT			&lt NAV SPACE								&lt NUM R		&kp RA(SQT)
 )
 
 ZMK_LAYER(alpha2,
 				&none			&none			&none										&kp RA(U)		&none			&none
-&kp RA(C)		&kp RA(B)		&kp RA(G)		&kp RA(X)		&none		&none			&none			&kp RA(N)		&none			&none
+&kp RA(C)		&kp RA(B)		&kp RA(G)		&kp RA(X)		&none		&none			&none			&none			&kp RA(N)		&none
 &none			&none			&kp RA(DOT)		&kp RA(J)		&none		&none			&kp RA(SEMI)	&none			&none			&none
 								&none			&none										&none			&none
 )
