@@ -69,7 +69,7 @@ ZMK_COMBO(v,        &kp V,        RT2 RT3,         BSE,  45,   0)
 ZMK_COMBO(qu,       &M_qu,        RT1 RT2,         BSE,  50,   0)
 ZMK_COMBO(q,        &kp Q,        RM1 RM4,         BSE,  45,   0)
 ZMK_COMBO(j,        &kp J,        RB2 RB3,         BSE,  50,   0)
-ZMK_COMBO(au,       &au,          RM1 RT2,         BSE,  50,   0)
+ZMK_COMBO(ausfb,    &au,          LM1 LT2,         BSE,  50,   0)
 
 ZMK_COMBO(tab,      &kp TAB,      RM1 RM2,         BSE,  35, 180) // control chars
 ZMK_COMBO(under,    &kp UNDER,    RM1 RM3,         BSE,  45, 100)
@@ -111,7 +111,7 @@ ZMK_COMBO(Rqmark,   &kp QMARK,    RM3 RB3,         BSE,  50,   0)
 
 ZMK_LAYER(alpha,
 				&sqt_dqt		&fsl_bsl		&dot_star									&kp M			&kp G			&kp W
-&lm LALT C		&lm LCTRL I		&lm LGUI E		&lm LSHFT A		&com_sem	&kp K			&rm RSHFT H		&rm RGUI T		&rm LCTRL N		&rm RALT S
+&lm LALT C		&lm LCTRL I		&lm AP2 E		&lm LSHFT A		&com_sem	&kp K			&rm RSHFT H		&rm AP2 T		&rm LCTRL N		&rm RALT S
 &kp B			&kp Y			&kp O			&kp U			&min_equ	&kp X			&kp L			&kp D			&kp P			&kp F
 								&sl AP2			&lt NAV SPACE								&lt NUM R		&sl AP2
 )
