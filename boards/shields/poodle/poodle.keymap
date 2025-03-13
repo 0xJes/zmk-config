@@ -79,7 +79,7 @@ ZMK_COMBO(ret,      &kp RET,      LM2 LM3, NUM BSE NAV,  55, 100)
 ZMK_COMBO(esc,      &kp ESC,      LM1 LM3, NUM BSE NAV,  55, 180)
 
 ZMK_COMBO(gaming,   &tog GME,     LT1 RT1,     GME BSE,  50, 250)
-ZMK_COMBO(caps,     &caps_word,   LM1 RM1,         BSE,  50, 100)
+ZMK_COMBO(caps,     &caps_word,   LM1 RM1,         BSE,  40, 100)
 ZMK_COMBO(meta,     &kp LGUI,     LH0 RH0,         BSE, 100, 100)
 
 ZMK_COMBO(dolar,    &kp DLLR,     LM0 LT1,         BSE,  50,   0) // symbols
