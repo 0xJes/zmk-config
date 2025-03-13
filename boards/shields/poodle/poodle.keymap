@@ -69,7 +69,7 @@ ZMK_COMBO(v,        &kp V,        RT2 RT3,         BSE,  45,   0)
 ZMK_COMBO(qu,       &M_qu,        RT1 RT2,         BSE,  50,   0)
 ZMK_COMBO(q,        &kp Q,        RM1 RM4,         BSE,  45,   0)
 ZMK_COMBO(j,        &kp J,        RB2 RB3,         BSE,  50,   0)
-ZMK_COMBO(au,       &au,          RB2 RB3,         BSE,  50,   0)
+ZMK_COMBO(au,       &au,          RM1 RT2,         BSE,  50,   0)
 
 ZMK_COMBO(tab,      &kp TAB,      RM1 RM2,         BSE,  35, 180) // control chars
 ZMK_COMBO(under,    &kp UNDER,    RM1 RM3,         BSE,  45, 100)
@@ -80,6 +80,7 @@ ZMK_COMBO(esc,      &kp ESC,      LM1 LM3, NUM BSE NAV,  55, 180)
 
 ZMK_COMBO(gaming,   &tog GME,     LT1 RT1,     GME BSE,  50, 250)
 ZMK_COMBO(caps,     &caps_word,   LM1 RM1,         BSE,  50, 100)
+ZMK_COMBO(meta,     &caps_word,   LH0 RH0,         BSE, 100, 100)
 
 ZMK_COMBO(dolar,    &kp DLLR,     LM0 LT1,         BSE,  50,   0) // symbols
 ZMK_COMBO(hash,     &kp HASH,     RM0 RT1,         BSE,  90, 150)
