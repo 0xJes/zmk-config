@@ -5,7 +5,7 @@
 
 #define LEFT_HAND_KEYS  LT3 LT2 LT1 LM4 LM3 LM2 LM1 LM0 LB4 LB3 LB2 LB1 LB0
 #define RIGHT_HAND_KEYS RT1 RT2 RT3 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4
-#define THUMB_KEYS      LH0 RH0
+#define THUMB_KEYS      LH0 LH1 RH0 RH1
 
 #define BSE 0
 #define AP2 1
@@ -60,6 +60,7 @@ ZMK_MOD_MORPH(min_equ, bindings = <&kp MINUS>, <&kp EQUAL>; mods = <(MOD_RSFT)>;
 ZMK_MOD_MORPH(com_at,  bindings = <&kp COMMA>, <&kp AT>;    mods = <(MOD_RSFT)>;)
 ZMK_MOD_MORPH(sqt_dqt, bindings = <&kp SQT>,   <&kp DQT>;   mods = <(MOD_RSFT)>;)
 ZMK_MOD_MORPH(fls_str, bindings = <&kp FSLH>,  <&kp STAR>;  mods = <(MOD_RSFT)>;)
+ZMK_MOD_MORPH(dot_sem, bindings = <&kp DOT>,   <&kp SEMI>;  mods = <(MOD_RSFT)>;)
 
 //        NAME        OUTPUT          COMBOS    LAYERS TIME IDLE
 ZMK_COMBO(z,        &kp Z,        RB1 RB3,         BSE,  45,   0) // alpha combos
@@ -78,7 +79,7 @@ ZMK_COMBO(esc,      &kp ESC,      LM1 LM3, NUM BSE NAV,  55, 180)
 ZMK_COMBO(gaming,   &tog GME,     LT1 RT1,     GME BSE,  50, 250)
 
 ZMK_COMBO(dolar,    &kp DLLR,     LT1 LT3,         BSE,  50,   0) // symbols
-ZMK_COMBO(hash,     &kp HASH,     LM0 LT1,	       BSE,  90, 150)
+ZMK_COMBO(hash,     &kp HASH,     LM0 LT1,         BSE,  90, 150)
 ZMK_COMBO(colon,    &kp COLON,    LM1 LM4,         BSE,  50, 250)
 ZMK_COMBO(semi,     &kp SEMI,     RM1 RM4,         BSE, 100, 180)
 ZMK_COMBO(blsh,     &kp BSLH,     LM0 LM1,         BSE, 150, 250)
@@ -104,16 +105,16 @@ ZMK_COMBO(Lqmark,   &kp RA(FSLH), LM3 LB3,         BSE,  50, 200)
 ZMK_COMBO(Rqmark,   &kp QMARK,    RM3 RB3,         BSE,  50,   0)
 
 ZMK_LAYER(alpha,
-				&min_equ		&fls_str		&sqt_dqt 									&kp M	    	&kp G           &kp W
-&lm LALT C		&lm LCTRL I		&lm LGUI E		&lm LSHFT A		&com_at 	&kp K			&rm RSHFT H		&rm RGUI T		&rm LCTRL N		&rm RALT S
-&kp B			&kp Y   		&kp O   		&kp U			&kp DOT 	&kp X   		&kp L			&kp D			&kp P   		&kp F
-								&lt NAV SPACE  	&sl AP2										&sl AP2			&lt NUM R
+				&sqt_dqt		&fls_str		&dot_sem									&kp M			&kp G			&kp W
+&lm LALT C		&lm LCTRL I		&lm LGUI E		&lm LSHFT A		&com_at		&kp K			&rm RSHFT H		&rm RGUI T		&rm LCTRL N		&rm RALT S
+&kp B			&kp Y			&kp O			&kp U			&min_equ	&kp X			&kp L			&kp D			&kp P			&kp F
+								&sl AP2			&lt NAV SPACE								&lt NUM R		&sl AP2
 )
 
 ZMK_LAYER(alpha2,
-				&none			&kp RA(DOT)		&kp RA(J)									&kp RA(U)		&none			&none
-&kp RA(C)		&kp RA(B)		&kp RA(G) 		&kp RA(X)		&none		&none			&none   		&kp RA(N)		&none   		&none
-&none			&none			&none			&none			&none		&none			&kp RA(SEMI)	&none   		&none			&none
+				&none			&none			&none										&kp RA(U)		&none			&none
+&kp RA(C)		&kp RA(B)		&kp RA(G)		&kp RA(X)		&none		&none			&none			&kp RA(N)		&none			&none
+&none			&none			&kp RA(DOT)		&kp RA(J)		&none		&none			&kp RA(SEMI)	&none			&none			&none
 								&none			&none										&none			&none
 )
 
@@ -128,9 +129,8 @@ ZMK_LAYER(numbers,
 				&kp RA(N3)		&kp RA(N2)		&kp RA(SEMI)								&kp RA(N5)		&kp RA(N4)		&kp RA(LS(N5))
 &kp N6			&kp N4			&kp N2			&kp N0			&none		&none			&kp N1			&kp N3			&kp N5			&kp N7
 &none			&none			&none			&kp N8			&none		&none			&kp N9			&none			&none			&none
-								&none			&none										&none	        &none
+								&none			&none										&none			&none
 )
-
 
 ZMK_LAYER(gaming, 
 				&kp Q			&kp UP			&kp E  										&kp COMMA		&kp FSLH		&kp J

@@ -46,5 +46,8 @@
 #define RB3 24
 #define RB4 25
 
-#define LH0 26  // thumb keys
-#define RH0 27
+#define LH0 27  // thumb keys
+#define LH1 26
+#define RH0 28
+#define RH1 29
+
