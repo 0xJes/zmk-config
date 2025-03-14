@@ -3,9 +3,8 @@
 #include <zmk-helpers/helper.h>
 #include "keylabels.h"
 
-#define LEFT_HAND_KEYS  LT3 LT2 LT1 LM4 LM3 LM2 LM1 LM0 LB4 LB3 LB2 LB1 LB0
-#define RIGHT_HAND_KEYS RT1 RT2 RT3 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4
-#define THUMB_KEYS      LH0 LH1 RH0 RH1
+#define LEFT_HAND_KEYS  LT3 LT2 LT1 LM4 LM3 LM2 LM1 LM0 LB4 LB3 LB2 LB1 LB0 LH0 LH1
+#define RIGHT_HAND_KEYS RT1 RT2 RT3 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4 RH0 RH1
 
 #define BSE 0
 #define NAV 1
@@ -30,7 +29,7 @@ ZMK_HOLD_TAP(lm,
 	require-prior-idle-ms = <100>;
 	tapping-term-ms = <350>;
 	quick-tap-ms = <200>;
-	hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+	hold-trigger-key-positions = <RIGHT_HAND_KEYS>;
 	hold-trigger-on-release;
 	bindings = <&kp>, <&kp>;
 )
@@ -40,7 +39,7 @@ ZMK_HOLD_TAP(rm,
 	require-prior-idle-ms = <100>;
 	tapping-term-ms = <350>;
 	quick-tap-ms = <200>; 
-	hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
+	hold-trigger-key-positions = <LEFT_HAND_KEYS>;
 	hold-trigger-on-release;
 	bindings = <&kp>, <&kp>;
 )
@@ -107,7 +106,7 @@ ZMK_COMBO(Lqmark,   &kp RA(FSLH), LM3 LB3,         BSE,  50, 200)
 ZMK_COMBO(Rqmark,   &kp QMARK,    RM3 RB3,         BSE,  50,   0)
 
 ZMK_LAYER(alpha,
-				&sqt_dqt		&fsl_bsl		&dot_star									&kp M			&kp G			&kp W
+				&min_equ		&fsl_bsl		&dot_star									&kp M			&kp G			&kp W
 &lm LALT C		&lm LCTRL I		&kp E			&lm LSHFT A		&com_sem	&kp K			&rm RSHFT H		&kp T			&rm LCTRL N		&rm RALT S
 &kp B			&kp Y			&kp O			&kp U			&min_equ	&kp X			&kp L			&kp D			&kp P			&kp F
 								&sqt_dqt		&lt NAV SPACE								&lt NUM R		&kp RA(SQT)
