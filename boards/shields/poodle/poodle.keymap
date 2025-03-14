@@ -45,10 +45,10 @@ ZMK_HOLD_TAP(rm,
 	bindings = <&kp>, <&kp>;
 )
 
-ZMK_MACRO(qu, bindings = <&kp Q &kp U> ;)
-ZMK_MACRO(au, bindings = <&kp A &kp U> ;)
-ZMK_MACRO(ua, bindings = <&kp U &kp A> ;)
-ZMK_MACRO(eo, bindings = <&kp E &kp O> ;)
+ZMK_MACRO(qu, bindings = <&kp Q &kp U>;)
+ZMK_MACRO(au, bindings = <&kp A &kp U>;)
+ZMK_MACRO(ua, bindings = <&kp U &kp A>;)
+ZMK_MACRO(eo, bindings = <&kp E &kp O>;)
 
 ZMK_MOD_MORPH(min_equ,  bindings = <&kp MINUS>, <&kp EQUAL>; mods = <(MOD_RSFT)>;)
 ZMK_MOD_MORPH(com_sem,  bindings = <&kp COMMA>, <&kp SEMI>;  mods = <(MOD_RSFT)>;)
@@ -66,9 +66,9 @@ ZMK_COMBO(q,        &kp Q,        RM1 RM4,         BSE,  40,   0)
 ZMK_COMBO(j,        &kp J,        RB2 RB3,         BSE,  40,   0)
 ZMK_COMBO(enie,     &kp RA(N),    RM2 RT1,         BSE,  40,   0)
 
-ZMK_COMBO(au,       &au,          LM1 LT2,         BSE,  45,   0) // SFB mitigation
-ZMK_COMBO(ua,       &ua,          LM1 LT2,         BSE,  45,   0)
-ZMK_COMBO(eo,       &eo,          LM1 LT2,         BSE,  45,   0)
+ZMK_COMBO(au,       &au,          LT1 LT2,         BSE,  45,   0) // SFB mitigation
+ZMK_COMBO(ua,       &ua,          LT2 LT3,         BSE,  45,   0)
+ZMK_COMBO(eo,       &eo,          LT1 LT3,         BSE,  45,   0)
 
 ZMK_COMBO(tab,      &kp TAB,      RM1 RM2,         BSE,  35, 180) // control chars
 ZMK_COMBO(under,    &kp UNDER,    RM1 RM3,         BSE,  45, 100)
@@ -90,7 +90,6 @@ ZMK_COMBO(percent,  &kp PRCNT,    RB1 RB3,         BSE,  90, 250)
 ZMK_COMBO(grave,    &kp GRAVE,    LT1 LT2,         BSE,  50, 250)
 ZMK_COMBO(plus,     &kp PLUS,     RB0 RM1,         BSE,  80, 250)
 ZMK_COMBO(tilde,    &kp TILDE,    LB0 LB1,         BSE,  80, 250)
-ZMK_COMBO(dqt,      &kp DQT,      LT1 LT3,         BSE,  80, 250)
 
 ZMK_COMBO(amps,     &kp AMPS,     RM0 RB0,         BSE,  50, 200)
 ZMK_COMBO(pipe,     &kp PIPE,     LM0 LB0,         BSE,  50,   0)
@@ -111,7 +110,7 @@ ZMK_LAYER(alpha,
 				&sqt_dqt		&fsl_bsl		&dot_star									&kp M			&kp G			&kp W
 &lm LALT C		&lm LCTRL I		&kp E			&lm LSHFT A		&com_sem	&kp K			&rm RSHFT H		&kp T			&rm LCTRL N		&rm RALT S
 &kp B			&kp Y			&kp O			&kp U			&min_equ	&kp X			&kp L			&kp D			&kp P			&kp F
-								&kp SQT			&lt NAV SPACE								&lt NUM R		&kp RA(SQT)
+								&sqt_dqt		&lt NAV SPACE								&lt NUM R		&kp RA(SQT)
 )
 
 ZMK_LAYER(navigation,
