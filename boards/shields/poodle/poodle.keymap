@@ -49,13 +49,13 @@ ZMK_MACRO(au, bindings = <&kp A &kp U>;)
 ZMK_MACRO(ua, bindings = <&kp U &kp A>;)
 ZMK_MACRO(eo, bindings = <&kp E &kp O>;)
 
-ZMK_MOD_MORPH(min_equ,  bindings = <&kp MINUS>, <&kp EQUAL>; mods = <(MOD_RSFT)>;)
-ZMK_MOD_MORPH(com_sem,  bindings = <&kp COMMA>, <&kp SEMI>;  mods = <(MOD_RSFT)>;)
-ZMK_MOD_MORPH(sqt_dqt,  bindings = <&kp SQT>,   <&kp DQT>;   mods = <(MOD_RSFT)>;)
-ZMK_MOD_MORPH(fsl_bsl,  bindings = <&kp FSLH>,  <&kp BSLH>;  mods = <(MOD_RSFT)>;)
-ZMK_MOD_MORPH(dot_star, bindings = <&kp DOT>,   <&kp AT>;    mods = <(MOD_RSFT)>;)
-ZMK_MOD_MORPH(bspc_del, bindings = <&kp BSPC>,  <&kp DEL>;   mods = <(MOD_LSFT)>;)
-
+ZMK_MOD_MORPH(min_plus,    bindings = <&kp MINUS>, <&kp PLUS>;  mods = <(MOD_RSFT)>;)
+ZMK_MOD_MORPH(com_sem,     bindings = <&kp COMMA>, <&kp SEMI>;  mods = <(MOD_RSFT)>;)
+ZMK_MOD_MORPH(sqt_dqt,     bindings = <&kp SQT>,   <&kp DQT>;   mods = <(MOD_RSFT)>;)
+ZMK_MOD_MORPH(fsl_bsl,     bindings = <&kp FSLH>,  <&kp BSLH>;  mods = <(MOD_RSFT)>;)
+ZMK_MOD_MORPH(dot_star,    bindings = <&kp DOT>,   <&kp AT>;    mods = <(MOD_RSFT)>;)
+ZMK_MOD_MORPH(bspc_del,    bindings = <&kp BSPC>,  <&kp DEL>;   mods = <(MOD_LSFT)>;)
+ZMK_MOD_MORPH(under_caret, bindings = <&kp UNDER>, <&kp CARET>; mods = <(MOD_LSFT)>;)
 
 //        NAME        OUTPUT          COMBOS    LAYERS TIME IDLE
 ZMK_COMBO(z,        &kp Z,        RT1 RT3,         BSE,  40,   0) // alpha combos
@@ -70,7 +70,8 @@ ZMK_COMBO(ua,       &ua,          LT2 LT3,         BSE,  45,   0)
 ZMK_COMBO(eo,       &eo,          LT1 LT3,         BSE,  45,   0)
 
 ZMK_COMBO(tab,      &kp TAB,      RM1 RM2,         BSE,  35, 180) // control chars
-ZMK_COMBO(under,    &kp UNDER,    RM1 RM3,         BSE,  45, 100)
+ZMK_COMBO(under,    &under_caret, RM1 RM3,         BSE,  45, 100)
+ZMK_COMBO(equal,    &kp EQUAL,    RM1 RM2,         BSE,  45, 100)
 ZMK_COMBO(bspc,     &bspc_del,    RM2 RM3, NUM BSE NAV,  65, 100)
 ZMK_COMBO(semi,     &kp SEMI,     RM3 RM4,         BSE,  45, 100)
 ZMK_COMBO(colon,    &kp COLON,    LM3 LM4,         BSE,  45, 100)
@@ -84,7 +85,6 @@ ZMK_COMBO(meta,     &kp LGUI,     LH0 RH0,         BSE, 100, 100)
 ZMK_COMBO(dolar,    &kp DLLR,     LM0 LT1,         BSE,  50,   0) // symbols
 ZMK_COMBO(hash,     &kp HASH,     RM0 RT1,         BSE,  90, 150)
 ZMK_COMBO(blsh,     &kp BSLH,     LM0 LM1,         BSE, 150, 250)
-ZMK_COMBO(caret,    &kp CARET,    LB0 LM1,         BSE, 150, 250)
 ZMK_COMBO(percent,  &kp PRCNT,    RB1 RB3,         BSE,  90, 250)
 ZMK_COMBO(grave,    &kp GRAVE,    LT1 LT2,         BSE,  50, 250)
 ZMK_COMBO(plus,     &kp PLUS,     RB0 RM1,         BSE,  80, 250)
