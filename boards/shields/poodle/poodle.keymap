@@ -49,7 +49,7 @@ ZMK_MACRO(au, bindings = <&kp A &kp U>;)
 ZMK_MACRO(ua, bindings = <&kp U &kp A>;)
 ZMK_MACRO(eo, bindings = <&kp E &kp O>;)
 
-ZMK_MOD_MORPH(min_plus,    bindings = <&kp MINUS>, <&kp PLUS>;  mods = <(MOD_RSFT)>;)
+ZMK_MOD_MORPH(min_equ,     bindings = <&kp MINUS>, <&kp PLUS>;  mods = <(MOD_RSFT)>;)
 ZMK_MOD_MORPH(com_sem,     bindings = <&kp COMMA>, <&kp SEMI>;  mods = <(MOD_RSFT)>;)
 ZMK_MOD_MORPH(sqt_dqt,     bindings = <&kp SQT>,   <&kp DQT>;   mods = <(MOD_RSFT)>;)
 ZMK_MOD_MORPH(fsl_bsl,     bindings = <&kp FSLH>,  <&kp BSLH>;  mods = <(MOD_RSFT)>;)
