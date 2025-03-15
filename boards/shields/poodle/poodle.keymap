@@ -49,14 +49,14 @@ ZMK_MACRO(au, bindings = <&kp A &kp U>;)
 ZMK_MACRO(ua, bindings = <&kp U &kp A>;)
 ZMK_MACRO(eo, bindings = <&kp E &kp O>;)
 
-ZMK_MOD_MORPH(min_pls,     bindings = <&kp MINUS>, <&kp PLUS>;  mods = <(MOD_RSFT)>;)
-ZMK_MOD_MORPH(com_sem,     bindings = <&kp COMMA>, <&kp SEMI>;  mods = <(MOD_RSFT)>;)
+ZMK_MOD_MORPH(min_plu,     bindings = <&kp MINUS>, <&kp PLUS>;  mods = <(MOD_RSFT)>;)
+ZMK_MOD_MORPH(com_at,      bindings = <&kp COMMA>, <&kp AT>;    mods = <(MOD_RSFT)>;)
 ZMK_MOD_MORPH(sqt_dqt,     bindings = <&kp SQT>,   <&kp DQT>;   mods = <(MOD_RSFT)>;)
 ZMK_MOD_MORPH(fsl_bsl,     bindings = <&kp FSLH>,  <&kp BSLH>;  mods = <(MOD_RSFT)>;)
 ZMK_MOD_MORPH(dot_star,    bindings = <&kp DOT>,   <&kp AT>;    mods = <(MOD_RSFT)>;)
 ZMK_MOD_MORPH(bspc_del,    bindings = <&kp BSPC>,  <&kp DEL>;   mods = <(MOD_LSFT)>;)
 ZMK_MOD_MORPH(under_caret, bindings = <&kp UNDER>, <&kp CARET>; mods = <(MOD_LSFT)>;)
-ZMK_MOD_MORPH(equ_til,     bindings = <&kp EQUAL>, <&kp TILDE>; mods = <(MOD_LSFT)>;)
+ZMK_MOD_MORPH(equ_til,     bindings = <&kp EQUAL>, <&kp TILDE>; mods = <(MOD_RSFT)>;)
 
 //        NAME        OUTPUT          COMBOS    LAYERS TIME IDLE
 ZMK_COMBO(z,        &kp Z,        RT1 RT3,         BSE,  40,   0) // alpha combos
@@ -105,7 +105,7 @@ ZMK_COMBO(Lqmark,   &kp RA(FSLH), LM3 LB3,         BSE,  50, 200)
 ZMK_COMBO(Rqmark,   &kp QMARK,    RM3 RB3,         BSE,  50,   0)
 
 ZMK_LAYER(alpha,
-				&min_pls		&fsl_bsl		&dot_star									&kp M			&kp G			&kp W
+				&min_plu		&fsl_bsl		&dot_star									&kp M			&kp G			&kp W
 &lm LALT C		&lm LCTRL I		&kp E			&lm LSHFT A		&com_sem	&kp K			&rm RSHFT H		&kp T			&rm LCTRL N		&rm RALT S
 &kp B			&kp Y			&kp O			&kp U			&equ_til	&kp X			&kp L			&kp D			&kp P			&kp F
 								&sqt_dqt		&lt NAV SPACE								&lt NUM R		&kp RA(SQT)
