@@ -53,7 +53,7 @@ ZMK_MOD_MORPH(min_plu,     bindings = <&kp MINUS>, <&kp PLUS>;  mods = <(MOD_RSF
 ZMK_MOD_MORPH(com_at,      bindings = <&kp COMMA>, <&kp AT>;    mods = <(MOD_RSFT)>;)
 ZMK_MOD_MORPH(sqt_dqt,     bindings = <&kp SQT>,   <&kp DQT>;   mods = <(MOD_RSFT)>;)
 ZMK_MOD_MORPH(fsl_bsl,     bindings = <&kp FSLH>,  <&kp BSLH>;  mods = <(MOD_RSFT)>;)
-ZMK_MOD_MORPH(dot_star,    bindings = <&kp DOT>,   <&kp STAR>   mods = <(MOD_RSFT)>;)
+ZMK_MOD_MORPH(dot_star,    bindings = <&kp DOT>,   <&kp STAR>;  mods = <(MOD_RSFT)>;)
 ZMK_MOD_MORPH(bspc_del,    bindings = <&kp BSPC>,  <&kp DEL>;   mods = <(MOD_LSFT)>;)
 ZMK_MOD_MORPH(under_caret, bindings = <&kp UNDER>, <&kp CARET>; mods = <(MOD_LSFT)>;)
 ZMK_MOD_MORPH(equ_til,     bindings = <&kp EQUAL>, <&kp TILDE>; mods = <(MOD_RSFT)>;)
