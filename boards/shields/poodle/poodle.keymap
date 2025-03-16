@@ -106,14 +106,14 @@ ZMK_COMBO(Rqmark,   &kp QMARK,    RM3 RB3,         BSE,  50,   0)
 
 ZMK_LAYER(alpha,
 				&min_plu		&fsl_bsl		&dot_star									&kp M			&kp G			&kp W
-&lm LALT C		&lm LCTRL I		&kp E			&lm LSHFT A		&com_at		&kp K			&rm RSHFT H		&kp T			&rm LCTRL N		&rm RALT S
+&lm LGUI C		&lm LALT I		&lm LCTRL E		&lm LSHFT A		&com_at		&kp K			&rm RSHFT H		&rm RCTRL T		&rm LALT N		&rm RGUI S
 &kp B			&kp Y			&kp O			&kp U			&equ_til	&kp X			&kp L			&kp D			&kp P			&kp F
 								&sqt_dqt		&lt NAV SPACE								&lt NUM R		&kp RA(SQT)
 )
 
 ZMK_LAYER(navigation,
 				&none			&none			&none										&none			&none			&none
-&none			&kp LALT		&kp LCTRL		&kp LSHIFT		&none		&kp LC(PLUS)	&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT
+&kp LGUI		&kp LALT		&kp LCTRL		&kp LSHIFT		&none		&kp LC(PLUS)	&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT
 &none			&none			&none			&none			&none		&kp LC(MINUS)	&kp HOME		&kp PG_DN		&kp PG_UP		&kp END
 								&none			&none										&none			&none
 )
