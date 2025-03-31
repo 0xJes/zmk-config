@@ -74,7 +74,7 @@ ZMK_COMBO(oe,       &oe,          LT1 LT3,         BSE,  45,   0)
 
 ZMK_COMBO(tab,      &kp TAB,      RM1 RM2,         BSE,  35, 180) // control chars
 ZMK_COMBO(under,    &under_caret, RM1 RM3,         BSE,  45, 100)
-ZMK_COMBO(equal,    &kb EQUAL,    LM1 LM4,         BSE,  45, 100)
+ZMK_COMBO(equal,    &kp EQUAL,    LM1 LM4,         BSE,  45, 100)
 ZMK_COMBO(tilde,    &kp TILDE,    RM1 RM4,         BSE,  45, 100)
 ZMK_COMBO(bspc,     &bspc_del,    RM2 RM3, NUM BSE NAV,  65, 100)
 ZMK_COMBO(semi,     &kp SEMI,     RM3 RM4,         BSE,  45, 100)
