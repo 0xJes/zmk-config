@@ -108,9 +108,9 @@ ZMK_COMBO(Lqmark,   &kp RA(FSLH), LM3 LB3,         BSE,  50, 200)
 ZMK_COMBO(Rqmark,   &kp QMARK,    RM3 RB3,         BSE,  50,   0)
 
 ZMK_LAYER(alpha,
-				&min_plu		&fsl_bsl		&dot_star									&kp M			&kp G			&kp W
+				&kp SEMI		&fsl_bsl		&dot_star									&kp M			&kp G			&kp W
 &lm LCTRL C		&lm LALT I		&lm LGUI E		&lm LSHFT A		&com_at		&kp K			&rm RSHFT H		&rm RGUI T		&rm LALT N		&rm LCTRL S
-&kp B			&kp Y			&kp O			&kp U			&none		&kp X			&kp L			&kp D			&kp P			&kp F
+&kp B			&kp Y			&kp O			&kp U			&min_plu	&kp X			&kp L			&kp D			&kp P			&kp F
 								&sqt_dqt		&lt NAV SPACE								&lt NUM R		&kp RA(SQT)
 )
 
