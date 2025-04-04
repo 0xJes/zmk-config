@@ -75,7 +75,7 @@ ZMK_COMBO(tab,      &kp TAB,      RM1 RM2,         BSE,  30, 180) // control cha
 ZMK_COMBO(under,    &under_caret, RM1 RM3,         BSE,  45, 100)
 ZMK_COMBO(equal,    &kp EQUAL,    LM1 LM4,         BSE,  45, 100)
 ZMK_COMBO(tilde,    &kp TILDE,    RM1 RM4,         BSE,  45, 100)
-ZMK_COMBO(bspc,     &bspc_del,    RM2 RM3, NUM BSE NAV,  65, 100)
+ZMK_COMBO(bspc,     &kp BSPC,     RM2 RM3, NUM BSE NAV,  65, 100)
 ZMK_COMBO(del,      &kp DEL,      RM2 RM4, NUM BSE NAV,  80, 100)
 ZMK_COMBO(semi,     &kp SEMI,     RM3 RM4,         BSE,  45, 100)
 ZMK_COMBO(colon,    &kp COLON,    LM3 LM4,         BSE,  45, 100)
