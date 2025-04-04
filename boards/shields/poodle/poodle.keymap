@@ -72,7 +72,7 @@ ZMK_COMBO(ua,       &ua,          LT1 LT2,         BSE,  45,   0)
 ZMK_COMBO(eo,       &eo,          LT2 LT3,         BSE,  45,   0)
 ZMK_COMBO(oe,       &oe,          LT1 LT3,         BSE,  45,   0)
 
-ZMK_COMBO(tab,      &kp TAB,      RM1 RM2,         BSE,  35, 180) // control chars
+ZMK_COMBO(tab,      &kp TAB,      RM1 RM2,         BSE,  30, 180) // control chars
 ZMK_COMBO(under,    &under_caret, RM1 RM3,         BSE,  45, 100)
 ZMK_COMBO(equal,    &kp EQUAL,    LM1 LM4,         BSE,  45, 100)
 ZMK_COMBO(tilde,    &kp TILDE,    RM1 RM4,         BSE,  45, 100)
@@ -130,9 +130,9 @@ ZMK_LAYER(numbers,
 
 ZMK_LAYER(gaming, 
 				&kp Q			&kp UP			&kp E  										&kp COMMA		&kp FSLH		&kp J
-&kp TAB			&kp LEFT		&kp DOWN		&kp RIGHT		&kp ESC		&kp BSPC		&kp A			&kp B			&kp Y			&kp X
-&kp LSHFT		&kp X			&kp C			&kp V			&kp TAB		&kp RET			&kp U			&kp O			&kp Y			&kp RSHFT
-								&kp X			&kp R										&kp SPACE		&kp Z
+&kp C			&kp LEFT		&kp DOWN		&kp RIGHT		&kp ESC		&kp BSPC		&kp H			&kp T			&kp N			&kp S
+&kp B			&kp Y			&kp O			&kp U			&kp TAB		&kp RET			&kp L			&kp D			&kp P			&kp F
+								&kp LSHFT		&kp R										&kp SPACE		&kp RSHFT
 )
 
 
