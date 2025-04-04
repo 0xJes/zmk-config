@@ -54,8 +54,8 @@ ZMK_MACRO(oe, bindings = <&kp O &kp E>;)
 ZMK_MOD_MORPH(min_plu,     bindings = <&kp MINUS>, <&kp PLUS>;  mods = <(MOD_RSFT)>;)
 ZMK_MOD_MORPH(com_at,      bindings = <&kp COMMA>, <&kp AT>;    mods = <(MOD_RSFT)>;)
 ZMK_MOD_MORPH(sqt_dqt,     bindings = <&kp SQT>,   <&kp DQT>;   mods = <(MOD_RSFT)>;)
-ZMK_MOD_MORPH(fsl_bsl,     bindings = <&kp FSLH>,  <&kp BSLH>;  mods = <(MOD_RSFT)>;)
-ZMK_MOD_MORPH(dot_star,    bindings = <&kp DOT>,   <&kp STAR>;  mods = <(MOD_RSFT)>;)
+ZMK_MOD_MORPH(fsl_star,    bindings = <&kp FSLH>,  <&kp STAR>;  mods = <(MOD_RSFT)>;)
+ZMK_MOD_MORPH(dot_grave,   bindings = <&kp DOT>,   <&kp GRAVE>; mods = <(MOD_RSFT)>;)
 ZMK_MOD_MORPH(bspc_del,    bindings = <&kp BSPC>,  <&kp DEL>;   mods = <(MOD_LSFT)>;)
 ZMK_MOD_MORPH(under_caret, bindings = <&kp UNDER>, <&kp CARET>; mods = <(MOD_LSFT)>;)
 
@@ -64,7 +64,7 @@ ZMK_COMBO(z,        &kp Z,        RT1 RT3,         BSE,  40,   0) // alpha combo
 ZMK_COMBO(v,        &kp V,        RB1 RB2,         BSE,  40,   0)
 ZMK_COMBO(qu,       &qu,          RT1 RT2,         BSE,  40,   0)
 ZMK_COMBO(q,        &kp Q,        RT2 RT3,         BSE,  40,   0)
-// ZMK_COMBO(j,        &kp J,        RB2 RB3,         BSE,  40,   0)
+ZMK_COMBO(cedilla,  &kp RA(C),    RM4 RT3,         BSE,  40,   0)
 ZMK_COMBO(enie,     &kp RA(N),    RM2 RT1,         BSE,  40,   0)
 
 ZMK_COMBO(au,       &au,          LM1 LM2,         BSE,  45,   0) // SFB mitigation
@@ -90,7 +90,7 @@ ZMK_COMBO(dolar,    &kp DLLR,     LM0 LT1,         BSE,  50,   0) // symbols
 ZMK_COMBO(hash,     &kp HASH,     RM0 RT1,         BSE,  90, 150)
 ZMK_COMBO(blsh,     &kp BSLH,     LM0 LM1,         BSE, 150, 250)
 ZMK_COMBO(percent,  &kp PRCNT,    RB1 RB3,         BSE,  90, 250)
-ZMK_COMBO(grave,    &kp GRAVE,    RH0 RH1,         BSE,  50, 250)
+ZMK_COMBO(grac,     &kp RA(GRAVE),RH0 RH1,         BSE,  50, 250)
 
 ZMK_COMBO(amps,     &kp AMPS,     RM0 RB0,         BSE,  50, 200)
 ZMK_COMBO(pipe,     &kp PIPE,     LM0 LB0,         BSE,  50,   0)
@@ -108,7 +108,7 @@ ZMK_COMBO(Lqmark,   &kp RA(FSLH), LM3 LB3,         BSE,  50, 200)
 ZMK_COMBO(Rqmark,   &kp QMARK,    RM3 RB3,         BSE,  50,   0)
 
 ZMK_LAYER(alpha,
-				&kp	J			&fsl_bsl		&dot_star									&kp M			&kp G			&kp W
+				&kp	J			&fsl_star		&dot_grave									&kp M			&kp G			&kp W
 &lm LCTRL C		&lm LALT I		&lm LGUI E		&lm LSHFT A		&com_at		&kp K			&rm RSHFT H		&rm RGUI T		&rm LALT N		&rm LCTRL S
 &kp B			&kp Y			&kp O			&kp U			&min_plu	&kp X			&kp L			&kp D			&kp P			&kp F
 								&sqt_dqt		&lt NAV SPACE								&lt NUM R		&kp RA(SQT)
