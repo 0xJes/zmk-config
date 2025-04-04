@@ -116,7 +116,7 @@ ZMK_LAYER(alpha,
 
 ZMK_LAYER(navigation,
 				&none			&none			&none										&none			&none			&none
-&lm LCTRL		&lm LALT RA(I)	&lm LGUI RA(G)	&lm LSHFT RA(X)	&none		&kp LC(PLUS)	&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT
+&kp LCTRL		&lm LALT RA(I)	&lm LGUI RA(G)	&lm LSHFT RA(X)	&none		&kp LC(PLUS)	&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT
 &none			&none			&kp RA(DOT)		&kp RA(J)		&none		&kp LC(MINUS)	&kp HOME		&kp PG_DN		&kp PG_UP		&kp END
 								&none			&none										&none			&none
 )
