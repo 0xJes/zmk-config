@@ -56,12 +56,11 @@ ZMK_MOD_MORPH(com_at,      bindings = <&kp COMMA>, <&kp AT>;    mods = <(MOD_RSF
 ZMK_MOD_MORPH(sqt_dqt,     bindings = <&kp SQT>,   <&kp DQT>;   mods = <(MOD_RSFT)>;)
 ZMK_MOD_MORPH(fsl_star,    bindings = <&kp FSLH>,  <&kp STAR>;  mods = <(MOD_RSFT)>;)
 ZMK_MOD_MORPH(dot_grave,   bindings = <&kp DOT>,   <&kp GRAVE>; mods = <(MOD_RSFT)>;)
-ZMK_MOD_MORPH(bspc_del,    bindings = <&kp BSPC>,  <&kp DEL>;   mods = <(MOD_LSFT)>;)
 ZMK_MOD_MORPH(under_caret, bindings = <&kp UNDER>, <&kp CARET>; mods = <(MOD_LSFT)>;)
 
 //        NAME        OUTPUT          COMBOS    LAYERS TIME IDLE
 ZMK_COMBO(z,        &kp Z,        RT1 RT3,         BSE,  40,   0) // alpha combos
-ZMK_COMBO(v,        &kp V,        RM2 RM4,         BSE,  40,   0)
+ZMK_COMBO(v,        &kp V,        RB1 RB2,         BSE,  40,   0)
 ZMK_COMBO(qu,       &qu,          RT1 RT2,         BSE,  40,   0)
 ZMK_COMBO(q,        &kp Q,        RT2 RT3,         BSE,  40,   0)
 ZMK_COMBO(cedilla,  &kp RA(C),    RM4 RT3,         BSE,  40,   0)
@@ -77,6 +76,7 @@ ZMK_COMBO(under,    &under_caret, RM1 RM3,         BSE,  45, 100)
 ZMK_COMBO(equal,    &kp EQUAL,    LM1 LM4,         BSE,  45, 100)
 ZMK_COMBO(tilde,    &kp TILDE,    RM1 RM4,         BSE,  45, 100)
 ZMK_COMBO(bspc,     &bspc_del,    RM2 RM3, NUM BSE NAV,  65, 100)
+ZMK_COMBO(del,      &kp DEL,      RM2 RM4, NUM BSE NAV,  80, 100)
 ZMK_COMBO(semi,     &kp SEMI,     RM3 RM4,         BSE,  45, 100)
 ZMK_COMBO(colon,    &kp COLON,    LM3 LM4,         BSE,  45, 100)
 ZMK_COMBO(ret,      &kp RET,      LM2 LM3, NUM BSE NAV,  55, 100)
@@ -116,8 +116,8 @@ ZMK_LAYER(alpha,
 
 ZMK_LAYER(navigation,
 				&none			&none			&none										&none			&none			&none
-&kp LCTRL		&kp LALT		&kp LGUI		&kp LSHFT		&none		&kp LC(PLUS)	&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT
-&none			&none			&none			&none			&none		&kp LC(MINUS)	&kp HOME		&kp PG_DN		&kp PG_UP		&kp END
+&lm LCTRL		&lm LALT RA(I)	&lm LGUI RA(G)	&lm LSHFT RA(X)	&none		&kp LC(PLUS)	&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT
+&none			&none			&kp RA(DOT)		&kp RA(J)		&none		&kp LC(MINUS)	&kp HOME		&kp PG_DN		&kp PG_UP		&kp END
 								&none			&none										&none			&none
 )
 
