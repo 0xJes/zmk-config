@@ -55,7 +55,7 @@ ZMK_MOD_MORPH(under_caret, bindings = <&kp UNDER>, <&kp CARET>; mods = <(MOD_LSF
 
 //        NAME        OUTPUT          COMBOS    LAYERS TIME IDLE
 ZMK_COMBO(z,        &kp Z,        RT1 RT3,         BSE,  40,   0) // alpha combos
-ZMK_COMBO(v,        &kp V,        RB1 RB2,         BSE,  40,   0)
+ZMK_COMBO(x,        &kp X,        RB1 RB2,         BSE,  40,   0)
 ZMK_COMBO(qu,       &qu,          RT1 RT2,         BSE,  40,   0)
 ZMK_COMBO(q,        &kp Q,        RT2 RT3,         BSE,  40,   0)
 ZMK_COMBO(cedilla,  &kp RA(C),    RM4 RT3,         BSE,  40,   0)
@@ -105,8 +105,8 @@ ZMK_COMBO(Rqmark,   &kp QMARK,    RM3 RB3,         BSE,  50,   0)
 
 ZMK_LAYER(alpha,
 				&kp J			&kp SQT			&kp DOT						&kp M			&kp G			&kp W
-&lm LALT C		&lm LCTRL I		&lt NAV E		&lm LSHFT A		&com_at		&kp K			&rm RSHFT H		&lt NUM T		&rm RCTRL N		&rm LALT S
-&kp B			&kp Y			&kp O			&kp U			&min_plu	&kp X			&kp L			&kp D			&kp P			&kp F
+&lm LALT C		&lm LCTRL I		&lt NAV E		&lm LSHFT A		&com_at		&kp V			&rm RSHFT H		&lt NUM T		&rm RCTRL N		&rm LALT S
+&kp B			&kp Y			&kp O			&kp U			&min_plu	&kp K			&kp L			&kp D			&kp P			&kp F
 								&sqt_dqt		&lm LGUI SPACE								&rm RA(SQT) R	&kp RA(SQT)
 )
 
