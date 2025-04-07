@@ -61,10 +61,18 @@ ZMK_COMBO(q,        &kp Q,        RT2 RT3,         BSE,  40,   0)
 ZMK_COMBO(cedilla,  &kp RA(C),    RM4 RT3,         BSE,  40,   0)
 ZMK_COMBO(enie,     &kp RA(N),    RM2 RT1,         BSE,  40,   0)
 
+ZMK_COMBO(dqt,      &kp DQT,      RT3 RT1,         BSE,  40,   0)
+ZMK_COMBO(fslh,     &kp FSLH,     RT3 RT2,         BSE,  40,   0)
+ZMK_COMBO(bslh,     &kp BSLH,     RB3 RB2,         BSE,  40,   0)
+ZMK_COMBO(star,     &kp STAR,     RB2 RB1,         BSE,  40,   0)
+
+ZMK_COMBO(equal,    &kp EQUAL,    LM1 LM4,         BSE,  45, 250)
+ZMK_COMBO(tilde,    &kp TILDE,    RM1 RM4,         BSE,  45, 250)
+ZMK_COMBO(dolar,    &kp DLLR,     LM0 LT1,         BSE,  50, 250)
+ZMK_COMBO(hash,     &kp HASH,     RM0 RT1,         BSE,  50, 250)
+
 ZMK_COMBO(tab,      &kp TAB,      RM1 RM2,         BSE,  30, 180) // control chars
 ZMK_COMBO(under,    &under_caret, RM1 RM3,         BSE,  45, 100)
-ZMK_COMBO(equal,    &kp EQUAL,    LM1 LM4,         BSE,  45, 100)
-ZMK_COMBO(tilde,    &kp TILDE,    RM1 RM4,         BSE,  45, 100)
 ZMK_COMBO(bspc,     &kp BSPC,     RM2 RM3, NUM BSE NAV,  65, 100)
 ZMK_COMBO(del,      &kp DEL,      RM2 RM4, NUM BSE NAV,  80, 100)
 ZMK_COMBO(semi,     &kp SEMI,     RM3 RM4,         BSE,  45, 100)
@@ -76,14 +84,12 @@ ZMK_COMBO(gaming,   &tog GME,     LT1 RT1,     GME BSE,  50, 250)
 ZMK_COMBO(caps,     &caps_word,   LM1 RM1,         BSE,  40, 100)
 ZMK_COMBO(meta,     &kp LGUI,     LH0 RH0,         BSE, 100, 100)
 
-ZMK_COMBO(dolar,    &kp DLLR,     LM0 LT1,         BSE,  50,   0) // symbols
-ZMK_COMBO(hash,     &kp HASH,     RM0 RT1,         BSE,  90, 150)
 ZMK_COMBO(blsh,     &kp BSLH,     LM0 LM1,         BSE, 150, 250)
 ZMK_COMBO(percent,  &kp PRCNT,    RB1 RB3,         BSE,  90, 250)
 ZMK_COMBO(grac,     &kp RA(GRAVE),RH0 RH1,         BSE,  50, 250)
-
 ZMK_COMBO(amps,     &kp AMPS,     RM0 RB0,         BSE,  50, 200)
 ZMK_COMBO(pipe,     &kp PIPE,     LM0 LB0,         BSE,  50,   0)
+
 ZMK_COMBO(lpar,     &kp LPAR,     LM1 LB1,         BSE,  50, 200)
 ZMK_COMBO(rpar,     &kp RPAR,     RM1 RB1,         BSE,  50,   0)
 ZMK_COMBO(lbkt,     &kp LBKT,     LT1 LM1,         BSE,  50, 200)
@@ -98,31 +104,31 @@ ZMK_COMBO(Lqmark,   &kp RA(FSLH), LM3 LB3,         BSE,  50, 200)
 ZMK_COMBO(Rqmark,   &kp QMARK,    RM3 RB3,         BSE,  50,   0)
 
 ZMK_LAYER(alpha,
-				&kp	J			&fsl_star		&dot_grave									&kp M			&kp G			&kp W
-&lm LCTRL C		&lm LALT I		&lm LGUI E		&lm LSHFT A		&com_at		&kp K			&rm RSHFT H		&rm RGUI T		&rm LALT N		&rm LCTRL S
+				&lm LGUI J		&lm LALT SQT	&lm LCTRL DOT								&rm RCTRL M		&rm LALT G		&rm RGUI W
+&kp C			&kp I			&lt NAV E		&lm LSHFT A		&com_at		&kp K			&rm RSHFT H		&lt NUM T		&kp N			&kp S
 &kp B			&kp Y			&kp O			&kp U			&min_plu	&kp X			&kp L			&kp D			&kp P			&kp F
-								&sqt_dqt		&lt NAV SPACE								&lt NUM R		&kp RA(SQT)
+								&sqt_dqt		&kp SPACE									&kp R			&kp RA(SQT)
 )
 
 ZMK_LAYER(navigation,
 				&none			&none			&none										&none			&none			&none
-&kp LCTRL		&lm LALT RA(I)	&lm LGUI RA(G)	&lm LSHFT RA(X)	&none		&kp LC(PLUS)	&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT
-&none			&none			&kp RA(DOT)		&kp RA(J)		&none		&kp LC(MINUS)	&kp HOME		&kp PG_DN		&kp PG_UP		&kp END
+&none			&none			&none			&kp LSHFT		&none		&kp LC(PLUS)	&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT
+&none			&none			&none			&none			&none		&kp LC(MINUS)	&kp HOME		&kp PG_DN		&kp PG_UP		&kp END
 								&none			&none										&none			&none
 )
 
 ZMK_LAYER(numbers,
-				&kp RA(N3)		&kp RA(N2)		&kp RA(SEMI)								&kp RA(N5)		&kp RA(N4)		&kp RA(LS(N5))
-&kp N6			&kp N4			&kp N2			&kp N0			&none		&none			&kp N1			&kp N3			&kp N5			&kp N7
-&none			&none			&none			&kp N8			&none		&none			&kp N9			&none			&none			&none
+				&none			&kp N9			&kp N8										&none			&none			&none
+&kp N3			&kp N2			&kp N1			&kp N0			&none		&none			&none			&none			&none			&none
+&kp N7			&kp N6 			&kp N5			&kp N4			&none		&none			&none			&none			&none			&none
 								&none			&none										&none			&none
 )
 
 ZMK_LAYER(gaming, 
-				&kp Q			&kp UP			&kp E  										&kp COMMA		&kp FSLH		&kp J
+				&kp J			&kp UP			&kp DOT										&kp M			&kp G			&kp W
 &kp C			&kp LEFT		&kp DOWN		&kp RIGHT		&kp ESC		&kp BSPC		&kp H			&kp T			&kp N			&kp S
 &kp B			&kp Y			&kp O			&kp U			&kp TAB		&kp RET			&kp L			&kp D			&kp P			&kp F
-								&kp LSHFT		&kp R										&kp SPACE		&kp RSHFT
+								&kp LSHFT		&kp SPACE									&kp R			&kp RSHFT
 )
 
 
