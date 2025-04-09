@@ -104,10 +104,10 @@ ZMK_COMBO(Lqmark,   &kp RA(FSLH), LM3 LB3,         BSE,  50, 200)
 ZMK_COMBO(Rqmark,   &kp QMARK,    RM3 RB3,         BSE,  50,   0)
 
 ZMK_LAYER(alpha,
-				&kp J			&kp SQT			&kp DOT						&kp M			&kp G			&kp W
+				&kp J			&kp FSLH		&kp DOT						&kp M			&kp G			&kp W
 &lm LALT C		&lm LCTRL I		&lt NAV E		&lm LSHFT A		&com_at		&kp V			&rm RSHFT H		&lt NUM T		&rm RCTRL N		&rm LALT S
 &kp B			&kp Y			&kp O			&kp U			&min_plu	&kp K			&kp L			&kp D			&kp P			&kp F
-								&sqt_dqt		&lm LGUI SPACE								&rm RA(SQT) R	&kp RA(SQT)
+								&sqt_dqt		&mt LGUI SPACE								&rm RA(SQT) R	&kp RA(SQT)
 )
 
 ZMK_LAYER(navigation,
@@ -128,7 +128,7 @@ ZMK_LAYER(gaming,
 				&kp J			&kp UP			&kp DOT										&kp M			&kp G			&kp W
 &kp C			&kp LEFT		&kp DOWN		&kp RIGHT		&kp ESC		&kp BSPC		&kp H			&kp T			&kp N			&kp S
 &kp B			&kp Y			&kp O			&kp U			&kp TAB		&kp RET			&kp L			&kp D			&kp P			&kp F
-								&kp LSHFT		&kp L 										&kp R			&kp RSHFT
+								&kp X			&kp L 										&kp R			&kp Z
 )
 
 
