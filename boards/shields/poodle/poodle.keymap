@@ -48,35 +48,37 @@ ZMK_MACRO(qu, bindings = <&kp Q &kp U>;)
 
 ZMK_MOD_MORPH(min_plu,     bindings = <&kp MINUS>, <&kp PLUS>;  mods = <(MOD_RSFT)>;)
 ZMK_MOD_MORPH(com_at,      bindings = <&kp COMMA>, <&kp AT>;    mods = <(MOD_RSFT)>;)
-ZMK_MOD_MORPH(fsl_star,    bindings = <&kp FSLH>,  <&kp STAR>;  mods = <(MOD_RSFT)>;)
-ZMK_MOD_MORPH(dot_grave,   bindings = <&kp DOT>,   <&kp GRAVE>; mods = <(MOD_RSFT)>;)
 ZMK_MOD_MORPH(under_caret, bindings = <&kp UNDER>, <&kp CARET>; mods = <(MOD_LSFT)>;)
 
 //        NAME        OUTPUT          COMBOS    LAYERS TIME IDLE
-ZMK_COMBO(z,        &kp Z,        RT1 RT3,         BSE,  40,   0) // alpha combos
-ZMK_COMBO(v,        &kp V,        RB2 RB3,         BSE,  40,   0)
-ZMK_COMBO(qu,       &qu,          RT1 RT2,         BSE,  40,   0)
-ZMK_COMBO(q,        &kp Q,        RT2 RT3,         BSE,  40,   0)
-ZMK_COMBO(cedilla,  &kp RA(C),    RM4 RT3,         BSE,  40,   0)
-ZMK_COMBO(enie,     &kp RA(N),    RM2 RT1,         BSE,  40,   0)
+// ALPHA
+ZMK_COMBO(z,        &kp Z,        RT1 RT3,         BSE,  38,   0)
+ZMK_COMBO(v,        &kp V,        RB2 RB3,         BSE,  38,   0)
+ZMK_COMBO(qu,       &qu,          RT1 RT2,         BSE,  38,   0)
+ZMK_COMBO(q,        &kp Q,        RT2 RT3,         BSE,  38,   0)
+ZMK_COMBO(cedilla,  &kp RA(C),    RM4 RT3,         BSE,  38,   0)
+ZMK_COMBO(enie,     &kp RA(N),    RM2 RT1,         BSE,  38,   0)
+
+// CONTROL CHARACTERS
+ZMK_COMBO(tab,      &kp TAB,      RM1 RM2,         BSE,  30, 180) // increase
+ZMK_COMBO(bspc,     &kp BSPC,     RM3 RM4, NUM BSE NAV,  65, 100)
+ZMK_COMBO(del,      &kp DEL,      RM2 RM4, NUM BSE NAV,  80, 100)
+ZMK_COMBO(ret,      &kp RET,      LM2 LM3, NUM BSE NAV,  55, 100)
+ZMK_COMBO(esc,      &kp ESC,      LM1 LM3, NUM BSE NAV,  55, 180) // increase
+
+ZMK_COMBO(semi,     &kp SEMI,     LM4 LM3,         BSE,  45, 100)
+ZMK_COMBO(colon,    &kp COLON,    LT3 LT2,         BSE,  45, 100)
+ZMK_COMBO(under,    &under_caret, RM1 RM3,         BSE,  45, 100)
 
 ZMK_COMBO(dqt,      &kp DQT,      LT2 LT1,         BSE,  35,   0)
-ZMK_COMBO(bslh,     &kp BSLH,     LB3 LB2,         BSE,  35, 250)
-ZMK_COMBO(star,     &kp STAR,     LB2 LB1,         BSE,  35, 250)
+ZMK_COMBO(bslh,     &kp BSLH,     LM3 LT2,         BSE,  35, 250)
+ZMK_COMBO(star,     &kp STAR,     LM2 LT1,         BSE,  35, 250)
 
 ZMK_COMBO(equal,    &kp EQUAL,    LM1 LM4,         BSE,  45, 250)
 ZMK_COMBO(tilde,    &kp TILDE,    RM1 RM4,         BSE,  45, 250)
 ZMK_COMBO(dolar,    &kp DLLR,     LM0 LT1,         BSE,  50, 250)
 ZMK_COMBO(hash,     &kp HASH,     RM0 RT1,         BSE,  50, 250)
 
-ZMK_COMBO(tab,      &kp TAB,      RM1 RM2,         BSE,  30, 180) // control chars
-ZMK_COMBO(under,    &under_caret, RM1 RM3,         BSE,  45, 100)
-ZMK_COMBO(bspc,     &kp BSPC,     RM2 RM3, NUM BSE NAV,  65, 100)
-ZMK_COMBO(del,      &kp DEL,      RM2 RM4, NUM BSE NAV,  80, 100)
-ZMK_COMBO(semi,     &kp SEMI,     RM3 RM4,         BSE,  45, 100)
-ZMK_COMBO(colon,    &kp COLON,    LM3 LM4,         BSE,  45, 100)
-ZMK_COMBO(ret,      &kp RET,      LM2 LM3, NUM BSE NAV,  55, 100)
-ZMK_COMBO(esc,      &kp ESC,      LM1 LM3, NUM BSE NAV,  55, 180)
 
 ZMK_COMBO(gaming,   &tog GME,     LT1 RT1,     GME BSE,  50, 250)
 ZMK_COMBO(caps,     &caps_word,   LM1 RM1,         BSE,  40, 100)
