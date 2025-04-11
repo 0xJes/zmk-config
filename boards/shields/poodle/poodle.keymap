@@ -60,11 +60,11 @@ ZMK_COMBO(cedilla,  &kp RA(C),    RM4 RT3,         BSE,  38,   0)
 ZMK_COMBO(enie,     &kp RA(N),    RM2 RT1,         BSE,  38,   0)
 
 // CONTROL CHARACTERS
-ZMK_COMBO(tab,      &kp TAB,      RM1 RM2,         BSE,  30, 180) // increase
+ZMK_COMBO(tab,      &kp TAB,      RM1 RM2,         BSE,  30, 180) // inc.
 ZMK_COMBO(bspc,     &kp BSPC,     RM3 RM4, NUM BSE NAV,  65, 100)
 ZMK_COMBO(del,      &kp DEL,      RM2 RM4, NUM BSE NAV,  80, 100)
 ZMK_COMBO(ret,      &kp RET,      LM2 LM3, NUM BSE NAV,  55, 100)
-ZMK_COMBO(esc,      &kp ESC,      LM1 LM3, NUM BSE NAV,  55, 180) // increase
+ZMK_COMBO(esc,      &kp ESC,      LM1 LM3, NUM BSE NAV,  55, 180) // inc.
 
 ZMK_COMBO(semi,     &kp SEMI,     LM4 LM3,         BSE,  45, 100)
 ZMK_COMBO(colon,    &kp COLON,    LT3 LT2,         BSE,  45, 100)
@@ -79,10 +79,8 @@ ZMK_COMBO(tilde,    &kp TILDE,    RM1 RM4,         BSE,  45, 250)
 ZMK_COMBO(dolar,    &kp DLLR,     LM0 LT1,         BSE,  50, 250)
 ZMK_COMBO(hash,     &kp HASH,     RM0 RT1,         BSE,  50, 250)
 
-
 ZMK_COMBO(gaming,   &tog GME,     LT1 RT1,     GME BSE,  50, 250)
 ZMK_COMBO(caps,     &caps_word,   LM1 RM1,         BSE,  40, 100)
-ZMK_COMBO(meta,     &kp LGUI,     LH0 RH0,         BSE, 100, 100)
 
 ZMK_COMBO(blsh,     &kp BSLH,     LM0 LM1,         BSE, 150, 250)
 ZMK_COMBO(percent,  &kp PRCNT,    RB1 RB3,         BSE,  90, 250)
@@ -90,18 +88,19 @@ ZMK_COMBO(grac,     &kp RA(GRAVE),RH0 RH1,         BSE,  50, 250)
 ZMK_COMBO(amps,     &kp AMPS,     RM0 RB0,         BSE,  50, 200)
 ZMK_COMBO(pipe,     &kp PIPE,     LM0 LB0,         BSE,  50,   0)
 
-ZMK_COMBO(lpar,     &kp LPAR,     LM1 LB1,         BSE,  50, 200)
-ZMK_COMBO(rpar,     &kp RPAR,     RM1 RB1,         BSE,  50,   0)
-ZMK_COMBO(lbkt,     &kp LBKT,     LT1 LM1,         BSE,  50, 200)
-ZMK_COMBO(rbkt,     &kp RBKT,     RT1 RM1,         BSE,  50,   0)
-ZMK_COMBO(lbrc,     &kp LBRC,     LM2 LB2,         BSE,  50, 200)
-ZMK_COMBO(rbrc,     &kp RBRC,     RM2 RB2,         BSE,  50,   0)
-ZMK_COMBO(lt,       &kp LT,       LT2 LM2,         BSE,  50, 200)
-ZMK_COMBO(gt,       &kp GT,       RT2 RM2,         BSE,  50,   0)
+// BRACES
+ZMK_COMBO(lparent,  &kp LPAR,     LM1 LB1,         BSE,  50, 250)
+ZMK_COMBO(rparent,  &kp RPAR,     RM1 RB1,         BSE,  50, 250)
+ZMK_COMBO(lbkt,     &kp LBKT,     LT1 LM1,         BSE,  50, 250)
+ZMK_COMBO(rbkt,     &kp RBKT,     RT1 RM1,         BSE,  50, 250)
+ZMK_COMBO(lbrc,     &kp LBRC,     LM2 LB2,         BSE,  50, 250)
+ZMK_COMBO(rbrc,     &kp RBRC,     RM2 RB2,         BSE,  50, 250)
+ZMK_COMBO(lt,       &kp LT,       LT2 LM2,         BSE,  50, 250)
+ZMK_COMBO(gt,       &kp GT,       RT2 RM2,         BSE,  50, 250)
 ZMK_COMBO(lexcl,    &kp RA(N1),   LT3 LM3,         BSE,  50, 200)
-ZMK_COMBO(excl,     &kp EXCL,     RT3 RM3,         BSE,  50,   0)
-ZMK_COMBO(Lqmark,   &kp RA(FSLH), LM3 LB3,         BSE,  50, 200)
-ZMK_COMBO(Rqmark,   &kp QMARK,    RM3 RB3,         BSE,  50,   0)
+ZMK_COMBO(excl,     &kp EXCL,     RT3 RM3,         BSE,  50, 150)
+ZMK_COMBO(Lqmark,   &kp RA(FSLH), LM3 LB3,         BSE,  50, 250)
+ZMK_COMBO(Rqmark,   &kp QMARK,    RM3 RB3,         BSE,  50, 150)
 
 ZMK_LAYER(alpha,
 				&kp J			&kp FSLH		&kp DOT										&kp M			&kp G			&kp W
