@@ -80,16 +80,13 @@ ZMK_COMBO(under,    &under_caret, RM1 RM3,         BSE,  45, 100)
 ZMK_COMBO(dqt,      &kp DQT,      LT2 LT1,         BSE,  35,   0)
 ZMK_COMBO(bslh,     &kp BSLH,     LM3 LT2,         BSE,  35, 250)
 ZMK_COMBO(star,     &kp STAR,     LM2 LT1,         BSE,  35, 250)
-
 ZMK_COMBO(dolar,    &kp DLLR,     LM0 LT1,         BSE,  50, 250)
 ZMK_COMBO(hash,     &kp HASH,     RM0 RT1,         BSE,  50, 250)
-
-
 ZMK_COMBO(blsh,     &kp BSLH,     LM0 LM1,         BSE, 150, 250)
 ZMK_COMBO(percent,  &kp PRCNT,    RB1 RB3,         BSE,  90, 250)
 
 ZMK_COMBO(equal,    &kp EQUAL,    LB2 LB3,         BSE,  45, 300)
-ZMK_COMBO(tilde,    &kp TILDE,    LT2 LT3,         BSE,  45, 300)
+ZMK_COMBO(tilde,    &kp TILDE,    LT2 LT3,         BSE,  35, 250)
 ZMK_COMBO(semi,     &kp SEMI,     RM1 RM4,         BSE,  45, 100)
 ZMK_COMBO(colon,    &kp COLON,    LM1 LM4,         BSE,  45, 100)
 ZMK_COMBO(pipe,     &kp PIPE,     LB1 LB2,         BSE,  50, 300)
