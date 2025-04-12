@@ -130,55 +130,10 @@ ZMK_LAYER(numbers,
 								&none			&none										&none			&none
 )
 
-ZMK_BEHAVIOR(left_up, macro,
-    wait-ms = <0>;
-    bindings
-	=	<&macro_press &kp LEFT>
-	,	<&macro_press &kp UP>
-	,   <&macro_pause_for_release>
-	,	<&macro_release &kp LEFT>
-	,	<&macro_release &kp UP>
-	;
-)
-
-ZMK_BEHAVIOR(right_up, macro,
-    wait-ms = <0>;
-    bindings
-	=	<&macro_press &kp RIGHT>
-	,	<&macro_press &kp UP>
-	,   <&macro_pause_for_release>
-	,	<&macro_release &kp RIGHT>
-	,	<&macro_release &kp UP>
-	;
-)
-
-ZMK_BEHAVIOR(left_down, macro,
-    wait-ms = <0>;
-    bindings
-	=	<&macro_press &kp LEFT>
-	,	<&macro_press &kp DOWN>
-	,   <&macro_pause_for_release>
-	,	<&macro_release &kp LEFT>
-	,	<&macro_release &kp DOWN>
-	;
-)
-
-ZMK_BEHAVIOR(right_down, macro,
-    wait-ms = <0>;
-    bindings
-	=	<&macro_press &kp RIGHT>
-	,	<&macro_press &kp DOWN>
-	,   <&macro_pause_for_release>
-	,	<&macro_release &kp RIGHT>
-	,	<&macro_release &kp DOWN>
-	;
-)
-
-
 ZMK_LAYER(gaming, 
-				&left_up		&kp UP			&right_up									&kp M			&kp G			&kp W
-&kp C			&kp LEFT		&kp DOWN		&kp RIGHT		&kp ESC		&kp BSPC		&kp H			&kp T			&kp N			&kp S
-&kp B			&left_down		&kp O			&right_down		&kp TAB		&kp RET			&kp L			&kp D			&kp P			&kp F
+				&none			&kp UP			&none										&kp M			&kp G			&kp W
+&kp LEFT		&kp UP			&kp DOWN		&kp RIGHT		&kp ESC		&kp BSPC		&kp H			&kp T			&kp N			&kp S
+&kp B			&none			&kp O			&none			&kp TAB		&kp RET			&kp L			&kp D			&kp P			&kp F
 								&kp X			&kp L 										&kp R			&kp Z
 )
 
