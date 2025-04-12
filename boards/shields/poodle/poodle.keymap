@@ -133,7 +133,10 @@ ZMK_LAYER(numbers,
 ZMK_BEHAVIOR(LU, macro,
     wait-ms = <100>;
     tap-ms = <5>;
-    bindings = <&kp LEFT &kp UP>;
+    bindings
+	=	<&macro_press &kp LEFT>
+	,	<&macro_press &kp UP>
+	;
 )
 
 ZMK_LAYER(gaming, 
