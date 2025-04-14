@@ -73,7 +73,12 @@ ZMK_COMBO(esc,      &kp ESC,      LM1 LM3, NUM BSE NAV,  55, 180) // inc.
 ZMK_COMBO(gaming,   &tog GME,     LT1 RT1,     GME BSE,  50, 250)
 ZMK_COMBO(caps,     &caps_word,   LM1 RM1,         BSE,  40, 100)
 
-// SYMBOLS
+// SYMBOL
+ZMK_COMBO(colon,    &kp COLON,    LM1 LM4,         BSE,  45, 150)
+ZMK_COMBO(semi,     &kp SEMI,     RM1 RM4,         BSE,  45, 150)
+ZMK_COMBO(equal,    &kp EQUAL,    LM4 LM2,         BSE,  50, 300)
+ZMK_COMBO(tilde,    &kp TILDE,    RM4 RM2,         BSE,  50, 300)
+
 ZMK_COMBO(under,    &under_caret, RM1 RM3,         BSE,  45, 100)
 ZMK_COMBO(dqt,      &kp DQT,      LT2 LT1,         BSE,  35,   0)
 ZMK_COMBO(blsh,     &kp BSLH,     LT2 LT3,         BSE, 150, 250)
@@ -82,10 +87,6 @@ ZMK_COMBO(percent,  &kp PRCNT,    LB0 LM1,         BSE,  90, 250)
 ZMK_COMBO(star,     &kp STAR,     RB0 RM1,         BSE,  35, 250)
 ZMK_COMBO(dolar,    &kp DLLR,     LM0 LT1,         BSE,  50, 250)
 ZMK_COMBO(hash,     &kp HASH,     RM0 RT1,         BSE,  50, 250)
-ZMK_COMBO(equal,    &kp EQUAL,    LM0 LM1,         BSE,  45, 300)
-ZMK_COMBO(tilde,    &kp TILDE,    RM0 RM1,         BSE,  35, 250)
-ZMK_COMBO(semi,     &kp SEMI,     RM1 RM4,         BSE,  45, 100)
-ZMK_COMBO(colon,    &kp COLON,    LM1 LM4,         BSE,  45, 100)
 ZMK_COMBO(pipe,     &kp PIPE,     LB0 LB1,         BSE,  50, 300)
 ZMK_COMBO(amps,     &kp AMPS,     RB0 RB1,         BSE,  50, 300)
 
