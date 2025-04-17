@@ -75,7 +75,7 @@ ZMK_COMBO(caps,     &caps_word,   LM1 RM1,         BSE,  40, 100)
 
 // SYMBOL
 ZMK_COMBO(under,    &kp UNDER,    RM1 RM3,         BSE,  45, 100)
-ZMK_COMBO(star,     &kp STAR,     RT3 RT1,         BSE,  35, 250)
+ZMK_COMBO(star,     &kp STAR,     LT3 LT1,         BSE,  35, 250)
 ZMK_COMBO(dqt,      &kp DQT,      LT2 LT1,         BSE,  35,   0)
 ZMK_COMBO(blsh,     &kp BSLH,     LT2 LT3,         BSE, 150, 250)
 
