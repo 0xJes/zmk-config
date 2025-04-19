@@ -46,19 +46,14 @@ ZMK_HOLD_TAP(rm,
 
 ZMK_MACRO(qu, bindings = <&kp Q &kp U>;)
 
-ZMK_MOD_MORPH(com_at,      bindings = <&kp COMMA>, <&kp AT>;    mods = <(MOD_RSFT)>;)
-ZMK_MOD_MORPH(under_caret, bindings = <&kp UNDER>, <&kp CARET>; mods = <(MOD_LSFT)>;)
-
-// ZMK_COMBO(grac,     &kp RA(GRAVE),RH0 RH1,         BSE,  50, 250)
-
 //        NAME        OUTPUT          COMBOS    LAYERS TIME IDLE
 // ALPHA
-ZMK_COMBO(z,        &kp Z,        RT1 RT3,         BSE,  38,   0)
-ZMK_COMBO(v,        &kp V,        RB2 RB3,         BSE,  38,   0)
-ZMK_COMBO(qu,       &qu,          RT1 RT2,         BSE,  38,   0)
-ZMK_COMBO(q,        &kp Q,        RT2 RT3,         BSE,  38,   0)
-ZMK_COMBO(cedilla,  &kp RA(C),    RM4 RT3,         BSE,  38,   0)
-ZMK_COMBO(enie,     &kp RA(N),    RM2 RT1,         BSE,  38,   0)
+ZMK_COMBO(z,        &kp Z,        RT1 RT3,         BSE,  30,   0)
+ZMK_COMBO(v,        &kp V,        RB2 RB3,         BSE,  30,   0)
+ZMK_COMBO(qu,       &qu,          RT1 RT2,         BSE,  30,   0)
+ZMK_COMBO(q,        &kp Q,        RT2 RT3,         BSE,  30,   0)
+ZMK_COMBO(cedilla,  &kp RA(C),    RM4 RT3,         BSE,  30,   0)
+ZMK_COMBO(enie,     &kp RA(N),    RM2 RT1,         BSE,  30,   0)
 
 // CONTROL CHARACTERS
 ZMK_COMBO(tab,      &kp TAB,      RM1 RM2,         BSE,  25, 180) // inc.
@@ -76,8 +71,8 @@ ZMK_COMBO(under,    &kp UNDER,    RM1 RM3,         BSE,  45, 100)
 ZMK_COMBO(star,     &kp STAR,     LT3 LT1,         BSE,  35, 250)
 ZMK_COMBO(dqt,      &kp DQT,      LT2 LT1,         BSE,  35,   0)
 ZMK_COMBO(blsh,     &kp BSLH,     LT2 LT3,         BSE, 150, 250)
-ZMK_COMBO(minus,    &kp MINUS,    LM1 LM2,         BSE,  35, 250)
-ZMK_COMBO(plus,     &kp PLUS,     LM3 LM4,         BSE,  35, 250)
+ZMK_COMBO(at,       &kp AT,       RM1 RM0,         BSE,  35, 250)
+ZMK_COMBO(plus,     &kp PLUS,     LM1 LM0,         BSE,  35, 250)
 
 ZMK_COMBO(colon,    &kp COLON,    LM1 LM4,         BSE,  45, 150)
 ZMK_COMBO(semi,     &kp SEMI,     RM1 RM4,         BSE,  45, 150)
@@ -106,8 +101,8 @@ ZMK_COMBO(r_qmark,  &kp QMARK,    RM3 RB3,         BSE,  50, 150)
 
 ZMK_LAYER(alpha,
 				&kp J			&kp FSLH		&kp DOT										&kp M			&kp G			&kp W
-&lm LALT C		&lm LCTRL I		&lm LSHFT E		&lt NAV A		&com_at		&kp K			&lt NUM H		&rm RSHFT T		&rm RCTRL N		&rm LALT S
-&kp B			&kp Y			&kp O			&kp U			&kp EQUAL	&kp X			&kp L			&kp D			&kp P			&kp F
+&lm LALT C		&lm LCTRL I		&lm LSHFT E		&lt NAV A		&kp COMMA	&kp K			&lt NUM H		&rm RSHFT T		&rm RCTRL N		&rm LALT S
+&kp B			&kp Y			&kp O			&kp U			&kp MINUS	&kp X			&kp L			&kp D			&kp P			&kp F
 								&kp SQT			&mt LGUI SPACE								&kp	R			&kp RA(SQT)
 )
 
@@ -121,7 +116,7 @@ ZMK_LAYER(navigation,
 ZMK_LAYER(numbers,
 				&kp N9			&kp N8			&kp DOT										&none			&none			&none
 &kp N3			&kp N2			&kp N1			&kp N0			&kp COMMA	&none			&none			&kp RSHFT		&kp RCTRL		&kp LALT
-&kp N7			&kp N6 			&kp N5			&kp N4			&none		&none			&none			&none			&none			&none
+&kp N7			&kp N6			&kp N5			&kp N4			&none		&none			&none			&none			&none			&none
 								&none			&none										&none			&none
 )
 
