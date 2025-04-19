@@ -44,7 +44,7 @@ ZMK_HOLD_TAP(rm,
 	bindings = <&kp>, <&kp>;
 )
 
-ouZMK_MACRO(qu, bindings = <&kp Q &kp U>;)
+ZMK_MACRO(qu, bindings = <&kp Q &kp U>;)
 
 //        NAME      OUTPUT        COMBOS    LAYERS TIME IDLE
 // ALPHA
