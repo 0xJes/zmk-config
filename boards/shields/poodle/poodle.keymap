@@ -53,6 +53,8 @@ ZMK_COMBO(v,        &kp V,        RB2 RB3,         BSE, 30,   0)
 ZMK_COMBO(q,        &kp Q,        RT2 RT3,         BSE, 30,   0)
 ZMK_COMBO(qu,       &qu,          RT1 RT2,         BSE, 30,   0)
 ZMK_COMBO(enie,     &kp RA(N),    RM2 RT1,         BSE, 30,   0)
+ZMK_COMBO(cedilla,  &kp RA(C),    RM4 RT3,         BSE, 30,   0)
+
 
 // CONTROL CHARACTERS
 ZMK_COMBO(tab,      &kp TAB,      RM1 RM2,         BSE, 25, 180)
@@ -106,7 +108,7 @@ ZMK_LAYER(alpha,
 				&kp J			&kp FSLH		&kp DOT										&kp M			&kp G			&kp W
 &lm LALT C		&lm LCTRL I		&lm LSHFT E		&lt NAV A		&kp COMMA	&kp K			&lt NUM H		&rm RSHFT T		&rm RCTRL N		&rm LALT S
 &kp B			&kp Y			&kp O			&kp U			&kp MINUS	&kp X			&kp L			&kp D			&kp P			&kp F
-								&kp SQT			&mt LGUI SPACE								&kp	R			&kp RA(SQT)
+								&kp SQT			&mt LGUI SPACE								&kp RA(GRAVE) R	&kp RA(SQT)
 )
 
 ZMK_LAYER(navigation,
