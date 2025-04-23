@@ -24,6 +24,13 @@
 	require-prior-idle-ms = <100>;
 };
 
+&mt {
+	flavor = "balanced";
+	tapping-term-ms = <250>;
+	quick-tap-ms = <150>;
+	require-prior-idle-ms = <100>;
+};
+
 ZMK_HOLD_TAP(lm,
 	flavor = "balanced";
 	require-prior-idle-ms = <100>;
