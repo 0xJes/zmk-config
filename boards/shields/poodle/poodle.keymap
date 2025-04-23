@@ -48,13 +48,13 @@ ZMK_MACRO(qu, bindings = <&kp Q &kp U>;)
 
 //        NAME      OUTPUT        COMBOS    LAYERS TIME IDLE
 // ALPHA
-ZMK_COMBO(z,        &kp Z,        RT1 RT3,         BSE, 30,   0)
+ZMK_COMBO(z,        &kp Z,        RT1 RT3,         BSE, 25,   0)
 ZMK_COMBO(v,        &kp V,        RB2 RB3,         BSE, 30,   0)
-ZMK_COMBO(q,        &kp Q,        RT2 RT3,         BSE, 30,   0)
-ZMK_COMBO(qu,       &qu,          RT1 RT2,         BSE, 30,   0)
+ZMK_COMBO(q,        &kp Q,        RT2 RT3,         BSE, 25,   0)
+ZMK_COMBO(qu,       &qu,          RT1 RT2,         BSE, 25,   0)
 ZMK_COMBO(enie,     &kp RA(N),    RM2 RT1,         BSE, 30,   0)
 ZMK_COMBO(cedilla,  &kp RA(C),    LM4 LT3,         BSE, 30,   0)
-ZMK_COMBO(oe,       &kp RA(P),    LM4 LT3,         BSE, 30,   0)
+ZMK_COMBO(oe,       &kp RA(P),    LB3 LB1,         BSE, 30,   0)
 ZMK_COMBO(circum,   &kp RA(N6),   RH0 RH1,         BSE, 30,   0)
 
 // CONTROL CHARACTERS
