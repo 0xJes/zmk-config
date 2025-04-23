@@ -26,7 +26,7 @@
 
 ZMK_HOLD_TAP(lm,
 	flavor = "balanced";
-	require-prior-idle-ms = <200>;
+	require-prior-idle-ms = <100>;
 	tapping-term-ms = <350>;
 	quick-tap-ms = <200>;
 	hold-trigger-key-positions = <RIGHT_HAND_KEYS>;
@@ -36,7 +36,7 @@ ZMK_HOLD_TAP(lm,
 
 ZMK_HOLD_TAP(rm,
 	flavor = "balanced";
-	require-prior-idle-ms = <200>;
+	require-prior-idle-ms = <100>;
 	tapping-term-ms = <350>;
 	quick-tap-ms = <200>; 
 	hold-trigger-key-positions = <LEFT_HAND_KEYS>;
@@ -53,8 +53,7 @@ ZMK_COMBO(v,        &kp V,        RB2 RB3,         BSE, 30,   0)
 ZMK_COMBO(q,        &kp Q,        RT2 RT3,         BSE, 30,   0)
 ZMK_COMBO(qu,       &qu,          RT1 RT2,         BSE, 30,   0)
 ZMK_COMBO(enie,     &kp RA(N),    RM2 RT1,         BSE, 30,   0)
-ZMK_COMBO(cedilla,  &kp RA(C),    RM4 RT3,         BSE, 30,   0)
-
+ZMK_COMBO(cedilla,  &kp RA(C),    LM4 LT3,         BSE, 30,   0)
 
 // CONTROL CHARACTERS
 ZMK_COMBO(tab,      &kp TAB,      RM1 RM2,         BSE, 22, 180)
@@ -81,28 +80,28 @@ ZMK_COMBO(dqt,      &kp DQT,      LT2 LT1,         BSE, 35,   0)
 ZMK_COMBO(blsh,     &kp BSLH,     LT2 LT3,         BSE, 30, 250)
 
 // SYMBOLS: MIDDLE CLUSTER
-ZMK_COMBO(dolar,    &kp DLLR,     LM0 LT1,         BSE, 50, 250)
-ZMK_COMBO(hash,     &kp HASH,     RM0 RT1,         BSE, 50, 250)
+ZMK_COMBO(dolar,    &kp DLLR,     LM0 LT1,         BSE, 40, 250)
+ZMK_COMBO(hash,     &kp HASH,     RM0 RT1,         BSE, 40, 250)
 ZMK_COMBO(plus,     &kp PLUS,     LM1 LM0,         BSE, 35, 250)
 ZMK_COMBO(at,       &kp AT,       RM1 RM0,         BSE, 35, 250)
-ZMK_COMBO(caret,    &kp CARET,    LB0 LM1,         BSE, 50, 250)
-ZMK_COMBO(percent,  &kp PRCNT,    RB0 RM1,         BSE, 50, 250)
-ZMK_COMBO(amps,     &kp AMPS,     LB0 LB1,         BSE, 50, 300)
-ZMK_COMBO(pipe,     &kp PIPE,     RB0 RB1,         BSE, 50, 300)
+ZMK_COMBO(caret,    &kp CARET,    LB0 LM1,         BSE, 40, 250)
+ZMK_COMBO(percent,  &kp PRCNT,    RB0 RM1,         BSE, 40, 250)
+ZMK_COMBO(amps,     &kp AMPS,     LB0 LB1,         BSE, 40, 300)
+ZMK_COMBO(pipe,     &kp PIPE,     RB0 RB1,         BSE, 40, 300)
 
 // SYMBOL PAIRS
-ZMK_COMBO(l_par,    &kp LPAR,     LM1 LB1,         BSE, 50, 300)
-ZMK_COMBO(r_par,    &kp RPAR,     RM1 RB1,         BSE, 50, 300)
-ZMK_COMBO(l_bkt,    &kp LBKT,     LT1 LM1,         BSE, 50, 300)
-ZMK_COMBO(r_bkt,    &kp RBKT,     RT1 RM1,         BSE, 50, 300)
-ZMK_COMBO(l_brc,    &kp LBRC,     LM2 LB2,         BSE, 50, 300)
-ZMK_COMBO(r_brc,    &kp RBRC,     RM2 RB2,         BSE, 50, 300)
-ZMK_COMBO(lt,       &kp LT,       LT2 LM2,         BSE, 50, 300)
-ZMK_COMBO(gt,       &kp GT,       RT2 RM2,         BSE, 50, 300)
-ZMK_COMBO(l_excl,   &kp RA(N1),   LT3 LM3,         BSE, 50, 300)
-ZMK_COMBO(r_excl,   &kp EXCL,     RT3 RM3,         BSE, 50, 150)
-ZMK_COMBO(l_qmark,  &kp RA(FSLH), LM3 LB3,         BSE, 50, 500)
-ZMK_COMBO(r_qmark,  &kp QMARK,    RM3 RB3,         BSE, 50, 150)
+ZMK_COMBO(l_par,    &kp LPAR,     LM1 LB1,         BSE, 40, 300)
+ZMK_COMBO(r_par,    &kp RPAR,     RM1 RB1,         BSE, 40, 300)
+ZMK_COMBO(l_bkt,    &kp LBKT,     LT1 LM1,         BSE, 40, 300)
+ZMK_COMBO(r_bkt,    &kp RBKT,     RT1 RM1,         BSE, 40, 300)
+ZMK_COMBO(l_brc,    &kp LBRC,     LM2 LB2,         BSE, 40, 300)
+ZMK_COMBO(r_brc,    &kp RBRC,     RM2 RB2,         BSE, 40, 300)
+ZMK_COMBO(lt,       &kp LT,       LT2 LM2,         BSE, 40, 300)
+ZMK_COMBO(gt,       &kp GT,       RT2 RM2,         BSE, 40, 300)
+ZMK_COMBO(l_excl,   &kp RA(N1),   LT3 LM3,         BSE, 40, 300)
+ZMK_COMBO(r_excl,   &kp EXCL,     RT3 RM3,         BSE, 40, 150)
+ZMK_COMBO(l_qmark,  &kp RA(FSLH), LM3 LB3,         BSE, 40, 500)
+ZMK_COMBO(r_qmark,  &kp QMARK,    RM3 RB3,         BSE, 40, 150)
 
 ZMK_LAYER(alpha,
 				&kp J			&kp FSLH		&kp DOT										&kp M			&kp G			&kp W
