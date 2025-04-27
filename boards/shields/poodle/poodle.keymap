@@ -53,7 +53,7 @@ ZMK_HOLD_TAP(rm,
 
 ZMK_HOLD_TAP(sk_lt,
 	flavor = "balanced";
-	bindings = <&sk>, <&mo>;
+	bindings = <&sk LSHFT>, <&mo>;
 )
 
 ZMK_MACRO(qu, bindings = <&kp Q &kp U>;)
