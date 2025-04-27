@@ -59,9 +59,7 @@ ZMK_COMBO(z,        &kp Z,        RT1 RT3,         BSE, 20,   0)
 ZMK_COMBO(v,        &kp V,        RB2 RB3,         BSE, 35,   0) // done
 ZMK_COMBO(q,        &kp Q,        RT2 RT3,         BSE, 20,   0)
 ZMK_COMBO(qu,       &qu,          RT1 RT2,         BSE, 20,   0)
-ZMK_COMBO(cedilla,  &kp RA(C),    LM4 LT3,         BSE, 30,   0)
-ZMK_COMBO(oe,       &kp RA(P),    LB3 LB1,         BSE, 25,   0)
-ZMK_COMBO(circum,   &kp RA(N6),   RH0 RH1,         BSE, 30,   0)
+ZMK_COMBO(j,        &kp J,        RB1 RB2,         BSE, 20,   0)
 
 // CONTROL CHARACTERS
 ZMK_COMBO(tab,      &kp TAB,      RM1 RM2,         BSE, 22, 180)
@@ -112,10 +110,10 @@ ZMK_COMBO(l_qmark,  &kp RA(FSLH), LM3 LB3,         BSE, 40, 500)
 ZMK_COMBO(r_qmark,  &kp QMARK,    RM3 RB3,         BSE, 40, 150)
 
 ZMK_LAYER(alpha,
-				&kp J			&kp FSLH		&kp DOT										&kp M			&kp G			&kp W
+				&kp FSLH		&kp SQT			&kp DOT										&kp M			&kp G			&kp W
 &lm LALT C		&lm LCTRL I		&lm LSHFT E		&lt NAV A		&kp COMMA	&kp K			&lt NUM H		&rm RSHFT T		&rm RCTRL N		&rm LALT S
 &kp B			&kp Y			&kp O			&kp U			&kp MINUS	&kp X			&kp L			&kp D			&kp P			&kp F
-								&kp SQT			&mt LGUI SPACE								&lt 4 R			&sk RSHFT
+								&sk LSHFT		&mt LGUI SPACE								&lt 4 R			&sk RSHFT
 )
 
 ZMK_LAYER(navigation,
