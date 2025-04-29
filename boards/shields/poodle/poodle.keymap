@@ -60,14 +60,24 @@ ZMK_HOLD_TAP(sk_lt,
 	bindings = <&mo>, <&sk>;
 )
 
+
+ZMK_HOLD_TAP(q_qu,
+	require-prior-idle-ms = <100>;
+	tapping-term-ms = <350>;
+	quick-tap-ms = <200>; 
+	hold-trigger-key-positions = <LEFT_HAND_KEYS>;
+	flavor = "balanced";
+	bindings = <&kp>, <&qu>;
+)
+
+
 ZMK_MACRO(qu, bindings = <&kp Q &kp U>;)
 
 //        NAME      OUTPUT        COMBOS    LAYERS TIME IDLE
 // ALPHA
 ZMK_COMBO(z,        &kp Z,        RT1 RT3,         BSE, 25,   0)
 ZMK_COMBO(v,        &kp V,        RB2 RB3,         BSE, 35,   0) // done
-ZMK_COMBO(q,        &kp Q,        RB1 RB4,         BSE, 25,   0)
-ZMK_COMBO(qu,       &qu,          RT1 RT2,         BSE, 20,   0)
+ZMK_COMBO(qu,       &q_qu Q 0,    RT1 RT2,         BSE, 20,   0)
 ZMK_COMBO(j,        &kp J,        RT2 RT3,         BSE, 35,   0)
 ZMK_COMBO(enie,     &kp RA(N),    RT1 RM2,         BSE, 35,   0)
 ZMK_COMBO(cedilla,  &kp RA(C),    RM4 RT3,         BSE, 35,   0)
@@ -121,8 +131,8 @@ ZMK_COMBO(l_qmark,  &kp RA(FSLH), LM3 LB3,         BSE, 40, 500)
 ZMK_COMBO(r_qmark,  &kp QMARK,    RM3 RB3,         BSE, 40, 150)
 
 ZMK_LAYER(alpha,
-				&kp FSLH		&kp SQT			&kp DOT										&kp M			&kp G			&kp W
-&lm LALT C		&lm LCTRL I		&lm LSHFT E		&lt NAV A		&kp COMMA	&kp K			&lt NUM H		&rm RSHFT T		&rm RCTRL N		&rm LALT S
+				&lm LALT FSLH	&lm LCTRL SQT	&lm LSHFT DOT								&rm RSHFT M		&rm RCTRL G		&rm LALT W
+&kp C			&kp I			&kp E			&lt NAV A		&kp COMMA	&kp K			&lt NUM H		&kp T			&kp N			&kp S
 &kp B			&kp Y			&kp O			&kp U			&kp MINUS	&kp X			&kp L			&kp D			&kp P			&kp F
 								&sk LSHFT		&mt LGUI SPACE								&lt 4 R			&sk RSHFT
 )
@@ -154,6 +164,15 @@ ZMK_LAYER(esp,
 &none			&none			&kp RA(DOT)		&kp RA(J)		&none		&none			&none			&none			&none			&none
 								&none			&none										&none			&none
 )
+
+ZMK_LAYER(mouse,
+				&none			&none			&none										&none			&none			&none
+&none			&kp RA(B)		&kp RA(G)		&kp RA(X)		&none		&none			&none			&none			&kp RA(N)		&none
+&none			&none			&kp RA(DOT)		&kp RA(J)		&none		&none			&none			&none			&none			&none
+								&none			&none										&none			&none
+)
+
+
 
 // IDEAS
 // - language modes
