@@ -66,9 +66,11 @@ ZMK_MACRO(qu, bindings = <&kp Q &kp U>;)
 // ALPHA
 ZMK_COMBO(z,        &kp Z,        RT1 RT3,         BSE, 20,   0)
 ZMK_COMBO(v,        &kp V,        RB2 RB3,         BSE, 35,   0) // done
-ZMK_COMBO(q,        &kp Q,        RT2 RT3,         BSE, 20,   0)
+ZMK_COMBO(q,        &kp Q,        RB1 RB2,         BSE, 20,   0)
 ZMK_COMBO(qu,       &qu,          RT1 RT2,         BSE, 20,   0)
-ZMK_COMBO(j,        &kp J,        RB1 RB2,         BSE, 35,   0)
+ZMK_COMBO(j,        &kp J,        RT2 RT3,         BSE, 35,   0)
+ZMK_COMBO(enie,     &kp RA(N),    RT1 RM2,         BSE, 35,   0)
+ZMK_COMBO(cedilla,  &kp RA(C),    RM4 RT3,         BSE, 35,   0)
 
 // CONTROL CHARACTERS
 ZMK_COMBO(tab,      &kp TAB,      RM1 RM2,         BSE, 22, 180)
