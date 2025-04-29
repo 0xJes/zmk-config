@@ -68,8 +68,11 @@ ZMK_HOLD_TAP(q_qu,
 	bindings = <&kp>, <&qu>;
 )
 
-
-ZMK_MACRO(qu, bindings = <&kp Q &kp U>;)
+ZMK_BEHAVIOR(qu, macro,
+    wait-ms = <1>;
+    tap-ms = <1>;
+    bindings = <&kp Q &kp U>;
+)
 
 //        NAME      OUTPUT        COMBOS    LAYERS TIME IDLE
 // ALPHA
