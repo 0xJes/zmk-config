@@ -62,10 +62,9 @@ ZMK_HOLD_TAP(sk_lt,
 
 
 ZMK_HOLD_TAP(q_qu,
-	require-prior-idle-ms = <100>;
-	tapping-term-ms = <350>;
-	quick-tap-ms = <200>; 
-	hold-trigger-key-positions = <LEFT_HAND_KEYS>;
+	require-prior-idle-ms = <0>;
+	tapping-term-ms = <150>;
+	quick-tap-ms = <200>;
 	flavor = "balanced";
 	bindings = <&kp>, <&qu>;
 )
