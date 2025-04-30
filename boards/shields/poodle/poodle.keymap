@@ -25,6 +25,10 @@
 	require-prior-idle-ms = <100>;
 };
 
+&sk {
+	quick-release;
+};
+
 &mt {
 	flavor = "balanced";
 	tapping-term-ms = <250>;
