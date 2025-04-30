@@ -6,11 +6,9 @@ All extra layers are layer-tap under index and middle fingers, this reduces hold
 ## Base
 ## Navigation
 ## Numbers
-## Window Management
 
 # Links
 ## Features not yet in ZMK
-- Mouse scrolling/movement: https://github.com/zmkfirmware/zmk/pull/2027
 - Combos that must press in order: https://github.com/zmkfirmware/zmk/issues/2260
 - Adaptive keys: https://github.com/zmkfirmware/zmk/pull/2042
 - String output: https://github.com/zmkfirmware/zmk/pull/1893

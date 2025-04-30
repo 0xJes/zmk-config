@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 
 #include <dt-bindings/zmk/keys.h>
@@ -161,7 +161,7 @@ ZMK_LAYER(gaming,
 )
 
 ZMK_LAYER(esp,
-				&none			&none			&none										&none			&none			&none
+				&kp RA(I)		&kp RA(E)		&kp RA(U)									&none			&none			&none
 &none			&kp RA(B)		&kp RA(G)		&kp RA(X)		&none		&none			&none			&none			&kp RA(N)		&none
 &none			&none			&kp RA(DOT)		&kp RA(J)		&none		&none			&none			&none			&none			&none
 								&none			&none										&none			&none
@@ -174,8 +174,3 @@ ZMK_LAYER(mouse,
 								&mkp 4			&mkp LCLK									&mkp RCLK		&mkp 5
 )
 
-
-
-// IDEAS
-// - language modes
-// - mouse mode
