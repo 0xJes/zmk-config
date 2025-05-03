@@ -136,7 +136,7 @@ ZMK_LAYER(alpha,
 				&lm LALT FSLH	&lm LCTRL SQT	&lm LSHFT DOT								&rm RSHFT M		&rm RCTRL G		&rm LALT W
 &kp C			&kp I			&lt 5 E			&lt NAV A		&kp COMMA	&kp K			&lt NUM H		&kp T			&kp N			&kp S
 &kp B			&kp Y			&kp O			&kp U			&kp MINUS	&kp X			&kp L			&kp D			&kp P			&kp F
-								&sk LSHFT		&mt LGUI SPACE								&kp R			&sk_lt 4 RSHFT
+								&sk LSHFT		&mt LGUI SPACE								&lt 4 R			&sk_lt 4 RSHFT
 )
 
 ZMK_LAYER(navigation,
@@ -154,15 +154,15 @@ ZMK_LAYER(numbers,
 )
 
 ZMK_LAYER(gaming, 
-				&kp J			&kp UP			&kp DOT										&kp M			&kp G			&kp W
-&kp C			&kp LEFT		&kp DOWN		&kp RIGHT		&kp ESC		&kp BSPC		&kp H			&kp T			&kp N			&kp S
+				&kp J			&kp UP			&kp DOT										&kp Y			&kp X			&none
+&kp C			&kp LEFT		&kp DOWN		&kp RIGHT		&kp ESC		&kp BSPC		&kp A			&kp B			&kp Y			&kp X
 &kp B			&kp Y			&kp O			&kp U			&kp TAB		&kp RET			&kp L			&kp D			&kp P			&kp F
-								&kp X			&kp L 										&kp R			&kp Z
+								&kp W			&kp L 										&kp R			&kp Z
 )
 
 ZMK_LAYER(esp,
 				&kp RA(I)		&kp RA(E)		&kp RA(U)									&none			&none			&none
-&none			&kp RA(B)		&kp RA(G)		&kp RA(X)		&none		&none			&none			&none			&kp RA(N)		&none
+&none			&kp RA(B)		&kp RA(G)		&kp RA(X)		&none		&none			&kp RA(GRAVE)	&RA(SQT)		&kp RA(N6)		&kp RA(RS(SQT))
 &none			&none			&kp RA(DOT)		&kp RA(J)		&none		&none			&none			&none			&none			&none
 								&none			&none										&none			&none
 )
@@ -174,3 +174,5 @@ ZMK_LAYER(mouse,
 								&mkp 4			&mkp LCLK									&mkp RCLK		&mkp 5
 )
 
+//media buttons
+// aacc layer
