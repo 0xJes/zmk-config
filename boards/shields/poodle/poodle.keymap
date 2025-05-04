@@ -97,8 +97,8 @@ ZMK_COMBO(caps_w,   &caps_word,   LM1 RM1,         BSE, 40, 300)
 ZMK_COMBO(caps_b,   &kp CAPS,     LT2 RT2,         BSE, 40, 300)
 
 // SYMBOLS: HOME CLUSTER
-ZMK_COMBO(colon,    &kp COLON,    LM1 LM4,         BSE, 40, 150)
-ZMK_COMBO(semi,     &kp SEMI,     RM1 RM4,         BSE, 40, 150)
+ZMK_COMBO(colon,    &kp COLON,    LM1 LM4,         BSE, 40, 100)
+ZMK_COMBO(semi,     &kp SEMI,     RM1 RM4,         BSE, 40, 100)
 ZMK_COMBO(equal,    &kp EQUAL,    LM4 LM2,         BSE, 40, 300)
 ZMK_COMBO(tilde,    &kp TILDE,    RM4 RM2,         BSE, 40, 300)
 
