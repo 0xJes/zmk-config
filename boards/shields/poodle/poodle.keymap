@@ -60,7 +60,7 @@ ZMK_HOLD_TAP(rm,
 )
 
 ZMK_BEHAVIOR(qu, macro,
-    wait-ms = <1>;
+    wait-ms = <5>;
     tap-ms = <1>;
     bindings = <&kp Q &kp U>;
 )
@@ -110,18 +110,18 @@ ZMK_COMBO(amps,     &kp AMPS,     LB0 LB1,         BSE, 40, 300)
 ZMK_COMBO(pipe,     &kp PIPE,     RB0 RB1,         BSE, 40, 300)
 
 // SYMBOL PAIRS
-ZMK_COMBO(l_par,    &kp LPAR,     LM1 LB1,         BSE, 40, 300)
-ZMK_COMBO(r_par,    &kp RPAR,     RM1 RB1,         BSE, 40, 300)
-ZMK_COMBO(l_bkt,    &kp LBKT,     LT1 LM1,         BSE, 40, 300)
-ZMK_COMBO(r_bkt,    &kp RBKT,     RT1 RM1,         BSE, 40, 300)
-ZMK_COMBO(l_brc,    &kp LBRC,     LM2 LB2,         BSE, 40, 300)
-ZMK_COMBO(r_brc,    &kp RBRC,     RM2 RB2,         BSE, 40, 300)
-ZMK_COMBO(lt,       &kp LT,       LT2 LM2,         BSE, 40, 300)
-ZMK_COMBO(gt,       &kp GT,       RT2 RM2,         BSE, 40, 300)
-ZMK_COMBO(l_excl,   &kp RA(N1),   LT3 LM3,         BSE, 40, 300)
-ZMK_COMBO(r_excl,   &kp EXCL,     RT3 RM3,         BSE, 40, 150)
-ZMK_COMBO(l_qmark,  &kp RA(FSLH), LM3 LB3,         BSE, 40, 500)
-ZMK_COMBO(r_qmark,  &kp QMARK,    RM3 RB3,         BSE, 40, 150)
+ZMK_COMBO(l_par,    &mt LPAR RPAR, LM1 LB1,         BSE, 40, 300)
+ZMK_COMBO(r_par,    &kp RPAR,      RM1 RB1,         BSE, 40, 300)
+ZMK_COMBO(l_bkt,    &kp LBKT,      LT1 LM1,         BSE, 40, 300)
+ZMK_COMBO(r_bkt,    &kp RBKT,      RT1 RM1,         BSE, 40, 300)
+ZMK_COMBO(l_brc,    &kp LBRC,      LM2 LB2,         BSE, 40, 300)
+ZMK_COMBO(r_brc,    &kp RBRC,      RM2 RB2,         BSE, 40, 300)
+ZMK_COMBO(lt,       &kp LT,        LT2 LM2,         BSE, 40, 300)
+ZMK_COMBO(gt,       &kp GT,        RT2 RM2,         BSE, 40, 300)
+ZMK_COMBO(l_excl,   &kp RA(N1),    LT3 LM3,         BSE, 40, 300)
+ZMK_COMBO(r_excl,   &kp EXCL,      RT3 RM3,         BSE, 40, 150)
+ZMK_COMBO(l_qmark,  &kp RA(FSLH),  LM3 LB3,         BSE, 40, 500)
+ZMK_COMBO(r_qmark,  &kp QMARK,     RM3 RB3,         BSE, 40, 150)
 
 ZMK_LAYER(alpha,
 				&kp FSLH		&kp SQT			&kp	DOT										&kp M			&kp G			&kp W
