@@ -110,24 +110,17 @@ ZMK_COMBO(amps,     &kp AMPS,     LB0 LB1,         BSE, 40, 300)
 ZMK_COMBO(pipe,     &kp PIPE,     RB0 RB1,         BSE, 40, 300)
 
 // SYMBOL PAIRS
-ZMK_COMBO(l_par,    &mt LPAR RPAR, LM1 LB1,         BSE, 40, 300)
-ZMK_COMBO(r_par,    &kp RPAR,      RM1 RB1,         BSE, 40, 300)
-ZMK_COMBO(l_bkt,    &kp LBKT,      LT1 LM1,         BSE, 40, 300)
-ZMK_COMBO(r_bkt,    &kp RBKT,      RT1 RM1,         BSE, 40, 300)
-ZMK_COMBO(l_brc,    &kp LBRC,      LM2 LB2,         BSE, 40, 300)
-ZMK_COMBO(r_brc,    &kp RBRC,      RM2 RB2,         BSE, 40, 300)
-ZMK_COMBO(lt,       &kp LT,        LT2 LM2,         BSE, 40, 300)
-ZMK_COMBO(gt,       &kp GT,        RT2 RM2,         BSE, 40, 300)
-ZMK_COMBO(l_excl,   &kp RA(N1),    LT3 LM3,         BSE, 40, 300)
-ZMK_COMBO(r_excl,   &kp EXCL,      RT3 RM3,         BSE, 40, 150)
-ZMK_COMBO(l_qmark,  &kp RA(FSLH),  LM3 LB3,         BSE, 40, 500)
-ZMK_COMBO(r_qmark,  &kp QMARK,     RM3 RB3,         BSE, 40, 150)
-
+ZMK_COMBO(a_acc,    &kp RA(X),    LM1 LT1,         BSE, 40, 300)
+ZMK_COMBO(e_acc,    &kp RA(G),    LM2 LT2,         BSE, 40, 300)
+ZMK_COMBO(i_acc,    &kp RA(B),    LM3 LT3,         BSE, 40, 300)
+ZMK_COMBO(o_acc,    &kp RA(DOT),  LM2 LB2,         BSE, 40, 300)
+ZMK_COMBO(u_acc,    &kp RA(J),    LM1 LB1,         BSE, 40, 300)
+ 
 ZMK_LAYER(alpha,
 				&kp FSLH		&kp SQT			&kp	DOT										&kp M			&kp G			&kp W
 &lm LALT C		&lm LCTRL I		&lm LSHFT E		&lt NAV A		&kp COMMA	&kp K			&lt NUM H		&rm RSHFT T		&rm RCTRL N		&rm LALT S
 &kp B			&kp Y			&kp O			&kp U			&kp MINUS	&kp X			&kp L			&kp D			&kp P			&kp F
-								&sk LSHFT		&mt LGUI SPACE								&lt 4 R			&sk RSHFT
+								&sk LSHFT		&mt LGUI SPACE								&lt 5 R			&sk RSHFT
 )
 
 ZMK_LAYER(navigation,
@@ -154,6 +147,13 @@ ZMK_LAYER(gaming,
 ZMK_LAYER(esp,
 				&none			&none			&none										&none			&none			&none
 &none			&none			&none			&none			&none		&none			&kp RA(GRAVE)	&kp RA(SQT)		&kp RA(N6)		&kp RA(RS(SQT))
+&none			&none			&none			&none			&none		&none			&none			&none			&none			&none
+								&none			&none										&none			&none
+)
+
+ZMK_LAYER(sym,
+				&none			&kp LT			&kp LBRC									&kp RBRC		&kp GT			&none
+&kp RA(FSLH)	&kp RA(N1)		&kp LBKT		&kp LPAR		&none		&none			&kp RPAR		&kp RBKT		&kp EXCL		&kp QMARK
 &none			&none			&none			&none			&none		&none			&none			&none			&none			&none
 								&none			&none										&none			&none
 )
