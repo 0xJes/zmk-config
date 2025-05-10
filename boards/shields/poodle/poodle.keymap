@@ -14,6 +14,7 @@
 #define NAV 1
 #define NUM 2
 #define GME 3
+#define SYM 5
 
 // behavior configuration
 
@@ -77,22 +78,22 @@ ZMK_COMBO(cedilla,  &kp RA(C),    RM4 RT3,         BSE, 35,   0)
 
 // CONTROL CHARACTERS
 ZMK_COMBO(tab,      &kp TAB,      RM1 RM2,         BSE, 22, 180)
-ZMK_COMBO(bspc,     &kp BSPC,     RM2 RM3,     BSE NAV, 40,  70)
-ZMK_COMBO(del,      &kp DEL,      RM3 RM4,     BSE NAV, 60, 100)
-ZMK_COMBO(ret,      &kp RET,      LM2 LM3,         BSE, 35, 100)
-ZMK_COMBO(esc,      &kp ESC,      LM1 LM3,         BSE, 50, 180)
+ZMK_COMBO(bspc,     &kp BSPC,     RM2 RM3, BSE NAV SYM, 40,  70)
+ZMK_COMBO(del,      &kp DEL,      RM3 RM4, BSE NAV SYM, 60, 100)
+ZMK_COMBO(ret,      &kp RET,      LM2 LM3,     BSE SYM, 35, 100)
+ZMK_COMBO(esc,      &kp ESC,      LM1 LM3,     BSE SYM, 50, 180)
 
 // SPECIAL
 ZMK_COMBO(gaming,   &tog GME,     LT1 RT1,     GME BSE, 50, 300)
-ZMK_COMBO(caps_w,   &caps_word,   LM1 RM1,         BSE, 40, 200)
+ZMK_COMBO(caps_w,   &caps_word,   LM1 RM1,         BSE, 35, 150)
 ZMK_COMBO(caps_b,   &kp CAPS,     LT2 RT2,         BSE, 40, 300)
 
 // SYMBOLS: HOME CLUSTER
 ZMK_COMBO(colon,    &kp COLON,    LM1 LM4,         BSE, 40, 100)
 ZMK_COMBO(semi,     &kp SEMI,     RM1 RM4,         BSE, 40, 100)
+ZMK_COMBO(under,    &kp UNDER,    RM1 RM3,         BSE, 45, 100)
 
 // SYMBOLS: LEFT UPPER CLUSTER
-ZMK_COMBO(under,    &kp UNDER,    RM1 RM3,         BSE, 45, 100)
 ZMK_COMBO(plus,     &kp PLUS,     LT3 LT1,         BSE, 35, 300)
 ZMK_COMBO(dqt,      &kp DQT,      LT2 LT1,         BSE, 35,   0)
 ZMK_COMBO(star,     &kp STAR,     LT2 LT3,         BSE, 30, 300)
@@ -119,10 +120,10 @@ ZMK_LAYER(navigation,
 )
 
 ZMK_LAYER(numbers,
-				&kp N9			&kp N8			&kp DOT											&none			&none			&none
-&kp N3			&kp N2			&kp N1			&kp N0			&kp COMMA		&none			&none			&kp RSHFT		&kp RCTRL		&kp LALT
-&kp N7			&kp N6			&kp N5			&kp N4			&none			&none			&none			&none			&none			&none
-								&none			&none											&none			&none
+				&trans			&trans			&trans											&none			&none				&none
+&kp N3			&kp N2			&kp N1			&kp N0			&trans			&none			&none			&rm LSHFT RA(SEMI)	&rm RCTRL RA(N2)	&rm LALT RA(N3)
+&kp N7			&kp N6			&kp N5			&kp N4			&trans			&none			&none			&kp LS(RA(N1))		&kp LS(RA(N2))		&kp LS(RA(N3))
+								&trans			&trans											&none			&none
 )
 
 ZMK_LAYER(gaming, 
@@ -142,6 +143,6 @@ ZMK_LAYER(esp,
 ZMK_LAYER(sym,
 				&kp AT			&kp AT			&kp LPAR										&kp RPAR		&kp DLLR		&kp RBKT
 &kp BSLH		&kp TILDE		&kp RA(N1)		&kp RA(FSLH)	&none			&none			&kp QMARK		&kp EXCL		&kp EQUAL		&kp HASH
-&kp PERCENT		&kp LT			&kp PIPE		&kp LBRC		&kp RA(SEMI)	&none			&kp RBRC		&kp AMPS		&kp GT			&kp CARET
+&kp PERCENT		&kp LT			&kp PIPE		&kp LBRC		&none			&none			&kp RBRC		&kp AMPS		&kp GT			&kp CARET
 								&none			&none											&none			&none
 )
