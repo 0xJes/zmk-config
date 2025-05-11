@@ -71,8 +71,8 @@ ZMK_BEHAVIOR(qu, macro,
 ZMK_COMBO(z,        &kp Z,        RT1 RT3,         BSE, 30,   0) // inc
 ZMK_COMBO(v,        &kp V,        RB2 RB3,         BSE, 35,   0) // inc
 ZMK_COMBO(qu,       &qu,          RT1 RT2,         BSE, 20,   0)
-ZMK_COMBO(q,        &kp Q,        RB1 RB2,         BSE, 30,   0)
-ZMK_COMBO(j,        &kp J,        RT2 RT3,         BSE, 35,   0)
+ZMK_COMBO(q,        &kp Q,        RB1 RB2,         BSE, 35,   0)
+ZMK_COMBO(j,        &kp J,        RT2 RT3,         BSE, 30,   0)
 ZMK_COMBO(enie,     &kp RA(N),    RT1 RM2,         BSE, 35,   0)
 ZMK_COMBO(cedilla,  &kp RA(C),    RM4 RT3,         BSE, 35,   0)
 
@@ -120,10 +120,10 @@ ZMK_LAYER(navigation,
 )
 
 ZMK_LAYER(numbers,
-				&kp N9			&kp N8			&trans											&none			&trans				&trans
-&kp N3			&kp N2			&kp N1			&kp N0			&trans			&none			&none			&rm LSHFT RA(SEMI)	&rm RCTRL RA(N2)	&rm LALT RA(N3)
-&kp N7			&kp N6			&kp N5			&kp N4			&trans			&none			&none			&kp LS(RA(N1))		&kp LS(RA(N2))		&kp LS(RA(N3))
-								&trans			&trans											&trans			&trans
+				&kp N9			&kp N8			&trans									&none		&trans				&trans
+&kp N3			&kp N2			&kp N1			&kp N0			&trans		&none		&none		&rm LSHFT RA(SEMI)	&rm RCTRL RA(N2)	&rm LALT RA(N3)
+&kp N7			&kp N6			&kp N5			&kp N4			&trans		&none		&none		&kp LS(RA(N1))		&kp LS(RA(N2))		&kp LS(RA(N3))
+								&trans			&trans									&trans		&trans
 )
 
 ZMK_LAYER(gaming, 
