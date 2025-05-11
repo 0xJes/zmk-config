@@ -120,7 +120,7 @@ ZMK_LAYER(navigation,
 )
 
 ZMK_LAYER(numbers,
-				&trans			&trans			&trans											&none			&trans				&trans
+				&kp N9			&kp N8			&trans											&none			&trans				&trans
 &kp N3			&kp N2			&kp N1			&kp N0			&trans			&none			&none			&rm LSHFT RA(SEMI)	&rm RCTRL RA(N2)	&rm LALT RA(N3)
 &kp N7			&kp N6			&kp N5			&kp N4			&trans			&none			&none			&kp LS(RA(N1))		&kp LS(RA(N2))		&kp LS(RA(N3))
 								&trans			&trans											&trans			&trans
