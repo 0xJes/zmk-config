@@ -62,7 +62,7 @@ ZMK_HOLD_TAP(rm,
 
 ZMK_BEHAVIOR(qu, macro,
     wait-ms = <5>;
-    tap-ms = <1>;
+    tap-ms = <5>;
     bindings = <&kp Q &kp U>;
 )
 
@@ -89,7 +89,7 @@ ZMK_COMBO(caps_w,   &caps_word,   LM1 RM1,         BSE, 35, 150)
 ZMK_COMBO(caps_b,   &kp CAPS,     LT2 RT2,         BSE, 40, 300)
 
 // SYMBOLS: HOME CLUSTER
-ZMK_COMBO(colon,    &kp COLON,    LM1 LM4,         BSE, 40, 100)
+ZMK_COMBO(colon,    &kp COLON,    LM1 LM4,     BSE NUM, 40, 100)
 ZMK_COMBO(semi,     &kp SEMI,     RM1 RM4,         BSE, 40, 100)
 ZMK_COMBO(under,    &kp UNDER,    RM1 RM3,         BSE, 45, 100)
 
