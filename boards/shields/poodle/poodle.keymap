@@ -141,7 +141,7 @@ ZMK_LAYER(esp,
 )
 
 ZMK_LAYER(sym,
-				&kp AT			&kp AT			&kp LPAR										&kp RPAR		&kp DLLR		&kp RBKT
+				&kp LBKT		&kp AT			&kp LPAR										&kp RPAR		&kp DLLR		&kp RBKT
 &kp BSLH		&kp TILDE		&kp RA(N1)		&kp RA(FSLH)	&none			&none			&kp QMARK		&kp EXCL		&kp EQUAL		&kp HASH
 &kp PERCENT		&kp LT			&kp PIPE		&kp LBRC		&none			&none			&kp RBRC		&kp AMPS		&kp GT			&kp CARET
 								&none			&none											&none			&none
