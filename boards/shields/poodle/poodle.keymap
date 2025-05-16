@@ -108,9 +108,9 @@ ZMK_COMBO(i_acc,    &kp RA(B),    LM3 LT3,         BSE, 40, 300)
 ZMK_COMBO(o_acc,    &kp RA(DOT),  LM2 LB2,         BSE, 40, 300)
 ZMK_COMBO(u_acc,    &kp RA(J),    LM1 LB1,         BSE, 40, 300)
 
-ZMK_COMBO(o_acc,    &kp RA(SQT),  RM1 RT1,         BSE, 40,   0)
-ZMK_COMBO(o_acc,    &kp RA(N6),   RM2 RT2,         BSE, 40,   0)
-ZMK_COMBO(o_acc,    &kp RA(RS(SQT)),  RM3 RT3,     BSE, 40,   0)
+ZMK_COMBO(grave,    &kp RA(SQT),  RM1 RT1,         BSE, 40,   0)
+ZMK_COMBO(circum,    &kp RA(N6),   RM2 RT2,         BSE, 40,   0)
+ZMK_COMBO(umlaut,    &kp RA(RS(SQT)),  RM3 RT3,     BSE, 40,   0)
  
 ZMK_LAYER(alpha,
 				&kp FSLH		&kp SQT			&kp	DOT											&kp M			&kp G			&kp W
