@@ -98,39 +98,46 @@ ZMK_COMBO(plus,     &kp PLUS,     LT3 LT1,         BSE, 35, 300)
 ZMK_COMBO(dqt,      &kp DQT,      LT2 LT1,         BSE, 35,   0)
 ZMK_COMBO(star,     &kp STAR,     LT2 LT3,         BSE, 30, 300)
 
+// VERTICAL COMBOS
+ZMK_COMBO(plus,     &kp PLUS,     LM0 LB0,         BSE, 40,   0)
+
 // DIACRITS
 ZMK_COMBO(a_acc,    &kp RA(X),    LM1 LT1,         BSE, 40, 300)
 ZMK_COMBO(e_acc,    &kp RA(G),    LM2 LT2,         BSE, 40, 300)
 ZMK_COMBO(i_acc,    &kp RA(B),    LM3 LT3,         BSE, 40, 300)
 ZMK_COMBO(o_acc,    &kp RA(DOT),  LM2 LB2,         BSE, 40, 300)
 ZMK_COMBO(u_acc,    &kp RA(J),    LM1 LB1,         BSE, 40, 300)
+
+ZMK_COMBO(o_acc,    &kp RA(SQT),  RM1 RT1,         BSE, 40,   0)
+ZMK_COMBO(o_acc,    &kp RA(N6),   RM2 RT2,         BSE, 40,   0)
+ZMK_COMBO(o_acc,    &kp RA(RS(SQT)),  RM3 RT3,     BSE, 40,   0)
  
 ZMK_LAYER(alpha,
 				&kp FSLH		&kp SQT			&kp	DOT											&kp M			&kp G			&kp W
-&lm LALT C		&lm LCTRL I		&lm LSHFT E		&lt NAV A		&kp COMMA		&kp K			&lt NUM H		&rm RSHFT T		&rm RCTRL N		&rm LALT S
+&lm LCTRL C		&lm LALT I		&lm LSHFT E		&lt NAV A		&kp COMMA		&kp K			&lt NUM H		&rm RSHFT T		&rm LALT N		&rm RCTRL S
 &kp B			&kp Y			&kp O			&kp U			&kp MINUS		&kp X			&kp L			&kp D			&kp P			&kp F
 								&sk LSHFT		&mt LGUI SPACE									&lt 5 R			&sk RSHFT
 )
 
 ZMK_LAYER(navigation,
 				&none			&none			&none											&none			&none			&none
-&kp LALT		&kp LCTRL		&kp LSHFT		&none			&none			&kp LC(PLUS)	&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT
+&kp LCTRL		&kp LALT		&kp LSHFT		&none			&none			&kp LC(PLUS)	&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT
 &kp LC(C)		&kp LC(V)		&kp LC(X)		&none			&none			&kp LC(MINUS)	&kp HOME		&kp PG_DN		&kp PG_UP		&kp END
 								&none			&none											&none			&none
 )
 
 ZMK_LAYER(numbers,
 				&kp N9			&kp N8			&trans									&none		&trans				&trans
-&kp N3			&kp N2			&kp N1			&kp N0			&trans		&none		&none		&rm LSHFT RA(SEMI)	&rm RCTRL RA(N2)	&rm LALT RA(N3)
+&kp N3			&kp N2			&kp N1			&kp N0			&trans		&none		&none		&rm LSHFT RA(SEMI)	&rm LALT RA(N2)		&rm RCTRL RA(N3)
 &kp N7			&kp N6			&kp N5			&kp N4			&trans		&none		&none		&kp LS(RA(N1))		&kp LS(RA(N2))		&kp LS(RA(N3))
 								&trans			&trans									&trans		&trans
 )
 
 ZMK_LAYER(gaming, 
-				&kp FSLH		&kp UP			&kp DOT											&kp X			&kp Y			&kp W
-&kp C			&kp LEFT		&kp DOWN		&kp RIGHT		&kp ESC			&kp BSPC		&kp A			&kp B			&kp Y			&kp X
+				&kp FSLH		&kp UP			&kp DOT											&kp M			&kp G			&kp W
+&kp C			&kp LEFT		&kp DOWN		&kp RIGHT		&kp ESC			&kp BSPC		&kp H			&kp T			&kp N			&kp S
 &kp B			&kp Y			&kp O			&kp U			&kp TAB			&kp RET			&kp L			&kp D			&kp P			&kp F
-								&kp W			&kp SPACE 										&kp R			&kp Z
+								&kp J			&kp SPACE 										&kp R			&kp Z
 )
 
 ZMK_LAYER(esp,
