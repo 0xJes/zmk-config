@@ -113,7 +113,7 @@ ZMK_LAYER(alpha,
 				&kp FSLH		&kp SQT			&kp	DOT											&kp M			&kp G			&kp W
 &lm LCTRL C		&lm LALT I		&lm LSHFT E		&lt NAV A		&kp COMMA		&kp K			&lt NUM H		&rm RSHFT T		&rm LALT N		&rm RCTRL S
 &kp B			&kp Y			&kp O			&kp U			&kp MINUS		&kp X			&kp L			&kp D			&kp P			&kp F
-								&sk LSHFT		&mt LGUI SPACE									&lt 5 R			&sk RSHFT
+								&sk LSHFT		&mt LGUI SPACE									&lt SYM R		&sk RSHFT
 )
 
 ZMK_LAYER(navigation,
