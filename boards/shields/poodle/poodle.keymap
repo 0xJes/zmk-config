@@ -74,7 +74,7 @@ ZMK_COMBO(enie,   &kp RA(N),       RT1 RM2,         BSE, 35,   0)
 ZMK_COMBO(ced,    &kp RA(C),       RM4 RT3,         BSE, 35,   0)
 
 // CONTROL CHARACTERS
-ZMK_COMBO(tab,    &kp TAB,         RM1 RM2,         BSE, 22, 180)
+ZMK_COMBO(tab,    &kp TAB,         RM1 RM2,         BSE, 20, 180)
 ZMK_COMBO(bspc,   &kp BSPC,        RM2 RM3, BSE NAV SYM, 40,  70)
 ZMK_COMBO(del,    &kp DEL,         RM3 RM4, BSE NAV SYM, 60, 100)
 ZMK_COMBO(ret,    &kp RET,         LM2 LM3,     BSE SYM, 35, 100)
