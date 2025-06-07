@@ -99,6 +99,7 @@ ZMK_COMBO(dllr,   &kp DLLR,        LM2 LM0,         BSE, 30,   0)
 ZMK_COMBO(plus,   &kp PLUS,        LM0 LB0,         BSE, 50,   0)
 ZMK_COMBO(bslh,   &kp BSLH,        LT3 LM1,         BSE, 50,   0)
 ZMK_COMBO(hash,   &kp HASH,        LT1 LM3,         BSE, 50,   0)
+ZMK_COMBO(tilde,  &kp TILDE,       RM0 RB0,         BSE, 50,   0)
 
 // DIACRITS
 ZMK_COMBO(a_acc,  &kp RA(X),       LM1 LT1,         BSE, 45,   0)
@@ -141,7 +142,7 @@ ZMK_LAYER(gaming,
 
 ZMK_LAYER(sym,
 				&kp LBKT		&none			&kp LPAR										&kp RPAR		&none			&kp RBKT
-&none			&kp TILDE		&kp RA(N1)		&kp RA(FSLH)	&none			&none			&kp QMARK		&kp EXCL		&none			&kp HASH
+&none			&none			&kp RA(N1)		&kp RA(FSLH)	&none			&none			&kp QMARK		&kp EXCL		&none			&none
 &kp PERCENT		&kp LT			&kp PIPE		&kp LBRC		&none			&none			&kp RBRC		&kp AMPS		&kp GT			&kp CARET
 								&none			&none											&none			&none
 )
