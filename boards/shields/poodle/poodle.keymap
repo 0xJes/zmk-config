@@ -97,8 +97,8 @@ ZMK_COMBO(star,   &kp STAR,        LT2 LT3,         BSE, 30,   0)
 ZMK_COMBO(at,     &kp AT,          LM0 LT1,         BSE, 30,   0)
 ZMK_COMBO(dllr,   &kp DLLR,        LM2 LM0,         BSE, 30,   0)
 ZMK_COMBO(plus,   &kp PLUS,        LM0 LB0,         BSE, 50,   0)
-ZMK_COMBO(bslh,   &kp BSLH,        LT3 LM0,         BSE, 50,   0)
-ZMK_COMBO(hash,   &kp HASH,        LT2 LM0,         BSE, 50,   0)
+ZMK_COMBO(bslh,   &kp BSLH,        LT3 LM1,         BSE, 50,   0)
+ZMK_COMBO(hash,   &kp HASH,        LT1 LM3,         BSE, 50,   0)
 
 // DIACRITS
 ZMK_COMBO(a_acc,  &kp RA(X),       LM1 LT1,         BSE, 45,   0)
