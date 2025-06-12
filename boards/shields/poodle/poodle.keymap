@@ -102,8 +102,8 @@ ZMK_COMBO(hash,   &kp HASH,        LM0 LT3,         BSE, 50,   0)
 ZMK_COMBO(tilde,  &kp TILDE,       RM0 RB0,         BSE, 50,   0)
 ZMK_COMBO(apms,   &kp AMPS,        LM0 LM1,         BSE, 50,   0)
 ZMK_COMBO(pipe,   &kp PIPE,        LM0 LB0,         BSE, 50,   0)
-// ZMK_COMBO(caret,  &kp CARET,       LM0 RB0,         BSE, 50,   0)
-// ZMK_COMBO(perce,  &kp PERCENT,     LM0 RB0,         BSE, 50,   0)
+ZMK_COMBO(caret,  &kp CARET,       RB4 RB3,         BSE, 50,   0)
+ZMK_COMBO(perce,  &kp PERCENT,     LB4 LB3,         BSE, 50,   0)
 
 // DIACRITS
 ZMK_COMBO(a_acc,  &kp RA(X),       LM1 LT1,         BSE, 45,   0)
