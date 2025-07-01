@@ -82,8 +82,8 @@ ZMK_COMBO(esc,    &kp ESC,         LM1 LM3,     BSE SYM, 50, 180)
 
 // SPECIAL
 ZMK_COMBO(gaming, &tog GME,        LT1 RT1,     GME BSE, 50, 300)
-ZMK_COMBO(caps_w, &caps_word,      RH0 RH1,         BSE, 45, 150)
-ZMK_COMBO(caps_b, &kp CAPS,        LH0 LH1,         BSE, 40, 300)
+ZMK_COMBO(caps_w, &caps_word,      LH0 LH1,         BSE, 45, 150)
+ZMK_COMBO(caps_b, &kp CAPS,        RH0 RH1,         BSE, 40, 300)
 
 // SYMBOLS: HOME CLUSTER
 ZMK_COMBO(colon,  &kp COLON,       LM1 LM4,     BSE NUM, 40, 100)
@@ -95,10 +95,10 @@ ZMK_COMBO(equal,  &kp EQUAL,       LT3 LT1,         BSE, 35,   0)
 ZMK_COMBO(dqt,    &kp DQT,         LT2 LT1,         BSE, 35,   0)
 ZMK_COMBO(star,   &kp STAR,        LT2 LT3,         BSE, 30,   0)
 ZMK_COMBO(at,     &kp AT,          LM0 LT1,         BSE, 30,   0)
-ZMK_COMBO(dllr,   &kp DLLR,        LM2 LT1,         BSE, 30,   0)
+ZMK_COMBO(dllr,   &kp DLLR,        LB4 LB1,         BSE, 30,   0)
 ZMK_COMBO(plus,   &kp PLUS,        LM0 LB0,         BSE, 50,   0)
 ZMK_COMBO(bslh,   &kp BSLH,        LT3 LM2,         BSE, 50,   0)
-ZMK_COMBO(hash,   &kp HASH,        LM0 LT3,         BSE, 50,   0)
+ZMK_COMBO(hash,   &kp HASH,        RB4 RB1,         BSE, 50,   0)
 ZMK_COMBO(tilde,  &kp TILDE,       RM0 RB0,         BSE, 50,   0)
 ZMK_COMBO(apms,   &kp AMPS,        RB1 RB4,         BSE, 50,   0)
 ZMK_COMBO(pipe,   &kp PIPE,        LB1 LB4,         BSE, 50,   0)
@@ -145,8 +145,8 @@ ZMK_LAYER(gaming,
 )
 
 ZMK_LAYER(sym,
-				&kp LBKT		&none			&kp LPAR										&kp RPAR		&none			&kp RBKT
-&none			&none			&kp RA(N1)		&kp RA(FSLH)	&none			&none			&kp QMARK		&kp EXCL		&none			&none
+				&none			&kp LBKT		&kp LPAR										&none			&kp RBKT        &none
+&none			&kp LPAR		&kp RA(N1)		&kp RA(FSLH)	&none			&none			&kp QMARK		&kp EXCL		&kp RPAR		&none
 &none			&kp LT			&none   		&kp LBRC		&none			&none			&kp RBRC		&none			&kp GT			&none
 								&none			&none											&none			&none
 )
