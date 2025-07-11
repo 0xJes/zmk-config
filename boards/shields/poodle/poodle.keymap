@@ -40,7 +40,7 @@
 ZMK_HOLD_TAP(lm,
 	flavor = "balanced";
 	require-prior-idle-ms = <100>;
-	tapping-term-ms = <350>;
+	tapping-term-ms = <300>;
 	quick-tap-ms = <200>;
 	hold-trigger-key-positions = <RIGHT_HAND_KEYS>;
 	hold-trigger-on-release;
@@ -50,7 +50,7 @@ ZMK_HOLD_TAP(lm,
 ZMK_HOLD_TAP(rm,
 	flavor = "balanced";
 	require-prior-idle-ms = <100>;
-	tapping-term-ms = <350>;
+	tapping-term-ms = <300>;
 	quick-tap-ms = <200>; 
 	hold-trigger-key-positions = <LEFT_HAND_KEYS>;
 	hold-trigger-on-release;
