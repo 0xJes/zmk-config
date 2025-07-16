@@ -105,6 +105,9 @@ ZMK_COMBO(pipe,   &kp PIPE,        LB1 LB4,         BSE, 50,   0)
 ZMK_COMBO(caret,  &kp CARET,       RB4 RB3,         BSE, 50,   0)
 ZMK_COMBO(perce,  &kp PERCENT,     LB4 LB3,         BSE, 50,   0)
 
+ZMK_COMBO(quest,  &kp QMARK,       RM3 RT3,         BSE, 50,   0)
+ZMK_COMBO(excl,   &kp EXCL,        RM2 RT2,         BSE, 50,   0)
+
 // DIACRITS
 ZMK_COMBO(a_acc,  &kp RA(X),       LM1 LT1,         BSE, 45,   0)
 ZMK_COMBO(e_acc,  &kp RA(G),       LM2 LT2,         BSE, 45,   0)
