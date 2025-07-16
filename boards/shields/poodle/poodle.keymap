@@ -148,8 +148,8 @@ ZMK_LAYER(gaming,
 )
 
 ZMK_LAYER(sym,
-				&none			&kp LBKT		&kp LPAR										&none			&kp RBKT        &none
-&none			&kp LPAR		&kp RA(N1)		&kp RA(FSLH)	&none			&none			&kp QMARK		&kp EXCL		&kp RPAR		&none
-&none			&kp LT			&none   		&kp LBRC		&none			&none			&kp RBRC		&none			&kp GT			&none
+				&none			&none			&none											&none			&none       &none
+&kp LT			&kp LBRC		&kp LBKT		&kp LPAR		&none			&none			&kp RPAR		&kp RBKT	&kp RBRC		&kp GT
+&none			&none			&none   		&none			&none			&none			&none			&none		&none			&none
 								&none			&none											&none			&none
 )
