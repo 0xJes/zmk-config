@@ -81,9 +81,9 @@ ZMK_COMBO(ret,    &kp RET,         LM2 LM3,     BSE SYM, 30, 100)
 ZMK_COMBO(esc,    &kp ESC,         LM1 LM3,     BSE SYM, 50, 180)
 
 // SPECIAL
-ZMK_COMBO(gaming, &tog GME,        LT1 RT1,     GME BSE, 50, 300)
-ZMK_COMBO(caps_w, &caps_word,      LH0 LH1,         BSE, 40, 150)
-ZMK_COMBO(caps_b, &kp CAPS,        RH0 RH1,         BSE, 40, 200)
+ZMK_COMBO(gaming, &tog GME,        LT1 RT1,     GME BSE, 45, 350)
+ZMK_COMBO(caps_w, &caps_word,      LH0 LH1,         BSE, 38, 400)
+ZMK_COMBO(caps_b, &kp CAPS,        RH0 RH1,         BSE, 38, 350)
 
 // SYMBOLS: HOME CLUSTER
 ZMK_COMBO(colon,  &kp COLON,       LM1 LM4,     BSE NUM, 40, 100)
